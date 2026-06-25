@@ -1,0 +1,42 @@
+﻿target_area,action,path,source,status,reason
+configs,copied,configs/README.md,generated,added,policy directory notes
+configs,copied,configs/qwen25_tbgmp_len8192_top4_keys.json,[LOCAL_SOURCE]/adaptive_policies,added,small policy JSON
+configs,copied,configs/qwen25_tbgmp_len8192_random4_keys_seed0.json,[LOCAL_SOURCE]/adaptive_policies,added,small policy JSON
+configs,copied,configs/qwen25_tbgmp_len8192_random4_keys_seed1.json,[LOCAL_SOURCE]/adaptive_policies,added,small policy JSON
+configs,copied,configs/qwen25_tbgmp_len8192_random4_keys_seed2.json,[LOCAL_SOURCE]/adaptive_policies,added,small policy JSON
+configs,copied,configs/qwen25_tbgmp_len8192_bottom4_keys.json,[LOCAL_SOURCE]/adaptive_policies,added,small policy JSON
+configs,copied,configs/qwen25_policy_b_key_protected.json,[LOCAL_SOURCE]/adaptive_policies,added,small policy JSON
+configs,copied,configs/qwen25_policy_c_layer_adaptive.json,[LOCAL_SOURCE]/adaptive_policies,added,small policy JSON
+configs,copied,configs/qwen25_policy_d_all_measured_keys.json,[LOCAL_SOURCE]/adaptive_policies,added,small policy JSON
+configs,copied,configs/qwen25_policy_e_all_measured_kv.json,[LOCAL_SOURCE]/adaptive_policies,added,small policy JSON
+configs,copied,configs/falcon3_tbgmp_minimal.json,[LOCAL_SOURCE]/adaptive_policies,added,small policy JSON
+configs,copied,configs/zephyr_tbgmp_minimal.json,[LOCAL_SOURCE]/adaptive_policies,added,small policy JSON
+data,copied,data/demo/old_replay_case_manifest.json,[LOCAL_SOURCE],added,cleaned case metadata
+data,copied,data/demo/old_strong_evidence_candidates.csv,[LOCAL_SOURCE],added,cleaned candidate metadata
+data,created,data/demo/README.md,generated,added,demo data notes
+data,created,data/schema/results_schema.md,generated,added,cleaned result schema
+data,created,data/schema/policy_schema.json,generated,added,policy JSON schema
+results,copied,results/main_evidence/table_main_evidence.csv,results/paper_tables,added,main evidence view
+results,copied,results/main_evidence/table_qwen25_scale.csv,results/paper_tables,added,main evidence view
+results,copied,results/main_evidence/table_first_success_k.csv,results/paper_tables,added,main evidence view
+results,copied,results/supporting/table_control_statistics.csv,results/paper_tables,added,supporting/control view
+results,copied,results/supporting/table_supporting_models.csv,results/paper_tables,added,supporting view
+results,copied,results/boundary_excluded/table_boundary_models.csv,results/paper_tables,added,boundary/excluded view
+results,copied,results/boundary_excluded/table_gemma2_boundary.csv,results/paper_tables,added,boundary view
+tables,copied,tables/paper/*.csv,results/paper_tables,added,paper-ready table copies
+docs,copied,docs/qwen25_top4_random4_bottom4_summary.md,[LOCAL_SOURCE]/paper_data_for_writer,added,cleaned summary
+docs,copied,docs/tbgmp_8192_validity_summary.md,[LOCAL_SOURCE]/paper_data_for_writer,added,cleaned summary
+docs,created,docs/reproducibility_file_manifest.md,generated,added,repository fill manifest
+slurm,created,slurm/xec/template_a800_formal_job.slurm,HPC slurm template sanitized,added,private cluster path redacted
+slurm,created,slurm/xec/submit_01_discovery_all_models_a800.slurm,HPC slurm script sanitized,added,private cluster path redacted
+reports,created,MISSING_REPO_FILES.md,generated,added,missing and rejected file report
+reports,created,repo_fill_report.csv,generated,added,structured fill report
+rejected,rejected,paper_data_for_writer.zip,[LOCAL_SOURCE],rejected,zip archive not uploaded
+rejected,rejected,paper_data_for_writer (2).zip,[LOCAL_SOURCE],rejected,zip archive not uploaded
+rejected,rejected,paper_outputs_from_xec.zip,[LOCAL_SOURCE],rejected,zip archive not uploaded
+rejected,rejected,paper_data_for_writer/qwen25_zzq/raw_results/*_raw.txt,[LOCAL_SOURCE],rejected,raw logs/full generations not uploaded
+rejected,rejected,adaptive_validation_results/logs/*.log,[LOCAL_SOURCE],rejected,raw logs not uploaded
+rejected,rejected,paper_data_for_writer/qwen25_zzq/risk_tables/table_qwen25_full_layer_key_risk.csv,[LOCAL_SOURCE],rejected,contains private local path
+rejected,rejected,[HPC_PROJECT]/logs/*,HPC,rejected,raw cluster logs not uploaded
+rejected,sanitized,[HPC_PROJECT]/slurm/*.slurm,HPC,redacted,private cluster paths replaced by TBGMP_HPC_PROJECT
+

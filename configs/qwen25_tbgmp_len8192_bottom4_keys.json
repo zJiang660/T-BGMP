@@ -1,0 +1,11 @@
+{
+  "default_key_bits": 4,
+  "default_value_bits": 2,
+  "residual_window": 128,
+  "overrides": {
+    "27:key": 6,
+    "12:key": 6,
+    "30:key": 6,
+    "26:key": 6
+  }
+}

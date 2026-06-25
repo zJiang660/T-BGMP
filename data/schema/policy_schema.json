@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "T-BGMP KV policy",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "default_key_bits": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "default_value_bits": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "residual_window": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "overrides": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "description": "Layer/component overrides such as '25:key': 6."
+    }
+  }
+}

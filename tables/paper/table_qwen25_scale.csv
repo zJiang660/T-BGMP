@@ -1,0 +1,3 @@
+model,scale,sensitive_cases,k4_sensitive,k2_sensitive,recovery,controls,saving_advantage,interpretation
+Qwen2.5-3B-Instruct,3B,72,67,5,72/72,Random 1.85%; Bottom 1.39%,+12.18 pp,More sensitive; clearest ranking signal
+Qwen2.5-14B-Instruct,14B,14,0,14,14/14,Random 35.71%; Bottom 50.00%,+17.87 pp,More tolerant; larger saving margin
