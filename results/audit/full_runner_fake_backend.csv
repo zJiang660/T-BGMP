@@ -1,0 +1,22 @@
+model,case_id,domain,context_length,depth,seed,answer,stage,policy,policy_type,key_bits,value_bits,protected_key_bits,protected_layers,residual_window,response,found,status,error,runtime_s,tok_per_s,peak_gpu_gb,kv_saving,aggressive_policy,topk_k,control_seed,matched_topk_k
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_a_discovery,fp16,fp16,16,16,,,0,AURORA-7749,True,success,,0.01,100.0,0.0,80.0,,,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_a_discovery,uniform_k2_v2_rw128,uniform,2,2,,[],128,not found,False,success,,0.01,100.0,0.0,80.0,,,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_a_discovery,uniform_k4_v2_rw128,uniform,4,2,,[],128,not found,False,success,,0.01,100.0,0.0,80.0,,,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_a_discovery,uniform_k6_v2_rw128,uniform,6,2,,[],128,not found,False,success,,0.01,100.0,0.0,80.0,,,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_a_discovery,uniform_k6_v4_rw128,uniform,6,4,,[],128,not found,False,success,,0.01,100.0,0.0,80.0,,,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_d_topk_recovery,tbgmp_top1,tbgmp_topk,4,2,6,[0],128,not found,False,success,,0.01,100.0,0.0,80.0,uniform_k4_v2_rw128,1.0,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_d_topk_recovery,tbgmp_top2,tbgmp_topk,4,2,6,"[0, 8]",128,AURORA-7749,True,success,,0.01,100.0,0.0,80.0,uniform_k4_v2_rw128,2.0,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_d_topk_recovery,tbgmp_top3,tbgmp_topk,4,2,6,"[0, 8, 1]",128,AURORA-7749,True,success,,0.01,100.0,0.0,80.0,uniform_k4_v2_rw128,3.0,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_d_topk_recovery,tbgmp_top4,tbgmp_topk,4,2,6,"[0, 8, 1, 5]",128,AURORA-7749,True,success,,0.01,100.0,0.0,80.0,uniform_k4_v2_rw128,4.0,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_d_topk_recovery,tbgmp_top5,tbgmp_topk,4,2,6,"[0, 8, 1, 5, 10]",128,AURORA-7749,True,success,,0.01,100.0,0.0,80.0,uniform_k4_v2_rw128,5.0,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_d_topk_recovery,tbgmp_top6,tbgmp_topk,4,2,6,"[0, 8, 1, 5, 10, 6]",128,AURORA-7749,True,success,,0.01,100.0,0.0,80.0,uniform_k4_v2_rw128,6.0,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_d_topk_recovery,tbgmp_top7,tbgmp_topk,4,2,6,"[0, 8, 1, 5, 10, 6, 4]",128,AURORA-7749,True,success,,0.01,100.0,0.0,80.0,uniform_k4_v2_rw128,7.0,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_d_topk_recovery,tbgmp_top8,tbgmp_topk,4,2,6,"[0, 8, 1, 5, 10, 6, 4, 35]",128,AURORA-7749,True,success,,0.01,100.0,0.0,80.0,uniform_k4_v2_rw128,8.0,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_d_topk_recovery,tbgmp_top9,tbgmp_topk,4,2,6,"[0, 8, 1, 5, 10, 6, 4, 35, 11]",128,AURORA-7749,True,success,,0.01,100.0,0.0,80.0,uniform_k4_v2_rw128,9.0,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_d_topk_recovery,tbgmp_top10,tbgmp_topk,4,2,6,"[0, 8, 1, 5, 10, 6, 4, 35, 11, 12]",128,AURORA-7749,True,success,,0.01,100.0,0.0,80.0,uniform_k4_v2_rw128,10.0,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_d_topk_recovery,tbgmp_top11,tbgmp_topk,4,2,6,"[0, 8, 1, 5, 10, 6, 4, 35, 11, 12, 2]",128,AURORA-7749,True,success,,0.01,100.0,0.0,80.0,uniform_k4_v2_rw128,11.0,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_d_topk_recovery,tbgmp_top12,tbgmp_topk,4,2,6,"[0, 8, 1, 5, 10, 6, 4, 35, 11, 12, 2, 34]",128,AURORA-7749,True,success,,0.01,100.0,0.0,80.0,uniform_k4_v2_rw128,12.0,,
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_e_controls,random2_seed0,random_k,4,2,6,"[24, 26]",128,not found,False,success,,0.01,100.0,0.0,80.0,,,0.0,2.0
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_e_controls,random2_seed1,random_k,4,2,6,"[4, 8]",128,not found,False,success,,0.01,100.0,0.0,80.0,,,1.0,2.0
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_e_controls,random2_seed2,random_k,4,2,6,"[3, 5]",128,not found,False,success,,0.01,100.0,0.0,80.0,,,2.0,2.0
+fake-model,demo_math,math,256,50,0,AURORA-7749,stage_e_controls,bottom2,bottom_k,4,2,6,"[13, 33]",128,not found,False,success,,0.01,100.0,0.0,80.0,,,,2.0

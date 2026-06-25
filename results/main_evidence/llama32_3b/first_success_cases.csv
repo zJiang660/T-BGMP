@@ -1,0 +1,26 @@
+model,case_id,topk_k,protected_layers,kv_saving
+Llama3.2-3B,code_ctx4096_d50_s0,2,"[25, 7]",82.7048
+Llama3.2-3B,code_ctx6144_d50_s0,7,"[25, 7, 11, 27, 3, 8, 14]",80.3195
+Llama3.2-3B,code_ctx8192_d10_s0,3,"[25, 7, 11]",83.3846
+Llama3.2-3B,code_ctx8192_d50_s0,3,"[25, 7, 11]",83.3846
+Llama3.2-3B,code_ctx8192_d90_s0,5,"[25, 7, 11, 27, 3]",82.0663
+Llama3.2-3B,code_ctx8192_d90_s1,5,"[25, 7, 11, 27, 3]",82.0663
+Llama3.2-3B,literature_ctx4096_d10_s1,2,"[25, 7]",82.7048
+Llama3.2-3B,literature_ctx4096_d90_s1,3,"[25, 7, 11]",82.0562
+Llama3.2-3B,literature_ctx6144_d90_s0,3,"[25, 7, 11]",82.9422
+Llama3.2-3B,literature_ctx6144_d90_s1,2,"[25, 7]",83.5978
+Llama3.2-3B,literature_ctx8192_d50_s0,2,"[25, 7]",84.0438
+Llama3.2-3B,literature_ctx8192_d90_s0,2,"[25, 7]",84.0436
+Llama3.2-3B,math_ctx6144_d10_s1,6,"[25, 7, 11, 27, 3, 8]",80.9749
+Llama3.2-3B,math_ctx6144_d50_s0,7,"[25, 7, 11, 27, 3, 8, 14]",80.3195
+Llama3.2-3B,math_ctx6144_d90_s0,5,"[25, 7, 11, 27, 3]",81.6305
+Llama3.2-3B,math_ctx8192_d10_s1,3,"[25, 7, 11]",83.3845
+Llama3.2-3B,math_ctx8192_d50_s0,10,"[25, 7, 11, 27, 3, 8, 14, 4, 19, 13]",78.7704
+Llama3.2-3B,math_ctx8192_d50_s1,2,"[25, 7]",84.0438
+Llama3.2-3B,math_ctx8192_d90_s0,3,"[25, 7, 11]",83.3846
+Llama3.2-3B,science_ctx4096_d90_s0,5,"[25, 7, 11, 27, 3]",80.7588
+Llama3.2-3B,science_ctx4096_d90_s1,2,"[25, 7]",82.7042
+Llama3.2-3B,science_ctx6144_d50_s0,5,"[25, 7, 11, 27, 3]",81.6308
+Llama3.2-3B,science_ctx6144_d50_s1,2,"[25, 7]",83.5975
+Llama3.2-3B,science_ctx6144_d90_s0,2,"[25, 7]",83.5978
+Llama3.2-3B,science_ctx8192_d50_s0,6,"[25, 7, 11, 27, 3, 8]",81.4071

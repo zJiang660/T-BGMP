@@ -1,5 +1,18 @@
 # Reproducibility Guide
 
+## Reproducibility Levels
+
+- **Level 1:** Reproduce paper tables and figures from cleaned CSV summaries.
+- **Level 2:** Audit the paper numbers from sanitized case-level outputs for
+  all four main models and the Gemma2 boundary case.
+- **Level 3:** Rerun model execution through the provided backend adapter,
+  configs, and Slurm templates after supplying model weights, a GPU
+  environment, and a compatible KV-cache implementation.
+
+Levels 1 and 2 are directly runnable in this repository. Level 3 provides a
+complete experiment-control interface but depends on external model and
+quantizer components described in `model_setup.md`.
+
 ## Environment
 
 Install with either:
@@ -61,6 +74,8 @@ The audit verifies:
 - Gemma2 value-bottleneck numbers;
 - excluded-model classification;
 - equality between canonical and grouped CSV copies.
+- per-model restoration directly from sanitized case-level Top-k rows;
+- source provenance hashes without private source paths.
 
 It writes `results/audit/audit_summary.json` and SHA-256 hashes in
 `results/audit/artifact_hashes.csv`.
@@ -68,6 +83,8 @@ It writes `results/audit/audit_summary.json` and SHA-256 hashes in
 ## Full GPU Reruns
 
 Full model execution is outside this minimal repository because checkpoints,
-raw outputs, and the quantized cache runtime are not distributed here. The
-Slurm files are sanitized templates showing the required external interfaces;
-they are not turn-key cluster jobs.
+raw outputs, and the quantized cache runtime are not distributed here.
+`experiments/run_full_pipeline.py` supplies discovery, sensitive mining,
+Top1--Top12, and same-budget control orchestration through an external backend
+contract. The Slurm files are sanitized templates showing the required
+interfaces; they are not turn-key institutional jobs.

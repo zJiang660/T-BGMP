@@ -1,0 +1,25 @@
+{
+  "source_files": [
+    {
+      "filename": "sensitive_cases.csv",
+      "bytes": 14011,
+      "sha256": "4ef6595967de6c2a06bd9d41aa5d07747f32804f81a13b10345fac743ddf0f4b"
+    },
+    {
+      "filename": "recovery_topk_results.csv",
+      "bytes": 124393,
+      "sha256": "ad51081336066ec6da9ccad45dc686efea0efb1ee2da6723ea5f657e20799585"
+    },
+    {
+      "filename": "same_budget_controls.csv",
+      "bytes": 48334,
+      "sha256": "26492d80ef0fd196c146e9590a864a3baaf02cec64d333442ffa32a32b68d35c"
+    },
+    {
+      "filename": "table_llama32_key_risk_ranked.csv",
+      "bytes": 4243,
+      "sha256": "86557a539310132317905ce77a9fcb63b4afbd1e3df75857741fd09bded179c8"
+    }
+  ],
+  "notes": "Sanitized from case-level SIP experiment exports; paths, timestamps, full responses, and logs are excluded."
+}

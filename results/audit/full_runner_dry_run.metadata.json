@@ -1,0 +1,15 @@
+{
+  "model_id": "example-model",
+  "backend": "dry_run",
+  "cases": 1,
+  "policies": [
+    "fp16",
+    "uniform_k2_v2_rw128",
+    "uniform_k4_v2_rw128",
+    "uniform_k6_v2_rw128",
+    "uniform_k6_v4_rw128"
+  ],
+  "sensitive_cases": 0,
+  "maximum_topk": 12,
+  "model_weights_in_repository": false
+}

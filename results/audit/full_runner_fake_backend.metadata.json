@@ -1,0 +1,15 @@
+{
+  "model_id": "fake-model",
+  "backend": "tests.fake_backend:create_backend",
+  "cases": 1,
+  "policies": [
+    "fp16",
+    "uniform_k2_v2_rw128",
+    "uniform_k4_v2_rw128",
+    "uniform_k6_v2_rw128",
+    "uniform_k6_v4_rw128"
+  ],
+  "sensitive_cases": 1,
+  "maximum_topk": 12,
+  "model_weights_in_repository": false
+}

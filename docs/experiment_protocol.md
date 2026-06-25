@@ -14,6 +14,8 @@ of domains, context lengths, needle depths, and seeds. Record retrieval
 `found`, execution validity, errors, and memory statistics separately.
 The model-free implementation in this repository validates answer matching on
 the synthetic demo rows; full GPU discovery requires an external runner.
+`experiments/run_full_pipeline.py` executes FP16, K2/V2, K4/V2, K6/V2, and
+K6/V4 through the user-supplied backend.
 
 ## Stage B: Sensitive-Case Mining
 
@@ -37,6 +39,8 @@ within a model and sum them to obtain a model-specific empirical risk score.
 Sort key layers by decreasing risk. Starting from the aggressive default
 precision, raise only the Top-k key layers to the protected precision and
 measure the first successful recovery budget.
+The full runner evaluates Top1 through Top12 (or the configured maximum)
+without stopping after the first success, preserving the diagnostic sweep.
 
 T-BGMP is a diagnostic recovery protocol, not an oracle-free deployment policy:
 the current procedure evaluates recoverability after a failure is known.
@@ -46,6 +50,8 @@ the current procedure evaluates recoverability after a failure is known.
 At the same protection budget, compare risk-ranked Top-k layers with random
 layers and bottom-ranked layers. These controls test whether ranking matters,
 not merely whether protecting any layers helps.
+The full runner evaluates three seeded Random-k policies and one Bottom-k
+policy at the first-success Top-k budget.
 
 ## Stage F: Efficiency Analysis
 

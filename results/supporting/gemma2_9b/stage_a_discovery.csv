@@ -1,0 +1,361 @@
+model,case_id,domain,context_length,actual_context_length,depth,seed,answer,policy,policy_type,key_bits,value_bits,protected_key_bits,protected_layers,residual_window,found,status,response_excerpt,topk_k,kv_saving,runtime_s,tok_per_s,peak_gpu_gb
+Gemma2-9B,gemma2_9b_math_ctx4096_d10_s0,math,4096,3912,10,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.208,13.24,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d10_s0,math,4096,3912,10,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"( The, and more onc public",,,1.962,8.153,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d10_s0,math,4096,3912,10,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,5123 53 The,,,1.964,8.148,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d10_s0,math,4096,3912,10,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,>>> 127 1234,,,1.963,8.151,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d10_s0,math,4096,3912,10,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,1.964,8.147,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d10_s1,math,4096,3913,10,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.205,13.274,22.234
+Gemma2-9B,gemma2_9b_math_ctx4096_d10_s1,math,4096,3913,10,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"sentence: is the ( 12. Context,",,,1.966,8.137,22.234
+Gemma2-9B,gemma2_9b_math_ctx4096_d10_s1,math,4096,3913,10,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"Please provide a simple first time, and tell me what",,,1.965,8.142,22.234
+Gemma2-9B,gemma2_9b_math_ctx4096_d10_s1,math,4096,3913,10,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"> The given text provides, and you are given a list of",,,1.97,8.12,22.234
+Gemma2-9B,gemma2_9b_math_ctx4096_d10_s1,math,4096,3913,10,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,1.966,8.136,22.234
+Gemma2-9B,gemma2_9b_math_ctx4096_d50_s0,math,4096,3912,50,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.204,13.289,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d50_s0,math,4096,3912,50,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"strings. , What do_ The ,",,,1.971,8.117,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d50_s0,math,4096,3912,50,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,__ ``` The following is the full text of,,,1.966,8.138,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d50_s0,math,4096,3912,50,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,AURORAMg The following is the full text of the text file,,,1.968,8.128,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d50_s0,math,4096,3912,50,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,1.97,8.123,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d50_s1,math,4096,3913,50,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.206,13.266,22.234
+Gemma2-9B,gemma2_9b_math_ctx4096_d50_s1,math,4096,3913,50,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"The ... \ A, The",,,1.97,8.124,22.234
+Gemma2-9B,gemma2_9b_math_ctx4096_d50_s1,math,4096,3913,50,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"The following is the full text of the following, and make sure",,,1.97,8.123,22.234
+Gemma2-9B,gemma2_9b_math_ctx4096_d50_s1,math,4096,3913,50,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,True,success,NEBULA-3186 The should not be,,,1.971,8.12,22.234
+Gemma2-9B,gemma2_9b_math_ctx4096_d50_s1,math,4096,3913,50,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,1.974,8.107,22.234
+Gemma2-9B,gemma2_9b_math_ctx4096_d90_s0,math,4096,3912,90,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.206,13.265,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d90_s0,math,4096,3912,90,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"1 on "" "" with,",,,1.967,8.133,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d90_s0,math,4096,3912,90,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,\ 12899750% 128,,,1.973,8.109,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d90_s0,math,4096,3912,90,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"Provide the entire conversation, and I will tell you what is the single most",,,1.969,8.126,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d90_s0,math,4096,3912,90,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,1.969,8.128,22.233
+Gemma2-9B,gemma2_9b_math_ctx4096_d90_s1,math,4096,3913,90,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.207,13.26,22.234
+Gemma2-9B,gemma2_9b_math_ctx4096_d90_s1,math,4096,3913,90,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"** ```, 6r :",,,1.971,8.119,22.234
+Gemma2-9B,gemma2_9b_math_ctx4096_d90_s1,math,4096,3913,90,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"<br> The question is not in the following, and to provide",,,1.969,8.127,22.234
+Gemma2-9B,gemma2_9b_math_ctx4096_d90_s1,math,4096,3913,90,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"Provide the following, and I will tell you what is the single most common",,,1.97,8.121,22.234
+Gemma2-9B,gemma2_9b_math_ctx4096_d90_s1,math,4096,3913,90,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,1.969,8.126,22.234
+Gemma2-9B,gemma2_9b_math_ctx6144_d10_s0,math,6144,5704,10,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.666,9.603,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d10_s0,math,6144,5704,10,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,0008870appearing U0000-,,,2.559,6.254,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d10_s0,math,6144,5704,10,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,009999999.07745,,,2.559,6.253,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d10_s0,math,6144,5704,10,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,True,success,'AURORA-7749' Please provide the following and,,,2.56,6.249,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d10_s0,math,6144,5704,10,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,2.558,6.254,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d10_s1,math,6144,5705,10,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.644,9.735,24.53
+Gemma2-9B,gemma2_9b_math_ctx6144_d10_s1,math,6144,5705,10,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"49, 002. Are you knowled-0",,,2.561,6.247,24.53
+Gemma2-9B,gemma2_9b_math_ctx6144_d10_s1,math,6144,5705,10,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,>>> 0000007666767,,,2.563,6.244,24.53
+Gemma2-9B,gemma2_9b_math_ctx6144_d10_s1,math,6144,5705,10,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,NEbitField__uxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxx,,,2.557,6.257,24.53
+Gemma2-9B,gemma2_9b_math_ctx6144_d10_s1,math,6144,5705,10,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,2.559,6.254,24.53
+Gemma2-9B,gemma2_9b_math_ctx6144_d50_s0,math,6144,5704,50,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.633,9.798,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d50_s0,math,6144,5704,50,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"F (1: LetinheritDoc, for one fine want",,,2.556,6.261,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d50_s0,math,6144,5704,50,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,tirst sentence **NOTEFbitFieldbitFieldbitFieldbitFieldbitField,,,2.554,6.265,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d50_s0,math,6144,5704,50,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,[]: ️️ enderror,,,2.554,6.264,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d50_s0,math,6144,5704,50,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,2.552,6.27,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d50_s1,math,6144,5705,50,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.634,9.793,24.53
+Gemma2-9B,gemma2_9b_math_ctx6144_d50_s1,math,6144,5705,50,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,007687 to be_blacerealhttphttpshttphttpshttphttps,,,2.557,6.259,24.53
+Gemma2-9B,gemma2_9b_math_ctx6144_d50_s1,math,6144,5705,50,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"**To the editor: The full text is provided, so you't",,,2.557,6.258,24.53
+Gemma2-9B,gemma2_9b_math_ctx6144_d50_s1,math,6144,5705,50,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,True,success,NEBULA-3186 PageRoute(),,,2.571,6.224,24.53
+Gemma2-9B,gemma2_9b_math_ctx6144_d50_s1,math,6144,5705,50,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,2.568,6.232,24.53
+Gemma2-9B,gemma2_9b_math_ctx6144_d90_s0,math,6144,5704,90,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.638,9.767,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d90_s0,math,6144,5704,90,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"It is one, there is the 0002062",,,2.565,6.238,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d90_s0,math,6144,5704,90,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,Please treat ## I't2,,,2.569,6.228,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d90_s0,math,6144,5704,90,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,Please provide'tbd(handle on the,,,2.567,6.233,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d90_s0,math,6144,5704,90,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,2.571,6.224,24.529
+Gemma2-9B,gemma2_9b_math_ctx6144_d90_s1,math,6144,5705,90,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.644,9.731,24.53
+Gemma2-9B,gemma2_9b_math_ctx6144_d90_s1,math,6144,5705,90,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,01616=129994997,,,2.578,6.207,24.53
+Gemma2-9B,gemma2_9b_math_ctx6144_d90_s1,math,6144,5705,90,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,Please provide the full text body to get the answer. Please provide the,,,2.586,6.187,24.53
+Gemma2-9B,gemma2_9b_math_ctx6144_d90_s1,math,6144,5705,90,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,Please provide the full text of the text file to,,,2.584,6.191,24.53
+Gemma2-9B,gemma2_9b_math_ctx6144_d90_s1,math,6144,5705,90,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,2.584,6.192,24.53
+Gemma2-9B,gemma2_9b_math_ctx8192_d10_s0,math,8192,7916,10,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,2.128,7.519,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d10_s0,math,8192,7916,10,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,071.0AndroidJUnit. (and and-specific-,,,3.229,4.955,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d10_s0,math,8192,7916,10,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,'t2000f__123f201,,,3.21,4.984,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d10_s0,math,8192,7916,10,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,AndroidJUnit ProtoMessage +:++:+ +:++:+,,,3.203,4.995,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d10_s0,math,8192,7916,10,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,3.201,4.999,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d10_s1,math,8192,7917,10,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,2.118,7.554,27.363
+Gemma2-9B,gemma2_9b_math_ctx8192_d10_s1,math,8192,7917,10,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,tree:7'keypress *and- 39,,,3.205,4.992,27.363
+Gemma2-9B,gemma2_9b_math_ctx8192_d10_s1,math,8192,7917,10,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,000007 binfod(tfother,,,3.207,4.989,27.363
+Gemma2-9B,gemma2_9b_math_ctx8192_d10_s1,math,8192,7917,10,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,``` ``` Please provide the full text body with the full text body,,,3.203,4.995,27.363
+Gemma2-9B,gemma2_9b_math_ctx8192_d10_s1,math,8192,7917,10,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,3.205,4.993,27.363
+Gemma2-9B,gemma2_9b_math_ctx8192_d50_s0,math,8192,7916,50,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,2.118,7.556,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d50_s0,math,8192,7916,50,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"67D JpaRepository on the one-ending, and,===7",,,3.205,4.992,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d50_s0,math,8192,7916,50,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,Answer: '0000020020,,,3.205,4.992,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d50_s0,math,8192,7916,50,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,Aurora-7749 [00000,,,3.207,4.989,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d50_s0,math,8192,7916,50,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,3.208,4.987,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d50_s1,math,8192,7917,50,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,2.122,7.54,27.363
+Gemma2-9B,gemma2_9b_math_ctx8192_d50_s1,math,8192,7917,50,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"a: **? by, and **",,,3.21,4.984,27.363
+Gemma2-9B,gemma2_9b_math_ctx8192_d50_s1,math,8192,7917,50,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,">>> ``` The full text provides a lot of information, but you",,,3.207,4.989,27.363
+Gemma2-9B,gemma2_9b_math_ctx8192_d50_s1,math,8192,7917,50,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,NEbitField ## **Please provide the full text of,,,3.21,4.985,27.363
+Gemma2-9B,gemma2_9b_math_ctx8192_d50_s1,math,8192,7917,50,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,3.208,4.988,27.363
+Gemma2-9B,gemma2_9b_math_ctx8192_d90_s0,math,8192,7916,90,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,2.121,7.545,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d90_s0,math,8192,7916,90,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"733 Sentence: **, no 0299,",,,3.208,4.988,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d90_s0,math,8192,7916,90,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,``` %Jhoncuxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxx,,,3.205,4.993,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d90_s0,math,8192,7916,90,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,'s end-of-,,,3.206,4.991,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d90_s0,math,8192,7916,90,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,3.208,4.987,27.362
+Gemma2-9B,gemma2_9b_math_ctx8192_d90_s1,math,8192,7917,90,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,2.122,7.539,27.363
+Gemma2-9B,gemma2_9b_math_ctx8192_d90_s1,math,8192,7917,90,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"(0 061499: ""078,",,,3.211,4.983,27.363
+Gemma2-9B,gemma2_9b_math_ctx8192_d90_s1,math,8192,7917,90,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,True,success,'NEBULA-3186 [00,,,3.206,4.991,27.363
+Gemma2-9B,gemma2_9b_math_ctx8192_d90_s1,math,8192,7917,90,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,True,success,NEBULA-3186,,,3.212,4.981,27.363
+Gemma2-9B,gemma2_9b_math_ctx8192_d90_s1,math,8192,7917,90,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,3.205,4.992,27.363
+Gemma2-9B,gemma2_9b_literature_ctx4096_d10_s0,literature,4096,3858,10,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.198,13.357,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d10_s0,literature,4096,3858,10,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,Context (one (// _per.,,,1.95,8.207,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d10_s0,literature,4096,3858,10,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"**Please provide the following command, and then tell me the number of the",,,1.949,8.21,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d10_s0,literature,4096,3858,10,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"Keras-10, **"" (e.c",,,1.948,8.212,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d10_s0,literature,4096,3858,10,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,1.948,8.216,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d10_s1,literature,4096,3859,10,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.196,13.382,22.165
+Gemma2-9B,gemma2_9b_literature_ctx4096_d10_s1,literature,4096,3859,10,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,assert epoch. something like: ** *4:,,,1.948,8.214,22.165
+Gemma2-9B,gemma2_9b_literature_ctx4096_d10_s1,literature,4096,3859,10,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,``` **NOTE: A few more likely to learn more than 3,,,1.95,8.207,22.165
+Gemma2-9B,gemma2_9b_literature_ctx4096_d10_s1,literature,4096,3859,10,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,``` **Please provide the following query to get the following answers from a,,,1.948,8.216,22.165
+Gemma2-9B,gemma2_9b_literature_ctx4096_d10_s1,literature,4096,3859,10,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,1.948,8.213,22.165
+Gemma2-9B,gemma2_9b_literature_ctx4096_d50_s0,literature,4096,3858,50,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.194,13.395,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d50_s0,literature,4096,3858,50,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"context. ""a maximum:bot. consider sentence, for the",,,1.952,8.197,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d50_s0,literature,4096,3858,50,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"""The following is the beginning of the VIMCO (very short for",,,1.95,8.206,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d50_s0,literature,4096,3858,50,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,``` That is a ``` The following is the full context,,,1.95,8.206,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d50_s0,literature,4096,3858,50,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,1.95,8.205,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d50_s1,literature,4096,3859,50,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.197,13.371,22.165
+Gemma2-9B,gemma2_9b_literature_ctx4096_d50_s1,literature,4096,3859,50,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"stdlib (for lit-and% (IT by """,,,1.954,8.186,22.165
+Gemma2-9B,gemma2_9b_literature_ctx4096_d50_s1,literature,4096,3859,50,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"The following are the following list of answers, and the following are the follo",,,1.953,8.195,22.165
+Gemma2-9B,gemma2_9b_literature_ctx4096_d50_s1,literature,4096,3859,50,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,That is all the following are the full text of a text about a few,,,1.952,8.197,22.165
+Gemma2-9B,gemma2_9b_literature_ctx4096_d50_s1,literature,4096,3859,50,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,1.952,8.198,22.165
+Gemma2-9B,gemma2_9b_literature_ctx4096_d90_s0,literature,4096,3858,90,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.204,13.294,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d90_s0,literature,4096,3858,90,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,""" ( author: * (a, it'PBL",,,1.952,8.196,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d90_s0,literature,4096,3858,90,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"""Aurora "" The full text body (regarding the following",,,1.956,8.18,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d90_s0,literature,4096,3858,90,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"""The full text provided is not sure, but you'Q You",,,1.954,8.187,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d90_s0,literature,4096,3858,90,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,1.955,8.185,22.164
+Gemma2-9B,gemma2_9b_literature_ctx4096_d90_s1,literature,4096,3859,90,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.2,13.335,22.165
+Gemma2-9B,gemma2_9b_literature_ctx4096_d90_s1,literature,4096,3859,90,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,", from the \ The (l Context",,,1.957,8.177,22.165
+Gemma2-9B,gemma2_9b_literature_ctx4096_d90_s1,literature,4096,3859,90,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"""NEBULA-56 (Regarding, That's",,,1.955,8.185,22.165
+Gemma2-9B,gemma2_9b_literature_ctx4096_d90_s1,literature,4096,3859,90,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"""The full text is the following: '\""You can''",,,1.957,8.177,22.165
+Gemma2-9B,gemma2_9b_literature_ctx4096_d90_s1,literature,4096,3859,90,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,1.954,8.187,22.165
+Gemma2-9B,gemma2_9b_literature_ctx6144_d10_s0,literature,6144,5748,10,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.646,9.722,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d10_s0,literature,6144,5748,10,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,ful: few-00014 f__': __( ```,,,2.574,6.216,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d10_s0,literature,6144,5748,10,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,'20000777677777,,,2.573,6.218,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d10_s0,literature,6144,5748,10,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"'\""D C(T_at_asf 77bitField",,,2.573,6.217,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d10_s0,literature,6144,5748,10,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,2.57,6.227,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d10_s1,literature,6144,5749,10,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.647,9.713,24.585
+Gemma2-9B,gemma2_9b_literature_ctx6144_d10_s1,literature,6144,5749,10,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"Here, k 0120095mph.00",,,2.571,6.222,24.585
+Gemma2-9B,gemma2_9b_literature_ctx6144_d10_s1,literature,6144,5749,10,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"(Hint: ""it means that the full-by-**then-",,,2.574,6.215,24.585
+Gemma2-9B,gemma2_9b_literature_ctx6144_d10_s1,literature,6144,5749,10,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"NEbitFieldbitField operator (Hint: ""there taking-",,,2.569,6.227,24.585
+Gemma2-9B,gemma2_9b_literature_ctx6144_d10_s1,literature,6144,5749,10,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,2.576,6.211,24.585
+Gemma2-9B,gemma2_9b_literature_ctx6144_d50_s0,literature,6144,5748,50,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.642,9.742,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d50_s0,literature,6144,5748,50,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"The author, the one-0564. The",,,2.568,6.231,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d50_s0,literature,6144,5748,50,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,'ber_answer_ Here's the full text from which the,,,2.568,6.232,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d50_s0,literature,6144,5748,50,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"'Remember, the full ' (Regarding the most likely reason (regarding",,,2.567,6.232,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d50_s0,literature,6144,5748,50,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,2.568,6.231,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d50_s1,literature,6144,5749,50,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.642,9.745,24.585
+Gemma2-9B,gemma2_9b_literature_ctx6144_d50_s1,literature,6144,5749,50,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"1 as e(with ar The term, and why?",,,2.568,6.23,24.585
+Gemma2-9B,gemma2_9b_literature_ctx6144_d50_s1,literature,6144,5749,50,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,""" 3-PRE-1<1000 Blum, in",,,2.567,6.233,24.585
+Gemma2-9B,gemma2_9b_literature_ctx6144_d50_s1,literature,6144,5749,50,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"""PRECEDING, but not less than ""The",,,2.57,6.226,24.585
+Gemma2-9B,gemma2_9b_literature_ctx6144_d50_s1,literature,6144,5749,50,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,2.567,6.234,24.585
+Gemma2-9B,gemma2_9b_literature_ctx6144_d90_s0,literature,6144,5748,90,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.644,9.733,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d90_s0,literature,6144,5748,90,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"``` The context期刊论文 %HasRequiresApi Remember, The",,,2.566,6.236,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d90_s0,literature,6144,5748,90,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,'ceptAndEndTagAndEndTagAndEndTagAndEndTagAndEndTagAndEndTagAndEndTagAndEndTagAnd,,,2.567,6.232,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d90_s0,literature,6144,5748,90,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,``` ``` The following sentence is the full context of the given sentence,,,2.568,6.23,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d90_s0,literature,6144,5748,90,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,2.568,6.229,24.584
+Gemma2-9B,gemma2_9b_literature_ctx6144_d90_s1,literature,6144,5749,90,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.648,9.707,24.585
+Gemma2-9B,gemma2_9b_literature_ctx6144_d90_s1,literature,6144,5749,90,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"Whichside(001076 The ویکی‌پدیای, it'",,,2.567,6.234,24.585
+Gemma2-9B,gemma2_9b_literature_ctx6144_d90_s1,literature,6144,5749,90,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"'Nebula, the , as you are likely",,,2.574,6.215,24.585
+Gemma2-9B,gemma2_9b_literature_ctx6144_d90_s1,literature,6144,5749,90,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"At the end of the beginning, the answer string is:",,,2.571,6.224,24.585
+Gemma2-9B,gemma2_9b_literature_ctx6144_d90_s1,literature,6144,5749,90,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,2.572,6.222,24.585
+Gemma2-9B,gemma2_9b_literature_ctx8192_d10_s0,literature,8192,7638,10,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,2.046,7.819,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d10_s0,literature,8192,7638,10,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"** al, 07div: (C,day,",,,3.125,5.119,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d10_s0,literature,8192,7638,10,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"Please, it's tbd 't't",,,3.121,5.127,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d10_s0,literature,8192,7638,10,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,``` It's t 'tI't,,,3.125,5.12,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d10_s0,literature,8192,7638,10,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,3.13,5.112,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d10_s1,literature,8192,7639,10,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,2.049,7.81,27.006
+Gemma2-9B,gemma2_9b_literature_ctx8192_d10_s1,literature,8192,7639,10,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"0's's-IAndroidJUnit__full,the ##",,,3.13,5.111,27.006
+Gemma2-9B,gemma2_9b_literature_ctx8192_d10_s1,literature,8192,7639,10,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,0969609'bejar.tIbd4,,,3.118,5.131,27.006
+Gemma2-9B,gemma2_9b_literature_ctx8192_d10_s1,literature,8192,7639,10,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,099944950506962,,,3.129,5.113,27.006
+Gemma2-9B,gemma2_9b_literature_ctx8192_d10_s1,literature,8192,7639,10,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,3.124,5.122,27.006
+Gemma2-9B,gemma2_9b_literature_ctx8192_d50_s0,literature,8192,7638,50,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,2.061,7.764,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d50_s0,literature,8192,7638,50,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,The 1 0 Waldriver 20 (,,,3.113,5.139,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d50_s0,literature,8192,7638,50,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"""You can' ""The following is the full "" """,,,3.125,5.12,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d50_s0,literature,8192,7638,50,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,'BECAUSE YOU' I'd4679,,,3.124,5.121,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d50_s0,literature,8192,7638,50,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,3.116,5.135,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d50_s1,literature,8192,7639,50,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,2.052,7.799,27.006
+Gemma2-9B,gemma2_9b_literature_ctx8192_d50_s1,literature,8192,7639,50,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"(and, The passage, sentence's [",,,3.128,5.114,27.006
+Gemma2-9B,gemma2_9b_literature_ctx8192_d50_s1,literature,8192,7639,50,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,NEB Please note that the following sentence is the full context as a,,,3.124,5.122,27.006
+Gemma2-9B,gemma2_9b_literature_ctx8192_d50_s1,literature,8192,7639,50,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,NEB The full text of the passage is provided as a multi-,,,3.127,5.116,27.006
+Gemma2-9B,gemma2_9b_literature_ctx8192_d50_s1,literature,8192,7639,50,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,3.127,5.117,27.006
+Gemma2-9B,gemma2_9b_literature_ctx8192_d90_s0,literature,8192,7638,90,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,2.059,7.77,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d90_s0,literature,8192,7638,90,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,at first- 0715 F 001.,,,3.123,5.123,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d90_s0,literature,8192,7638,90,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,'1. The following are the first sentence of body_size:,,,3.114,5.138,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d90_s0,literature,8192,7638,90,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"""Aurora, you are feeling's end-to be willing to be",,,3.118,5.131,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d90_s0,literature,8192,7638,90,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,3.125,5.12,27.005
+Gemma2-9B,gemma2_9b_literature_ctx8192_d90_s1,literature,8192,7639,90,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,2.055,7.786,27.006
+Gemma2-9B,gemma2_9b_literature_ctx8192_d90_s1,literature,8192,7639,90,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,Cunha(uxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxxuxxxx,,,3.126,5.119,27.006
+Gemma2-9B,gemma2_9b_literature_ctx8192_d90_s1,literature,8192,7639,90,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"""T *From the following questions: (T be",,,3.128,5.115,27.006
+Gemma2-9B,gemma2_9b_literature_ctx8192_d90_s1,literature,8192,7639,90,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"""Needing to write a good- While you are at first,",,,3.12,5.128,27.006
+Gemma2-9B,gemma2_9b_literature_ctx8192_d90_s1,literature,8192,7639,90,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,3.126,5.119,27.006
+Gemma2-9B,gemma2_9b_science_ctx4096_d10_s0,science,4096,3963,10,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.208,13.247,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d10_s0,science,4096,3963,10,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,text: Question 3 er: 's=<process.,,,1.978,8.087,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d10_s0,science,4096,3963,10,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,1.20037749 That is the end,,,1.982,8.074,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d10_s0,science,4096,3963,10,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,Please provide me with the following Cistalking-as-a-,,,1.978,8.089,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d10_s0,science,4096,3963,10,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,1.984,8.063,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d10_s1,science,4096,3964,10,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.208,13.247,22.3
+Gemma2-9B,gemma2_9b_science_ctx4096_d10_s1,science,4096,3964,10,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"** standsIsContent The answer, , NE. Let",,,1.981,8.075,22.3
+Gemma2-9B,gemma2_9b_science_ctx4096_d10_s1,science,4096,3964,10,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,neve-3186 Give me the following sentence from which,,,1.983,8.069,22.3
+Gemma2-9B,gemma2_9b_science_ctx4096_d10_s1,science,4096,3964,10,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,nebula: ` The given ` The given paragraph,,,1.982,8.073,22.3
+Gemma2-9B,gemma2_9b_science_ctx4096_d10_s1,science,4096,3964,10,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,1.979,8.086,22.3
+Gemma2-9B,gemma2_9b_science_ctx4096_d50_s0,science,4096,3963,50,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.211,13.216,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d50_s0,science,4096,3963,50,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,(sfrain: The The text: list:,,,1.98,8.081,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d50_s0,science,4096,3963,50,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,AURORA. **Context-based on a few things (regarding the,,,1.981,8.076,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d50_s0,science,4096,3963,50,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,A ``` ``` The text provides no further context 'Aurora,,,1.982,8.072,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d50_s0,science,4096,3963,50,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,1.981,8.075,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d50_s1,science,4096,3964,50,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.21,13.225,22.3
+Gemma2-9B,gemma2_9b_science_ctx4096_d50_s1,science,4096,3964,50,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"A3300001 javax See, as",,,1.983,8.069,22.3
+Gemma2-9B,gemma2_9b_science_ctx4096_d50_s1,science,4096,3964,50,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,`NEB-70 The final answer: Q.,,,1.985,8.06,22.3
+Gemma2-9B,gemma2_9b_science_ctx4096_d50_s1,science,4096,3964,50,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,True,success,"""NEBULA-3186"" Please re-order",,,1.98,8.081,22.3
+Gemma2-9B,gemma2_9b_science_ctx4096_d50_s1,science,4096,3964,50,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,1.984,8.066,22.3
+Gemma2-9B,gemma2_9b_science_ctx4096_d90_s0,science,4096,3963,90,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.206,13.269,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d90_s0,science,4096,3963,90,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"toid (at: Itber, a statement, as a `",,,1.977,8.091,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d90_s0,science,4096,3963,90,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"A few years, the following sentence from which you can re- Answer",,,1.973,8.109,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d90_s0,science,4096,3963,90,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"""It's the following: 'Aurora Please provide me",,,1.972,8.113,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d90_s0,science,4096,3963,90,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,1.977,8.092,22.298
+Gemma2-9B,gemma2_9b_science_ctx4096_d90_s1,science,4096,3964,90,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.205,13.277,22.3
+Gemma2-9B,gemma2_9b_science_ctx4096_d90_s1,science,4096,3964,90,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"(one, they said: ```, v (",,,1.976,8.096,22.3
+Gemma2-9B,gemma2_9b_science_ctx4096_d90_s1,science,4096,3964,90,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"""The following sentence is a 5-FieldBuilder. 'ungkinkan,",,,1.981,8.076,22.3
+Gemma2-9B,gemma2_9b_science_ctx4096_d90_s1,science,4096,3964,90,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"""The following is the content of the entire text (e.g.,",,,1.982,8.073,22.3
+Gemma2-9B,gemma2_9b_science_ctx4096_d90_s1,science,4096,3964,90,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,1.981,8.078,22.3
+Gemma2-9B,gemma2_9b_science_ctx6144_d10_s0,science,6144,6096,10,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.72,9.302,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d10_s0,science,6144,6096,10,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"bam. The higher, (be begin, 1 by",,,2.674,5.983,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d10_s0,science,6144,6096,10,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"(Hint: You's-day-over-feira sure,",,,2.677,5.977,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d10_s0,science,6144,6096,10,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,(Hint: Consider the following points (regarding the following (Hint1,,,2.67,5.992,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d10_s0,science,6144,6096,10,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,2.672,5.988,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d10_s1,science,6144,6097,10,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.726,9.272,25.032
+Gemma2-9B,gemma2_9b_science_ctx6144_d10_s1,science,6144,6097,10,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,f91 01: 00thier,,,2.681,5.969,25.032
+Gemma2-9B,gemma2_9b_science_ctx6144_d10_s1,science,6144,6097,10,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,**[WRITE Rたた урна vuabf (that is to be regarded,,,2.676,5.978,25.032
+Gemma2-9B,gemma2_9b_science_ctx6144_d10_s1,science,6144,6097,10,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,NEbitFieldbitField68766 as judged by the following:,,,2.681,5.969,25.032
+Gemma2-9B,gemma2_9b_science_ctx6144_d10_s1,science,6144,6097,10,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,2.679,5.972,25.032
+Gemma2-9B,gemma2_9b_science_ctx6144_d50_s0,science,6144,6096,50,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.724,9.283,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d50_s0,science,6144,6096,50,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"J's, the following, the 0's' (one",,,2.67,5.993,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d50_s0,science,6144,6096,50,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,I't (Hint: The following text (can's,,,2.672,5.989,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d50_s0,science,6144,6096,50,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"A (Regarding, The following is the 'day-",,,2.668,5.997,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d50_s0,science,6144,6096,50,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,2.673,5.986,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d50_s1,science,6144,6097,50,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.724,9.281,25.032
+Gemma2-9B,gemma2_9b_science_ctx6144_d50_s1,science,6144,6097,50,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,O T >>> I'full search=,,,2.676,5.979,25.032
+Gemma2-9B,gemma2_9b_science_ctx6144_d50_s1,science,6144,6097,50,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,I'TPMailer pace **8t,,,2.68,5.97,25.032
+Gemma2-9B,gemma2_9b_science_ctx6144_d50_s1,science,6144,6097,50,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,```T **87P ** 000,,,2.676,5.979,25.032
+Gemma2-9B,gemma2_9b_science_ctx6144_d50_s1,science,6144,6097,50,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,2.675,5.981,25.032
+Gemma2-9B,gemma2_9b_science_ctx6144_d90_s0,science,6144,6096,90,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.718,9.313,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d90_s0,science,6144,6096,90,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"F 1: ** 14, please: ""1",,,2.668,5.998,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d90_s0,science,6144,6096,90,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,(Regarding the following is the following: 0f (Hint,,,2.668,5.997,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d90_s0,science,6144,6096,90,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,(Hint: The following is the beginning of the following (likely the following,,,2.668,5.998,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d90_s0,science,6144,6096,90,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,2.666,6.002,25.031
+Gemma2-9B,gemma2_9b_science_ctx6144_d90_s1,science,6144,6097,90,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.725,9.275,25.032
+Gemma2-9B,gemma2_9b_science_ctx6144_d90_s1,science,6144,6097,90,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,", The The following as it's, who",,,2.675,5.982,25.032
+Gemma2-9B,gemma2_9b_science_ctx6144_d90_s1,science,6144,6097,90,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,' Numerade It's a (Hint: Remember,,,2.68,5.97,25.032
+Gemma2-9B,gemma2_9b_science_ctx6144_d90_s1,science,6144,6097,90,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"@col-regarding, Please remember that the following is a",,,2.678,5.974,25.032
+Gemma2-9B,gemma2_9b_science_ctx6144_d90_s1,science,6144,6097,90,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,2.678,5.976,25.032
+Gemma2-9B,gemma2_9b_science_ctx8192_d10_s0,science,8192,8040,10,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,2.144,7.462,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d10_s0,science,8192,8040,10,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"al (000442027three, the answer",,,3.242,4.936,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d10_s0,science,8192,8040,10,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"` Please, the following (Regarding The fabled",,,3.24,4.938,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d10_s0,science,8192,8040,10,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"`672 Please, the following statement as a",,,3.244,4.933,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d10_s0,science,8192,8040,10,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,3.249,4.925,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d10_s1,science,8192,8041,10,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,2.157,7.416,27.522
+Gemma2-9B,gemma2_9b_science_ctx8192_d10_s1,science,8192,8041,10,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,期刊论文! ##03Which?bz: 768a,,,3.256,4.914,27.522
+Gemma2-9B,gemma2_9b_science_ctx8192_d10_s1,science,8192,8041,10,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,**72 кро mà t2 JIC,,,3.253,4.918,27.522
+Gemma2-9B,gemma2_9b_science_ctx8192_d10_s1,science,8192,8041,10,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,**72 кроца+:+37 glab defaultstate defaultstate defaultstate defaultstate,,,3.253,4.919,27.522
+Gemma2-9B,gemma2_9b_science_ctx8192_d10_s1,science,8192,8041,10,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,3.253,4.919,27.522
+Gemma2-9B,gemma2_9b_science_ctx8192_d50_s0,science,8192,8040,50,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,2.144,7.463,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d50_s0,science,8192,8040,50,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"Consider4! hard, the following ## The following",,,3.242,4.935,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d50_s0,science,8192,8040,50,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,` ``` Please feel The following ``` Please feel,,,3.238,4.942,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d50_s0,science,8192,8040,50,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,`7FbitFieldbitFieldbitFieldbitFieldbitField du That is the,,,3.242,4.935,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d50_s0,science,8192,8040,50,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,3.24,4.938,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d50_s1,science,8192,8041,50,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,2.153,7.431,27.522
+Gemma2-9B,gemma2_9b_science_ctx8192_d50_s1,science,8192,8041,50,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,The following standard The following \Whoever pi (0,,,3.251,4.921,27.522
+Gemma2-9B,gemma2_9b_science_ctx8192_d50_s1,science,8192,8041,50,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"""NEBODEbitFieldbitFieldbitFieldwriteHead (Regarding the The",,,3.247,4.928,27.522
+Gemma2-9B,gemma2_9b_science_ctx8192_d50_s1,science,8192,8041,50,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,` The following ``` Please provide the full text to write-,,,3.246,4.928,27.522
+Gemma2-9B,gemma2_9b_science_ctx8192_d50_s1,science,8192,8041,50,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,3.248,4.925,27.522
+Gemma2-9B,gemma2_9b_science_ctx8192_d90_s0,science,8192,8040,90,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,2.141,7.473,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d90_s0,science,8192,8040,90,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"labs. String The last, insuffisamment likely, Subject",,,3.237,4.942,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d90_s0,science,8192,8040,90,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"""Aurora The full fI The following",,,3.24,4.939,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d90_s0,science,8192,8040,90,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"""Aurora 'I' The following",,,3.235,4.945,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d90_s0,science,8192,8040,90,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,3.237,4.943,27.521
+Gemma2-9B,gemma2_9b_science_ctx8192_d90_s1,science,8192,8041,90,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,2.147,7.451,27.522
+Gemma2-9B,gemma2_9b_science_ctx8192_d90_s1,science,8192,8041,90,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"Why, and(justified The following, and 's",,,3.249,4.925,27.522
+Gemma2-9B,gemma2_9b_science_ctx8192_d90_s1,science,8192,8041,90,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,'t's'tregarding The following Please ',,,3.247,4.928,27.522
+Gemma2-9B,gemma2_9b_science_ctx8192_d90_s1,science,8192,8041,90,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,'NEB I's's,,,3.249,4.925,27.522
+Gemma2-9B,gemma2_9b_science_ctx8192_d90_s1,science,8192,8041,90,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186 This passage discusses experimental,,,3.25,4.923,27.522
+Gemma2-9B,gemma2_9b_code_ctx4096_d10_s0,code,4096,3858,10,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.199,13.346,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d10_s0,code,4096,3858,10,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,", This israwDesc. ` Context",,,1.95,8.204,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d10_s0,code,4096,3858,10,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,<brWriteTagHelperWriteTagHelperWriteTagHelperWriteTagHelperWriteTagHelperWriteTa,,,1.951,8.2,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d10_s0,code,4096,3858,10,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,<brWriteTagHelperWriteTagHelperWriteTagHelperWriteTagHelperWriteTagHelperWriteTa,,,1.953,8.194,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d10_s0,code,4096,3858,10,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,1.953,8.191,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d10_s1,code,4096,3859,10,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.198,13.354,22.165
+Gemma2-9B,gemma2_9b_code_ctx4096_d10_s1,code,4096,3859,10,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,. Context 1: > **11649,,,1.953,8.194,22.165
+Gemma2-9B,gemma2_9b_code_ctx4096_d10_s1,code,4096,3859,10,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,<br> The hidden_12364. Answer,,,1.953,8.192,22.165
+Gemma2-9B,gemma2_9b_code_ctx4096_d10_s1,code,4096,3859,10,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"<?> > The question is out of the provided, and provide a",,,1.955,8.185,22.165
+Gemma2-9B,gemma2_9b_code_ctx4096_d10_s1,code,4096,3859,10,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,1.951,8.201,22.165
+Gemma2-9B,gemma2_9b_code_ctx4096_d50_s0,code,4096,3858,50,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.2,13.329,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d50_s0,code,4096,3858,50,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"The simplestsi__771 (one, and byo,",,,1.954,8.189,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d50_s0,code,4096,3858,50,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,The text body. The question-sizedu21249,,,1.953,8.193,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d50_s0,code,4096,3858,50,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"""Aurora"" The text body rerrHandler_01237",,,1.954,8.188,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d50_s0,code,4096,3858,50,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,1.956,8.179,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d50_s1,code,4096,3859,50,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.2,13.331,22.165
+Gemma2-9B,gemma2_9b_code_ctx4096_d50_s1,code,4096,3859,50,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,", and the above the only to u 01. Answer:",,,1.96,8.164,22.165
+Gemma2-9B,gemma2_9b_code_ctx4096_d50_s1,code,4096,3859,50,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,The answer is: NEB1234599br,,,1.954,8.188,22.165
+Gemma2-9B,gemma2_9b_code_ctx4096_d50_s1,code,4096,3859,50,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,NEB1237 The answer is t,,,1.949,8.208,22.165
+Gemma2-9B,gemma2_9b_code_ctx4096_d50_s1,code,4096,3859,50,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,1.954,8.188,22.165
+Gemma2-9B,gemma2_9b_code_ctx4096_d90_s0,code,4096,3858,90,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.2,13.332,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d90_s0,code,4096,3858,90,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"sentence sentences, Context, and, and of Sentence 8",,,1.951,8.202,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d90_s0,code,4096,3858,90,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,01111123 The question appears in the context,,,1.949,8.209,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d90_s0,code,4096,3858,90,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,Answer: ``` 0123 ``` The system will,,,1.955,8.185,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d90_s0,code,4096,3858,90,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,1.952,8.198,22.164
+Gemma2-9B,gemma2_9b_code_ctx4096_d90_s1,code,4096,3859,90,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.2,13.329,22.165
+Gemma2-9B,gemma2_9b_code_ctx4096_d90_s1,code,4096,3859,90,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"Context, gedMigrationBuilder, and1117.",,,1.954,8.188,22.165
+Gemma2-9B,gemma2_9b_code_ctx4096_d90_s1,code,4096,3859,90,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"Do not use any other information not provided in the given context, and only",,,1.951,8.201,22.165
+Gemma2-9B,gemma2_9b_code_ctx4096_d90_s1,code,4096,3859,90,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"Do not end the text, and please remember that the answer should be found",,,1.953,8.194,22.165
+Gemma2-9B,gemma2_9b_code_ctx4096_d90_s1,code,4096,3859,90,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,1.954,8.188,22.165
+Gemma2-9B,gemma2_9b_code_ctx6144_d10_s0,code,6144,5748,10,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.64,9.753,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d10_s0,code,6144,5748,10,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"""01010000101",,,2.569,6.228,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d10_s0,code,6144,5748,10,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"""AURT650007701015",,,2.563,6.244,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d10_s0,code,6144,5748,10,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"""AURT650100 Please provide their full",,,2.566,6.236,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d10_s0,code,6144,5748,10,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,2.565,6.238,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d10_s1,code,6144,5749,10,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.64,9.754,24.585
+Gemma2-9B,gemma2_9b_code_ctx6144_d10_s1,code,6144,5749,10,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"FROM, The length: 677",,,2.565,6.238,24.585
+Gemma2-9B,gemma2_9b_code_ctx6144_d10_s1,code,6144,5749,10,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,b ModelAndView [要要我 want to write offsurdstransQ,,,2.567,6.233,24.585
+Gemma2-9B,gemma2_9b_code_ctx6144_d10_s1,code,6144,5749,10,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,Do not change the V2004769 (,,,2.563,6.244,24.585
+Gemma2-9B,gemma2_9b_code_ctx6144_d10_s1,code,6144,5749,10,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,2.562,6.246,24.585
+Gemma2-9B,gemma2_9b_code_ctx6144_d50_s0,code,6144,5748,50,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.635,9.788,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d50_s0,code,6144,5748,50,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,From: 011 d$1. ```AndroidJUnitAndroidJUnitAndroidJUnit,,,2.562,6.245,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d50_s0,code,6144,5748,50,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,'t 12300 `tArgumentParser.,,,2.562,6.245,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d50_s0,code,6144,5748,50,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,'0123.0007 labsWillAppear,,,2.558,6.255,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d50_s0,code,6144,5748,50,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,2.559,6.253,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d50_s1,code,6144,5749,50,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.636,9.78,24.585
+Gemma2-9B,gemma2_9b_code_ctx6144_d50_s1,code,6144,5749,50,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,This. 0F35311. [0,,,2.565,6.239,24.585
+Gemma2-9B,gemma2_9b_code_ctx6144_d50_s1,code,6144,5749,50,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"NEB123 The full answer is: ""NE",,,2.563,6.242,24.585
+Gemma2-9B,gemma2_9b_code_ctx6144_d50_s1,code,6144,5749,50,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,True,success,NEBULA-3186,,,2.567,6.233,24.585
+Gemma2-9B,gemma2_9b_code_ctx6144_d50_s1,code,6144,5749,50,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,2.568,6.23,24.585
+Gemma2-9B,gemma2_9b_code_ctx6144_d90_s0,code,6144,5748,90,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,1.64,9.758,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d90_s0,code,6144,5748,90,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"The's: 정, 0121014",,,2.569,6.228,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d90_s0,code,6144,5748,90,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,> 0123072. > 0,,,2.567,6.232,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d90_s0,code,6144,5748,90,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,01000 Answer: Subject:,,,2.57,6.226,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d90_s0,code,6144,5748,90,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,2.565,6.238,24.584
+Gemma2-9B,gemma2_9b_code_ctx6144_d90_s1,code,6144,5749,90,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,1.643,9.739,24.585
+Gemma2-9B,gemma2_9b_code_ctx6144_d90_s1,code,6144,5749,90,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"(120[0, and WaitGroupWaitGroupWaitGroup, the",,,2.567,6.233,24.585
+Gemma2-9B,gemma2_9b_code_ctx6144_d90_s1,code,6144,5749,90,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,"""NEB 3147, 01012",,,2.57,6.227,24.585
+Gemma2-9B,gemma2_9b_code_ctx6144_d90_s1,code,6144,5749,90,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,NEB 0100%3D The answer should be,,,2.568,6.23,24.585
+Gemma2-9B,gemma2_9b_code_ctx6144_d90_s1,code,6144,5749,90,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,2.565,6.237,24.585
+Gemma2-9B,gemma2_9b_code_ctx8192_d10_s0,code,8192,7638,10,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,2.052,7.796,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d10_s0,code,8192,7638,10,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,7'tt (from (0. Subjects:,,,3.115,5.136,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d10_s0,code,8192,7638,10,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,61 [antMatchersantMatchersantMatchersantMatchersantMatchersantMatcherst,,,3.119,5.13,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d10_s0,code,8192,7638,10,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"Please note that the ""it's 00049",,,3.124,5.122,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d10_s0,code,8192,7638,10,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,3.122,5.125,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d10_s1,code,8192,7639,10,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,2.047,7.817,27.006
+Gemma2-9B,gemma2_9b_code_ctx8192_d10_s1,code,8192,7639,10,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,072_place I50+1.asne,,,3.128,5.114,27.006
+Gemma2-9B,gemma2_9b_code_ctx8192_d10_s1,code,8192,7639,10,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,000{Ne mecánica 77492 The,,,3.121,5.126,27.006
+Gemma2-9B,gemma2_9b_code_ctx8192_d10_s1,code,8192,7639,10,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,Nebu34500 (Hint: the author's,,,3.126,5.119,27.006
+Gemma2-9B,gemma2_9b_code_ctx8192_d10_s1,code,8192,7639,10,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,3.125,5.12,27.006
+Gemma2-9B,gemma2_9b_code_ctx8192_d50_s0,code,8192,7638,50,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,2.048,7.814,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d50_s0,code,8192,7638,50,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,? frol out from Faulkner: find >>> (f,,,3.116,5.134,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d50_s0,code,8192,7638,50,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,``` **020123.,,,3.116,5.135,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d50_s0,code,8192,7638,50,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"``` ""The Hidden List of the ""system. """,,,3.119,5.13,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d50_s0,code,8192,7638,50,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,3.121,5.126,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d50_s1,code,8192,7639,50,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,2.058,7.775,27.006
+Gemma2-9B,gemma2_9b_code_ctx8192_d50_s1,code,8192,7639,50,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"The following on, 043`All99:0",,,3.127,5.116,27.006
+Gemma2-9B,gemma2_9b_code_ctx8192_d50_s1,code,8192,7639,50,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,NEB 31239writeField(),,,3.13,5.112,27.006
+Gemma2-9B,gemma2_9b_code_ctx8192_d50_s1,code,8192,7639,50,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,True,success,NEBULA-3186,,,3.124,5.122,27.006
+Gemma2-9B,gemma2_9b_code_ctx8192_d50_s1,code,8192,7639,50,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,3.123,5.123,27.006
+Gemma2-9B,gemma2_9b_code_ctx8192_d90_s0,code,8192,7638,90,0,AURORA-7749,fp16,fp16,16,16,16,,0,True,success,AURORA-7749,,,2.042,7.834,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d90_s0,code,8192,7638,90,0,AURORA-7749,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,"5: 0. 's,hamcrest.",,,3.122,5.124,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d90_s0,code,8192,7638,90,0,AURORA-7749,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,At 020033. I't__(,,,3.116,5.135,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d90_s0,code,8192,7638,90,0,AURORA-7749,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,"At most, the full text of the ""system_set_id",,,3.12,5.128,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d90_s0,code,8192,7638,90,0,AURORA-7749,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,AURORA-7749,,,3.114,5.138,27.005
+Gemma2-9B,gemma2_9b_code_ctx8192_d90_s1,code,8192,7639,90,1,NEBULA-3186,fp16,fp16,16,16,16,,0,True,success,NEBULA-3186,,,2.056,7.781,27.006
+Gemma2-9B,gemma2_9b_code_ctx8192_d90_s1,code,8192,7639,90,1,NEBULA-3186,uniform_k2_v2_rw128,uniform,2,2,2,,128,False,success,0 0 148200@staticmethod:,,,3.125,5.12,27.006
+Gemma2-9B,gemma2_9b_code_ctx8192_d90_s1,code,8192,7639,90,1,NEBULA-3186,uniform_k4_v2_rw128,uniform,4,2,4,,128,False,success,70037's answer fiji-31,,,3.128,5.115,27.006
+Gemma2-9B,gemma2_9b_code_ctx8192_d90_s1,code,8192,7639,90,1,NEBULA-3186,uniform_k6_v2_rw128,uniform,6,2,6,,128,False,success,'02000.,,,3.125,5.119,27.006
+Gemma2-9B,gemma2_9b_code_ctx8192_d90_s1,code,8192,7639,90,1,NEBULA-3186,uniform_k6_v4_rw128,uniform,6,4,6,,128,True,success,NEBULA-3186,,,3.128,5.115,27.006

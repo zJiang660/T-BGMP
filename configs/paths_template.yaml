@@ -1,0 +1,3 @@
+project_root: /path/to/T-BGMP
+model_root: /path/to/models
+output_root: /path/to/outputs

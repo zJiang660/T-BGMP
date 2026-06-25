@@ -1,0 +1,15 @@
+model,case_id,topk_k,protected_layers,kv_saving
+Qwen2.5-14B,code_ctx4096_d90_s0,1,[0],83.6231
+Qwen2.5-14B,code_ctx6144_d10_s0,1,[0],84.5264
+Qwen2.5-14B,code_ctx6144_d90_s0,1,[0],84.5264
+Qwen2.5-14B,code_ctx8192_d10_s1,1,[0],84.9774
+Qwen2.5-14B,literature_ctx4096_d50_s1,1,[0],83.6238
+Qwen2.5-14B,literature_ctx6144_d10_s0,1,[0],84.5261
+Qwen2.5-14B,literature_ctx6144_d90_s0,1,[0],84.5264
+Qwen2.5-14B,literature_ctx6144_d90_s1,1,[0],84.5267
+Qwen2.5-14B,literature_ctx8192_d90_s1,1,[0],84.9774
+Qwen2.5-14B,math_ctx4096_d50_s0,1,[0],83.6231
+Qwen2.5-14B,math_ctx4096_d90_s0,1,[0],83.6238
+Qwen2.5-14B,math_ctx8192_d90_s1,3,"[0, 46, 2]",84.2084
+Qwen2.5-14B,science_ctx4096_d50_s1,1,[0],83.6238
+Qwen2.5-14B,science_ctx6144_d90_s1,1,[0],84.5267

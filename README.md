@@ -71,6 +71,23 @@ python scripts/audit_results.py
 python scripts/validate_csv_schema.py
 ```
 
+## Reproducibility Levels
+
+This repository supports reproducibility at three levels:
+
+1. **Level 1 - paper tables and figures.** Rebuild paper-facing summaries from
+   the canonical cleaned CSV files in `results/paper_tables/`.
+2. **Level 2 - case-level audit.** Recompute the main 183/183 aggregate and the
+   Gemma2 boundary numbers from sanitized case-level discovery, Top-k, control,
+   and risk files. Source file hashes are recorded without exposing source
+   paths.
+3. **Level 3 - model rerun interface.** Use the provided configs, pipeline CLI,
+   backend adapter contract, and Slurm templates with user-supplied model
+   weights, GPU environment, and a compatible KV-cache quantization backend.
+
+Level 3 is an explicit execution interface, not a claim of universal one-click
+reproduction. Model-specific cache APIs and quantizer kernels remain external.
+
 The complete model-free Stage A--F demonstration is:
 
 ```bash
@@ -91,6 +108,8 @@ configs/                Generic configs and cleaned policy examples
 data/demo/              Tiny synthetic and cleaned metadata inputs
 data/schema/            JSON schemas and result-schema notes
 results/paper_tables/   Canonical cleaned paper-ready CSV files
+results/main_evidence/  Sanitized per-case evidence for four main models
+results/supporting/     Supporting summaries and Gemma2 case-level evidence
 results/audit/          Generated audit summary and artifact hashes
 figures/paper/           Paper figures and reproduced control plot
 tables/paper/            CSV copies and generated Markdown tables
@@ -101,10 +120,22 @@ slurm/xec/               Sanitized templates only
 ## Reproducibility Note
 
 The repository includes cleaned paper-ready CSV files and scripts for
-reproducing paper tables, figures, and consistency audits. Large model
+reproducing paper tables, figures, case-level aggregates, and consistency
+audits. Large model
 checkpoints, raw cluster logs, and full raw model outputs are not included.
 Reproducing the GPU model-execution stage requires an external compatible
 KV-cache quantization runtime and independently obtained model weights.
+
+See `docs/model_setup.md` and test the runner schema with:
+
+```bash
+python experiments/run_full_pipeline.py \
+  --cases data/demo/full_runner_cases.csv \
+  --model-path /path/to/models/example \
+  --model-id example-model \
+  --output /path/to/outputs/dry_run.csv \
+  --dry-run
+```
 
 ## Safety Note
 

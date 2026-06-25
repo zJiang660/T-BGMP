@@ -1,0 +1,2 @@
+model,sensitive_cases,restored_cases,mean_first_success_k,max_first_success_k,mean_first_success_kv_saving
+Qwen2.5-3B,72,72,1.2638888888888888,6,78.609175

@@ -1,0 +1,57 @@
+model,case_id,domain,context_length,actual_context_length,depth,seed,answer,policy,policy_type,key_bits,value_bits,protected_key_bits,protected_layers,residual_window,found,status,response_excerpt,topk_k,kv_saving,runtime_s,tok_per_s,peak_gpu_gb
+Qwen2.5-14B,math_ctx4096_d50_s0,math,4096,4085,50,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed0,random1,2.0,2.0,6.0,[24],128.0,True,completed,AURORA-7749,,83.6231,3.7372,2.4082,30.1433
+Qwen2.5-14B,math_ctx4096_d50_s0,math,4096,4085,50,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed1,random1,2.0,2.0,6.0,[8],128.0,True,completed,AURORA-7749,,83.6231,3.2126,2.8015,29.8599
+Qwen2.5-14B,math_ctx4096_d50_s0,math,4096,4085,50,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed2,random1,2.0,2.0,6.0,[3],128.0,True,completed,AURORA-7749,,83.6231,3.4672,2.5958,29.7718
+Qwen2.5-14B,math_ctx4096_d50_s0,math,4096,4085,50,0,AURORA-7749,qwen25_14b_instruct_tbgmp_bottom1_keys,bottom1,2.0,2.0,6.0,[1],128.0,True,completed,AURORA-7749,,83.6231,3.1478,2.8591,29.7357
+Qwen2.5-14B,math_ctx4096_d90_s0,math,4096,4086,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed0,random1,2.0,2.0,6.0,[24],128.0,True,completed,AURORA-7749,,83.6238,2.9216,3.0805,30.1434
+Qwen2.5-14B,math_ctx4096_d90_s0,math,4096,4086,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed1,random1,2.0,2.0,6.0,[8],128.0,False,completed,AURORA7749,,83.6238,2.9729,2.691,29.86
+Qwen2.5-14B,math_ctx4096_d90_s0,math,4096,4086,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed2,random1,2.0,2.0,6.0,[3],128.0,False,completed,Aurora,,83.6238,2.3856,1.6767,29.7718
+Qwen2.5-14B,math_ctx4096_d90_s0,math,4096,4086,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_bottom1_keys,bottom1,2.0,2.0,6.0,[1],128.0,True,completed,AURORA-7749,,83.6238,3.2208,2.7943,29.7357
+Qwen2.5-14B,math_ctx8192_d90_s1,math,8192,8181,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random3_keys_seed0,random3,2.0,2.0,6.0,"[2, 24, 26]",128.0,False,completed,NEbULA,,84.2084,3.5956,1.1125,32.9213
+Qwen2.5-14B,math_ctx8192_d90_s1,math,8192,8181,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random3_keys_seed1,random3,2.0,2.0,6.0,"[4, 8, 36]",128.0,True,completed,NEBULA-3186,,84.2084,4.4891,2.0048,33.2771
+Qwen2.5-14B,math_ctx8192_d90_s1,math,8192,8181,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random3_keys_seed2,random3,2.0,2.0,6.0,"[3, 5, 23]",128.0,True,completed,NEbula-3186,,84.2084,4.7778,1.8837,32.8134
+Qwen2.5-14B,math_ctx8192_d90_s1,math,8192,8181,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_bottom3_keys,bottom3,2.0,2.0,6.0,"[34, 40, 1]",128.0,False,completed,NEbula318,,84.2084,4.513,1.5511,33.4167
+Qwen2.5-14B,literature_ctx4096_d50_s1,literature,4096,4086,50,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed0,random1,2.0,2.0,6.0,[24],128.0,False,completed,NEBULA-316,,83.6238,3.408,2.3474,30.1434
+Qwen2.5-14B,literature_ctx4096_d50_s1,literature,4096,4086,50,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed1,random1,2.0,2.0,6.0,[8],128.0,False,completed,NEBULA-3196,,83.6238,3.9378,2.2856,29.86
+Qwen2.5-14B,literature_ctx4096_d50_s1,literature,4096,4086,50,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed2,random1,2.0,2.0,6.0,[3],128.0,False,completed,NEBURA-316,,83.6238,2.7806,2.8771,29.7718
+Qwen2.5-14B,literature_ctx4096_d50_s1,literature,4096,4086,50,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_bottom1_keys,bottom1,2.0,2.0,6.0,[1],128.0,False,completed,NEBULA-31,,83.6238,2.792,2.5072,29.7357
+Qwen2.5-14B,literature_ctx6144_d10_s0,literature,6144,6132,10,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed0,random1,2.0,2.0,6.0,[24],128.0,False,completed,AUROR-7749,,84.5261,3.3549,2.6826,31.4938
+Qwen2.5-14B,literature_ctx6144_d10_s0,literature,6144,6132,10,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed1,random1,2.0,2.0,6.0,[8],128.0,False,completed,AUROR-7749,,84.5261,3.353,2.6841,31.0652
+Qwen2.5-14B,literature_ctx6144_d10_s0,literature,6144,6132,10,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed2,random1,2.0,2.0,6.0,[3],128.0,False,completed,AURORU-7749,,84.5261,3.6287,2.7558,30.933
+Qwen2.5-14B,literature_ctx6144_d10_s0,literature,6144,6132,10,0,AURORA-7749,qwen25_14b_instruct_tbgmp_bottom1_keys,bottom1,2.0,2.0,6.0,[1],128.0,False,completed,AURORAN-7749,,84.5261,3.6126,2.7681,30.8791
+Qwen2.5-14B,literature_ctx6144_d90_s0,literature,6144,6133,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed0,random1,2.0,2.0,6.0,[24],128.0,True,completed,AURORA-7749,,84.5264,3.3746,2.667,31.4948
+Qwen2.5-14B,literature_ctx6144_d90_s0,literature,6144,6133,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed1,random1,2.0,2.0,6.0,[8],128.0,True,completed,AURORA-7749,,84.5264,3.4335,2.6212,31.0652
+Qwen2.5-14B,literature_ctx6144_d90_s0,literature,6144,6133,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed2,random1,2.0,2.0,6.0,[3],128.0,False,completed,AURORA-79,,84.5264,2.9495,2.3733,30.9329
+Qwen2.5-14B,literature_ctx6144_d90_s0,literature,6144,6133,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_bottom1_keys,bottom1,2.0,2.0,6.0,[1],128.0,False,completed,AURORA-774,,84.5264,3.147,2.5421,30.8785
+Qwen2.5-14B,literature_ctx6144_d90_s1,literature,6144,6134,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed0,random1,2.0,2.0,6.0,[24],128.0,False,completed,NEBULU-186,,84.5267,3.621,2.4855,31.4939
+Qwen2.5-14B,literature_ctx6144_d90_s1,literature,6144,6134,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed1,random1,2.0,2.0,6.0,[8],128.0,False,completed,NEBULA-186,,84.5267,3.1382,2.5492,31.0653
+Qwen2.5-14B,literature_ctx6144_d90_s1,literature,6144,6134,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed2,random1,2.0,2.0,6.0,[3],128.0,False,completed,NEBULA-186,,84.5267,3.3247,2.4062,30.933
+Qwen2.5-14B,literature_ctx6144_d90_s1,literature,6144,6134,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_bottom1_keys,bottom1,2.0,2.0,6.0,[1],128.0,False,completed,NEBULA-186,,84.5267,3.2389,2.47,30.8791
+Qwen2.5-14B,literature_ctx8192_d90_s1,literature,8192,8181,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed0,random1,2.0,2.0,6.0,[24],128.0,False,completed,NEBULA-318,,84.9774,3.8172,2.0958,32.8383
+Qwen2.5-14B,literature_ctx8192_d90_s1,literature,8192,8181,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed1,random1,2.0,2.0,6.0,[8],128.0,True,completed,NEBULA-3186,,84.9774,5.284,1.7032,32.2705
+Qwen2.5-14B,literature_ctx8192_d90_s1,literature,8192,8181,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed2,random1,2.0,2.0,6.0,[3],128.0,True,completed,NEBULA-3186,,84.9774,5.4796,1.6424,32.0929
+Qwen2.5-14B,literature_ctx8192_d90_s1,literature,8192,8181,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_bottom1_keys,bottom1,2.0,2.0,6.0,[1],128.0,True,completed,NEBULA-3186,,84.9774,4.3789,2.0553,32.0213
+Qwen2.5-14B,science_ctx4096_d50_s1,science,4096,4086,50,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed0,random1,2.0,2.0,6.0,[24],128.0,False,completed,NEBULA-316,,83.6238,3.7671,2.1237,30.1434
+Qwen2.5-14B,science_ctx4096_d50_s1,science,4096,4086,50,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed1,random1,2.0,2.0,6.0,[8],128.0,True,completed,NEBULA-3186,,83.6238,3.4677,2.5954,29.86
+Qwen2.5-14B,science_ctx4096_d50_s1,science,4096,4086,50,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed2,random1,2.0,2.0,6.0,[3],128.0,False,completed,NEBULA-3196,,83.6238,2.9337,3.0677,29.7718
+Qwen2.5-14B,science_ctx4096_d50_s1,science,4096,4086,50,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_bottom1_keys,bottom1,2.0,2.0,6.0,[1],128.0,True,completed,NEBULA-3186,,83.6238,3.4382,2.6177,29.7357
+Qwen2.5-14B,science_ctx6144_d90_s1,science,6144,6134,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed0,random1,2.0,2.0,6.0,[24],128.0,False,completed,NEBULA-186,,84.5267,3.3789,2.3676,31.4939
+Qwen2.5-14B,science_ctx6144_d90_s1,science,6144,6134,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed1,random1,2.0,2.0,6.0,[8],128.0,False,completed,NEBULA-186,,84.5267,3.4291,2.333,31.0653
+Qwen2.5-14B,science_ctx6144_d90_s1,science,6144,6134,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed2,random1,2.0,2.0,6.0,[3],128.0,False,completed,NEBULA-186,,84.5267,3.4605,2.3118,30.933
+Qwen2.5-14B,science_ctx6144_d90_s1,science,6144,6134,90,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_bottom1_keys,bottom1,2.0,2.0,6.0,[1],128.0,False,completed,NEBULA-186,,84.5267,3.6537,2.1895,30.8791
+Qwen2.5-14B,code_ctx4096_d90_s0,code,4096,4085,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed0,random1,2.0,2.0,6.0,[24],128.0,True,completed,AURORA-7749,,83.6231,2.932,3.0696,30.1433
+Qwen2.5-14B,code_ctx4096_d90_s0,code,4096,4085,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed1,random1,2.0,2.0,6.0,[8],128.0,False,completed,AURORA7749,,83.6231,2.7175,2.9439,29.8599
+Qwen2.5-14B,code_ctx4096_d90_s0,code,4096,4085,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed2,random1,2.0,2.0,6.0,[3],128.0,False,completed,Aurora7749,,83.6231,2.7177,2.9437,29.7718
+Qwen2.5-14B,code_ctx4096_d90_s0,code,4096,4085,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_bottom1_keys,bottom1,2.0,2.0,6.0,[1],128.0,True,completed,Aurora-7749,,83.6231,2.9214,3.0807,29.7357
+Qwen2.5-14B,code_ctx6144_d10_s0,code,6144,6133,10,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed0,random1,2.0,2.0,6.0,[24],128.0,True,completed,AURORA-7749,,84.5264,3.371,2.6699,31.4948
+Qwen2.5-14B,code_ctx6144_d10_s0,code,6144,6133,10,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed1,random1,2.0,2.0,6.0,[8],128.0,True,completed,AURORA-7749,,84.5264,3.3687,2.6716,31.0652
+Qwen2.5-14B,code_ctx6144_d10_s0,code,6144,6133,10,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed2,random1,2.0,2.0,6.0,[3],128.0,False,completed,AURORO-7749,,84.5264,3.5934,2.7829,30.9329
+Qwen2.5-14B,code_ctx6144_d10_s0,code,6144,6133,10,0,AURORA-7749,qwen25_14b_instruct_tbgmp_bottom1_keys,bottom1,2.0,2.0,6.0,[1],128.0,True,completed,AURORA-7749,,84.5264,3.3696,2.6709,30.8785
+Qwen2.5-14B,code_ctx6144_d90_s0,code,6144,6133,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed0,random1,2.0,2.0,6.0,[24],128.0,True,completed,AURORA-7749,,84.5264,3.3681,2.6721,31.4948
+Qwen2.5-14B,code_ctx6144_d90_s0,code,6144,6133,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed1,random1,2.0,2.0,6.0,[8],128.0,False,completed,AURORA-749,,84.5264,3.1572,2.5339,31.0652
+Qwen2.5-14B,code_ctx6144_d90_s0,code,6144,6133,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_random1_keys_seed2,random1,2.0,2.0,6.0,[3],128.0,False,completed,AURORA-749,,84.5264,3.1536,2.5368,30.9329
+Qwen2.5-14B,code_ctx6144_d90_s0,code,6144,6133,90,0,AURORA-7749,qwen25_14b_instruct_tbgmp_bottom1_keys,bottom1,2.0,2.0,6.0,[1],128.0,False,completed,AURORA-749,,84.5264,3.1539,2.5365,30.8785
+Qwen2.5-14B,code_ctx8192_d10_s1,code,8192,8181,10,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed0,random1,2.0,2.0,6.0,[24],128.0,False,completed,NEBULA,,84.9774,2.8765,1.3906,32.8383
+Qwen2.5-14B,code_ctx8192_d10_s1,code,8192,8181,10,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed1,random1,2.0,2.0,6.0,[8],128.0,False,completed,NEBULA-318,,84.9774,3.6496,2.192,32.2705
+Qwen2.5-14B,code_ctx8192_d10_s1,code,8192,8181,10,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_random1_keys_seed2,random1,2.0,2.0,6.0,[3],128.0,False,completed,NEBULA,,84.9774,2.8789,1.3894,32.0929
+Qwen2.5-14B,code_ctx8192_d10_s1,code,8192,8181,10,1,NEBULA-3186,qwen25_14b_instruct_tbgmp_bottom1_keys,bottom1,2.0,2.0,6.0,[1],128.0,True,completed,NEBULA-3186,,84.9774,3.8713,2.3248,32.0213

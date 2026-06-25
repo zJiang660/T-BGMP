@@ -1,0 +1,26 @@
+model,case_id,domain,context_length,depth,seed,answer,case_type,aggressive_policy,fp16_found,aggressive_found
+Llama3.2-3B,code_ctx4096_d50_s0,code,4096,50,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,code_ctx6144_d50_s0,code,6144,50,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,code_ctx8192_d10_s0,code,8192,10,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,code_ctx8192_d50_s0,code,8192,50,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,code_ctx8192_d90_s0,code,8192,90,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,code_ctx8192_d90_s1,code,8192,90,1,NEBULA-3186,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,literature_ctx4096_d10_s1,literature,4096,10,1,NEBULA-3186,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,literature_ctx4096_d90_s1,literature,4096,90,1,NEBULA-3186,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,literature_ctx6144_d90_s0,literature,6144,90,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,literature_ctx6144_d90_s1,literature,6144,90,1,NEBULA-3186,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,literature_ctx8192_d50_s0,literature,8192,50,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,literature_ctx8192_d90_s0,literature,8192,90,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,math_ctx6144_d10_s1,math,6144,10,1,NEBULA-3186,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,math_ctx6144_d50_s0,math,6144,50,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,math_ctx6144_d90_s0,math,6144,90,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,math_ctx8192_d10_s1,math,8192,10,1,NEBULA-3186,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,math_ctx8192_d50_s0,math,8192,50,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,math_ctx8192_d50_s1,math,8192,50,1,NEBULA-3186,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,math_ctx8192_d90_s0,math,8192,90,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,science_ctx4096_d90_s0,science,4096,90,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,science_ctx4096_d90_s1,science,4096,90,1,NEBULA-3186,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,science_ctx6144_d50_s0,science,6144,50,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,science_ctx6144_d50_s1,science,6144,50,1,NEBULA-3186,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,science_ctx6144_d90_s0,science,6144,90,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False
+Llama3.2-3B,science_ctx8192_d50_s0,science,8192,50,0,AURORA-7749,k2_sensitive,Uniform K2/V2 rw128,True,False

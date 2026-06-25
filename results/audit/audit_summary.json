@@ -3,15 +3,51 @@
   "main_sensitive": 183,
   "main_restored": 183,
   "main_denominator": 183,
+  "case_level_counts": {
+    "Qwen3-4B": {
+      "restored": 72,
+      "sensitive": 72
+    },
+    "Qwen2.5-3B": {
+      "restored": 72,
+      "sensitive": 72
+    },
+    "Qwen2.5-14B": {
+      "restored": 14,
+      "sensitive": 14
+    },
+    "Llama3.2-3B": {
+      "restored": 25,
+      "sensitive": 25
+    }
+  },
   "checks": {
+    "Qwen3-4B_sensitive_uses_found_fields": true,
+    "Qwen3-4B_topk_cases_subset_sensitive": true,
+    "Qwen3-4B_provenance_hashes_present": true,
+    "Qwen2.5-3B_sensitive_uses_found_fields": true,
+    "Qwen2.5-3B_topk_cases_subset_sensitive": true,
+    "Qwen2.5-3B_provenance_hashes_present": true,
+    "Qwen2.5-14B_sensitive_uses_found_fields": true,
+    "Qwen2.5-14B_topk_cases_subset_sensitive": true,
+    "Qwen2.5-14B_provenance_hashes_present": true,
+    "Llama3.2-3B_sensitive_uses_found_fields": true,
+    "Llama3.2-3B_topk_cases_subset_sensitive": true,
+    "Llama3.2-3B_provenance_hashes_present": true,
+    "case_level_main_restored_183_of_183": true,
     "main_model_set_exact": true,
     "main_sensitive_total_183": true,
     "main_restored_183_of_183": true,
+    "paper_summary_matches_case_level": true,
     "supporting_not_main": true,
     "gemma_boundary_supporting": true,
     "gemma_key_only_7_of_72": true,
     "gemma_k6_v2_7_of_72": true,
     "gemma_k6_v4_72_of_72": true,
+    "gemma_case_level_key_only_7_of_72": true,
+    "gemma_case_level_k6_v2_7_of_72": true,
+    "gemma_case_level_k6_v4_72_of_72": true,
+    "gemma_provenance_hashes_present": true,
     "excluded_classified_not_retrieval_failure": true,
     "demo_has_one_sensitive_case": true,
     "demo_topk_beats_controls": true,

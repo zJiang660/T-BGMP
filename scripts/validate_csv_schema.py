@@ -56,6 +56,36 @@ REQUIRED_COLUMNS = {
     "table_boundary_models.csv": {"model", "status", "reason", "classification"},
 }
 
+CASE_LEVEL_REQUIRED = {
+    "sensitive_cases.csv": {
+        "model",
+        "case_id",
+        "fp16_found",
+        "aggressive_found",
+    },
+    "topk_recovery.csv": {
+        "model",
+        "case_id",
+        "policy",
+        "found",
+        "topk_k",
+        "protected_layers",
+    },
+    "random_bottom_controls.csv": {
+        "model",
+        "case_id",
+        "policy",
+        "found",
+        "protected_layers",
+    },
+    "risk_ranking.csv": {"rank"},
+    "efficiency_summary.csv": {
+        "model",
+        "sensitive_cases",
+        "restored_cases",
+    },
+}
+
 
 def main() -> None:
     failures: list[str] = []
@@ -78,6 +108,32 @@ def main() -> None:
     for path in sorted((ROOT / "configs").glob("*.yaml")):
         yaml.safe_load(path.read_text(encoding="utf-8"))
         print(f"PASS YAML parse: {path.relative_to(ROOT)}")
+
+    case_dirs = [
+        ROOT / "results" / "main_evidence" / "qwen3_4b",
+        ROOT / "results" / "main_evidence" / "qwen25_3b",
+        ROOT / "results" / "main_evidence" / "qwen25_14b",
+        ROOT / "results" / "main_evidence" / "llama32_3b",
+        ROOT / "results" / "supporting" / "gemma2_9b",
+    ]
+    for directory in case_dirs:
+        for filename, required in CASE_LEVEL_REQUIRED.items():
+            path = directory / filename
+            if not path.exists():
+                failures.append(f"missing case-level file: {path.relative_to(ROOT)}")
+                continue
+            columns = set(pd.read_csv(path).columns)
+            missing = sorted(required - columns)
+            if missing:
+                failures.append(
+                    f"{path.relative_to(ROOT)}: missing columns {missing}"
+                )
+        provenance = directory / "source_provenance.json"
+        if not provenance.exists():
+            failures.append(f"missing provenance: {provenance.relative_to(ROOT)}")
+        else:
+            json.loads(provenance.read_text(encoding="utf-8"))
+        print(f"PASS case-level bundle: {directory.relative_to(ROOT)}")
 
     if failures:
         raise SystemExit("\n".join(failures))

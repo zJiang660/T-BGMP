@@ -1,0 +1,30 @@
+{
+  "source_files": [
+    {
+      "filename": "stage_a_discovery_valid_falcon_gemma_xec.csv",
+      "bytes": 215792,
+      "sha256": "b08276d773311a0f5f8b7fcb8088fda58cce4a19cacf887cb108b45fee7420de"
+    },
+    {
+      "filename": "table_gemma2_xec_sensitive_cases.csv",
+      "bytes": 7493,
+      "sha256": "c521a8e9e3a77731fade93e42fb1fbe14e327dd6402bb5c9502bdc30b8d3d830"
+    },
+    {
+      "filename": "gemma2_9b_key_risk_ranked_xec.csv",
+      "bytes": 5968,
+      "sha256": "dcc202e7968d94fda9bd7cdebd262352945ab32aa59d080556015b411f28cc69"
+    },
+    {
+      "filename": "stage_d_topk_recovery_falcon_gemma_xec.csv",
+      "bytes": 461346,
+      "sha256": "65fa14a38cff22aae2fef57a7de049bc4c6aaa57eb4fb272b3df775e4f7ac73f"
+    },
+    {
+      "filename": "stage_e_controls_falcon_gemma_xec.csv",
+      "bytes": 132277,
+      "sha256": "66baffdc94f3e6528873c72b5122434e7bd16aeb3a04aad4038d6b7021cd17a4"
+    }
+  ],
+  "notes": "Sanitized from the Gemma2 XEC Stage A--E evidence package; host, partition, device, timestamps, errors, and full responses are excluded."
+}

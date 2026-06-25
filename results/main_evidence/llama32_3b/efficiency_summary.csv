@@ -1,0 +1,2 @@
+model,sensitive_cases,restored_cases,mean_first_success_k,max_first_success_k,mean_first_success_kv_saving
+Llama3.2-3B,25,25,3.88,10,82.380756

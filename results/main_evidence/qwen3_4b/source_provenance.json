@@ -1,0 +1,25 @@
+{
+  "source_files": [
+    {
+      "filename": "sensitive_cases.csv",
+      "bytes": 15052,
+      "sha256": "acc7b4e11424e44a46ae50261624adc1363a5e97abc83daf276478f481946efe"
+    },
+    {
+      "filename": "recovery_topk_results.csv",
+      "bytes": 356725,
+      "sha256": "a1d3d301d756b0f77067b6a1db4517102adcb82074e98715b7e8a6607f2519a5"
+    },
+    {
+      "filename": "same_budget_controls.csv",
+      "bytes": 118515,
+      "sha256": "998728fc7a195dfbf93e3bfb324d37ccaa6efcc64b95af9a83039590d4891c89"
+    },
+    {
+      "filename": "qwen3_full_layer_key_risk.csv",
+      "bytes": 12345,
+      "sha256": "9309c54b3dacd213d0568c8a863e1448c9438bb421b2b4e2a283745cfe001f70"
+    }
+  ],
+  "notes": "Sanitized from case-level SIP experiment exports; paths, timestamps, full responses, and logs are excluded."
+}

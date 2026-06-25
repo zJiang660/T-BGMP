@@ -18,6 +18,26 @@
 `results/boundary_excluded/` contain friend-uploaded grouped copies. The audit
 script confirms that they match the canonical tables.
 
+## Sanitized Case-Level Evidence
+
+The model subdirectories under `results/main_evidence/` contain:
+
+- `stage_a_discovery.csv`
+- `sensitive_cases.csv`
+- `risk_ranking.csv`
+- `topk_recovery.csv`
+- `random_bottom_controls.csv`
+- `first_success_cases.csv`
+- `efficiency_summary.csv`
+- `source_provenance.json`
+
+The Gemma2 bundle follows the same structure under
+`results/supporting/gemma2_9b/`. Responses are truncated to short excerpts;
+host, device, partition, timestamps, paths, and raw logs are excluded.
+
+Each provenance file records source filenames, byte sizes, and SHA-256 hashes
+without recording the private source location.
+
 ## Demo Data
 
 `data/demo/demo_cases.csv` is synthetic and intentionally tiny. It demonstrates

@@ -1,0 +1,20 @@
+{
+  "source_files": [
+    {
+      "filename": "tbgmp_full_single_model_results.csv",
+      "bytes": 626920,
+      "sha256": "7e570831156b1dc8bf684e57b6b238b42b5f6348a9693dd36419b2cc13b8beea"
+    },
+    {
+      "filename": "tbgmp_case_classification.csv",
+      "bytes": 6007,
+      "sha256": "3655d01c66a36d341bcb7100923d7ba68d89a42d155010ca07d7749724190a35"
+    },
+    {
+      "filename": "qwen25_full_layer_key_risk.csv",
+      "bytes": 7024,
+      "sha256": "fcadd08127b18a92d78ab16a7a53fa2b1642dbf270d1bcc195126478605c011d"
+    }
+  ],
+  "notes": "Sanitized from case-level XEC experiment exports. Qwen2.5-14B ranking records policy order because a separate risk-score file was not available."
+}

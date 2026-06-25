@@ -1,0 +1,73 @@
+model,case_id,topk_k,protected_layers,kv_saving
+Qwen2.5-3B,code_ctx4096_d10_s0,1,[0],77.611
+Qwen2.5-3B,code_ctx4096_d10_s1,1,[0],77.6104
+Qwen2.5-3B,code_ctx4096_d50_s0,1,[0],77.611
+Qwen2.5-3B,code_ctx4096_d50_s1,1,[0],77.6104
+Qwen2.5-3B,code_ctx4096_d90_s0,1,[0],77.611
+Qwen2.5-3B,code_ctx4096_d90_s1,1,[0],77.6104
+Qwen2.5-3B,code_ctx6144_d10_s0,1,[0],78.4493
+Qwen2.5-3B,code_ctx6144_d10_s1,1,[0],78.4491
+Qwen2.5-3B,code_ctx6144_d50_s0,1,[0],78.4493
+Qwen2.5-3B,code_ctx6144_d50_s1,1,[0],78.4493
+Qwen2.5-3B,code_ctx6144_d90_s0,1,[0],78.4493
+Qwen2.5-3B,code_ctx6144_d90_s1,1,[0],78.4491
+Qwen2.5-3B,code_ctx8192_d10_s0,1,[0],78.8679
+Qwen2.5-3B,code_ctx8192_d10_s1,1,[0],78.8679
+Qwen2.5-3B,code_ctx8192_d50_s0,1,[0],78.8679
+Qwen2.5-3B,code_ctx8192_d50_s1,1,[0],78.8679
+Qwen2.5-3B,code_ctx8192_d90_s0,1,[0],78.8679
+Qwen2.5-3B,code_ctx8192_d90_s1,1,[0],78.8678
+Qwen2.5-3B,literature_ctx4096_d10_s0,1,[0],77.611
+Qwen2.5-3B,literature_ctx4096_d10_s1,4,"[0, 27, 1, 18]",76.602
+Qwen2.5-3B,literature_ctx4096_d50_s0,1,[0],77.611
+Qwen2.5-3B,literature_ctx4096_d50_s1,1,[0],77.6116
+Qwen2.5-3B,literature_ctx4096_d90_s0,1,[0],77.6116
+Qwen2.5-3B,literature_ctx4096_d90_s1,1,[0],77.6116
+Qwen2.5-3B,literature_ctx6144_d10_s0,1,[0],78.4491
+Qwen2.5-3B,literature_ctx6144_d10_s1,1,[0],78.4496
+Qwen2.5-3B,literature_ctx6144_d50_s0,3,"[0, 27, 1]",83.379
+Qwen2.5-3B,literature_ctx6144_d50_s1,1,[0],78.4496
+Qwen2.5-3B,literature_ctx6144_d90_s0,1,[0],78.4493
+Qwen2.5-3B,literature_ctx6144_d90_s1,1,[0],78.4496
+Qwen2.5-3B,literature_ctx8192_d10_s0,3,"[0, 27, 1]",78.1845
+Qwen2.5-3B,literature_ctx8192_d10_s1,1,[0],78.8678
+Qwen2.5-3B,literature_ctx8192_d50_s0,3,"[0, 27, 1]",83.8241
+Qwen2.5-3B,literature_ctx8192_d50_s1,5,"[0, 27, 1, 18, 2]",77.5008
+Qwen2.5-3B,literature_ctx8192_d90_s0,1,[0],78.8679
+Qwen2.5-3B,literature_ctx8192_d90_s1,1,[0],78.8679
+Qwen2.5-3B,math_ctx4096_d10_s0,2,"[0, 27]",82.9931
+Qwen2.5-3B,math_ctx4096_d10_s1,1,[0],77.611
+Qwen2.5-3B,math_ctx4096_d50_s0,1,[0],77.611
+Qwen2.5-3B,math_ctx4096_d50_s1,1,[0],77.611
+Qwen2.5-3B,math_ctx4096_d90_s0,1,[0],77.6116
+Qwen2.5-3B,math_ctx4096_d90_s1,1,[0],77.611
+Qwen2.5-3B,math_ctx6144_d10_s0,1,[0],78.4493
+Qwen2.5-3B,math_ctx6144_d10_s1,1,[0],78.4496
+Qwen2.5-3B,math_ctx6144_d50_s0,1,[0],78.4496
+Qwen2.5-3B,math_ctx6144_d50_s1,1,[0],78.4496
+Qwen2.5-3B,math_ctx6144_d90_s0,1,[0],78.4496
+Qwen2.5-3B,math_ctx6144_d90_s1,1,[0],78.4496
+Qwen2.5-3B,math_ctx8192_d10_s0,1,[0],78.8681
+Qwen2.5-3B,math_ctx8192_d10_s1,1,[0],78.8681
+Qwen2.5-3B,math_ctx8192_d50_s0,1,[0],78.8681
+Qwen2.5-3B,math_ctx8192_d50_s1,1,[0],78.8679
+Qwen2.5-3B,math_ctx8192_d90_s0,1,[0],78.8681
+Qwen2.5-3B,math_ctx8192_d90_s1,1,[0],78.8679
+Qwen2.5-3B,science_ctx4096_d10_s0,1,[0],77.611
+Qwen2.5-3B,science_ctx4096_d10_s1,1,[0],77.6116
+Qwen2.5-3B,science_ctx4096_d50_s0,1,[0],77.6116
+Qwen2.5-3B,science_ctx4096_d50_s1,1,[0],77.6116
+Qwen2.5-3B,science_ctx4096_d90_s0,1,[0],77.6116
+Qwen2.5-3B,science_ctx4096_d90_s1,1,[0],77.611
+Qwen2.5-3B,science_ctx6144_d10_s0,1,[0],84.3992
+Qwen2.5-3B,science_ctx6144_d10_s1,1,[0],78.4496
+Qwen2.5-3B,science_ctx6144_d50_s0,1,[0],78.4496
+Qwen2.5-3B,science_ctx6144_d50_s1,1,[0],78.4496
+Qwen2.5-3B,science_ctx6144_d90_s0,1,[0],78.4496
+Qwen2.5-3B,science_ctx6144_d90_s1,1,[0],78.4496
+Qwen2.5-3B,science_ctx8192_d10_s0,1,[0],78.8679
+Qwen2.5-3B,science_ctx8192_d10_s1,1,[0],78.8681
+Qwen2.5-3B,science_ctx8192_d50_s0,1,[0],78.8679
+Qwen2.5-3B,science_ctx8192_d50_s1,6,"[0, 27, 1, 18, 2, 20]",82.286
+Qwen2.5-3B,science_ctx8192_d90_s0,1,[0],78.8679
+Qwen2.5-3B,science_ctx8192_d90_s1,1,[0],78.8681
