@@ -1,0 +1,4 @@
+case_id,classification,selected_sensitive,topk_recovered,random_recovered,bottom_recovered
+math_sensitive,sensitive,True,True,False,False
+math_tolerant,tolerant,False,False,False,False
+math_invalid,fp16_invalid,False,False,False,False

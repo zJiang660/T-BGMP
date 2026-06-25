@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "main_sensitive": 183,
+  "main_restored": 183,
+  "main_denominator": 183,
+  "checks": {
+    "main_model_set_exact": true,
+    "main_sensitive_total_183": true,
+    "main_restored_183_of_183": true,
+    "supporting_not_main": true,
+    "gemma_boundary_supporting": true,
+    "gemma_key_only_7_of_72": true,
+    "gemma_k6_v2_7_of_72": true,
+    "gemma_k6_v4_72_of_72": true,
+    "excluded_classified_not_retrieval_failure": true,
+    "demo_has_one_sensitive_case": true,
+    "demo_topk_beats_controls": true,
+    "grouped_copy_matches_table_main_evidence": true,
+    "grouped_copy_matches_table_first_success_k": true,
+    "grouped_copy_matches_table_qwen25_scale": true,
+    "grouped_copy_matches_table_control_statistics": true,
+    "grouped_copy_matches_table_supporting_models": true,
+    "grouped_copy_matches_table_gemma2_boundary": true,
+    "grouped_copy_matches_table_boundary_models": true
+  }
+}

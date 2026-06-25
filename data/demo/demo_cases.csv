@@ -1,0 +1,4 @@
+case_id,domain,answer,response_fp16,response_aggressive,response_topk,response_random,response_bottom,fp16_found,aggressive_found,topk_found,random_found,bottom_found,tbgmp_saving,uniform_safe_saving
+math_sensitive,math,AURORA-7749,AURORA-7749,I cannot find it.,AURORA-7749,UNKNOWN,UNKNOWN,True,False,True,False,False,83.76,66.43
+math_tolerant,math,AURORA-7749,AURORA-7749,AURORA-7749,AURORA-7749,AURORA-7749,AURORA-7749,True,True,True,True,True,83.76,66.43
+math_invalid,math,AURORA-7749,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,False,False,False,False,False,0.0,0.0

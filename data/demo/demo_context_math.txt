@@ -1,0 +1,3 @@
+The archive contains several distractor statements.
+The hidden answer string is AURORA-7749.
+Use only this context when answering the retrieval question.

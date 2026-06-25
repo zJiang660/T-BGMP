@@ -1,0 +1,13 @@
+experiment:
+  mode: diagnostic_failure_recovery
+  domains: [math, literature, science, code]
+  context_lengths: [4096, 6144, 8192]
+  needle_depths: [10, 50, 90]
+  seeds: [0, 1]
+  residual_window: 128
+  maximum_topk: 12
+
+selection:
+  require_fp16_found: true
+  require_aggressive_found: false
+  exclude_execution_errors: true

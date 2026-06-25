@@ -1,0 +1,19 @@
+supporting:
+  - Mistral-7B
+  - Yi-1.5-9B
+  - Zephyr-7B
+  - SmolLM2-1.7B
+
+boundary_supporting:
+  - model: Gemma2-9B
+    interpretation: value_bottleneck
+
+excluded:
+  - model: Gemma-3-4B-it
+    reason: fp16_invalid
+  - model: Qwen3.5-4B
+    reason: cache_interface_limited
+  - model: InternLM2.5-7B
+    reason: compatibility_limited
+  - model: GLM-4-9B
+    reason: generation_interface_limited

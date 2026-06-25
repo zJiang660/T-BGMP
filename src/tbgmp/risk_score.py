@@ -29,4 +29,6 @@ def compute_risk_scores(
         risk = risk + minmax_norm(inv_eff)
 
     out["risk_score"] = risk
-    return out.sort_values("risk_score", ascending=False).reset_index(drop=True)
+    out = out.sort_values("risk_score", ascending=False).reset_index(drop=True)
+    out["rank"] = np.arange(1, len(out) + 1)
+    return out

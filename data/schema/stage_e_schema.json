@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage E same-budget control row",
+  "type": "object",
+  "required": ["case_id", "control_type", "k", "layers", "seed", "found"],
+  "properties": {
+    "case_id": {"type": "string", "minLength": 1},
+    "control_type": {"enum": ["random_k", "bottom_k"]},
+    "k": {"type": "integer", "minimum": 1},
+    "layers": {"type": "array", "items": {"type": "integer", "minimum": 0}},
+    "seed": {"type": ["integer", "null"]},
+    "found": {"type": "boolean"}
+  }
+}

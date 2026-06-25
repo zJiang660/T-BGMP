@@ -1,0 +1,13 @@
+models:
+  - id: qwen3_4b
+    display_name: Qwen3-4B
+    role: main_evidence
+  - id: qwen25_3b
+    display_name: Qwen2.5-3B
+    role: main_evidence
+  - id: qwen25_14b
+    display_name: Qwen2.5-14B
+    role: main_evidence
+  - id: llama32_3b
+    display_name: Llama3.2-3B
+    role: main_evidence

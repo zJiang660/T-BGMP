@@ -13,17 +13,19 @@ from tbgmp.metrics import recovery_rate
 from tbgmp.policy import make_topk_layers, make_topk_policy
 from tbgmp.risk_score import compute_risk_scores
 from tbgmp.sensitive_cases import select_sensitive_cases
+from tbgmp.utils import parse_bool
 
 
 def main() -> None:
-    cases = pd.DataFrame(
-        [
-            {"case_id": "math-1", "fp16_found": True, "aggressive_found": False},
-            {"case_id": "code-1", "fp16_found": True, "aggressive_found": True},
-            {"case_id": "science-1", "fp16_found": False, "aggressive_found": False},
-        ]
-    )
+    cases = pd.read_csv(ROOT / "data" / "demo" / "demo_cases.csv")
+    for column in ["fp16_found", "aggressive_found"]:
+        cases[column] = cases[column].map(parse_bool)
+    print(f"Loaded demo cases: {len(cases)}")
     sensitive = select_sensitive_cases(cases)
+    print(
+        "Selected FP16-pass/aggressive-fail sensitive cases:",
+        sensitive["case_id"].tolist(),
+    )
 
     layer_stats = pd.DataFrame(
         {
@@ -41,10 +43,11 @@ def main() -> None:
     restored = paper["recovered"].str.split("/").str[0].astype(int).sum()
     total = paper["sensitive"].astype(int).sum()
 
-    print("Toy sensitive case IDs:", sensitive["case_id"].tolist())
     print("Toy ranked layers:", ranked["layer"].astype(int).tolist())
-    print("Toy Top-2 policy:", policy)
+    print("Generated toy Top-k policy:", policy)
     print(f"Paper main-set recovery: {restored}/{total} ({recovery_rate(restored, total):.1%})")
+    print("Computed recovery summary")
+    print("Demo completed")
 
 
 if __name__ == "__main__":

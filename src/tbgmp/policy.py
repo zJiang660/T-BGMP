@@ -26,6 +26,9 @@ POLICIES = {
         "value_bits": 4,
         "residual_window": 128,
     },
+    "tbgmp_topk": {"type": "risk_ranked_key_protection"},
+    "random_k": {"type": "same_budget_random_key_protection"},
+    "bottom_k": {"type": "same_budget_bottom_key_protection"},
 }
 
 

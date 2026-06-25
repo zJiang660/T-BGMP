@@ -1,0 +1,7 @@
+| model | sensitive | recovered | overall_recovery | control_subset | random_rate | bottom_rate | gain | limitation | usage |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Mistral-7B-Instruct-v0.3 | 8 | 7/8 | 87.50% | 7 restored cases | 64.52% | 71.43% | +17.20 pp | One case not restored; controls weak | Supporting |
+| Yi-1.5-9B-Chat-16K | 19 | 15/19 | 78.95% | 15 restored cases | 57.78% | 86.67% | +17.53 pp | Four cases not restored; Bottom-k high | Supporting |
+| Zephyr-7B-Beta | 5 | 5/5 | 100.00% | 5 valid sensitive cases | 40.00% | 40.00% | +16.61 pp | Only five sensitive cases; FP16 success 65.28% | Supporting |
+| SmolLM2-1.7B-Instruct | 71 | 25/71 | 35.21% | 25 restored cases | 38.67% | 44.00% | +12.69 pp | Low overall recovery; subset-conditioned controls | Supporting |
+| Gemma2-9B | 72 | 7/72 | 9.72% | Top1 controls: 72 cases | 0.00% | 0.00% | Top1: +24.40 pp | Key-only Top-k restores 7/72; K6/V4 restores 72/72 | Boundary-supporting / value bottleneck |

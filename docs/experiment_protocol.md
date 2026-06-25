@@ -12,6 +12,8 @@ policy.
 Evaluate FP16 and predefined uniform precision policies over a controlled grid
 of domains, context lengths, needle depths, and seeds. Record retrieval
 `found`, execution validity, errors, and memory statistics separately.
+The model-free implementation in this repository validates answer matching on
+the synthetic demo rows; full GPU discovery requires an external runner.
 
 ## Stage B: Sensitive-Case Mining
 

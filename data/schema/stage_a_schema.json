@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage A discovery row",
+  "type": "object",
+  "required": ["case_id", "fp16_found", "aggressive_found"],
+  "properties": {
+    "case_id": {"type": "string", "minLength": 1},
+    "domain": {"type": "string"},
+    "fp16_found": {"type": "boolean"},
+    "aggressive_found": {"type": "boolean"},
+    "error": {"type": ["string", "null"]}
+  }
+}

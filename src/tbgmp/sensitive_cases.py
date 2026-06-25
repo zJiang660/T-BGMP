@@ -18,6 +18,7 @@ def is_k2_sensitive(fp16_found: bool, k4_found: bool, k2_found: bool) -> bool:
 
 
 def is_sensitive(fp16_found: bool, aggressive_found: bool) -> bool:
+    """A sensitive case is FP16-pass and aggressive-uniform-fail."""
     return bool(fp16_found) and not bool(aggressive_found)
 
 

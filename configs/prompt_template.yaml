@@ -1,0 +1,10 @@
+system: "Use only the supplied context to answer the question."
+template: |
+  Context:
+  {context}
+
+  Question:
+  {question}
+
+  Answer exactly with the hidden answer string.
+answer_matching: exact_substring
