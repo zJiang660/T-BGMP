@@ -13,6 +13,11 @@ Levels 1 and 2 are directly runnable in this repository. Level 3 provides a
 complete experiment-control interface but depends on external model and
 quantizer components described in `model_setup.md`.
 
+This repository does not include model weights, raw HPC logs, full raw model
+responses, or a production quantizer kernel. The minimal demo does not load
+language models. Full GPU/model execution requires external model weights and
+backend support.
+
 ## Environment
 
 Install with either:

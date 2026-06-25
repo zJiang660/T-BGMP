@@ -1,5 +1,9 @@
 {
   "status": "PASS",
+  "primary_source": {
+    "main": "case-level CSV",
+    "gemma2": "case-level CSV"
+  },
   "main_sensitive": 183,
   "main_restored": 183,
   "main_denominator": 183,

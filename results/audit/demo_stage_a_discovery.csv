@@ -1,0 +1,7 @@
+case_id,domain,context_length,depth,seed,answer,policy,found,status
+math_sensitive,math,,,,AURORA-7749,fp16,True,success
+math_sensitive,math,,,,AURORA-7749,aggressive_uniform,False,success
+math_tolerant,math,,,,AURORA-7749,fp16,True,success
+math_tolerant,math,,,,AURORA-7749,aggressive_uniform,True,success
+math_invalid,math,,,,AURORA-7749,fp16,False,success
+math_invalid,math,,,,AURORA-7749,aggressive_uniform,False,success

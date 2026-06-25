@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Top-k recovery template. The runner performs Stage A first, mines sensitive
-# cases from found fields, then executes Top1--Top12 and matched controls.
+# Sanitized template, not a turn-key cluster job. Adapt partition/account
+# names, environment modules, resources, and paths for the target HPC system.
+# The runner mines sensitive cases from found fields before Top-k evaluation.
 #SBATCH --partition=<a800-partition>
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
@@ -12,17 +13,20 @@
 set -euo pipefail
 
 PROJECT_ROOT=/path/to/T-BGMP
-MODEL_PATH=/path/to/models/model
+MODEL_ROOT=/path/to/models
 OUTPUT_ROOT=/path/to/outputs
+MODEL_PATH="${MODEL_ROOT}/model"
+CASES_FILE=/path/to/cases.csv
+RISK_RANKING=/path/to/risk_ranking.csv
 BACKEND_MODULE=your_backend.module:create_backend
 
 cd "${PROJECT_ROOT}"
 mkdir -p "${OUTPUT_ROOT}" logs
 python experiments/run_full_pipeline.py \
-  --cases /path/to/cases.csv \
+  --cases "${CASES_FILE}" \
   --model-path "${MODEL_PATH}" \
   --model-id example-model \
   --backend "${BACKEND_MODULE}" \
-  --risk-ranking /path/to/risk_ranking.csv \
+  --risk-ranking "${RISK_RANKING}" \
   --maximum-topk 12 \
   --output "${OUTPUT_ROOT}/pipeline_results.csv"

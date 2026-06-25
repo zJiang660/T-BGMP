@@ -15,5 +15,6 @@
 - **Compatibility boundaries.** Invalid FP16 baselines and incompatible cache
   or generation interfaces cannot support recovery conclusions.
 - **Model execution excluded.** This minimal repository validates the analysis
-  pipeline from cleaned summaries; external model runtimes and checkpoints are
-  required for full GPU reruns.
+  pipeline from sanitized case-level outputs and cleaned summaries; external
+  model runtimes, checkpoints, and a compatible KV-cache backend are required
+  for full GPU reruns.

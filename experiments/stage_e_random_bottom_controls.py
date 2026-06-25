@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import sys
 from pathlib import Path
 
@@ -14,27 +15,63 @@ from tbgmp.sensitive_cases import select_sensitive_cases
 from tbgmp.utils import parse_bool
 
 
-def main() -> None:
-    ranking_path = ROOT / "results" / "audit" / "demo_key_risk_ranking.csv"
-    if not ranking_path.exists():
-        raise FileNotFoundError("Run stage_c_profile_key_risk.py first")
-    ranked = pd.read_csv(ranking_path)["layer"].astype(int).tolist()
-    random_layers = sample_random_layers(ranked, k=2, seed=0)
-    bottom_layers = bottomk_layers(ranked, k=2)
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Create same-budget Random-k and Bottom-k model-free control rows."
+    )
+    parser.add_argument(
+        "--cases",
+        type=Path,
+        default=ROOT / "data" / "demo" / "demo_cases.csv",
+    )
+    parser.add_argument(
+        "--risk-ranking",
+        type=Path,
+        default=ROOT / "results" / "audit" / "demo_key_risk_ranking.csv",
+    )
+    parser.add_argument("--k", type=int, default=2)
+    parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=ROOT / "results" / "audit" / "demo_random_bottom_controls.csv",
+    )
+    return parser.parse_args()
 
-    cases = pd.read_csv(ROOT / "data" / "demo" / "demo_cases.csv")
-    for column in [
-        "fp16_found",
-        "aggressive_found",
-        "random_found",
-        "bottom_found",
-    ]:
+
+def main() -> None:
+    args = parse_args()
+    if not args.risk_ranking.exists():
+        raise SystemExit("Run stage_c_profile_key_risk.py first or pass --risk-ranking")
+    ranked = pd.read_csv(args.risk_ranking).sort_values("rank")["layer"].astype(int).tolist()
+    selections = {
+        f"random{args.k}_seed{args.seed}": sample_random_layers(ranked, args.k, args.seed),
+        f"bottom{args.k}": bottomk_layers(ranked, args.k),
+    }
+    cases = pd.read_csv(args.cases)
+    for column in ("fp16_found", "aggressive_found", "random_found", "bottom_found"):
         cases[column] = cases[column].map(parse_bool)
     sensitive = select_sensitive_cases(cases)
-    random_found = int(sensitive["random_found"].sum())
-    bottom_found = int(sensitive["bottom_found"].sum())
-    print(f"Stage E Random-k layers (seed 0): {random_layers}; found rows={random_found}")
-    print(f"Stage E Bottom-k layers: {bottom_layers}; found rows={bottom_found}")
+
+    rows: list[dict] = []
+    for case in sensitive.to_dict("records"):
+        for policy, layers in selections.items():
+            is_random = policy.startswith("random")
+            rows.append(
+                {
+                    "case_id": case["case_id"],
+                    "policy": policy,
+                    "policy_type": "random_k" if is_random else "bottom_k",
+                    "protected_layers": str(layers),
+                    "matched_topk_k": args.k,
+                    "seed": args.seed if is_random else "",
+                    "found": case["random_found"] if is_random else case["bottom_found"],
+                    "status": "success",
+                }
+            )
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    pd.DataFrame(rows).to_csv(args.output, index=False)
+    print(f"Stage E matched controls: {len(rows)} rows -> {args.output}")
 
 
 if __name__ == "__main__":

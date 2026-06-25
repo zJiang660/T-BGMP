@@ -1,0 +1,3 @@
+case_id,policy,policy_type,protected_layers,matched_topk_k,seed,found,status
+math_sensitive,random2_seed0,random_k,"[1, 3]",2,0,False,success
+math_sensitive,bottom2,bottom_k,"[0, 2]",2,,False,success

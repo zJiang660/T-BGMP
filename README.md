@@ -113,6 +113,8 @@ This repository supports reproducibility at three levels:
 
 Level 3 is an explicit execution interface, not a claim of universal one-click
 reproduction. Model-specific cache APIs and quantizer kernels remain external.
+The minimal demo does not load language models. Full GPU/model execution
+requires external model weights and backend support.
 
 The complete model-free Stage A--F demonstration is:
 
@@ -136,6 +138,7 @@ data/schema/            JSON schemas and result-schema notes
 results/paper_tables/   Canonical cleaned paper-ready CSV files
 results/main_evidence/  Sanitized per-case evidence for four main models
 results/supporting/     Supporting summaries and Gemma2 case-level evidence
+results/boundary_excluded/ Compatibility and invalid-boundary summaries
 results/audit/          Generated audit summary and artifact hashes
 figures/paper/           Paper figures and reproduced control plot
 tables/paper/            CSV copies and generated Markdown tables

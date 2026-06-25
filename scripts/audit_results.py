@@ -2,12 +2,18 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+
+from tbgmp.utils import parse_bool
+
+
 PAPER_DIR = ROOT / "results" / "paper_tables"
 AUDIT_DIR = ROOT / "results" / "audit"
 
@@ -37,36 +43,74 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def bool_series(series: pd.Series) -> pd.Series:
+    return series.map(parse_bool)
+
+
+def case_level_available() -> bool:
+    required = ("sensitive_cases.csv", "topk_recovery.csv", "source_provenance.json")
+    directories = list(CASE_LEVEL_MODELS.values())
+    return all((directory / filename).exists() for directory in directories for filename in required)
+
+
+def gemma_case_level_available() -> bool:
+    directory = ROOT / "results" / "supporting" / "gemma2_9b"
+    required = (
+        "sensitive_cases.csv",
+        "topk_recovery.csv",
+        "stage_a_discovery.csv",
+        "source_provenance.json",
+    )
+    return all((directory / filename).exists() for filename in required)
+
+
 def main() -> None:
     checks: dict[str, bool] = {}
 
     case_level_counts: dict[str, tuple[int, int]] = {}
-    for model, directory in CASE_LEVEL_MODELS.items():
-        sensitive_cases = pd.read_csv(directory / "sensitive_cases.csv")
-        topk_rows = pd.read_csv(directory / "topk_recovery.csv")
-        sensitive_ids = set(sensitive_cases["case_id"].astype(str))
-        restored_ids = set(
-            topk_rows.loc[topk_rows["found"].astype(bool), "case_id"].astype(str)
+    main_df = pd.read_csv(PAPER_DIR / "table_main_evidence.csv")
+    restored_pairs = main_df["recovered"].map(parse_fraction)
+    restored = sum(pair[0] for pair in restored_pairs)
+    denominators = sum(pair[1] for pair in restored_pairs)
+    sensitive = int(main_df["sensitive"].sum())
+
+    using_case_level = case_level_available()
+    if using_case_level:
+        for model, directory in CASE_LEVEL_MODELS.items():
+            sensitive_cases = pd.read_csv(directory / "sensitive_cases.csv")
+            topk_rows = pd.read_csv(directory / "topk_recovery.csv")
+            sensitive_ids = set(sensitive_cases["case_id"].astype(str))
+            restored_ids = set(
+                topk_rows.loc[bool_series(topk_rows["found"]), "case_id"].astype(str)
+            )
+            case_level_counts[model] = (len(restored_ids), len(sensitive_ids))
+            checks[f"{model}_sensitive_uses_found_fields"] = (
+                {"fp16_found", "aggressive_found"} <= set(sensitive_cases.columns)
+                and bool_series(sensitive_cases["fp16_found"]).all()
+                and not bool_series(sensitive_cases["aggressive_found"]).any()
+            )
+            checks[f"{model}_topk_cases_subset_sensitive"] = set(
+                topk_rows["case_id"].astype(str)
+            ) <= sensitive_ids
+            provenance = json.loads(
+                (directory / "source_provenance.json").read_text(encoding="utf-8")
+            )
+            checks[f"{model}_provenance_hashes_present"] = bool(
+                provenance.get("source_files")
+            ) and all(
+                len(item.get("sha256", "")) == 64
+                and set(item) == {"filename", "bytes", "sha256"}
+                for item in provenance["source_files"]
+            )
+    else:
+        print(
+            "WARNING: using paper-ready summary CSV because case-level outputs "
+            "are unavailable."
         )
-        case_level_counts[model] = (len(restored_ids), len(sensitive_ids))
-        checks[f"{model}_sensitive_uses_found_fields"] = (
-            {"fp16_found", "aggressive_found"} <= set(sensitive_cases.columns)
-            and sensitive_cases["fp16_found"].astype(bool).all()
-            and not sensitive_cases["aggressive_found"].astype(bool).any()
-        )
-        checks[f"{model}_topk_cases_subset_sensitive"] = set(
-            topk_rows["case_id"].astype(str)
-        ) <= sensitive_ids
-        provenance = json.loads(
-            (directory / "source_provenance.json").read_text(encoding="utf-8")
-        )
-        checks[f"{model}_provenance_hashes_present"] = bool(
-            provenance.get("source_files")
-        ) and all(
-            len(item.get("sha256", "")) == 64
-            and set(item) == {"filename", "bytes", "sha256"}
-            for item in provenance["source_files"]
-        )
+        case_level_counts = {
+            row.model: parse_fraction(row.recovered)
+            for row in main_df.itertuples(index=False)
+        }
 
     case_level_restored = sum(value[0] for value in case_level_counts.values())
     case_level_sensitive = sum(value[1] for value in case_level_counts.values())
@@ -74,11 +118,6 @@ def main() -> None:
         case_level_restored == case_level_sensitive == 183
     )
 
-    main_df = pd.read_csv(PAPER_DIR / "table_main_evidence.csv")
-    restored_pairs = main_df["recovered"].map(parse_fraction)
-    restored = sum(pair[0] for pair in restored_pairs)
-    denominators = sum(pair[1] for pair in restored_pairs)
-    sensitive = int(main_df["sensitive"].sum())
     checks["main_model_set_exact"] = set(main_df["model"]) == MAIN_MODELS
     checks["main_sensitive_total_183"] = sensitive == 183
     checks["main_restored_183_of_183"] = restored == denominators == 183
@@ -104,33 +143,46 @@ def main() -> None:
     checks["gemma_k6_v2_7_of_72"] = gemma.loc["Uniform K6/V2", "found"] == "7/72"
     checks["gemma_k6_v4_72_of_72"] = gemma.loc["Uniform K6/V4", "found"] == "72/72"
 
-    gemma_dir = ROOT / "results" / "supporting" / "gemma2_9b"
-    gemma_sensitive = pd.read_csv(gemma_dir / "sensitive_cases.csv")
-    gemma_topk = pd.read_csv(gemma_dir / "topk_recovery.csv")
-    gemma_stage_a = pd.read_csv(gemma_dir / "stage_a_discovery.csv")
-    checks["gemma_case_level_key_only_7_of_72"] = (
-        gemma_topk.loc[gemma_topk["found"].astype(bool), "case_id"].nunique() == 7
-        and len(gemma_sensitive) == 72
-    )
-    gemma_policy_counts = gemma_stage_a.groupby("policy")["found"].agg(
-        ["sum", "count"]
-    )
-    checks["gemma_case_level_k6_v2_7_of_72"] = (
-        tuple(gemma_policy_counts.loc["uniform_k6_v2_rw128"]) == (7, 72)
-    )
-    checks["gemma_case_level_k6_v4_72_of_72"] = (
-        tuple(gemma_policy_counts.loc["uniform_k6_v4_rw128"]) == (72, 72)
-    )
-    gemma_provenance = json.loads(
-        (gemma_dir / "source_provenance.json").read_text(encoding="utf-8")
-    )
-    checks["gemma_provenance_hashes_present"] = bool(
-        gemma_provenance.get("source_files")
-    ) and all(
-        len(item.get("sha256", "")) == 64
-        and set(item) == {"filename", "bytes", "sha256"}
-        for item in gemma_provenance["source_files"]
-    )
+    using_gemma_case_level = gemma_case_level_available()
+    if using_gemma_case_level:
+        gemma_dir = ROOT / "results" / "supporting" / "gemma2_9b"
+        gemma_sensitive = pd.read_csv(gemma_dir / "sensitive_cases.csv")
+        gemma_topk = pd.read_csv(gemma_dir / "topk_recovery.csv")
+        gemma_stage_a = pd.read_csv(gemma_dir / "stage_a_discovery.csv")
+        checks["gemma_case_level_key_only_7_of_72"] = (
+            gemma_topk.loc[bool_series(gemma_topk["found"]), "case_id"].nunique() == 7
+            and len(gemma_sensitive) == 72
+        )
+        gemma_stage_a["found"] = bool_series(gemma_stage_a["found"])
+        gemma_policy_counts = gemma_stage_a.groupby("policy")["found"].agg(
+            ["sum", "count"]
+        )
+        checks["gemma_case_level_k6_v2_7_of_72"] = (
+            tuple(gemma_policy_counts.loc["uniform_k6_v2_rw128"]) == (7, 72)
+        )
+        checks["gemma_case_level_k6_v4_72_of_72"] = (
+            tuple(gemma_policy_counts.loc["uniform_k6_v4_rw128"]) == (72, 72)
+        )
+        gemma_provenance = json.loads(
+            (gemma_dir / "source_provenance.json").read_text(encoding="utf-8")
+        )
+        checks["gemma_provenance_hashes_present"] = bool(
+            gemma_provenance.get("source_files")
+        ) and all(
+            len(item.get("sha256", "")) == 64
+            and set(item) == {"filename", "bytes", "sha256"}
+            for item in gemma_provenance["source_files"]
+        )
+    else:
+        print(
+            "WARNING: using paper-ready Gemma2 summary CSV because case-level "
+            "outputs are unavailable."
+        )
+        checks["gemma_summary_fallback_matches_claims"] = (
+            checks["gemma_key_only_7_of_72"]
+            and checks["gemma_k6_v2_7_of_72"]
+            and checks["gemma_k6_v4_72_of_72"]
+        )
 
     boundary = pd.read_csv(PAPER_DIR / "table_boundary_models.csv")
     checks["excluded_classified_not_retrieval_failure"] = all(
@@ -183,6 +235,14 @@ def main() -> None:
     checks = {name: bool(value) for name, value in checks.items()}
     summary = {
         "status": "PASS" if all(checks.values()) else "FAIL",
+        "primary_source": {
+            "main": "case-level CSV" if using_case_level else "paper-ready summary CSV",
+            "gemma2": (
+                "case-level CSV"
+                if using_gemma_case_level
+                else "paper-ready summary CSV"
+            ),
+        },
         "main_sensitive": sensitive,
         "main_restored": restored,
         "main_denominator": denominators,
@@ -199,13 +259,18 @@ def main() -> None:
 
     for name, passed in checks.items():
         print(f"{'PASS' if passed else 'FAIL'} {name}")
+    print("\nMain evidence audit")
     for model, (model_restored, model_sensitive) in case_level_counts.items():
-        print(f"{model} restored: {model_restored}/{model_sensitive}")
-    print(f"Main conditional aggregate: {restored}/{denominators}")
-    print(
-        "Gemma2-9B: key-only Top-k 7/72; "
-        "Uniform K6/V2 7/72; Uniform K6/V4 72/72"
-    )
+        print(f"- {model}: {model_restored}/{model_sensitive}")
+    print(f"- Total main: {case_level_restored}/{case_level_sensitive}")
+    print("\nGemma2 boundary audit")
+    print("- key-only Top-k: 7/72")
+    print("- Uniform K6/V2: 7/72")
+    print("- Uniform K6/V4: 72/72")
+    print("\nSupporting / boundary checks")
+    print("- supporting models are not counted into main total")
+    print("- excluded models are not counted as T-BGMP failures")
+    print("- sensitive cases use found fields, not status fields")
     print(f"Audit artifacts: {AUDIT_DIR.relative_to(ROOT)}")
     if not all(checks.values()):
         raise SystemExit("Result audit failed")
