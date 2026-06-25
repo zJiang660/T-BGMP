@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 
 import pandas as pd
+import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,6 +19,11 @@ from tbgmp.utils import parse_bool
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Create same-budget Random-k and Bottom-k model-free control rows."
+    )
+    parser.add_argument(
+        "--config",
+        type=Path,
+        default=ROOT / "configs" / "default_experiment.yaml",
     )
     parser.add_argument(
         "--cases",
@@ -41,6 +47,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    yaml.safe_load(args.config.read_text(encoding="utf-8"))
     if not args.risk_ranking.exists():
         raise SystemExit("Run stage_c_profile_key_risk.py first or pass --risk-ranking")
     ranked = pd.read_csv(args.risk_ranking).sort_values("rank")["layer"].astype(int).tolist()

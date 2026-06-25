@@ -1,0 +1,46 @@
+models:
+  qwen3_4b:
+    display_name: Qwen3-4B
+    repo_id: Qwen/Qwen3-4B-Instruct-2507
+    local_dir: Qwen3-4B-Instruct-2507
+    role: main_evidence
+  qwen25_3b:
+    display_name: Qwen2.5-3B
+    repo_id: Qwen/Qwen2.5-3B-Instruct
+    local_dir: Qwen2.5-3B-Instruct
+    role: main_evidence
+  qwen25_14b:
+    display_name: Qwen2.5-14B
+    repo_id: Qwen/Qwen2.5-14B-Instruct
+    local_dir: Qwen2.5-14B-Instruct
+    role: main_evidence
+  llama32_3b:
+    display_name: Llama3.2-3B
+    repo_id: meta-llama/Llama-3.2-3B-Instruct
+    local_dir: Llama-3.2-3B-Instruct
+    role: main_evidence
+  mistral_7b:
+    display_name: Mistral-7B
+    repo_id: mistralai/Mistral-7B-Instruct-v0.3
+    local_dir: Mistral-7B-Instruct-v0.3
+    role: supporting
+  yi_15_9b:
+    display_name: Yi-1.5-9B
+    repo_id: 01-ai/Yi-1.5-9B-Chat-16K
+    local_dir: Yi-1.5-9B-Chat-16K
+    role: supporting
+  zephyr_7b:
+    display_name: Zephyr-7B
+    repo_id: HuggingFaceH4/zephyr-7b-beta
+    local_dir: zephyr-7b-beta
+    role: supporting
+  smollm2_17b:
+    display_name: SmolLM2-1.7B
+    repo_id: HuggingFaceTB/SmolLM2-1.7B-Instruct
+    local_dir: SmolLM2-1.7B-Instruct
+    role: supporting
+  gemma2_9b:
+    display_name: Gemma2-9B
+    repo_id: google/gemma-2-9b-it
+    local_dir: gemma-2-9b-it
+    role: boundary_supporting

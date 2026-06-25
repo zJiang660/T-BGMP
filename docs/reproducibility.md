@@ -2,16 +2,21 @@
 
 ## Reproducibility Levels
 
-- **Level 1:** Reproduce paper tables and figures from cleaned CSV summaries.
-- **Level 2:** Audit the paper numbers from sanitized case-level outputs for
-  all four main models and the Gemma2 boundary case.
-- **Level 3:** Rerun model execution through the provided backend adapter,
-  configs, and Slurm templates after supplying model weights, a GPU
-  environment, and a compatible KV-cache implementation.
+- **Level 1:** Cleaned CSV to paper tables and figures. Fully supported.
+- **Level 2:** Sanitized case-level outputs to audited paper numbers. Supported
+  when the corresponding case-level CSV bundle is present.
+- **Level 3:** Rerun model execution through the documented TurboQuant
+  integration path. This requires the external `turboquant-pytorch` runtime,
+  model weights, a GPU environment, and local adaptation for arbitrary
+  protected key-layer IDs.
 
 Levels 1 and 2 are directly runnable in this repository. Level 3 provides a
 complete experiment-control interface but depends on external model and
 quantizer components described in `model_setup.md`.
+
+Backend installation and the current adapter boundary are documented in
+`backend_integration.md`; runnable command templates are in
+`command_cookbook.md`.
 
 This repository does not include model weights, raw HPC logs, full raw model
 responses, or a production quantizer kernel. The minimal demo does not load
@@ -93,3 +98,8 @@ raw outputs, and the quantized cache runtime are not distributed here.
 Top1--Top12, and same-budget control orchestration through an external backend
 contract. The Slurm files are sanitized templates showing the required
 interfaces; they are not turn-key institutional jobs.
+
+The included TurboQuant adapter validates the external runtime and then fails
+clearly before generation because the upstream first/last-layer protection
+interface is not equivalent to T-BGMP's arbitrary key-only layer selection.
+No placeholder result is written as a successful model run.

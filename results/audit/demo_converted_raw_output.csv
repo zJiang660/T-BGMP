@@ -1,0 +1,2 @@
+model,case_id,domain,context_length,actual_context_length,depth,seed,answer,policy,policy_type,key_bits,value_bits,protected_key_bits,protected_layers,residual_window,found,status,response_excerpt,runtime_s,tok_per_s,peak_gpu_gb,kv_saving
+demo-model,demo_math_0,math,128,128,50,0,violet-bridge,uniform_k4_v2_rw128,uniform,4,2,,[],128,True,success,The retrieved answer is violet-bridge.,,,,

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "T-BGMP raw generation output",
+  "type": "object",
+  "required": [
+    "model",
+    "domain",
+    "context_length",
+    "depth",
+    "seed",
+    "policy",
+    "key_bits",
+    "value_bits",
+    "residual_window",
+    "answer",
+    "response",
+    "status",
+    "metadata"
+  ],
+  "properties": {
+    "model": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string"},
+    "domain": {"type": "string", "minLength": 1},
+    "context_length": {"type": "integer", "minimum": 1},
+    "actual_context_length": {"type": "integer", "minimum": 1},
+    "depth": {"type": "number"},
+    "seed": {"type": "integer"},
+    "policy": {"type": "string", "minLength": 1},
+    "policy_type": {"type": "string"},
+    "key_bits": {"type": "integer", "minimum": 1, "maximum": 16},
+    "value_bits": {"type": "integer", "minimum": 1, "maximum": 16},
+    "protected_key_bits": {
+      "type": ["integer", "null"],
+      "minimum": 1,
+      "maximum": 16
+    },
+    "protected_layers": {
+      "type": "array",
+      "items": {"type": "integer", "minimum": 0},
+      "uniqueItems": true
+    },
+    "residual_window": {"type": "integer", "minimum": 0},
+    "answer": {"type": "string"},
+    "response": {"type": "string"},
+    "status": {"type": "string"},
+    "runtime_s": {"type": ["number", "null"], "minimum": 0},
+    "tok_per_s": {"type": ["number", "null"], "minimum": 0},
+    "peak_gpu_gb": {"type": ["number", "null"], "minimum": 0},
+    "kv_saving": {"type": ["number", "null"]},
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": true
+}

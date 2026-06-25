@@ -21,6 +21,7 @@ class Backend:
         policy_name,
         quantization,
         max_new_tokens,
+        seed=0,
     ):
         # TODO:
         # 1. Load the user-supplied model from model_path.

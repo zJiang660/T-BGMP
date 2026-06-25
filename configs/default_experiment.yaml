@@ -6,6 +6,16 @@ experiment:
   seeds: [0, 1]
   residual_window: 128
   maximum_topk: 12
+  max_new_tokens: 32
+  default_seed: 0
+
+inputs:
+  model_registry: configs/model_registry.yaml
+  policies: configs/policies.yaml
+  cases: /path/to/cases.csv
+
+backend:
+  config: configs/backend_turboquant.yaml
 
 selection:
   require_fp16_found: true

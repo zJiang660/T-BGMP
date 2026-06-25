@@ -105,6 +105,27 @@ def main() -> None:
         json.loads(path.read_text(encoding="utf-8"))
         print(f"PASS JSON schema parse: {path.relative_to(ROOT)}")
 
+    raw_schema = json.loads(
+        (ROOT / "data" / "schema" / "raw_output_schema.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    raw_required = set(raw_schema["required"])
+    raw_demo = ROOT / "data" / "demo" / "demo_raw_outputs.jsonl"
+    for line_number, line in enumerate(
+        raw_demo.read_text(encoding="utf-8").splitlines(), start=1
+    ):
+        if not line.strip():
+            continue
+        record = json.loads(line)
+        missing = sorted(raw_required - set(record))
+        if missing:
+            failures.append(
+                f"{raw_demo.relative_to(ROOT)} line {line_number}: "
+                f"missing fields {missing}"
+            )
+    print(f"PASS raw JSONL fixture: {raw_demo.relative_to(ROOT)}")
+
     for path in sorted((ROOT / "configs").glob("*.yaml")):
         yaml.safe_load(path.read_text(encoding="utf-8"))
         print(f"PASS YAML parse: {path.relative_to(ROOT)}")

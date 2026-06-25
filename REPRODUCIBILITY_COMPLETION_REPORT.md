@@ -2,14 +2,16 @@
 
 ## Current Capability
 
-This repository supports Level 1 and Level 2 reproducibility.
-Level 3 rerunning requires user-supplied model weights, GPU environment, and
-compatible KV-cache quantization backend.
+This repository supports Level 1 and Level 2 reproducibility. It now provides
+a documented Level 3 integration path using the external TurboQuant PyTorch
+runtime. Level 3 rerunning still requires user-supplied model weights, GPU
+hardware, and local backend configuration.
 
 - Level 1 rebuilds paper tables and figures from cleaned CSV files.
 - Level 2 audits the main paper numbers from sanitized case-level files.
-- Level 3 provides configs, command-line runners, an adapter contract, and
-  sanitized Slurm templates for an externally supplied execution backend.
+- Level 3 provides configs, model registration, command-line runners, a
+  TurboQuant validation adapter, raw-output conversion, and sanitized Slurm
+  templates.
 
 The repository does not provide model checkpoints, raw HPC logs, complete raw
 responses, or a production quantizer kernel. It therefore does not claim
@@ -51,10 +53,24 @@ ranking, Top-k policy construction, matched controls, and KV-saving analysis
 without loading a language model.
 
 `experiments/run_full_pipeline.py` provides the model-execution orchestration
-contract. Real execution requires `--backend module.path:factory`, model
-weights, and GPU support. Stage C consumes a supplied risk-ranking CSV because
-this minimal repository does not include a universal KV extraction or
-quantization kernel.
+contract. It accepts `--backend turboquant`, `--turboquant-root`,
+`--model-key`, `--model-root`, and `--output-dir`, while retaining support for
+custom `module.path:factory` backends.
+
+The external TurboQuant source is not copied or added as a submodule. The
+adapter validates the configured runtime and confirms that `TurboQuantV3` is
+available. It then stops before generation until the upstream cache interface
+is locally adapted for arbitrary protected key-layer IDs with unchanged value
+precision. The published first/last-layer count is not treated as an
+equivalent implementation.
+
+## Raw-Output Conversion
+
+`scripts/convert_raw_outputs_to_case_csv.py` converts raw JSONL into compact
+case-level CSV. It recomputes `found`, removes complete responses and metadata,
+and retains only a bounded response excerpt. The input contract is documented
+in `docs/raw_output_schema.md` and
+`data/schema/raw_output_schema.json`.
 
 ## Audit Results
 
@@ -86,15 +102,22 @@ provenance hashes are present. A mismatch produces a FAIL and nonzero exit.
 - `python scripts/build_figures.py`: PASS
 - `python scripts/validate_csv_schema.py`: PASS
 - `python experiments/run_full_pipeline.py --help`: PASS
+- `python experiments/stage_a_discovery.py --help`: PASS
+- `python scripts/convert_raw_outputs_to_case_csv.py --help`: PASS
+- Synthetic raw JSONL to case-level CSV conversion: PASS
+- TurboQuant unavailable/incomplete integration failure path: PASS
 - Python compilation check for `experiments`, `scripts`, and `src`: PASS
 
-The full GPU pipeline was not executed because no external backend was
-requested or bundled. No success was fabricated for that level.
+The full GPU pipeline was not executed. The adapter's exact T-BGMP policy
+binding is intentionally incomplete and reports this before writing a model
+result. No success was fabricated for that level.
 
 ## Safety and Size Checks
 
 - Model weights or checkpoint-like files: none found.
 - Raw cluster logs or model caches: none found.
+- Raw generation data: only the one-line synthetic conversion fixture under
+  `data/demo/`; no real model response bundle is included.
 - Real local absolute paths: none found.
 - Real HPC paths: none found.
 - Usernames, institutional identifiers, email addresses, or credentials: none
@@ -108,6 +131,8 @@ requested or bundled. No success was fabricated for that level.
   complete sanitized case-level bundles in this repository.
 - Full model inference depends on model-specific cache APIs and an external
   TurboQuant-compatible backend.
+- The current upstream protected-layer interface uses first/last layer counts;
+  it still needs a local extension for arbitrary risk-ranked key-layer IDs.
 - The repository does not implement or benchmark a production quantizer
   kernel and does not claim deployment speedup.
 - The reported evidence remains conditioned on FP16-pass/aggressive-fail exact

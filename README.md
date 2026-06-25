@@ -97,6 +97,27 @@ documented in [`docs/model_setup.md`](docs/model_setup.md). Copy
 `configs/paths_template.yaml` outside version control before adding real
 machine paths.
 
+## Running Full Experiments with TurboQuant
+
+Full model execution requires the external TurboQuant PyTorch runtime:
+
+https://github.com/tonbistudio/turboquant-pytorch
+
+This repository provides T-BGMP pipeline scripts, configs, adapters, raw-output
+conversion, and audit tools. It does not vendor TurboQuant, model weights,
+production quantizer kernels, or raw cluster logs.
+
+The current adapter validates the external installation but does not silently
+approximate T-BGMP's arbitrary key-layer protection with TurboQuant's published
+first/last-layer protection option. Completing that exact local binding is
+required before GPU generation.
+
+See:
+
+- [`docs/model_setup.md`](docs/model_setup.md)
+- [`docs/backend_integration.md`](docs/backend_integration.md)
+- [`docs/command_cookbook.md`](docs/command_cookbook.md)
+
 ## Reproducibility Levels
 
 This repository supports reproducibility at three levels:
@@ -111,8 +132,9 @@ This repository supports reproducibility at three levels:
    backend adapter contract, and Slurm templates with user-supplied model
    weights, GPU environment, and a compatible KV-cache quantization backend.
 
-Level 3 is an explicit execution interface, not a claim of universal one-click
-reproduction. Model-specific cache APIs and quantizer kernels remain external.
+Level 3 is supported as a documented integration path, not as a guaranteed
+one-command reproduction on every machine. Model-specific cache APIs and
+quantizer kernels remain external.
 The minimal demo does not load language models. Full GPU/model execution
 requires external model weights and backend support.
 

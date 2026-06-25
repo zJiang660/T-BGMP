@@ -148,6 +148,8 @@ and return `tbgmp.kv_cache_wrapper.GenerationResult`.
 The repository does not implement a universal quantizer kernel. The adapter
 must apply `QuantizationConfig` to a compatible model/cache runtime. An
 implementation template is provided in `docs/backend_adapter_template.py`.
+External TurboQuant installation and the exact current adapter boundary are
+documented in `docs/backend_integration.md`.
 
 ## Dry Run Before GPU Execution
 

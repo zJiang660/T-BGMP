@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 
 import pandas as pd
+import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,6 +23,11 @@ def parse_args() -> argparse.Namespace:
         )
     )
     parser.add_argument(
+        "--config",
+        type=Path,
+        default=ROOT / "configs" / "default_experiment.yaml",
+    )
+    parser.add_argument(
         "--input",
         type=Path,
         default=ROOT / "data" / "demo" / "demo_cases.csv",
@@ -37,6 +43,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    yaml.safe_load(args.config.read_text(encoding="utf-8"))
     cases = pd.read_csv(args.input)
     required = {"case_id", "answer", "response_fp16", "response_aggressive"}
     missing = sorted(required - set(cases.columns))

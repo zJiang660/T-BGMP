@@ -1,0 +1,14 @@
+backend:
+  name: turboquant
+  turboquant_root: /path/to/turboquant-pytorch
+  device: cuda
+  dtype: float16
+  max_new_tokens: 32
+
+runtime:
+  require_gpu: true
+  allow_cpu_demo_only: true
+
+outputs:
+  raw_jsonl: outputs/raw
+  case_csv: outputs/case_csv

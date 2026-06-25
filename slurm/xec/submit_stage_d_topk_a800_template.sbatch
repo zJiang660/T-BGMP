@@ -12,21 +12,22 @@
 
 set -euo pipefail
 
-PROJECT_ROOT=/path/to/T-BGMP
-MODEL_ROOT=/path/to/models
-OUTPUT_ROOT=/path/to/outputs
-MODEL_PATH="${MODEL_ROOT}/model"
+export TBGMP_ROOT=/path/to/T-BGMP
+export TURBOQUANT_ROOT=/path/to/turboquant-pytorch
+export MODEL_ROOT=/path/to/models
+export OUTPUT_ROOT=/path/to/outputs
 CASES_FILE=/path/to/cases.csv
 RISK_RANKING=/path/to/risk_ranking.csv
-BACKEND_MODULE=your_backend.module:create_backend
 
-cd "${PROJECT_ROOT}"
+cd "${TBGMP_ROOT}"
 mkdir -p "${OUTPUT_ROOT}" logs
 python experiments/run_full_pipeline.py \
+  --config configs/default_experiment.yaml \
   --cases "${CASES_FILE}" \
-  --model-path "${MODEL_PATH}" \
-  --model-id example-model \
-  --backend "${BACKEND_MODULE}" \
+  --model-key qwen25_3b \
+  --model-root "${MODEL_ROOT}" \
+  --backend turboquant \
+  --turboquant-root "${TURBOQUANT_ROOT}" \
   --risk-ranking "${RISK_RANKING}" \
   --maximum-topk 12 \
   --output "${OUTPUT_ROOT}/pipeline_results.csv"

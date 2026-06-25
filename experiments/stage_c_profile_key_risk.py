@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 
 import pandas as pd
+import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,6 +20,11 @@ def parse_args() -> argparse.Namespace:
             "Rank layers from precomputed key-distortion statistics. This script "
             "does not extract KV tensors or run a language model."
         )
+    )
+    parser.add_argument(
+        "--config",
+        type=Path,
+        default=ROOT / "configs" / "default_experiment.yaml",
     )
     parser.add_argument(
         "--input",
@@ -46,6 +52,7 @@ def demo_stats() -> pd.DataFrame:
 
 def main() -> None:
     args = parse_args()
+    yaml.safe_load(args.config.read_text(encoding="utf-8"))
     stats = pd.read_csv(args.input) if args.input else demo_stats()
     ranked = compute_risk_scores(stats)
     args.output.parent.mkdir(parents=True, exist_ok=True)

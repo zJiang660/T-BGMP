@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 
 import pandas as pd
+import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,6 +18,11 @@ from tbgmp.utils import parse_bool
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Summarize KV-saving advantage for restored Top-k cases."
+    )
+    parser.add_argument(
+        "--config",
+        type=Path,
+        default=ROOT / "configs" / "default_experiment.yaml",
     )
     parser.add_argument(
         "--input",
@@ -33,6 +39,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    yaml.safe_load(args.config.read_text(encoding="utf-8"))
     rows = pd.read_csv(args.input)
     required = {"found", "tbgmp_saving", "uniform_safe_saving"}
     missing = sorted(required - set(rows.columns))

@@ -15,6 +15,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from tbgmp.kv_cache_wrapper import DryRunBackend, load_backend
 from tbgmp.controls import bottomk_layers, sample_random_layers
+from tbgmp.backends.turboquant_backend import TurboQuantBackend
 from tbgmp.quantization import QuantizationConfig
 from tbgmp.retrieval_eval import found_answer
 
@@ -49,19 +50,38 @@ def execute(
     policy_type: str,
     quantization: QuantizationConfig | None,
     max_new_tokens: int,
+    seed: int,
     stage: str,
 ) -> dict:
     prompt = f"{case['context']}\n\n{case['question']}"
-    result = backend.generate(
-        model_path=model_path,
-        prompt=prompt,
-        answer=str(case["answer"]),
-        policy_name=policy_name,
-        quantization=quantization,
-        max_new_tokens=max_new_tokens,
-    )
+    try:
+        result = backend.generate(
+            model_path=model_path,
+            prompt=prompt,
+            answer=str(case["answer"]),
+            policy_name=policy_name,
+            quantization=quantization,
+            max_new_tokens=max_new_tokens,
+            seed=seed,
+        )
+    except (NotImplementedError, RuntimeError) as exc:
+        raise SystemExit(str(exc)) from None
     if result.status == "success":
         result.found = found_answer(result.response, str(case["answer"]))
+    if hasattr(result, "to_dict"):
+        result_fields = result.to_dict()
+    else:
+        metadata = dict(getattr(result, "metadata", {}))
+        result_fields = {
+            "response": result.response,
+            "found": result.found,
+            "status": result.status,
+            "error": metadata.get("error", ""),
+            "runtime_s": metadata.get("runtime_s"),
+            "tok_per_s": metadata.get("tok_per_s"),
+            "peak_gpu_gb": metadata.get("peak_gpu_gb"),
+            "kv_saving": metadata.get("kv_saving"),
+        }
     return {
         "model": model_id,
         "case_id": case["case_id"],
@@ -84,7 +104,7 @@ def execute(
         "residual_window": (
             0 if quantization is None else quantization.residual_window
         ),
-        **result.to_dict(),
+        **result_fields,
     }
 
 
@@ -95,18 +115,36 @@ def parse_args() -> argparse.Namespace:
             "pipeline contract; users supply model weights and a compatible backend."
         )
     )
-    parser.add_argument("--cases", type=Path, required=True)
-    parser.add_argument("--model-path", required=True)
-    parser.add_argument("--model-id", required=True)
+    parser.add_argument(
+        "--config",
+        type=Path,
+        default=ROOT / "configs" / "default_experiment.yaml",
+    )
+    parser.add_argument("--cases", type=Path)
+    parser.add_argument("--model-path")
+    parser.add_argument("--model-id")
+    parser.add_argument("--model-key")
+    parser.add_argument("--model-root", type=Path)
+    parser.add_argument(
+        "--model-registry",
+        type=Path,
+        default=ROOT / "configs" / "model_registry.yaml",
+    )
     parser.add_argument(
         "--policies",
         type=Path,
         default=ROOT / "configs" / "policies.yaml",
     )
-    parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--backend", help="External backend as module.path:factory")
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--output-dir", type=Path)
+    parser.add_argument(
+        "--backend",
+        help="'turboquant' or an external backend as module.path:factory",
+    )
+    parser.add_argument("--turboquant-root", type=Path)
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--max-new-tokens", type=int, default=24)
+    parser.add_argument("--max-new-tokens", type=int, default=32)
+    parser.add_argument("--seed", type=int, default=0)
     parser.add_argument(
         "--risk-ranking",
         type=Path,
@@ -117,11 +155,61 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def resolve_paths(args: argparse.Namespace) -> None:
+    config = yaml.safe_load(args.config.read_text(encoding="utf-8"))
+    if args.cases is None:
+        configured_cases = config.get("inputs", {}).get("cases")
+        if configured_cases and not str(configured_cases).startswith("/path/to/"):
+            args.cases = Path(configured_cases)
+    if args.cases is None:
+        raise SystemExit("Provide --cases with a prompt-case CSV.")
+
+    if args.model_key:
+        registry = yaml.safe_load(args.model_registry.read_text(encoding="utf-8"))
+        models = registry.get("models", {})
+        if args.model_key not in models:
+            raise SystemExit(f"Unknown --model-key: {args.model_key}")
+        entry = models[args.model_key]
+        args.model_id = args.model_id or entry.get("display_name") or args.model_key
+        if args.model_path is None:
+            if args.model_root is None:
+                raise SystemExit(
+                    "Provide --model-root when resolving a model from --model-key."
+                )
+            args.model_path = str(args.model_root / entry["local_dir"])
+
+    if not args.model_path or not args.model_id:
+        raise SystemExit(
+            "Provide --model-path and --model-id, or use --model-key with "
+            "--model-root."
+        )
+    if args.output is None:
+        if args.output_dir is None:
+            raise SystemExit("Provide --output or --output-dir.")
+        args.output = args.output_dir / "full_pipeline_results.csv"
+
+
 def main() -> None:
     args = parse_args()
+    resolve_paths(args)
     if not args.dry_run and not args.backend:
-        raise SystemExit("Provide --backend module:factory or use --dry-run")
-    backend = DryRunBackend() if args.dry_run else load_backend(args.backend)
+        raise SystemExit(
+            "Full model execution requires the external TurboQuant backend. "
+            "See docs/backend_integration.md."
+        )
+    if args.dry_run:
+        backend = DryRunBackend()
+    elif args.backend == "turboquant":
+        try:
+            backend = TurboQuantBackend(
+                turboquant_root=(
+                    str(args.turboquant_root) if args.turboquant_root else None
+                )
+            )
+        except RuntimeError as exc:
+            raise SystemExit(str(exc)) from None
+    else:
+        backend = load_backend(args.backend)
     cases = load_cases(args.cases)
     policies = yaml.safe_load(args.policies.read_text(encoding="utf-8"))
     discovery_names = [
@@ -146,6 +234,7 @@ def main() -> None:
                 policy_type="fp16" if name == "fp16" else "uniform",
                 quantization=policy_config(name, policies),
                 max_new_tokens=args.max_new_tokens,
+                seed=args.seed,
                 stage="stage_a_discovery",
             )
             rows.append(row)
@@ -193,6 +282,7 @@ def main() -> None:
                     policy_type="tbgmp_topk",
                     quantization=config,
                     max_new_tokens=args.max_new_tokens,
+                    seed=args.seed,
                     stage="stage_d_topk_recovery",
                 )
                 row["aggressive_policy"] = aggressive_name
@@ -222,6 +312,7 @@ def main() -> None:
                     policy_type="random_k",
                     quantization=config,
                     max_new_tokens=args.max_new_tokens,
+                    seed=seed,
                     stage="stage_e_controls",
                 )
                 row["control_seed"] = seed
@@ -245,6 +336,7 @@ def main() -> None:
                 policy_type="bottom_k",
                 quantization=config,
                 max_new_tokens=args.max_new_tokens,
+                seed=args.seed,
                 stage="stage_e_controls",
             )
             row["matched_topk_k"] = k
@@ -259,6 +351,7 @@ def main() -> None:
         "policies": discovery_names,
         "sensitive_cases": len(sensitive_cases),
         "maximum_topk": args.maximum_topk,
+        "seed": args.seed,
         "model_weights_in_repository": False,
     }
     args.output.with_suffix(".metadata.json").write_text(
