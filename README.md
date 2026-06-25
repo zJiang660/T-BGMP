@@ -71,6 +71,32 @@ python scripts/audit_results.py
 python scripts/validate_csv_schema.py
 ```
 
+## Model Setup and Full Reproduction
+
+Model weights are not included. See `docs/model_setup.md` and set `MODEL_ROOT`
+before rerunning full experiments.
+
+The committed cleaned results are sufficient for rebuilding and auditing the
+paper tables without downloading checkpoints. A full GPU rerun additionally
+requires independently obtained model weights, a compatible CUDA/PyTorch
+environment, and an external TurboQuant/KV-cache backend. Start from:
+
+```bash
+export MODEL_ROOT=/path/to/models
+python experiments/run_full_pipeline.py \
+  --cases data/demo/full_runner_cases.csv \
+  --model-path "${MODEL_ROOT}/Qwen3-4B-Instruct-2507" \
+  --model-id Qwen3-4B-Instruct-2507 \
+  --output /path/to/outputs/qwen3_full.csv \
+  --backend module.path:factory
+```
+
+Model repository IDs, Hugging Face and ModelScope download examples, gated
+license notes, recommended directories, and environment requirements are
+documented in [`docs/model_setup.md`](docs/model_setup.md). Copy
+`configs/paths_template.yaml` outside version control before adding real
+machine paths.
+
 ## Reproducibility Levels
 
 This repository supports reproducibility at three levels:
