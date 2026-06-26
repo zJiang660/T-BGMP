@@ -1,36 +1,119 @@
-Status: proposed patch guide, not yet validated.
-
-This file is an implementation sketch for adapting a TurboQuant-style cache to
-T-BGMP. It is intentionally not claimed as a tested upstream patch.
-
+﻿diff --git a/turboquant/compressors_v3.py b/turboquant/compressors_v3.py
+index 912cb0f..42dd830 100644
 --- a/turboquant/compressors_v3.py
 +++ b/turboquant/compressors_v3.py
-@@
--        protected_layers: int = 4,
--        protected_bits: int = 8,
-+        protected_layers: int = 0,
-+        protected_layer_ids: set[int] | None = None,
+@@ -146,7 +146,9 @@ class TurboQuantV3:
+         layer_idx: int = 0,
+         n_layers: int = 36,
+         protected_layers: int = 4,
++        protected_layer_ids: list[int] | set[int] | None = None,
+         protected_bits: int = 8,
 +        protected_key_bits: int = 8,
-@@
+         seed: int = 42,
+         device: str = "cpu",
+     ):
+@@ -154,10 +156,22 @@ class TurboQuantV3:
+         self.residual_window = residual_window
+         self.device = device
+ 
+-        # Layer-adaptive: first/last N layers get more bits
 -        is_protected = layer_idx < protected_layers or layer_idx >= (n_layers - protected_layers)
 -        effective_key_bits = protected_bits if is_protected else key_bits
 -        effective_value_bits = protected_bits if is_protected else value_bits
-+        protected_layer_ids = protected_layer_ids or set()
-+        is_protected_key = layer_idx in protected_layer_ids
-+        effective_key_bits = protected_key_bits if is_protected_key else key_bits
-+        effective_value_bits = value_bits
++        # Backward-compatible path: protected_layers keeps the original
++        # first/last-N semantics and raises both key and value precision.
++        is_prefix_suffix_protected = (
++            layer_idx < protected_layers or layer_idx >= (n_layers - protected_layers)
++        )
++
++        # T-BGMP path: explicit risk-ranked key layer IDs raise key precision
++        # only. Values remain at value_bits for a fair same-budget comparison.
++        protected_layer_ids = set(protected_layer_ids or [])
++        is_key_id_protected = layer_idx in protected_layer_ids
++        effective_key_bits = (
++            protected_key_bits if is_key_id_protected
++            else protected_bits if is_prefix_suffix_protected
++            else key_bits
++        )
++        effective_value_bits = protected_bits if is_prefix_suffix_protected else value_bits
+ 
+         # Cap at 8 bits (uint8 max)
+         self.key_bits = min(effective_key_bits, 8)
+diff --git a/turboquant/generation_test.py b/turboquant/generation_test.py
+index 10c0390..a065ff9 100644
 --- a/turboquant/generation_test.py
 +++ b/turboquant/generation_test.py
-@@
--    def __init__(self, key_bits=4, value_bits=2, residual_window=128,
+@@ -52,12 +52,15 @@ class V3Cache(DynamicCache):
+     """
+ 
+     def __init__(self, key_bits=4, value_bits=2, residual_window=128,
 -                 protected_layers=0, n_layers=36):
-+    def __init__(self, key_bits=4, value_bits=2, residual_window=128,
-+                 protected_layer_ids=None, protected_key_bits=8, n_layers=36):
-@@
--        self.protected_layers = protected_layers
++                 protected_layers=0, protected_layer_ids=None,
++                 protected_key_bits=8, n_layers=36):
+         super().__init__()
+         self.key_bits = key_bits
+         self.value_bits = value_bits
+         self.residual_window = residual_window
+         self.protected_layers = protected_layers
 +        self.protected_layer_ids = set(protected_layer_ids or [])
 +        self.protected_key_bits = protected_key_bits
-@@
--                protected_layers=self.protected_layers,
+         self.n_layers = n_layers
+         self._compressors = {}
+         self._chunks_k = {}  # layer_idx -> list of compressed key chunks
+@@ -76,6 +79,8 @@ class V3Cache(DynamicCache):
+                 layer_idx=layer_idx,
+                 n_layers=self.n_layers,
+                 protected_layers=self.protected_layers,
 +                protected_layer_ids=self.protected_layer_ids,
 +                protected_key_bits=self.protected_key_bits,
+                 seed=42,
+                 device=str(device),
+             )
+@@ -167,6 +172,8 @@ def run_test(model, tokenizer, target_tokens, config, needle_pos=0.5):
+             value_bits=config["value_bits"],
+             residual_window=config.get("residual_window", 128),
+             protected_layers=config.get("protected_layers", 0),
++            protected_layer_ids=config.get("protected_layer_ids", []),
++            protected_key_bits=config.get("protected_key_bits", 8),
+             n_layers=n_layers,
+         )
+ 
+diff --git a/turboquant/generation_test_v2.py b/turboquant/generation_test_v2.py
+index 830dad7..d2c8864 100644
+--- a/turboquant/generation_test_v2.py
++++ b/turboquant/generation_test_v2.py
+@@ -47,12 +47,15 @@ def build_prompt(tokenizer, target_tokens=2048, needle_pos=0.5):
+ 
+ class V3Cache(DynamicCache):
+     def __init__(self, key_bits=4, value_bits=2, residual_window=128,
+-                 protected_layers=0, n_layers=36):
++                 protected_layers=0, protected_layer_ids=None,
++                 protected_key_bits=8, n_layers=36):
+         super().__init__()
+         self.key_bits = key_bits
+         self.value_bits = value_bits
+         self.residual_window = residual_window
+         self.protected_layers = protected_layers
++        self.protected_layer_ids = set(protected_layer_ids or [])
++        self.protected_key_bits = protected_key_bits
+         self.n_layers = n_layers
+         self._compressors = {}
+         self._chunks_k = {}
+@@ -72,6 +75,8 @@ class V3Cache(DynamicCache):
+                 layer_idx=layer_idx,
+                 n_layers=self.n_layers,
+                 protected_layers=self.protected_layers,
++                protected_layer_ids=self.protected_layer_ids,
++                protected_key_bits=self.protected_key_bits,
+                 seed=42,
+                 device=str(device),
+             )
+@@ -184,6 +189,8 @@ def run_test(model, tokenizer, target_tokens, config, needle_pos=0.5):
+             value_bits=config["value_bits"],
+             residual_window=config["residual_window"],
+             protected_layers=config.get("protected_layers", 0),
++            protected_layer_ids=config.get("protected_layer_ids", []),
++            protected_key_bits=config.get("protected_key_bits", 8),
+             n_layers=n_layers,
+         )
+ 

@@ -7,6 +7,8 @@ a documented Level 3 integration path using the external TurboQuant PyTorch
 runtime. Level 3 rerunning still requires user-supplied model weights, GPU
 hardware, and local backend configuration.
 
+GitHub push status: successful. `origin/main` now points to commit `17fbf69`.
+
 - Level 1 rebuilds paper tables and figures from cleaned CSV files.
 - Level 2 audits the main paper numbers from sanitized case-level files.
 - Level 3 provides configs, model registration, command-line runners, a
@@ -75,6 +77,12 @@ equivalent implementation.
 - Key-only protection support: no direct public binding found.
 - `residual_window` support: present in the inspected V3 compressor/cache path.
 - Patch needed: yes, for exact T-BGMP execution.
+- Patch apply check: PASS against a clean clone of the inspected public
+  TurboQuant repository.
+- Patch detection check: PASS. After temporarily applying the patch,
+  `TurboQuantBackend.check_available()` detects `protected_layer_ids` and
+  `protected_key_bits` markers.
+- Patch runtime validation: NOT TESTED.
 
 Detailed findings are in `docs/turboquant_api_findings.md`.
 
@@ -89,6 +97,10 @@ Detailed findings are in `docs/turboquant_api_findings.md`.
 - Patch guide: `docs/turboquant_patch_guide.md`.
 - Proposed patch sketch:
   `patches/turboquant_arbitrary_protected_layers.patch`.
+- Backend availability diagnostics: `check_available()` reports root presence,
+  key TurboQuant file presence, import status, `TurboQuantV3` availability, and
+  whether `protected_layer_ids` / `protected_key_bits` patch markers are
+  present.
 
 ## Smoke Test Status
 

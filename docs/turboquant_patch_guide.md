@@ -1,6 +1,8 @@
 # TurboQuant Patch Guide
 
-Status: proposed patch guide, not yet validated.
+Status: proposed patch guide. `git apply --check` passes against a clean clone
+of the inspected public TurboQuant repository, but runtime smoke validation has
+not yet been performed.
 
 T-BGMP needs arbitrary risk-ranked key-layer protection. The inspected public
 TurboQuant runtime exposes prefix/suffix protected layer counts, so exact
@@ -54,3 +56,10 @@ Top-k policy with explicit `protected_layer_ids`. Confirm:
 
 Do not claim a full GPU reproduction until this smoke test passes on the target
 machine.
+
+## Patch Check Status
+
+- Patch file: `patches/turboquant_arbitrary_protected_layers.patch`
+- Apply check: PASS against the inspected public TurboQuant repository.
+- Runtime smoke test: NOT TESTED.
+- Full model validation: NOT TESTED.

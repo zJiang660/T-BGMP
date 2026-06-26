@@ -49,3 +49,8 @@ key-layer IDs.
 The public repository is still usable as the external runtime basis, but the
 current T-BGMP adapter refuses to approximate Top-k protection with
 first/last-layer protection. See `docs/turboquant_patch_guide.md`.
+
+Patch apply check: PASS against a clean clone of the inspected public
+TurboQuant repository.
+
+Patch runtime validation: NOT TESTED.

@@ -39,6 +39,12 @@ class TurboQuantBackend:
         self.compressor_class = None
         self._import_error = ""
         self._compressors_module = None
+        self._compressors_file = (
+            self.root / "turboquant" / "compressors_v3.py" if self.root else None
+        )
+        self._generation_file = (
+            self.root / "turboquant" / "generation_test.py" if self.root else None
+        )
 
         if self.root and self.root.is_dir():
             root_text = str(self.root)
@@ -58,21 +64,44 @@ class TurboQuantBackend:
         root_ok = self.root is not None and self.root.is_dir()
         import_ok = self.runtime_module is not None and not self._import_error
         compressor_ok = self.compressor_class is not None
+        compressors_file_ok = (
+            self._compressors_file is not None and self._compressors_file.is_file()
+        )
+        generation_file_ok = (
+            self._generation_file is not None and self._generation_file.is_file()
+        )
+        source_text = ""
+        if compressors_file_ok:
+            source_text += self._compressors_file.read_text(
+                encoding="utf-8", errors="replace"
+            )
+        if generation_file_ok:
+            source_text += self._generation_file.read_text(
+                encoding="utf-8", errors="replace"
+            )
+        arbitrary_patch_detected = (
+            "protected_layer_ids" in source_text
+            and "protected_key_bits" in source_text
+        )
         return {
             "backend": "turboquant",
             "root_configured": self.root is not None,
             "root_exists": root_ok,
+            "compressors_v3_file": compressors_file_ok,
+            "generation_test_file": generation_file_ok,
             "import_ok": import_ok,
             "compressor_v3_found": compressor_ok,
             "protected_layers_semantics": "prefix_suffix_count",
-            "arbitrary_protected_key_layer_ids": False,
-            "key_only_protection": False,
+            "arbitrary_patch_detected": arbitrary_patch_detected,
+            "arbitrary_protected_key_layer_ids": arbitrary_patch_detected,
+            "key_only_protection": arbitrary_patch_detected,
             "residual_window": "supported by upstream V3 cache",
             "ready_for_tbgmp_generation": False,
             "error": self._import_error,
             "message": (
-                "The public TurboQuant API can be inspected, but arbitrary "
-                "risk-ranked protected key-layer IDs are not bound."
+                "The external TurboQuant runtime can be inspected. Exact "
+                "generation still requires a callable backend binding for "
+                "arbitrary risk-ranked protected key-layer IDs."
             ),
         }
 
@@ -125,10 +154,10 @@ class TurboQuantBackend:
 
         self._raise_if_unavailable()
         raise NotImplementedError(
-            "Full TurboQuant generation is not available because arbitrary "
-            "risk-ranked protected key-layer IDs are not yet bound to the "
-            "external TurboQuant runtime. See docs/turboquant_api_findings.md "
-            "and docs/backend_integration.md."
+            "Full TurboQuant generation is unavailable because the public "
+            "TurboQuant runtime does not directly expose arbitrary risk-ranked "
+            "protected key-layer IDs. Apply the patch described in "
+            "docs/turboquant_patch_guide.md or provide a compatible backend."
         )
 
 
