@@ -53,4 +53,7 @@ first/last-layer protection. See `docs/turboquant_patch_guide.md`.
 Patch apply check: PASS against a clean clone of the inspected public
 TurboQuant repository.
 
-Patch runtime validation: NOT TESTED.
+Patch runtime validation: PASS for a minimal XEC A800-class backend smoke test
+with Qwen2.5-3B-Instruct, FP16, and `tbgmp_topk` protected key layers `[25, 2]`.
+This validates the small integration path only; it is not a full paper-scale
+rerun.

@@ -1,8 +1,9 @@
 # TurboQuant Patch Guide
 
-Status: proposed patch guide. `git apply --check` passes against a clean clone
-of the inspected public TurboQuant repository, but runtime smoke validation has
-not yet been performed.
+Status: proposed patch guide with smoke validation. `git apply --check` passes
+against a clean clone of the inspected public TurboQuant repository, and a
+minimal XEC A800-class backend smoke test has run successfully with patched
+TurboQuant.
 
 T-BGMP needs arbitrary risk-ranked key-layer protection. The inspected public
 TurboQuant runtime exposes prefix/suffix protected layer counts, so exact
@@ -61,5 +62,6 @@ machine.
 
 - Patch file: `patches/turboquant_arbitrary_protected_layers.patch`
 - Apply check: PASS against the inspected public TurboQuant repository.
-- Runtime smoke test: NOT TESTED.
-- Full model validation: NOT TESTED.
+- Runtime smoke test: PASS for a minimal XEC A800-class Qwen2.5-3B-Instruct
+  smoke test using FP16 and `tbgmp_topk` with protected layer IDs `[25, 2]`.
+- Full paper-scale validation: NOT TESTED by this smoke test.
