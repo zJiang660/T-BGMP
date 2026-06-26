@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "T-BGMP: A Conditional Failure-Recovery Study of Risk-Guided Key-Layer Protection for KV-Cache Quantization"
+message: "If you use this artifact, please cite the associated paper."
+type: software
+authors:
+  - name: "Anonymous"
+repository-code: "https://github.com/zJiang660/T-BGMP"
+license: "MIT"

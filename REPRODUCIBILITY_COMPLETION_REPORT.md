@@ -2,12 +2,18 @@
 
 ## Current Capability
 
-This repository supports Level 1 and Level 2 reproducibility. It now provides
-a documented Level 3 integration path using the external TurboQuant PyTorch
-runtime. Level 3 rerunning still requires user-supplied model weights, GPU
+This repository supports Level 1 and Level 2 reproducibility and now includes
+a validated Level 3 small backend smoke path using patched TurboQuant. Full
+paper-scale GPU reruns still require user-supplied model weights, GPU
 hardware, and local backend configuration.
 
-GitHub push status: successful. `origin/main` now points to commit `17fbf69`.
+Artifact status:
+
+- Level 1: PASS, cleaned CSV to paper tables and figures.
+- Level 2: PASS, sanitized case-level and paper-ready CSV to audited paper
+  numbers.
+- Level 3 smoke path: PASS, small patched TurboQuant backend smoke test.
+- Full paper-scale rerun: not packaged as a one-command artifact.
 
 - Level 1 rebuilds paper tables and figures from cleaned CSV files.
 - Level 2 audits the main paper numbers from sanitized case-level files.
@@ -82,7 +88,7 @@ equivalent implementation.
 - Patch detection check: PASS. After temporarily applying the patch,
   `TurboQuantBackend.check_available()` detects `protected_layer_ids` and
   `protected_key_bits` markers.
-- Patch runtime validation: NOT TESTED.
+- Patch runtime validation: PASS for the small XEC A800-class smoke test.
 
 Detailed findings are in `docs/turboquant_api_findings.md`.
 
@@ -162,9 +168,29 @@ provenance hashes are present. A mismatch produces a FAIL and nonzero exit.
 - TurboQuant unavailable/incomplete integration failure path: PASS
 - Python compilation check for `experiments`, `scripts`, and `src`: PASS
 
-The full GPU pipeline was not executed. The adapter's exact T-BGMP policy
-binding is intentionally incomplete and reports this before writing a model
-result. No success was fabricated for that level.
+The full paper-scale GPU pipeline was not executed. The small backend smoke
+path was executed with patched TurboQuant, but this should not be interpreted
+as a full rerun of all paper-scale experiments.
+
+## Artifact Submission Additions
+
+- `ARTIFACT_EVALUATION.md`: evaluator guide and reproducibility levels.
+- `CLAIMS_TO_ARTIFACTS.md`: claim-to-file and claim-to-command mapping.
+- `REPRODUCE.md`: short CPU-only reproduction path.
+- `PAPER_RESULTS_MANIFEST.yaml`: machine-readable result manifest.
+- `VERSION_LOCK.md`: repository/runtime/model version notes.
+- `CITATION.cff`: anonymous software citation metadata.
+- `NOTICE.md`: external dependency and licensing notice.
+- `docs/data_provenance.md`: data provenance and transformation pipeline.
+- `scripts/check_artifact_integrity.py`: repository integrity and safety check.
+- `.github/workflows/ci.yml`: CPU-only artifact CI.
+
+## CI and Integrity
+
+- GitHub Actions CI: added.
+- CI scope: demo, audit, tables, figures, schemas, artifact integrity, tests.
+- Model download required by CI: no.
+- `scripts/check_artifact_integrity.py`: PASS locally.
 
 ## Safety and Size Checks
 
@@ -178,6 +204,7 @@ result. No success was fabricated for that level.
   found.
 - Files larger than 25 MB: none found.
 - Largest repository file at the time of inspection: below 0.2 MB.
+- Extra public evidence models outside the declared manifest: none found.
 
 ## Remaining Limitations
 
@@ -187,7 +214,8 @@ result. No success was fabricated for that level.
   TurboQuant-compatible backend.
 - The current upstream protected-layer interface uses first/last layer counts;
   it still needs a local extension for arbitrary risk-ranked key-layer IDs.
-- The included patch is a proposed guide, not a validated upstream patch.
+- The included patch is smoke-validated in this artifact, but it is not an
+  upstream-maintained TurboQuant release.
 - The repository does not implement or benchmark a production quantizer
   kernel and does not claim deployment speedup.
 - The reported evidence remains conditioned on FP16-pass/aggressive-fail exact

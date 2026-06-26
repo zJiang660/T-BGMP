@@ -1,0 +1,65 @@
+artifact_version: "1.0"
+paper_title: "T-BGMP: A Conditional Failure-Recovery Study of Risk-Guided Key-Layer Protection for KV-Cache Quantization"
+
+main_evidence:
+  aggregate:
+    sensitive_cases: 183
+    restored: 183
+    source: results/paper_tables/table_main_evidence.csv
+    audit_command: python scripts/audit_results.py
+  models:
+    qwen3_4b:
+      sensitive_cases: 72
+      restored: 72
+      role: main
+    qwen25_3b:
+      sensitive_cases: 72
+      restored: 72
+      role: main
+    qwen25_14b:
+      sensitive_cases: 14
+      restored: 14
+      role: main
+    llama32_3b:
+      sensitive_cases: 25
+      restored: 25
+      role: main
+
+supporting:
+  mistral_7b:
+    role: supporting
+  yi_15_9b:
+    role: supporting
+  zephyr_7b:
+    role: supporting
+  smollm2_17b:
+    role: supporting
+  gemma2_9b:
+    role: boundary_supporting
+    note: "value-bottleneck boundary case"
+
+excluded:
+  gemma3_4b:
+    reason: FP16-invalid
+  qwen35_4b:
+    reason: cache-interface-limited
+  internlm25_7b:
+    reason: compatibility-limited
+  glm4_9b:
+    reason: generation-interface-limited
+
+smoke_test:
+  status: validated
+  model: Qwen2.5-3B-Instruct
+  backend: patched TurboQuant
+  policies:
+    - fp16
+    - tbgmp_topk
+  sanitized_examples: examples/smoke_test
+
+not_included:
+  - model weights
+  - raw HPC logs
+  - full raw model responses
+  - production quantizer kernel
+  - private machine paths

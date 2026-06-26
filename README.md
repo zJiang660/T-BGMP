@@ -1,7 +1,33 @@
-# T-BGMP
+# T-BGMP Artifact
 
-T-BGMP is a diagnostic failure-recovery protocol for aggressive KV-cache
-quantization.
+This repository contains the reproducibility artifact for T-BGMP, a
+conditional failure-recovery study of risk-guided key-layer protection for
+KV-cache quantization.
+
+The artifact supports:
+
+1. reproducing paper tables and figures from cleaned CSV files;
+2. auditing main paper numbers from sanitized result files;
+3. running a small validated TurboQuant backend smoke path;
+4. preparing user-side full reruns with model weights, GPU resources, and a
+   patched or equivalent TurboQuant runtime.
+
+This repository does not redistribute model weights, raw HPC logs, full raw
+model responses, or production quantizer kernels.
+
+## Artifact Entry Points
+
+- [`REPRODUCE.md`](REPRODUCE.md): shortest CPU-only reproduction path.
+- [`ARTIFACT_EVALUATION.md`](ARTIFACT_EVALUATION.md): evaluator-oriented
+  guide, expected outputs, and reproducibility levels.
+- [`CLAIMS_TO_ARTIFACTS.md`](CLAIMS_TO_ARTIFACTS.md): paper claims mapped to
+  files and commands.
+- [`PAPER_RESULTS_MANIFEST.yaml`](PAPER_RESULTS_MANIFEST.yaml): machine-readable
+  result manifest.
+- [`docs/model_setup.md`](docs/model_setup.md): model download and path setup.
+- [`docs/backend_integration.md`](docs/backend_integration.md): TurboQuant
+  backend contract.
+- [`docs/smoke_test.md`](docs/smoke_test.md): backend smoke-test path.
 
 ## What This Repository Is For
 
