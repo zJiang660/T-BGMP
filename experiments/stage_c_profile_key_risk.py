@@ -36,6 +36,12 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=ROOT / "results" / "audit" / "demo_key_risk_ranking.csv",
     )
+    parser.add_argument("--model-key")
+    parser.add_argument("--model-root", type=Path)
+    parser.add_argument("--output-dir", type=Path)
+    parser.add_argument("--backend")
+    parser.add_argument("--turboquant-root", type=Path)
+    parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args()
 
 
@@ -53,6 +59,12 @@ def demo_stats() -> pd.DataFrame:
 def main() -> None:
     args = parse_args()
     yaml.safe_load(args.config.read_text(encoding="utf-8"))
+    if args.output_dir:
+        args.output = args.output_dir / "risk_ranking.csv"
+    if args.dry_run:
+        print(f"Stage C: profile key risk -> {args.output}")
+        print("No model execution performed in dry-run mode.")
+        return
     stats = pd.read_csv(args.input) if args.input else demo_stats()
     ranked = compute_risk_scores(stats)
     args.output.parent.mkdir(parents=True, exist_ok=True)

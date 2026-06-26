@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # Sanitized template, not a turn-key cluster job. Adapt partition/account
 # names, environment modules, resources, and paths for the target HPC system.
-# The minimal repository does not include a production quantizer backend.
+# The runner mines sensitive cases from found fields before Top-k evaluation.
 #SBATCH --partition=<your_partition>
 #SBATCH --account=<your_account>
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=96G
 #SBATCH --time=12:00:00
-#SBATCH --output=logs/tbgmp_pipeline_%j.out
-#SBATCH --error=logs/tbgmp_pipeline_%j.err
+#SBATCH --output=logs/stage_d_topk_%j.out
+#SBATCH --error=logs/stage_d_topk_%j.err
 
 set -euo pipefail
 

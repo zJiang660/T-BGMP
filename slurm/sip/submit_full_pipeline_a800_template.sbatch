@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Sanitized template, not a turn-key cluster job. Adapt partition/account
 # names, environment modules, resources, and paths for the target HPC system.
-# The minimal repository does not include a production quantizer backend.
+# The minimal repository does not include model weights or raw cluster logs.
 #SBATCH --partition=<your_partition>
 #SBATCH --account=<your_account>
 #SBATCH --gres=gpu:1

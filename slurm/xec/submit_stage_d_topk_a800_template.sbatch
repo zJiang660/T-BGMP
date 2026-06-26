@@ -2,7 +2,8 @@
 # Sanitized template, not a turn-key cluster job. Adapt partition/account
 # names, environment modules, resources, and paths for the target HPC system.
 # The runner mines sensitive cases from found fields before Top-k evaluation.
-#SBATCH --partition=<a800-partition>
+#SBATCH --partition=<your_partition>
+#SBATCH --account=<your_account>
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=96G

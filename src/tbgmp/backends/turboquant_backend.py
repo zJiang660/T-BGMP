@@ -33,35 +33,67 @@ class TurboQuantBackend:
         **_: Any,
     ):
         configured = turboquant_root or os.environ.get("TURBOQUANT_ROOT")
-        if not configured:
-            raise RuntimeError(f"{INTEGRATION_MESSAGE} Set TURBOQUANT_ROOT first.")
-
-        self.root = Path(configured).expanduser().resolve()
+        self.root = Path(configured).expanduser().resolve() if configured else None
         self.device = device
-        if not self.root.is_dir():
+        self.runtime_module = None
+        self.compressor_class = None
+        self._import_error = ""
+        self._compressors_module = None
+
+        if self.root and self.root.is_dir():
+            root_text = str(self.root)
+            if root_text not in sys.path:
+                sys.path.insert(0, root_text)
+            try:
+                self.runtime_module = importlib.import_module("turboquant")
+                self._compressors_module = importlib.import_module(
+                    "turboquant.compressors_v3"
+                )
+                if hasattr(self._compressors_module, "TurboQuantV3"):
+                    self.compressor_class = self._compressors_module.TurboQuantV3
+            except Exception as exc:  # pragma: no cover - message asserted indirectly
+                self._import_error = repr(exc)
+
+    def check_available(self) -> dict[str, Any]:
+        root_ok = self.root is not None and self.root.is_dir()
+        import_ok = self.runtime_module is not None and not self._import_error
+        compressor_ok = self.compressor_class is not None
+        return {
+            "backend": "turboquant",
+            "root_configured": self.root is not None,
+            "root_exists": root_ok,
+            "import_ok": import_ok,
+            "compressor_v3_found": compressor_ok,
+            "protected_layers_semantics": "prefix_suffix_count",
+            "arbitrary_protected_key_layer_ids": False,
+            "key_only_protection": False,
+            "residual_window": "supported by upstream V3 cache",
+            "ready_for_tbgmp_generation": False,
+            "error": self._import_error,
+            "message": (
+                "The public TurboQuant API can be inspected, but arbitrary "
+                "risk-ranked protected key-layer IDs are not bound."
+            ),
+        }
+
+    def _raise_if_unavailable(self) -> None:
+        status = self.check_available()
+        if not status["root_configured"]:
+            raise RuntimeError(f"{INTEGRATION_MESSAGE} Set TURBOQUANT_ROOT first.")
+        if not status["root_exists"]:
             raise RuntimeError(
                 f"{INTEGRATION_MESSAGE} The configured TurboQuant directory "
                 "does not exist."
             )
-
-        root_text = str(self.root)
-        if root_text not in sys.path:
-            sys.path.insert(0, root_text)
-        try:
-            module = importlib.import_module("turboquant")
-            compressors = importlib.import_module("turboquant.compressors_v3")
-        except Exception as exc:
+        if not status["import_ok"]:
             raise RuntimeError(
                 f"{INTEGRATION_MESSAGE} The external package could not be imported."
-            ) from exc
-
-        if not hasattr(compressors, "TurboQuantV3"):
+            )
+        if not status["compressor_v3_found"]:
             raise RuntimeError(
                 f"{INTEGRATION_MESSAGE} TurboQuantV3 was not found in the "
                 "configured runtime."
             )
-        self.runtime_module = module
-        self.compressor_class = compressors.TurboQuantV3
 
     def generate(
         self,
@@ -91,10 +123,12 @@ class TurboQuantBackend:
                 seed=int(legacy_kwargs.get("seed", 0)),
             )
 
+        self._raise_if_unavailable()
         raise NotImplementedError(
-            f"{INTEGRATION_MESSAGE} The upstream runtime must be adapted to "
-            "apply arbitrary protected key-layer IDs without changing value "
-            "precision. No inference result was generated."
+            "Full TurboQuant generation is not available because arbitrary "
+            "risk-ranked protected key-layer IDs are not yet bound to the "
+            "external TurboQuant runtime. See docs/turboquant_api_findings.md "
+            "and docs/backend_integration.md."
         )
 
 

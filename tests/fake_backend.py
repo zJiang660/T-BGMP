@@ -15,6 +15,7 @@ class FakeBackend:
         policy_name,
         quantization,
         max_new_tokens,
+        seed=0,
     ) -> GenerationResult:
         if policy_name == "fp16":
             response = answer

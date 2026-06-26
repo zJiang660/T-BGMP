@@ -64,6 +64,39 @@ is locally adapted for arbitrary protected key-layer IDs with unchanged value
 precision. The published first/last-layer count is not treated as an
 equivalent implementation.
 
+## TurboQuant API Finding
+
+- Repository checked: <https://github.com/tonbistudio/turboquant-pytorch>
+- Files inspected: `turboquant/compressors_v3.py`,
+  `turboquant/generation_test.py`, `turboquant/generation_test_v2.py`, and
+  `turboquant/validate_v3.py`.
+- `protected_layers` semantics: prefix/suffix layer count.
+- Arbitrary protected key-layer ID support: no direct public binding found.
+- Key-only protection support: no direct public binding found.
+- `residual_window` support: present in the inspected V3 compressor/cache path.
+- Patch needed: yes, for exact T-BGMP execution.
+
+Detailed findings are in `docs/turboquant_api_findings.md`.
+
+## Backend Adapter Status
+
+- Base interface: `src/tbgmp/backends/base.py` defines request/result objects
+  and the backend protocol.
+- TurboQuant adapter: `src/tbgmp/backends/turboquant_backend.py` validates the
+  external runtime and exposes `check_available()`.
+- Real generate binding: not claimed. The adapter raises a clear error until
+  arbitrary risk-ranked protected key-layer IDs are bound.
+- Patch guide: `docs/turboquant_patch_guide.md`.
+- Proposed patch sketch:
+  `patches/turboquant_arbitrary_protected_layers.patch`.
+
+## Smoke Test Status
+
+`experiments/smoke_test_backend.py` provides a real backend smoke-test entry.
+It fails before writing raw output when the backend is not bound to generation.
+Real backend smoke testing has not been completed in this repository because
+the exact arbitrary key-layer binding is still required.
+
 ## Raw-Output Conversion
 
 `scripts/convert_raw_outputs_to_case_csv.py` converts raw JSONL into compact
@@ -102,9 +135,14 @@ provenance hashes are present. A mismatch produces a FAIL and nonzero exit.
 - `python scripts/build_figures.py`: PASS
 - `python scripts/validate_csv_schema.py`: PASS
 - `python experiments/run_full_pipeline.py --help`: PASS
+- `python experiments/run_full_pipeline.py --dry-run --backend turboquant
+  --model-key qwen25_3b --model-root /path/to/models --turboquant-root
+  /path/to/turboquant-pytorch --output-dir /path/to/outputs`: PASS
 - `python experiments/stage_a_discovery.py --help`: PASS
 - `python scripts/convert_raw_outputs_to_case_csv.py --help`: PASS
+- `python experiments/smoke_test_backend.py --help`: PASS
 - Synthetic raw JSONL to case-level CSV conversion: PASS
+- Pytest suite: PASS
 - TurboQuant unavailable/incomplete integration failure path: PASS
 - Python compilation check for `experiments`, `scripts`, and `src`: PASS
 
@@ -133,6 +171,7 @@ result. No success was fabricated for that level.
   TurboQuant-compatible backend.
 - The current upstream protected-layer interface uses first/last layer counts;
   it still needs a local extension for arbitrary risk-ranked key-layer IDs.
+- The included patch is a proposed guide, not a validated upstream patch.
 - The repository does not implement or benchmark a production quantizer
   kernel and does not claim deployment speedup.
 - The reported evidence remains conditioned on FP16-pass/aggressive-fail exact

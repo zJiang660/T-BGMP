@@ -7,8 +7,8 @@
   when the corresponding case-level CSV bundle is present.
 - **Level 3:** Rerun model execution through the documented TurboQuant
   integration path. This requires the external `turboquant-pytorch` runtime,
-  model weights, a GPU environment, and local adaptation for arbitrary
-  protected key-layer IDs.
+  model weights, a GPU environment, and a backend binding that supports
+  arbitrary protected key-layer IDs.
 
 Levels 1 and 2 are directly runnable in this repository. Level 3 provides a
 complete experiment-control interface but depends on external model and
@@ -103,3 +103,22 @@ The included TurboQuant adapter validates the external runtime and then fails
 clearly before generation because the upstream first/last-layer protection
 interface is not equivalent to T-BGMP's arbitrary key-only layer selection.
 No placeholder result is written as a successful model run.
+
+Current limitation: arbitrary risk-ranked protected key-layer ID execution
+depends on backend support or the provided patch guide.
+
+Use the dry-run command to validate the orchestration contract without model
+execution:
+
+```bash
+python experiments/run_full_pipeline.py \
+  --dry-run \
+  --backend turboquant \
+  --model-key qwen25_3b \
+  --model-root /path/to/models \
+  --turboquant-root /path/to/turboquant-pytorch \
+  --output-dir /path/to/outputs/qwen25_3b
+```
+
+Use `experiments/smoke_test_backend.py` for a real backend smoke test after the
+external runtime has been adapted.

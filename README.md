@@ -116,6 +116,9 @@ See:
 
 - [`docs/model_setup.md`](docs/model_setup.md)
 - [`docs/backend_integration.md`](docs/backend_integration.md)
+- [`docs/turboquant_api_findings.md`](docs/turboquant_api_findings.md)
+- [`docs/turboquant_patch_guide.md`](docs/turboquant_patch_guide.md)
+- [`docs/smoke_test.md`](docs/smoke_test.md)
 - [`docs/command_cookbook.md`](docs/command_cookbook.md)
 
 ## Reproducibility Levels
@@ -134,7 +137,9 @@ This repository supports reproducibility at three levels:
 
 Level 3 is supported as a documented integration path, not as a guaranteed
 one-command reproduction on every machine. Model-specific cache APIs and
-quantizer kernels remain external.
+quantizer kernels remain external. Current limitation: arbitrary risk-ranked
+protected key-layer ID execution depends on backend support or the provided
+patch guide.
 The minimal demo does not load language models. Full GPU/model execution
 requires external model weights and backend support.
 

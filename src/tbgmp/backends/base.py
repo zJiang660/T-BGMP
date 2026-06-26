@@ -23,5 +23,8 @@ class GenerationResult:
 
 
 class KVCacheBackend(Protocol):
+    def check_available(self) -> dict[str, Any]:
+        ...
+
     def generate(self, request: GenerationRequest) -> GenerationResult:
         ...

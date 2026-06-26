@@ -87,3 +87,27 @@ approximate Top-k with first/last layers and does not fabricate output.
 
 The minimal repository provides adapters and pipeline scripts, but full GPU
 execution depends on the external backend and user-supplied model weights.
+
+Detailed API findings are recorded in `docs/turboquant_api_findings.md`. A
+proposed extension path is documented in `docs/turboquant_patch_guide.md` and
+`patches/turboquant_arbitrary_protected_layers.patch`.
+
+## Backend Smoke Test
+
+Use `experiments/smoke_test_backend.py` to check a local runtime:
+
+```bash
+python experiments/smoke_test_backend.py \
+  --backend turboquant \
+  --turboquant-root "$TURBOQUANT_ROOT" \
+  --model-root "$MODEL_ROOT" \
+  --model-key qwen25_3b \
+  --prompt "The hidden answer is ABC123. What is the hidden answer?" \
+  --answer ABC123 \
+  --policy fp16 \
+  --output "$OUTPUT_ROOT/smoke_test.jsonl"
+```
+
+If the backend is not bound to real generation, the smoke test fails before
+writing output. If it succeeds, convert raw JSONL with
+`scripts/convert_raw_outputs_to_case_csv.py`.

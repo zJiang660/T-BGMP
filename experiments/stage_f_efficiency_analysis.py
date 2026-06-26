@@ -34,12 +34,24 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=ROOT / "results" / "audit" / "demo_efficiency_summary.csv",
     )
+    parser.add_argument("--model-key")
+    parser.add_argument("--model-root", type=Path)
+    parser.add_argument("--output-dir", type=Path)
+    parser.add_argument("--backend")
+    parser.add_argument("--turboquant-root", type=Path)
+    parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
     yaml.safe_load(args.config.read_text(encoding="utf-8"))
+    if args.output_dir:
+        args.output = args.output_dir / "efficiency_summary.csv"
+    if args.dry_run:
+        print(f"Stage F: efficiency analysis -> {args.output}")
+        print("No model execution performed in dry-run mode.")
+        return
     rows = pd.read_csv(args.input)
     required = {"found", "tbgmp_saving", "uniform_safe_saving"}
     missing = sorted(required - set(rows.columns))

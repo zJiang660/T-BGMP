@@ -161,6 +161,8 @@ def resolve_paths(args: argparse.Namespace) -> None:
         configured_cases = config.get("inputs", {}).get("cases")
         if configured_cases and not str(configured_cases).startswith("/path/to/"):
             args.cases = Path(configured_cases)
+    if args.cases is None and args.dry_run:
+        args.cases = ROOT / "data" / "demo" / "full_runner_cases.csv"
     if args.cases is None:
         raise SystemExit("Provide --cases with a prompt-case CSV.")
 
@@ -198,6 +200,15 @@ def main() -> None:
             "See docs/backend_integration.md."
         )
     if args.dry_run:
+        print("Stage A: discovery")
+        print("Stage B: mine sensitive cases")
+        print("Stage C: profile key risk")
+        print("Stage D: Top-k recovery")
+        print("Stage E: Random/Bottom controls")
+        print("Stage F: efficiency analysis")
+        print(f"Backend: {args.backend or 'dry_run'}")
+        print(f"Model key: {args.model_key or ''}")
+        print("No model execution performed in dry-run mode.")
         backend = DryRunBackend()
     elif args.backend == "turboquant":
         try:

@@ -1,0 +1,36 @@
+Status: proposed patch guide, not yet validated.
+
+This file is an implementation sketch for adapting a TurboQuant-style cache to
+T-BGMP. It is intentionally not claimed as a tested upstream patch.
+
+--- a/turboquant/compressors_v3.py
++++ b/turboquant/compressors_v3.py
+@@
+-        protected_layers: int = 4,
+-        protected_bits: int = 8,
++        protected_layers: int = 0,
++        protected_layer_ids: set[int] | None = None,
++        protected_key_bits: int = 8,
+@@
+-        is_protected = layer_idx < protected_layers or layer_idx >= (n_layers - protected_layers)
+-        effective_key_bits = protected_bits if is_protected else key_bits
+-        effective_value_bits = protected_bits if is_protected else value_bits
++        protected_layer_ids = protected_layer_ids or set()
++        is_protected_key = layer_idx in protected_layer_ids
++        effective_key_bits = protected_key_bits if is_protected_key else key_bits
++        effective_value_bits = value_bits
+--- a/turboquant/generation_test.py
++++ b/turboquant/generation_test.py
+@@
+-    def __init__(self, key_bits=4, value_bits=2, residual_window=128,
+-                 protected_layers=0, n_layers=36):
++    def __init__(self, key_bits=4, value_bits=2, residual_window=128,
++                 protected_layer_ids=None, protected_key_bits=8, n_layers=36):
+@@
+-        self.protected_layers = protected_layers
++        self.protected_layer_ids = set(protected_layer_ids or [])
++        self.protected_key_bits = protected_key_bits
+@@
+-                protected_layers=self.protected_layers,
++                protected_layer_ids=self.protected_layer_ids,
++                protected_key_bits=self.protected_key_bits,
