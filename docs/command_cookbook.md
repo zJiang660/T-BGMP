@@ -125,3 +125,12 @@ python experiments/run_full_pipeline.py \
 The included adapter intentionally stops before generation until the exact
 arbitrary key-layer protection semantics are implemented. See
 `docs/turboquant_api_findings.md` and `docs/turboquant_patch_guide.md`.
+
+For an A800-style batch template, see:
+
+```bash
+slurm/xec/submit_smoke_test_a800_template.sbatch
+```
+
+The repository includes a sanitized example from a completed small XEC smoke
+test in `examples/smoke_test/`.

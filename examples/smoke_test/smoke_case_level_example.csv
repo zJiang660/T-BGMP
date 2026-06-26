@@ -1,0 +1,3 @@
+model,case_id,domain,context_length,actual_context_length,depth,seed,answer,policy,policy_type,key_bits,value_bits,protected_key_bits,protected_layers,residual_window,found,status,response_excerpt
+Qwen2.5-3B,backend_smoke_0,smoke,10,10,0,0,ABC123,fp16,fp16,16,16,,[],0,True,success,"The hidden answer ""ABC123"" is commonly used"
+Qwen2.5-3B,backend_smoke_0,smoke,10,10,0,0,ABC123,tbgmp_topk,quantized,4,2,6,"[25, 2]",128,True,success,"The hidden answer ""ABC123"" is commonly used"

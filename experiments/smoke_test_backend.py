@@ -38,6 +38,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--prompt", required=True)
     parser.add_argument("--answer", required=True)
     parser.add_argument("--policy", default="fp16")
+    parser.add_argument("--protected-layer-ids", default="")
+    parser.add_argument("--default-key-bits", type=int, default=4)
+    parser.add_argument("--default-value-bits", type=int, default=2)
+    parser.add_argument("--protected-key-bits", type=int, default=6)
+    parser.add_argument("--residual-window", type=int, default=128)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--max-new-tokens", type=int, default=32)
     parser.add_argument("--seed", type=int, default=0)
@@ -55,7 +60,14 @@ def resolve_model_path(args: argparse.Namespace) -> tuple[str, str]:
     )
 
 
-def make_policy(name: str) -> dict:
+def parse_layer_ids(text: str) -> list[int]:
+    if not text:
+        return []
+    return [int(value.strip()) for value in text.split(",") if value.strip()]
+
+
+def make_policy(args: argparse.Namespace) -> dict:
+    name = args.policy
     if name == "fp16":
         return {
             "name": "fp16",
@@ -63,7 +75,32 @@ def make_policy(name: str) -> dict:
             "value_bits": 16,
             "residual_window": 0,
         }
-    raise SystemExit("Only --policy fp16 is supported by the generic smoke entry.")
+    if name == "uniform_k4_v2_rw128":
+        return {
+            "name": name,
+            "key_bits": 4,
+            "value_bits": 2,
+            "residual_window": 128,
+            "protected_layer_ids": [],
+            "protected_key_bits": "",
+        }
+    if name == "tbgmp_topk":
+        protected_layer_ids = parse_layer_ids(args.protected_layer_ids)
+        if not protected_layer_ids:
+            raise SystemExit("--protected-layer-ids is required for tbgmp_topk")
+        return {
+            "name": name,
+            "key_bits": args.default_key_bits,
+            "value_bits": args.default_value_bits,
+            "default_key_bits": args.default_key_bits,
+            "default_value_bits": args.default_value_bits,
+            "protected_layer_ids": protected_layer_ids,
+            "protected_key_bits": args.protected_key_bits,
+            "residual_window": args.residual_window,
+        }
+    raise SystemExit(
+        "Unsupported --policy. Use fp16, uniform_k4_v2_rw128, or tbgmp_topk."
+    )
 
 
 def main() -> None:
@@ -89,7 +126,7 @@ def main() -> None:
         model_path=model_path,
         prompt=args.prompt,
         answer=args.answer,
-        policy=make_policy(args.policy),
+        policy=make_policy(args),
         max_new_tokens=args.max_new_tokens,
         seed=args.seed,
     )
@@ -110,6 +147,8 @@ def main() -> None:
         "policy_type": "fp16" if args.policy == "fp16" else "quantized",
         "key_bits": request.policy["key_bits"],
         "value_bits": request.policy["value_bits"],
+        "protected_key_bits": request.policy.get("protected_key_bits", ""),
+        "protected_layers": request.policy.get("protected_layer_ids", []),
         "residual_window": request.policy["residual_window"],
         "answer": args.answer,
         "response": response,

@@ -109,8 +109,15 @@ production quantizer kernels, or raw cluster logs.
 
 The current adapter validates the external installation but does not silently
 approximate T-BGMP's arbitrary key-layer protection with TurboQuant's published
-first/last-layer protection option. Completing that exact local binding is
-required before GPU generation.
+first/last-layer protection option. Real generation requires the provided patch
+or an equivalent backend extension; the included binding is intended for
+minimal smoke validation rather than full production inference.
+
+A small XEC backend smoke test has been performed with a patched TurboQuant
+runtime on Qwen2.5-3B-Instruct. It validates FP16 generation, T-BGMP Top-k
+protected key-layer generation, raw JSONL creation, and case-level CSV
+conversion on a small example. This is not a full rerun of all paper-scale
+experiments. See [`examples/smoke_test/`](examples/smoke_test/).
 
 See:
 

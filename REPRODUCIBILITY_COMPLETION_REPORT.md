@@ -106,8 +106,11 @@ Detailed findings are in `docs/turboquant_api_findings.md`.
 
 `experiments/smoke_test_backend.py` provides a real backend smoke-test entry.
 It fails before writing raw output when the backend is not bound to generation.
-Real backend smoke testing has not been completed in this repository because
-the exact arbitrary key-layer binding is still required.
+A small XEC A800-class backend smoke test has been completed with
+Qwen2.5-3B-Instruct and patched TurboQuant. The test ran FP16 and `tbgmp_topk`
+with protected layer IDs `[25, 2]`, generated raw JSONL, converted the raw
+outputs to case-level CSV, and recomputed `found=True` for both rows. Sanitized
+examples are committed under `examples/smoke_test/`.
 
 ## Raw-Output Conversion
 
@@ -153,6 +156,7 @@ provenance hashes are present. A mismatch produces a FAIL and nonzero exit.
 - `python experiments/stage_a_discovery.py --help`: PASS
 - `python scripts/convert_raw_outputs_to_case_csv.py --help`: PASS
 - `python experiments/smoke_test_backend.py --help`: PASS
+- XEC backend smoke test with patched TurboQuant: PASS
 - Synthetic raw JSONL to case-level CSV conversion: PASS
 - Pytest suite: PASS
 - TurboQuant unavailable/incomplete integration failure path: PASS

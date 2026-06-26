@@ -38,6 +38,25 @@ If the backend is not yet bound to arbitrary protected key-layer IDs, this
 script fails before writing raw output and points to
 `docs/backend_integration.md` and `docs/turboquant_api_findings.md`.
 
+The smoke entry also supports a patched T-BGMP Top-k policy:
+
+```bash
+python experiments/smoke_test_backend.py \
+  --backend turboquant \
+  --turboquant-root "$TURBOQUANT_ROOT" \
+  --model-root "$MODEL_ROOT" \
+  --model-key qwen25_3b \
+  --prompt "The hidden answer is ABC123. What is the hidden answer?" \
+  --answer ABC123 \
+  --policy tbgmp_topk \
+  --protected-layer-ids 25,2 \
+  --default-key-bits 4 \
+  --default-value-bits 2 \
+  --protected-key-bits 6 \
+  --residual-window 128 \
+  --output "$OUTPUT_ROOT/smoke_test_tbgmp_topk.jsonl"
+```
+
 If a real backend is available, convert the raw output:
 
 ```bash
@@ -48,3 +67,11 @@ python scripts/convert_raw_outputs_to_case_csv.py \
 
 Do not commit real raw model responses unless they are tiny, sanitized, and
 intended as a public fixture.
+
+## XEC Smoke Status
+
+A small XEC A800-class backend smoke test has been performed with
+Qwen2.5-3B-Instruct and patched TurboQuant. The test generated FP16 and
+`tbgmp_topk` raw JSONL, converted both to case-level CSV, and recomputed
+`found=True` for the short retrieval prompt. Sanitized examples are stored in
+`examples/smoke_test/`.

@@ -80,10 +80,11 @@ Relevant upstream reference files:
 - [`turboquant/compressors_v3.py`](https://github.com/tonbistudio/turboquant-pytorch/blob/master/turboquant/compressors_v3.py)
 - [`turboquant/generation_test.py`](https://github.com/tonbistudio/turboquant-pytorch/blob/master/turboquant/generation_test.py)
 
-The included adapter therefore validates `TURBOQUANT_ROOT` and imports the
-external runtime, but deliberately raises `NotImplementedError` at generation
-until that exact cache-policy binding is implemented locally. It does not
-approximate Top-k with first/last layers and does not fabricate output.
+The included adapter validates `TURBOQUANT_ROOT`, imports the external runtime,
+detects whether the arbitrary key-layer patch is present, and can run a minimal
+smoke generation path when the patch and required Python packages are
+available. It does not approximate Top-k with first/last layers and does not
+fabricate output.
 
 The minimal repository provides adapters and pipeline scripts, but full GPU
 execution depends on the external backend and user-supplied model weights.
@@ -111,3 +112,7 @@ python experiments/smoke_test_backend.py \
 If the backend is not bound to real generation, the smoke test fails before
 writing output. If it succeeds, convert raw JSONL with
 `scripts/convert_raw_outputs_to_case_csv.py`.
+
+An XEC A800-class smoke test has been completed with Qwen2.5-3B-Instruct,
+patched TurboQuant, FP16, and `tbgmp_topk` with protected layer IDs `[25, 2]`.
+The sanitized example is in `examples/smoke_test/`.

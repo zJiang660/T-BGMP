@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib
 import os
 import sys
+import time
 from pathlib import Path
 from typing import Any
 
@@ -83,6 +84,13 @@ class TurboQuantBackend:
             "protected_layer_ids" in source_text
             and "protected_key_bits" in source_text
         )
+        ready = bool(
+            root_ok
+            and import_ok
+            and compressor_ok
+            and generation_file_ok
+            and arbitrary_patch_detected
+        )
         return {
             "backend": "turboquant",
             "root_configured": self.root is not None,
@@ -96,12 +104,12 @@ class TurboQuantBackend:
             "arbitrary_protected_key_layer_ids": arbitrary_patch_detected,
             "key_only_protection": arbitrary_patch_detected,
             "residual_window": "supported by upstream V3 cache",
-            "ready_for_tbgmp_generation": False,
+            "ready_for_tbgmp_generation": ready,
             "error": self._import_error,
             "message": (
-                "The external TurboQuant runtime can be inspected. Exact "
-                "generation still requires a callable backend binding for "
-                "arbitrary risk-ranked protected key-layer IDs."
+                "The external TurboQuant runtime can be inspected. Real "
+                "generation is enabled only when the arbitrary key-layer patch "
+                "is detected and required Python packages are available."
             ),
         }
 
@@ -123,6 +131,41 @@ class TurboQuantBackend:
                 f"{INTEGRATION_MESSAGE} TurboQuantV3 was not found in the "
                 "configured runtime."
             )
+        if not status["arbitrary_patch_detected"]:
+            raise RuntimeError(
+                "Full TurboQuant generation is unavailable because the public "
+                "TurboQuant runtime does not directly expose arbitrary "
+                "risk-ranked protected key-layer IDs. Apply the patch described "
+                "in docs/turboquant_patch_guide.md or provide a compatible "
+                "backend."
+            )
+
+    def _build_cache(self, request: GenerationRequest, n_layers: int):
+        policy = request.policy
+        policy_name = str(policy.get("name", "")).lower()
+        if policy_name == "fp16" or int(policy.get("key_bits", 16)) >= 16:
+            return None
+
+        generation = importlib.import_module("turboquant.generation_test")
+        cache_class = getattr(generation, "V3Cache")
+        protected_ids = policy.get("protected_layer_ids", policy.get("protected_layers", []))
+        if isinstance(protected_ids, str):
+            protected_ids = [
+                int(value.strip())
+                for value in protected_ids.split(",")
+                if value.strip()
+            ]
+        return cache_class(
+            key_bits=int(policy.get("key_bits", policy.get("default_key_bits", 4))),
+            value_bits=int(
+                policy.get("value_bits", policy.get("default_value_bits", 2))
+            ),
+            residual_window=int(policy.get("residual_window", 128)),
+            protected_layers=int(policy.get("protected_layers_count", 0)),
+            protected_layer_ids=list(protected_ids),
+            protected_key_bits=int(policy.get("protected_key_bits", 8)),
+            n_layers=n_layers,
+        )
 
     def generate(
         self,
@@ -153,11 +196,83 @@ class TurboQuantBackend:
             )
 
         self._raise_if_unavailable()
-        raise NotImplementedError(
-            "Full TurboQuant generation is unavailable because the public "
-            "TurboQuant runtime does not directly expose arbitrary risk-ranked "
-            "protected key-layer IDs. Apply the patch described in "
-            "docs/turboquant_patch_guide.md or provide a compatible backend."
+        try:
+            import torch
+            from transformers import AutoModelForCausalLM, AutoTokenizer
+        except Exception as exc:
+            raise RuntimeError(
+                "Real TurboQuant smoke generation requires torch and "
+                "transformers in the active environment."
+            ) from exc
+
+        if not request.model_path or not Path(request.model_path).is_dir():
+            raise RuntimeError("Model path does not exist or was not provided.")
+
+        start = time.time()
+        device = self.device
+        if device == "cuda" and not torch.cuda.is_available():
+            device = "cpu"
+        torch.manual_seed(request.seed)
+
+        tokenizer = AutoTokenizer.from_pretrained(
+            request.model_path,
+            trust_remote_code=True,
+        )
+        if tokenizer.pad_token_id is None and tokenizer.eos_token_id is not None:
+            tokenizer.pad_token = tokenizer.eos_token
+
+        dtype = torch.float16 if device == "cuda" else torch.float32
+        model_kwargs = {
+            "trust_remote_code": True,
+            "low_cpu_mem_usage": True,
+        }
+        try:
+            model = AutoModelForCausalLM.from_pretrained(
+                request.model_path,
+                dtype=dtype,
+                **model_kwargs,
+            )
+        except TypeError:
+            model = AutoModelForCausalLM.from_pretrained(
+                request.model_path,
+                torch_dtype=dtype,
+                **model_kwargs,
+            )
+        model.to(device)
+        model.eval()
+
+        encoded = tokenizer(request.prompt, return_tensors="pt")
+        encoded = {key: value.to(device) for key, value in encoded.items()}
+        cache = self._build_cache(request, int(model.config.num_hidden_layers))
+        if torch.cuda.is_available():
+            torch.cuda.reset_peak_memory_stats()
+        with torch.no_grad():
+            outputs = model.generate(
+                **encoded,
+                max_new_tokens=request.max_new_tokens,
+                do_sample=False,
+                past_key_values=cache,
+                use_cache=True,
+                pad_token_id=tokenizer.pad_token_id,
+            )
+        new_tokens = outputs[0][encoded["input_ids"].shape[1] :]
+        response = tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
+        runtime_s = time.time() - start
+        peak_gpu_gb = None
+        if torch.cuda.is_available():
+            peak_gpu_gb = torch.cuda.max_memory_allocated() / (1024**3)
+        return GenerationResult(
+            response=response,
+            found=str(request.answer).strip() in response,
+            status="success",
+            metadata={
+                "runtime_s": runtime_s,
+                "tok_per_s": (
+                    float(len(new_tokens)) / runtime_s if runtime_s > 0 else None
+                ),
+                "peak_gpu_gb": peak_gpu_gb,
+                "generated_tokens": int(len(new_tokens)),
+            },
         )
 
 

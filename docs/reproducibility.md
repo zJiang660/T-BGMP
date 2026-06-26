@@ -121,4 +121,6 @@ python experiments/run_full_pipeline.py \
 ```
 
 Use `experiments/smoke_test_backend.py` for a real backend smoke test after the
-external runtime has been adapted.
+external runtime has been adapted. A small XEC A800-class smoke test has been
+performed with Qwen2.5-3B-Instruct and patched TurboQuant; sanitized outputs
+are available under `examples/smoke_test/`.
