@@ -200,8 +200,6 @@ results/main_evidence/  Sanitized per-case evidence for four main models
 results/supporting/     Supporting summaries and Gemma2 case-level evidence
 results/boundary_excluded/ Compatibility and invalid-boundary summaries
 results/audit/          Generated audit summary and artifact hashes
-figures/paper/           Paper figures and reproduced control plot
-tables/paper/            CSV copies and generated Markdown tables
 docs/                    Protocol, interpretation, limitations, and provenance
 slurm/xec/               Sanitized templates only
 ```
