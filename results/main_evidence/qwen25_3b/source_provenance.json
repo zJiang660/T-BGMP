@@ -14,7 +14,12 @@
       "filename": "qwen25_full_layer_key_risk.csv",
       "bytes": 7024,
       "sha256": "fcadd08127b18a92d78ab16a7a53fa2b1642dbf270d1bcc195126478605c011d"
+    },
+    {
+      "filename": "qwen25_3b_risk_ablation_details_job2141266.csv",
+      "bytes": 938271,
+      "sha256": "c771c171c4a6bff2d49f6d015e7e0c1a3bed8273c21683deeb6fced3d4a6ad44"
     }
   ],
-  "notes": "Sanitized from case-level XEC experiment exports. Qwen2.5-14B ranking records policy order because a separate risk-score file was not available."
+  "notes": "Sanitized from case-level experiment exports. The risk-ablation source supplies the current camera-ready Qwen2.5-3B Full-ranking first-success statistics."
 }

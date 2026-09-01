@@ -1,0 +1,7 @@
+model,score,top1_cumulative,k100,mean_first_success_k,cumulative_auc_percent
+Qwen3-4B,MSE,54/72,4,1.319,97.338
+Qwen3-4B,MSE + IP,54/72,3,1.306,97.454
+Qwen3-4B,Full,54/72,3,1.292,97.569
+Qwen2.5-3B,MSE,65/72,8,1.319,97.338
+Qwen2.5-3B,MSE + IP,65/72,3,1.139,98.843
+Qwen2.5-3B,Full,65/72,3,1.139,98.843

@@ -42,10 +42,10 @@ python scripts/build_paper_tables.py
 
 Relevant file: `results/paper_tables/table_control_statistics.csv`.
 
-### Claim 3: Qwen2.5 Scale Comparison
+### Claim 3: Ranking Validation
 
-The Qwen2.5-3B and Qwen2.5-14B results are reported as a scale comparison
-within the conditional failure-recovery setting.
+The camera-ready risk ablation, weight sensitivity, and domain-held-out
+summaries are available as canonical cleaned CSVs.
 
 How to verify:
 
@@ -53,9 +53,26 @@ How to verify:
 python scripts/build_paper_tables.py
 ```
 
-Relevant file: `results/paper_tables/table_qwen25_scale.csv`.
+Relevant files: `results/paper_tables/table_risk_ablation.csv`,
+`results/paper_tables/table_weight_sensitivity.csv`, and
+`results/paper_tables/table_domain_heldout.csv`.
 
-### Claim 4: Gemma2 Boundary Case
+### Claim 4: Frozen and RULER-Style Transfer
+
+The frozen Top3 and RULER-style transfer results are represented by the same
+summary rows used in camera-ready Tables 6 and 7.
+
+How to verify:
+
+```bash
+python scripts/build_paper_tables.py
+python scripts/validate_csv_schema.py
+```
+
+Relevant files: `results/paper_tables/table_frozen_top3.csv` and
+`results/paper_tables/table_ruler_transfer.csv`.
+
+### Claim 5: Gemma2 Boundary Case
 
 Gemma2-9B is treated as a value-bottleneck boundary-supporting case, not as a
 fifth main evidence model.
@@ -74,7 +91,7 @@ Gemma2 Uniform K6/V2: 7/72
 Gemma2 Uniform K6/V4: 72/72
 ```
 
-### Claim 5: Backend Smoke Path
+### Claim 6: Backend Smoke Path
 
 The pipeline can run a small TurboQuant backend smoke test with a patched or
 equivalent backend.

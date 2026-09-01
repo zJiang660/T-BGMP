@@ -28,6 +28,13 @@ REQUIRED_FILES = [
     "docs/smoke_test.md",
     "results/paper_tables/table_main_evidence.csv",
     "results/paper_tables/table_control_statistics.csv",
+    "results/paper_tables/table_first_success_k.csv",
+    "results/paper_tables/figure_2_domain_recovery.csv",
+    "results/paper_tables/table_risk_ablation.csv",
+    "results/paper_tables/table_weight_sensitivity.csv",
+    "results/paper_tables/table_domain_heldout.csv",
+    "results/paper_tables/table_frozen_top3.csv",
+    "results/paper_tables/table_ruler_transfer.csv",
     "results/paper_tables/table_gemma2_boundary.csv",
     "examples/smoke_test/SMOKE_TEST_SUMMARY.md",
     "examples/smoke_test/smoke_raw_example.sanitized.jsonl",
@@ -56,7 +63,16 @@ SENSITIVE_PATTERNS = [
         r"hf_[A-Za-z0-9]",
     ]
 ]
-SKIP_DIRS = {".git", "__pycache__", ".pytest_cache", ".mypy_cache", ".venv"}
+SKIP_DIRS = {
+    ".git",
+    "__pycache__",
+    ".pytest_cache",
+    ".mypy_cache",
+    ".venv",
+    "analysis_outputs",
+    "tables",
+    "figures",
+}
 SENSITIVE_SCAN_ALLOWLIST = {
     Path(".gitignore"),
     Path("scripts/check_artifact_integrity.py"),

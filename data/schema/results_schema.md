@@ -1,7 +1,8 @@
 # Cleaned Results Schema
 
-The cleaned CSV files in `results/` and `tables/paper/` are derived from
-paper-ready summaries, not raw cluster logs.
+The cleaned CSV files under `results/` are derived from paper-ready summaries
+or sanitized case-level outputs, not raw cluster logs. `tables/paper/` is a
+generated Markdown output directory and is not a canonical data source.
 
 ## Common fields
 

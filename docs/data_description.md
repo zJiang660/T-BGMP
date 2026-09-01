@@ -6,18 +6,22 @@
 
 - `table_main_evidence.csv`: four main models and matched controls.
 - `table_first_success_k.csv`: first-success Top-k budget summaries.
-- `table_control_statistics.csv`: Top/Random/Bottom rates and tests.
-- `table_qwen25_scale.csv`: within-family scale comparison.
+- `table_control_statistics.csv`: camera-ready Table 1 rates and bootstrap
+  confidence intervals.
+- `figure_2_domain_recovery.csv`: camera-ready Figure 2 curve values.
+- `table_risk_ablation.csv`: camera-ready Table 3.
+- `table_weight_sensitivity.csv`: camera-ready Table 4.
+- `table_domain_heldout.csv`: camera-ready Table 5.
+- `table_frozen_top3.csv`: camera-ready Table 6.
+- `table_ruler_transfer.csv`: camera-ready Table 7.
+- `table_qwen25_scale.csv`: supplementary within-family scale summary.
 - `table_supporting_models.csv`: supporting and boundary-supporting outcomes.
 - `table_gemma2_boundary.csv`: value-bottleneck policy contrast.
 - `table_boundary_models.csv`: invalid or interface-limited executions.
 
-## Grouped Copies
-
-`results/main_evidence/`, `results/supporting/`, and
-`results/boundary_excluded/` contain grouped copies organized by evidence
-role. The audit script confirms that the summary copies match the canonical
-tables.
+Paper-facing summaries exist only in `results/paper_tables/`. Other result
+directories contain case-level bundles or supporting material and do not
+duplicate the canonical summary CSVs.
 
 ## Sanitized Case-Level Evidence
 
@@ -32,14 +36,19 @@ The model subdirectories under `results/main_evidence/` contain:
 - `efficiency_summary.csv`
 - `source_provenance.json`
 
+For Qwen2.5-3B, the original main-recovery bundle and the later camera-ready
+Full-ranking analysis are both retained without conflating their protocols.
+The current Table 2 and Table 3 source files are
+`risk_ablation_first_success_by_case.csv`, `risk_ablation_topk_curve.csv`, and
+`risk_ablation_summary.csv`. The superseded derived `first_success_cases.csv`
+was removed from that model directory.
+
 The Gemma2 bundle follows the same structure under
 `results/supporting/gemma2_9b/`. Responses are truncated to short excerpts;
 host, device, partition, timestamps, paths, and raw logs are excluded.
 
-The remaining supporting and excluded/boundary model directories contain
-`MISSING_CASE_LEVEL_DATA.md` when only paper-ready summaries are currently
-available. These declarations prevent summary rows from being mistaken for
-complete case-level evidence.
+Models without released case-level bundles are listed once in
+`docs/missing_case_level_data.md`.
 
 Each provenance file records source filenames, byte sizes, and SHA-256 hashes
 without recording the private source location.

@@ -31,11 +31,14 @@ REQUIRED_COLUMNS = {
     },
     "table_control_statistics.csv": {
         "model",
-        "top",
-        "random",
-        "bottom",
-        "p_random",
-        "p_bottom",
+        "n",
+        "top_percent",
+        "random_percent",
+        "bottom_percent",
+        "top_minus_random_pp",
+        "top_minus_random_ci95",
+        "top_minus_bottom_pp",
+        "top_minus_bottom_ci95",
     },
     "table_qwen25_scale.csv": {
         "model",
@@ -54,6 +57,30 @@ REQUIRED_COLUMNS = {
     },
     "table_gemma2_boundary.csv": {"policy", "found"},
     "table_boundary_models.csv": {"model", "status", "reason", "classification"},
+    "table_risk_ablation.csv": {
+        "model", "score", "top1_cumulative", "k100", "mean_first_success_k",
+        "cumulative_auc_percent",
+    },
+    "table_weight_sensitivity.csv": {
+        "model", "alpha", "beta", "gamma", "spearman_rho", "top3_overlap",
+        "mean_first_success_k",
+    },
+    "table_domain_heldout.csv": {
+        "model", "profiling_domains", "evaluation_domains", "topk", "randomk", "bottomk",
+    },
+    "table_frozen_top3.csv": {
+        "model", "fp16", "aggressive", "uniform", "frozen_top3", "random3",
+        "bottom3", "recovery", "kv_saving_percent",
+    },
+    "table_ruler_transfer.csv": {
+        "model", "n", "top1_percent", "top4_percent", "top8_percent",
+        "top12_percent", "cumulative_top12", "random12_percent",
+        "bottom12_percent", "kv_saving_percent",
+    },
+    "figure_2_domain_recovery.csv": {
+        "model", "domain", "k1", "k2", "k3", "k4", "k5", "k6", "k7",
+        "k8", "k9", "k10", "k11", "k12",
+    },
 }
 
 CASE_LEVEL_REQUIRED = {
@@ -83,6 +110,21 @@ CASE_LEVEL_REQUIRED = {
         "model",
         "sensitive_cases",
         "restored_cases",
+    },
+}
+
+QWEN25_RISK_ABLATION_REQUIRED = {
+    "risk_ablation_first_success_by_case.csv": {
+        "domain", "context_length", "needle_depth", "seed", "risk_score",
+        "first_success_k", "recovered_within_top12",
+    },
+    "risk_ablation_summary.csv": {
+        "model", "risk_score", "n_sensitive", "top1_cumulative_count",
+        "k100", "mean_first_success_k", "cumulative_auc_percent",
+    },
+    "risk_ablation_topk_curve.csv": {
+        "model", "risk_score", "k", "cumulative_count", "cumulative_percent",
+        "exact_at_k_count", "exact_at_k_percent",
     },
 }
 
@@ -155,6 +197,18 @@ def main() -> None:
         else:
             json.loads(provenance.read_text(encoding="utf-8"))
         print(f"PASS case-level bundle: {directory.relative_to(ROOT)}")
+
+    qwen25_dir = ROOT / "results" / "main_evidence" / "qwen25_3b"
+    for filename, required in QWEN25_RISK_ABLATION_REQUIRED.items():
+        path = qwen25_dir / filename
+        if not path.exists():
+            failures.append(f"missing Qwen2.5 risk-ablation file: {path.relative_to(ROOT)}")
+            continue
+        columns = set(pd.read_csv(path).columns)
+        missing = sorted(required - columns)
+        if missing:
+            failures.append(f"{path.relative_to(ROOT)}: missing columns {missing}")
+    print("PASS Qwen2.5 camera-ready risk-ablation bundle")
 
     if failures:
         raise SystemExit("\n".join(failures))

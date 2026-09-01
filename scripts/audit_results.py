@@ -31,10 +31,6 @@ def parse_fraction(value: str) -> tuple[int, int]:
     return int(numerator), int(denominator)
 
 
-def normalized_csv(path: Path) -> pd.DataFrame:
-    return pd.read_csv(path).fillna("").astype(str)
-
-
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -202,19 +198,69 @@ def main() -> None:
         and demo["bottom_recovered"].astype(bool).sum() == 0
     )
 
-    copies = {
-        "table_main_evidence.csv": ROOT / "results" / "main_evidence",
-        "table_first_success_k.csv": ROOT / "results" / "main_evidence",
-        "table_qwen25_scale.csv": ROOT / "results" / "main_evidence",
-        "table_control_statistics.csv": ROOT / "results" / "supporting",
-        "table_supporting_models.csv": ROOT / "results" / "supporting",
-        "table_gemma2_boundary.csv": ROOT / "results" / "boundary_excluded",
-        "table_boundary_models.csv": ROOT / "results" / "boundary_excluded",
+    controls = pd.read_csv(PAPER_DIR / "table_control_statistics.csv").set_index("model")
+    checks["paper_table_1_matches_camera_ready"] = (
+        float(controls.loc["Qwen3-4B", "random_percent"]) == 2.7
+        and float(controls.loc["Llama3.2-3B", "random_percent"]) == 39.2
+        and (controls["top_percent"].astype(float) == 100.0).all()
+    )
+
+    first_success = pd.read_csv(PAPER_DIR / "table_first_success_k.csv").set_index("model")
+    checks["paper_table_2_matches_camera_ready"] = (
+        float(first_success.loc["Qwen2.5-3B", "mean"]) == 1.14
+        and int(first_success.loc["Qwen2.5-3B", "max"]) == 3
+        and first_success.loc["Qwen2.5-3B", "top4"] == "100.0%"
+        and int(first_success.loc["Llama3.2-3B", "max"]) == 10
+    )
+
+    qwen25_dir = CASE_LEVEL_MODELS["Qwen2.5-3B"]
+    qwen25_ablation = pd.read_csv(qwen25_dir / "risk_ablation_summary.csv").set_index(
+        "risk_score"
+    )
+    qwen25_full_cases = pd.read_csv(
+        qwen25_dir / "risk_ablation_first_success_by_case.csv"
+    )
+    qwen25_full_cases = qwen25_full_cases[
+        qwen25_full_cases["risk_score"] == "Full"
+    ].copy()
+    qwen25_full_k = pd.to_numeric(qwen25_full_cases["first_success_k"])
+    checks["qwen25_table_2_matches_current_full_case_level"] = (
+        len(qwen25_full_cases) == 72
+        and abs(float(qwen25_full_k.mean()) - 1.1388888888888888) < 1e-12
+        and int(qwen25_full_k.max()) == 3
+        and int((qwen25_full_k <= 1).sum()) == 65
+        and int((qwen25_full_k <= 3).sum()) == 72
+    )
+    checks["qwen25_table_3_matches_current_ablation_summary"] = (
+        int(qwen25_ablation.loc["MSE", "k100"]) == 8
+        and int(qwen25_ablation.loc["MSE + IP", "k100"]) == 3
+        and int(qwen25_ablation.loc["Full", "k100"]) == 3
+        and abs(float(qwen25_ablation.loc["Full", "cumulative_auc_percent"]) - 98.843)
+        < 0.001
+    )
+
+    figure_2 = pd.read_csv(PAPER_DIR / "figure_2_domain_recovery.csv")
+    qwen25_figure = figure_2[figure_2["model"] == "Qwen2.5-3B"].set_index("domain")
+    figure_matches_cases = True
+    for domain, rows in qwen25_full_cases.groupby("domain"):
+        for k in range(1, 13):
+            expected = float((pd.to_numeric(rows["first_success_k"]) <= k).mean() * 100.0)
+            observed = float(qwen25_figure.loc[domain, f"k{k}"])
+            figure_matches_cases &= abs(expected - observed) < 1e-5
+    checks["qwen25_figure_2_matches_current_full_case_level"] = figure_matches_cases
+
+    expected_paper_rows = {
+        "table_risk_ablation.csv": 6,
+        "table_weight_sensitivity.csv": 8,
+        "table_domain_heldout.csv": 2,
+        "table_frozen_top3.csv": 2,
+        "table_ruler_transfer.csv": 2,
+        "figure_2_domain_recovery.csv": 16,
     }
-    for filename, directory in copies.items():
-        canonical = normalized_csv(PAPER_DIR / filename)
-        grouped = normalized_csv(directory / filename)
-        checks[f"grouped_copy_matches_{Path(filename).stem}"] = canonical.equals(grouped)
+    checks["camera_ready_tables_3_to_7_and_figure_2_present"] = all(
+        len(pd.read_csv(PAPER_DIR / filename)) == row_count
+        for filename, row_count in expected_paper_rows.items()
+    )
 
     AUDIT_DIR.mkdir(parents=True, exist_ok=True)
     tracked_results = sorted(

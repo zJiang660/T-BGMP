@@ -1,8 +1,8 @@
 # T-BGMP Artifact
 
-This repository contains the reproducibility artifact for T-BGMP, a
-conditional failure-recovery study of risk-guided key-layer protection for
-KV-cache quantization.
+This repository contains the reproducibility artifact for **T-BGMP: An
+Empirical Characterization of Key-Layer Protection for KV-Cache Quantization
+Failure Recovery**.
 
 The artifact supports:
 
@@ -198,11 +198,28 @@ data/schema/            JSON schemas and result-schema notes
 results/paper_tables/   Canonical cleaned paper-ready CSV files
 results/main_evidence/  Sanitized per-case evidence for four main models
 results/supporting/     Supporting summaries and Gemma2 case-level evidence
-results/boundary_excluded/ Compatibility and invalid-boundary summaries
-results/audit/          Generated audit summary and artifact hashes
+results/audit/          Small demo outputs and regenerated integrity reports
 docs/                    Protocol, interpretation, limitations, and provenance
 slurm/xec/               Sanitized templates only
 ```
+
+## Paper Results Map
+
+The current camera-ready paper is mapped to the repository as follows:
+
+| Paper item | Canonical source |
+|---|---|
+| Table 1: same-budget recovery | `results/paper_tables/table_control_statistics.csv` |
+| Table 2: first-success budget | `results/paper_tables/table_first_success_k.csv` |
+| Figure 2: domain recovery | `results/paper_tables/figure_2_domain_recovery.csv` |
+| Table 3: risk ablation | `results/paper_tables/table_risk_ablation.csv` |
+| Table 4: weight sensitivity | `results/paper_tables/table_weight_sensitivity.csv` |
+| Table 5: domain-held-out | `results/paper_tables/table_domain_heldout.csv` |
+| Table 6: frozen Top3 | `results/paper_tables/table_frozen_top3.csv` |
+| Table 7: RULER-style transfer | `results/paper_tables/table_ruler_transfer.csv` |
+
+`tables/paper/` and `figures/paper/` are generated locally by the build
+scripts and are intentionally not versioned.
 
 ## Reproducibility Note
 

@@ -1,8 +1,13 @@
 cff-version: 1.2.0
-title: "T-BGMP: A Conditional Failure-Recovery Study of Risk-Guided Key-Layer Protection for KV-Cache Quantization"
+title: "T-BGMP: An Empirical Characterization of Key-Layer Protection for KV-Cache Quantization Failure Recovery"
 message: "If you use this artifact, please cite the associated paper."
 type: software
 authors:
-  - name: "Anonymous"
+  - given-names: "Ziqi"
+    family-names: "Zhao"
+  - given-names: "Zhenghao"
+    family-names: "Jiang"
+  - given-names: "Pascal"
+    family-names: "Lefèvre"
 repository-code: "https://github.com/zJiang660/T-BGMP"
 license: "MIT"

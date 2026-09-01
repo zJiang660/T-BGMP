@@ -1,0 +1,3 @@
+model,profiling_domains,evaluation_domains,topk,randomk,bottomk
+Qwen3-4B,Math + Literature,Science + Code,36/36,3/36,3/36
+Qwen2.5-3B,Math + Literature,Science + Code,36/36,1/36,0/36

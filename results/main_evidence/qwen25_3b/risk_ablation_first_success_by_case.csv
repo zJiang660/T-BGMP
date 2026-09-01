@@ -1,0 +1,217 @@
+domain,context_length,needle_depth,seed,needle_string,case_type,model,risk_score,first_success_k,recovered_within_top12
+code,4096,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,4096,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,4096,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,4096,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,4096,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,4096,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,6144,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,6144,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,6144,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,6144,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,6144,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,6144,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,8192,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,8192,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,8192,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,8192,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,8192,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,8192,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+literature,4096,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+literature,4096,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,4,True
+literature,4096,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+literature,4096,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+literature,4096,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+literature,4096,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+literature,6144,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+literature,6144,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+literature,6144,50,0,AURORA-7749,K2-sensitive,Qwen2.5-3B,MSE,3,True
+literature,6144,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+literature,6144,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+literature,6144,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+literature,8192,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,3,True
+literature,8192,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+literature,8192,50,0,AURORA-7749,K2-sensitive,Qwen2.5-3B,MSE,3,True
+literature,8192,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,8,True
+literature,8192,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+literature,8192,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,4096,10,0,AURORA-7749,K2-sensitive,Qwen2.5-3B,MSE,2,True
+math,4096,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,4096,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,4096,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,4096,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,4096,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,6144,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,6144,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,6144,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,6144,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,6144,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,6144,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,8192,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,8192,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,8192,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,8192,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,8192,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+math,8192,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,4096,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,4096,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,4096,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,4096,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,4096,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,4096,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,6144,10,0,AURORA-7749,K2-sensitive,Qwen2.5-3B,MSE,1,True
+science,6144,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,6144,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,6144,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,6144,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,6144,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,8192,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,8192,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,8192,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,8192,50,1,NEBULA-3186,K2-sensitive,Qwen2.5-3B,MSE,7,True
+science,8192,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE,1,True
+science,8192,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE,1,True
+code,4096,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,4096,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,4096,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,4096,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,4096,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,4096,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,6144,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,6144,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,6144,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,6144,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,6144,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,6144,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,8192,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,8192,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,8192,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,8192,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,8192,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,8192,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+literature,4096,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+literature,4096,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,3,True
+literature,4096,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+literature,4096,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+literature,4096,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+literature,4096,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+literature,6144,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+literature,6144,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+literature,6144,50,0,AURORA-7749,K2-sensitive,Qwen2.5-3B,MSE + IP,2,True
+literature,6144,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+literature,6144,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+literature,6144,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+literature,8192,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,2,True
+literature,8192,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+literature,8192,50,0,AURORA-7749,K2-sensitive,Qwen2.5-3B,MSE + IP,2,True
+literature,8192,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,2,True
+literature,8192,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+literature,8192,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,4096,10,0,AURORA-7749,K2-sensitive,Qwen2.5-3B,MSE + IP,3,True
+math,4096,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,4096,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,4096,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,4096,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,4096,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,6144,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,6144,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,6144,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,6144,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,6144,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,6144,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,8192,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,8192,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,8192,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,8192,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,8192,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+math,8192,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,4096,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,4096,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,4096,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,4096,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,4096,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,4096,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,6144,10,0,AURORA-7749,K2-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,6144,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,6144,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,6144,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,6144,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,6144,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,8192,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,8192,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,8192,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,8192,50,1,NEBULA-3186,K2-sensitive,Qwen2.5-3B,MSE + IP,3,True
+science,8192,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+science,8192,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,MSE + IP,1,True
+code,4096,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,4096,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,4096,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,4096,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,4096,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,4096,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,6144,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,6144,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,6144,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,6144,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,6144,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,6144,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,8192,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,8192,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,8192,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,8192,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,8192,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+code,8192,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+literature,4096,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+literature,4096,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,3,True
+literature,4096,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+literature,4096,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+literature,4096,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+literature,4096,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+literature,6144,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+literature,6144,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+literature,6144,50,0,AURORA-7749,K2-sensitive,Qwen2.5-3B,Full,2,True
+literature,6144,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+literature,6144,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+literature,6144,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+literature,8192,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,2,True
+literature,8192,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+literature,8192,50,0,AURORA-7749,K2-sensitive,Qwen2.5-3B,Full,2,True
+literature,8192,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,2,True
+literature,8192,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+literature,8192,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,4096,10,0,AURORA-7749,K2-sensitive,Qwen2.5-3B,Full,3,True
+math,4096,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,4096,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,4096,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,4096,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,4096,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,6144,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,6144,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,6144,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,6144,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,6144,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,6144,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,8192,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,8192,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,8192,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,8192,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,8192,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+math,8192,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,4096,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,4096,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,4096,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,4096,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,4096,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,4096,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,6144,10,0,AURORA-7749,K2-sensitive,Qwen2.5-3B,Full,1,True
+science,6144,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,6144,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,6144,50,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,6144,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,6144,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,8192,10,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,8192,10,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,8192,50,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,8192,50,1,NEBULA-3186,K2-sensitive,Qwen2.5-3B,Full,3,True
+science,8192,90,0,AURORA-7749,K4-sensitive,Qwen2.5-3B,Full,1,True
+science,8192,90,1,NEBULA-3186,K4-sensitive,Qwen2.5-3B,Full,1,True

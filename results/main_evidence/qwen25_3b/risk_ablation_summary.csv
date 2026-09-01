@@ -1,0 +1,4 @@
+model,risk_score,n_sensitive,top1_cumulative_count,top1_cumulative_percent,k100,mean_first_success_k,cumulative_auc_percent,recovered_within_top12,unrecovered_within_top12
+Qwen2.5-3B,MSE,72,65,90.278,8,1.319,97.338,72,0
+Qwen2.5-3B,MSE + IP,72,65,90.278,3,1.139,98.843,72,0
+Qwen2.5-3B,Full,72,65,90.278,3,1.139,98.843,72,0

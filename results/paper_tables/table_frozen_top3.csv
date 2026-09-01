@@ -1,0 +1,3 @@
+model,fp16,aggressive,uniform,frozen_top3,random3,bottom3,recovery,kv_saving_percent
+Qwen3-4B,36/36,0/36,35/36,34/36,10.7/36,0/36,34/36,83.2
+Qwen2.5-3B,36/36,2/36,35/36,33/36,2/36,1/36,31/34,77.6

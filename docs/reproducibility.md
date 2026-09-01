@@ -67,8 +67,9 @@ python scripts/build_paper_tables.py
 python scripts/build_figures.py
 ```
 
-Markdown tables are written to `tables/paper/`. The reproduced controls plot is
-written to `figures/paper/`.
+Markdown tables are written to `tables/paper/`. The Figure 2 reconstruction is
+written to `figures/paper/`. Both directories are generated and ignored by
+Git.
 
 ## Data Verification
 
@@ -83,8 +84,9 @@ The audit verifies:
 - supporting/main separation;
 - Gemma2 value-bottleneck numbers;
 - excluded-model classification;
-- equality between canonical and grouped CSV copies.
 - per-model restoration directly from sanitized case-level Top-k rows;
+- consistency of the current camera-ready Table 1, Table 2, and Table 3--7
+  summary files;
 - source provenance hashes without private source paths.
 
 It writes `results/audit/audit_summary.json` and SHA-256 hashes in

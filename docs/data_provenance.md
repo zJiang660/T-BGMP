@@ -5,7 +5,7 @@
 - cleaned paper-ready CSV files;
 - sanitized case-level or compact result files;
 - smoke-test sanitized examples;
-- generated paper tables and figures derived from the included CSV files.
+- scripts that regenerate paper tables and Figure 2 from the included CSV files.
 
 ## Excluded Data
 

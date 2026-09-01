@@ -27,4 +27,7 @@ backup_*/
 old_*/
 render_*/
 contact_sheet*
+analysis_outputs/
+tables/paper/
+figures/paper/
 LOCAL_SCRIPT_AUDIT_PRIVATE.md

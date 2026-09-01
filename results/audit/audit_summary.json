@@ -55,12 +55,11 @@
     "excluded_classified_not_retrieval_failure": true,
     "demo_has_one_sensitive_case": true,
     "demo_topk_beats_controls": true,
-    "grouped_copy_matches_table_main_evidence": true,
-    "grouped_copy_matches_table_first_success_k": true,
-    "grouped_copy_matches_table_qwen25_scale": true,
-    "grouped_copy_matches_table_control_statistics": true,
-    "grouped_copy_matches_table_supporting_models": true,
-    "grouped_copy_matches_table_gemma2_boundary": true,
-    "grouped_copy_matches_table_boundary_models": true
+    "paper_table_1_matches_camera_ready": true,
+    "paper_table_2_matches_camera_ready": true,
+    "qwen25_table_2_matches_current_full_case_level": true,
+    "qwen25_table_3_matches_current_ablation_summary": true,
+    "qwen25_figure_2_matches_current_full_case_level": true,
+    "camera_ready_tables_3_to_7_and_figure_2_present": true
   }
 }
