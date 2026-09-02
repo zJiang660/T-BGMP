@@ -130,6 +130,21 @@ python experiments/run_full_pipeline.py \
   --backend turboquant
 ```
 
+The `requirements.txt` command in Quick Start installs the CPU analysis
+environment. Before full GPU execution, install one recorded profile and
+verify the runtime rather than resolving the latest packages:
+
+```bash
+python -m pip install -r requirements-gpu-xec.txt
+python scripts/check_runtime_lock.py --profile xec_gpu \
+  --turboquant-root "${TURBOQUANT_ROOT}" \
+  --model-root "${MODEL_ROOT}" --model-key qwen3_4b
+```
+
+Use `requirements-gpu-sip.txt` with `--profile sip_gpu` for the recorded SIP
+environment. See [`VERSION_LOCK.md`](VERSION_LOCK.md) for provenance and the
+model fingerprint policy.
+
 The case generator uses the configured domain/context/depth/seed grid and the
 selected model tokenizer. Stage C performs a real key-cache profiling pass with
 TurboQuant's `MSECompressor`, then computes the paper's MSE, inner-product, and

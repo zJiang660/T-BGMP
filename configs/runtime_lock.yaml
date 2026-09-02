@@ -1,0 +1,104 @@
+schema_version: 1
+
+# These profiles record environments used by completed T-BGMP GPU runs. They
+# are intentionally separate because the two clusters did not use one
+# byte-identical Python environment.
+profiles:
+  xec_gpu:
+    python: "3.10.20"
+    cuda_runtime: "12.1"
+    requirements: requirements-gpu-xec.txt
+    packages:
+      torch: "2.5.1+cu121"
+      transformers: "5.12.1"
+      accelerate: "1.14.0"
+      safetensors: "0.8.0"
+      numpy: "2.2.6"
+      PyYAML: "6.0.3"
+      triton: "3.1.0"
+  sip_gpu:
+    python: "3.12.12"
+    cuda_runtime: site-provided
+    requirements: requirements-gpu-sip.txt
+    packages:
+      torch: "2.5.1"
+      transformers: "5.12.1"
+      accelerate: "1.14.0"
+      safetensors: "0.7.0"
+      numpy: "2.3.3"
+      PyYAML: "6.0.3"
+      triton: "3.1.0"
+
+external_runtime:
+  turboquant:
+    repository: https://github.com/tonbistudio/turboquant-pytorch.git
+    upstream_commit: 999713889a18c0ffa20c62a65e7cbbe5746794e3
+
+# Historical ModelScope downloads do not expose one immutable repository SHA.
+# Their config and weight-index hashes therefore form the authoritative content
+# identity. The Llama download retained its Hugging Face snapshot revision as
+# well. Weight shards are referenced by the locked index and are not committed.
+models:
+  qwen3_4b:
+    repo_id: Qwen/Qwen3-4B-Instruct-2507
+    local_dir: Qwen3-4B-Instruct-2507
+    source: modelscope
+    source_revision: master
+    config_sha256: 5beea1a4a34c62782bfb2f911c606741a3bab8f92d80a118fa053c28af12e8ba
+    weight_index_sha256: d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c
+  qwen25_3b:
+    repo_id: Qwen/Qwen2.5-3B-Instruct
+    local_dir: Qwen2.5-3B-Instruct
+    source: modelscope
+    source_revision: master
+    config_sha256: eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b
+    weight_index_sha256: bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56
+  qwen25_14b:
+    repo_id: Qwen/Qwen2.5-14B-Instruct
+    local_dir: Qwen2.5-14B-Instruct
+    source: modelscope
+    source_revision: master
+    config_sha256: 0f2085dbbe2ee251bd6a6a0797d84a6ce34436044d629aa3cba793b43d311a9e
+    weight_index_sha256: 46627f7a9e851d9cede6a7a4c49999082148ced9c22d2b9cfaaa5ba8b65dc68f
+  llama32_3b:
+    repo_id: meta-llama/Llama-3.2-3B-Instruct
+    local_dir: Llama-3.2-3B-Instruct
+    source: huggingface
+    source_revision: 0cb88a4f764b7a12671c53f0838cd831a0843b95
+    config_sha256: 39fb36dc5416f445ebc4e71cb71fbcf6727e80a35836d8ba1a1474c318467b7a
+    weight_index_sha256: 0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c
+  mistral_7b:
+    repo_id: mistralai/Mistral-7B-Instruct-v0.3
+    local_dir: Mistral-7B-Instruct-v0.3
+    source: modelscope
+    source_revision: master
+    config_sha256: affafc6478ec0fd07a32f0ca57aa2fc57743f4d17d6730f86a96ac24d1507f99
+    weight_index_sha256: e489ba553b87cde188d921b1a8283c2e0b9d33d635b88147d96ff0fcd6250016
+  yi_15_9b:
+    repo_id: 01-ai/Yi-1.5-9B-Chat-16K
+    local_dir: Yi-1.5-9B-Chat-16K
+    source: modelscope
+    source_revision: master
+    config_sha256: 84818d0aa650bb8f668a8bae5e569c4f1d79b913d329f59c1536ab2544e88250
+    weight_index_sha256: b84d6ebdcbaa08a91d99947222b5ee792a4503f6e4e857c07fb6cf2a3c8a2117
+  zephyr_7b:
+    repo_id: HuggingFaceH4/zephyr-7b-beta
+    local_dir: zephyr-7b-beta
+    source: modelscope
+    source_revision: master
+    config_sha256: fe01cead39af797cfcf27304efc18ed507042e608baaa9705285394f702f5969
+    weight_index_sha256: 7b57b6b93e91a44ad1bd030819d6411fb036c71ce6f80a87ab4286bf48fc836d
+  smollm2_17b:
+    repo_id: HuggingFaceTB/SmolLM2-1.7B-Instruct
+    local_dir: SmolLM2-1.7B-Instruct
+    source: modelscope
+    source_revision: master
+    config_sha256: 994f50b16abb4ae00880baefe03c10260b5bd608d2bf586f7056ca05a534feea
+    weight_file: model.safetensors
+  gemma2_9b:
+    repo_id: google/gemma-2-9b-it
+    local_dir: gemma-2-9b-it
+    source: modelscope
+    source_revision: master
+    config_sha256: 8ecc124513fdb0bb31bf51b4f0dd6c8658a68296dc8cd30af612205ff4a1bc49
+    weight_index_sha256: c38b39b80b2d7aa422464a9b816af4c30d2177e471b89e5325df1336a23ad284

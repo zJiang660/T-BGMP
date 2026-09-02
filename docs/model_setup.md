@@ -109,11 +109,19 @@ The model-free analysis environment is defined by `requirements.txt` and
 - the external TurboQuant/KV-cache backend used for execution;
 - model-specific remote code only when required by the official model card.
 
-The exact PyTorch, CUDA, Transformers, and backend versions depend on the GPU
-driver and cache implementation. Record the complete environment, model
-revision, quantization policy, requested context, actual context, and random
-seed for every rerun. Follow the individual model card when it imposes a newer
-minimum Transformers version.
+Do not resolve these dependencies afresh for a paper rerun. Use the exact XEC
+or SIP profile in `requirements-gpu-xec.txt` or `requirements-gpu-sip.txt` and
+verify it against `configs/runtime_lock.yaml`. The lock also records the
+TurboQuant base commit and checkpoint content fingerprints. Run
+`scripts/check_runtime_lock.py` before submitting a GPU job; a mismatch should
+be treated as a new environment, not silently accepted as the paper setup.
+
+Some historical ModelScope downloads retained only the moving label `master`,
+not one repository-wide immutable revision. For those checkpoints, the lock
+uses SHA-256 fingerprints of `config.json` and the safetensors index as the
+authoritative content identity. This is more precise than assigning an
+unverifiable revision after the run. New downloads should additionally record
+the immutable source revision supplied by the host.
 
 ## Hardware Planning
 

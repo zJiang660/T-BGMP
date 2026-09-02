@@ -1,0 +1,11 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+# Validated XEC full-experiment profile. See configs/runtime_lock.yaml.
+torch==2.5.1+cu121
+transformers==5.12.1
+accelerate==1.14.0
+safetensors==0.8.0
+numpy==2.2.6
+PyYAML==6.0.3
+triton==3.1.0
+

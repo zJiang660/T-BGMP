@@ -1,0 +1,10 @@
+# Validated SIP full-experiment profile. CUDA is supplied by the site runtime.
+# See configs/runtime_lock.yaml before installing on a different system.
+torch==2.5.1
+transformers==5.12.1
+accelerate==1.14.0
+safetensors==0.7.0
+numpy==2.3.3
+PyYAML==6.0.3
+triton==3.1.0
+
