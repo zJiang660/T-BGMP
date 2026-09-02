@@ -42,6 +42,12 @@ Total main: 183/183
 python scripts/build_paper_tables.py
 ```
 
+Verify the case-level sources behind camera-ready Tables 4--7:
+
+```bash
+python scripts/audit_extension_results.py
+```
+
 ## 4. Regenerate Paper Figures
 
 ```bash

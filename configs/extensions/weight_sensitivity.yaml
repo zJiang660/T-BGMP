@@ -1,0 +1,21 @@
+experiment: risk_weight_sensitivity
+models: [Qwen3-4B, Qwen2.5-3B]
+baseline_weights: [1.0, 1.0, 1.0]
+perturbations:
+  - [1.0, 1.0, 0.5]
+  - [1.0, 0.5, 1.0]
+  - [0.5, 1.0, 1.0]
+score_terms:
+  - minmax_mse
+  - minmax_log1p_inner_product_distortion
+  - minmax_inverse_effective_dimension
+evaluation:
+  maximum_topk: 12
+  first_success_metric: smallest_successful_topk
+evidence:
+  qwen3_4b: direct_gpu_outputs_for_all_four_rankings
+  qwen25_3b: direct_equal_weight_outputs_and_identical_top3_prefix_reuse
+outputs:
+  rankings: results/extensions/weight_sensitivity/rankings.csv
+  case_level: results/extensions/weight_sensitivity/case_level.csv
+

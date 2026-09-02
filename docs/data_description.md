@@ -23,6 +23,12 @@ Paper-facing summaries exist only in `results/paper_tables/`. Other result
 directories contain case-level bundles or supporting material and do not
 duplicate the canonical summary CSVs.
 
+Case-level sources for camera-ready Tables 4--7 are retained under
+`results/extensions/`. They are reduced from completed formal outputs and keep
+the per-case success decisions required to reconstruct every reported value.
+See `results/extensions/README.md` and run
+`python scripts/audit_extension_results.py`.
+
 ## Sanitized Case-Level Evidence
 
 The model subdirectories under `results/main_evidence/` contain:

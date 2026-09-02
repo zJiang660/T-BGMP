@@ -1,0 +1,28 @@
+experiment: domain_heldout_ranking
+models:
+  qwen3_4b:
+    model_id: qwen3_4b
+    model_path: ${MODEL_ROOT}/Qwen3-4B-Instruct-2507
+  qwen25_3b:
+    model_id: qwen25_3b_instruct
+    model_path: ${MODEL_ROOT}/Qwen2.5-3B-Instruct
+profiling:
+  domains: [math, literature]
+  context_length: 4096
+  needle_depth: 50
+  seed: 0
+  key_quantization_bits: 2
+  samples_per_layer: 512
+evaluation:
+  domains: [science, code]
+  context_lengths: [4096, 6144, 8192]
+  needle_depths: [10, 50, 90]
+  seeds: [0, 1]
+  topk_budgets: [1, 2, 4, 8, 12]
+  random_seeds: [0, 1, 2]
+  controls_use_each_cases_first_success_budget: true
+  protected_key_bits: 6
+  value_bits: 2
+  residual_window: 128
+output_schema: results/extensions/domain_heldout/case_level.csv
+

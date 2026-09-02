@@ -1,0 +1,723 @@
+[
+  {
+    "case_id": "math_ctx4096_d10_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "math",
+    "context_length": 4096,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx4096_d50_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "math",
+    "context_length": 4096,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx4096_d90_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "math",
+    "context_length": 4096,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx6144_d10_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "math",
+    "context_length": 6144,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx6144_d50_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "math",
+    "context_length": 6144,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx6144_d90_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "math",
+    "context_length": 6144,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx8192_d10_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "math",
+    "context_length": 8192,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx8192_d50_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "math",
+    "context_length": 8192,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx8192_d90_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "math",
+    "context_length": 8192,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx4096_d10_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "literature",
+    "context_length": 4096,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx4096_d50_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "literature",
+    "context_length": 4096,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx4096_d90_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "literature",
+    "context_length": 4096,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx6144_d10_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "literature",
+    "context_length": 6144,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx6144_d50_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "literature",
+    "context_length": 6144,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx6144_d90_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "literature",
+    "context_length": 6144,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx8192_d10_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "literature",
+    "context_length": 8192,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx8192_d50_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "literature",
+    "context_length": 8192,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx8192_d90_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "literature",
+    "context_length": 8192,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx4096_d10_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "science",
+    "context_length": 4096,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx4096_d50_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "science",
+    "context_length": 4096,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx4096_d90_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "science",
+    "context_length": 4096,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx6144_d10_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "science",
+    "context_length": 6144,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx6144_d50_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "science",
+    "context_length": 6144,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx6144_d90_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "science",
+    "context_length": 6144,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx8192_d10_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "science",
+    "context_length": 8192,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx8192_d50_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "science",
+    "context_length": 8192,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx8192_d90_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "science",
+    "context_length": 8192,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx4096_d10_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "code",
+    "context_length": 4096,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx4096_d50_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "code",
+    "context_length": 4096,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx4096_d90_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "code",
+    "context_length": 4096,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx6144_d10_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "code",
+    "context_length": 6144,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx6144_d50_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "code",
+    "context_length": 6144,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx6144_d90_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "code",
+    "context_length": 6144,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx8192_d10_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "code",
+    "context_length": 8192,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx8192_d50_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "code",
+    "context_length": 8192,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx8192_d90_s1",
+    "model_id": "qwen3_4b",
+    "model_name": "Qwen3-4B-Instruct-2507",
+    "domain": "code",
+    "context_length": 8192,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx4096_d10_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "math",
+    "context_length": 4096,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx4096_d50_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "math",
+    "context_length": 4096,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx4096_d90_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "math",
+    "context_length": 4096,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx6144_d10_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "math",
+    "context_length": 6144,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx6144_d50_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "math",
+    "context_length": 6144,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx6144_d90_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "math",
+    "context_length": 6144,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx8192_d10_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "math",
+    "context_length": 8192,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx8192_d50_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "math",
+    "context_length": 8192,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "math_ctx8192_d90_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "math",
+    "context_length": 8192,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx4096_d10_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "literature",
+    "context_length": 4096,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx4096_d50_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "literature",
+    "context_length": 4096,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx4096_d90_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "literature",
+    "context_length": 4096,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx6144_d10_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "literature",
+    "context_length": 6144,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx6144_d50_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "literature",
+    "context_length": 6144,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx6144_d90_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "literature",
+    "context_length": 6144,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx8192_d10_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "literature",
+    "context_length": 8192,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx8192_d50_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "literature",
+    "context_length": 8192,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "literature_ctx8192_d90_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "literature",
+    "context_length": 8192,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx4096_d10_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "science",
+    "context_length": 4096,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx4096_d50_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "science",
+    "context_length": 4096,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx4096_d90_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "science",
+    "context_length": 4096,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx6144_d10_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "science",
+    "context_length": 6144,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx6144_d50_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "science",
+    "context_length": 6144,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx6144_d90_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "science",
+    "context_length": 6144,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx8192_d10_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "science",
+    "context_length": 8192,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx8192_d50_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "science",
+    "context_length": 8192,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "science_ctx8192_d90_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "science",
+    "context_length": 8192,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx4096_d10_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "code",
+    "context_length": 4096,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx4096_d50_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "code",
+    "context_length": 4096,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx4096_d90_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "code",
+    "context_length": 4096,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx6144_d10_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "code",
+    "context_length": 6144,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx6144_d50_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "code",
+    "context_length": 6144,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx6144_d90_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "code",
+    "context_length": 6144,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx8192_d10_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "code",
+    "context_length": 8192,
+    "needle_depth": 10,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx8192_d50_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "code",
+    "context_length": 8192,
+    "needle_depth": 50,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  },
+  {
+    "case_id": "code_ctx8192_d90_s1",
+    "model_id": "qwen25_3b",
+    "model_name": "Qwen2.5-3B-Instruct",
+    "domain": "code",
+    "context_length": 8192,
+    "needle_depth": 90,
+    "seed": 1,
+    "needle_string": "NEBULA-3186"
+  }
+]
+

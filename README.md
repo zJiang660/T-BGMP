@@ -279,6 +279,12 @@ The current camera-ready paper is mapped to the repository as follows:
 | Table 6: frozen Top3 | `results/paper_tables/table_frozen_top3.csv` |
 | Table 7: RULER-style transfer | `results/paper_tables/table_ruler_transfer.csv` |
 
+Tables 4--7 also have reduced case-level evidence under
+`results/extensions/`. Run `python scripts/audit_extension_results.py` to
+reconstruct their reported values. The recovered path-independent experiment
+runners and exact protocols are documented in
+`docs/extension_experiments.md`.
+
 `tables/paper/` and `figures/paper/` are generated locally by the build
 scripts and are intentionally not versioned.
 

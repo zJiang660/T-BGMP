@@ -11,6 +11,17 @@ paper_items:
   table_6: results/paper_tables/table_frozen_top3.csv
   table_7: results/paper_tables/table_ruler_transfer.csv
 
+extension_case_level:
+  weight_sensitivity:
+    rankings: results/extensions/weight_sensitivity/rankings.csv
+    cases: results/extensions/weight_sensitivity/case_level.csv
+  domain_heldout: results/extensions/domain_heldout/case_level.csv
+  frozen_top3: results/extensions/frozen_top3/case_level.csv
+  ruler_screening: results/extensions/ruler/screening_case_level.csv
+  ruler_recovery: results/extensions/ruler/recovery_case_level.csv
+  provenance: results/extensions/source_provenance.json
+  audit_command: python scripts/audit_extension_results.py
+
 main_evidence:
   aggregate:
     sensitive_cases: 183

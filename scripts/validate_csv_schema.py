@@ -128,6 +128,35 @@ QWEN25_RISK_ABLATION_REQUIRED = {
     },
 }
 
+EXTENSION_REQUIRED = {
+    "domain_heldout/case_level.csv": {
+        "model", "case_id", "case_type", "aggressive_key_bits",
+        "first_success_k", "top_recovered", "random0", "random1",
+        "random2", "bottom", "completed",
+    },
+    "frozen_top3/case_level.csv": {
+        "model", "case_id", "fp16", "aggressive", "uniform",
+        "frozen_top", "frozen_bottom", "random0", "random1", "random2",
+        "conditional_failure", "recovered",
+    },
+    "ruler/screening_case_level.csv": {
+        "model", "sample_id", "task", "context_length", "fp16_success",
+        "aggressive_success", "fp16_valid", "aggressive_valid",
+    },
+    "ruler/recovery_case_level.csv": {
+        "model", "sample_id", "task", "context_length", "top1", "top12",
+        "bottom12", "random0_k12", "random1_k12", "random2_k12",
+    },
+    "weight_sensitivity/rankings.csv": {
+        "model", "weights", "layer", "mse_norm", "log_ip_norm",
+        "inverse_effdim_norm", "risk_score", "rank",
+    },
+    "weight_sensitivity/case_level.csv": {
+        "model", "case_id", "weights", "first_success_k",
+        "recovered_within_top12", "evidence",
+    },
+}
+
 
 def main() -> None:
     failures: list[str] = []
@@ -168,9 +197,25 @@ def main() -> None:
             )
     print(f"PASS raw JSONL fixture: {raw_demo.relative_to(ROOT)}")
 
-    for path in sorted((ROOT / "configs").glob("*.yaml")):
+    for path in sorted((ROOT / "configs").rglob("*.yaml")):
         yaml.safe_load(path.read_text(encoding="utf-8"))
         print(f"PASS YAML parse: {path.relative_to(ROOT)}")
+
+    for path in sorted((ROOT / "configs" / "extensions").glob("*.json")):
+        json.loads(path.read_text(encoding="utf-8"))
+        print(f"PASS JSON config parse: {path.relative_to(ROOT)}")
+
+    for relative, required in EXTENSION_REQUIRED.items():
+        path = ROOT / "results" / "extensions" / relative
+        if not path.exists():
+            failures.append(f"missing extension file: {path.relative_to(ROOT)}")
+            continue
+        columns = set(pd.read_csv(path).columns)
+        missing = sorted(required - columns)
+        if missing:
+            failures.append(f"{path.relative_to(ROOT)}: missing columns {missing}")
+        else:
+            print(f"PASS extension schema: {relative}")
 
     case_dirs = [
         ROOT / "results" / "main_evidence" / "qwen3_4b",

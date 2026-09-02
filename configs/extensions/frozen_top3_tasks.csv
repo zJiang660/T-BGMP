@@ -1,0 +1,11 @@
+task_id,model_id,policy,random_seed
+0,qwen3_4b,frozen_top,
+1,qwen3_4b,frozen_bottom,
+2,qwen3_4b,frozen_random,0
+3,qwen3_4b,frozen_random,1
+4,qwen3_4b,frozen_random,2
+5,qwen25_3b,frozen_top,
+6,qwen25_3b,frozen_bottom,
+7,qwen25_3b,frozen_random,0
+8,qwen25_3b,frozen_random,1
+9,qwen25_3b,frozen_random,2

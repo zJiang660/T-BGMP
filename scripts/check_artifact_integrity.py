@@ -26,6 +26,7 @@ REQUIRED_FILES = [
     "docs/data_provenance.md",
     "docs/model_setup.md",
     "docs/backend_integration.md",
+    "docs/extension_experiments.md",
     "docs/smoke_test.md",
     "data/formal_contexts/manifest.yaml",
     "results/paper_tables/table_main_evidence.csv",
@@ -42,6 +43,14 @@ REQUIRED_FILES = [
     "examples/smoke_test/smoke_raw_example.sanitized.jsonl",
     "examples/smoke_test/smoke_case_level_example.csv",
     "scripts/audit_results.py",
+    "scripts/audit_extension_results.py",
+    "results/extensions/domain_heldout/case_level.csv",
+    "results/extensions/frozen_top3/case_level.csv",
+    "results/extensions/ruler/screening_case_level.csv",
+    "results/extensions/ruler/recovery_case_level.csv",
+    "results/extensions/weight_sensitivity/rankings.csv",
+    "results/extensions/weight_sensitivity/case_level.csv",
+    "results/extensions/source_provenance.json",
 ]
 SENSITIVE_PATTERNS = [
     re.compile(pattern, re.IGNORECASE)
