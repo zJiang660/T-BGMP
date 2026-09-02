@@ -1,29 +1,29 @@
-model_id,model,layer,kv_type,context_length,actual_tokens,n_layers,n_kv_heads,head_dim,key_norm_mean,key_norm_std,key_abs_mean,key_abs_max,risk_score,rank
-llama32,Llama-3.2-3B-Instruct,0,key,2048,2060,28,8,128,17.62958145,5.14095879,1.14029694,19.453125,7.16273479,1
-llama32,Llama-3.2-3B-Instruct,25,key,2048,2060,28,8,128,21.71850014,3.56831574,1.24471605,23.484375,5.8989568,2
-llama32,Llama-3.2-3B-Instruct,14,key,2048,2060,28,8,128,22.30064583,2.98870254,1.40512276,18.734375,5.50885758,3
-llama32,Llama-3.2-3B-Instruct,9,key,2048,2060,28,8,128,21.63264275,2.77984095,1.31600153,21.015625,5.17747462,4
-llama32,Llama-3.2-3B-Instruct,13,key,2048,2060,28,8,128,22.82494736,2.40214396,1.36345077,18.5,4.90684209,5
-llama32,Llama-3.2-3B-Instruct,10,key,2048,2060,28,8,128,20.92435265,2.54624891,1.28424132,16.625,4.87670786,6
-llama32,Llama-3.2-3B-Instruct,19,key,2048,2060,28,8,128,21.8995285,2.4141109,1.33532012,18.328125,4.84440744,7
-llama32,Llama-3.2-3B-Instruct,7,key,2048,2060,28,8,128,22.70007515,2.34416056,1.35133839,17.6875,4.8305027,8
-llama32,Llama-3.2-3B-Instruct,12,key,2048,2060,28,8,128,22.45404625,2.25162339,1.38475263,14.9765625,4.75907834,9
-llama32,Llama-3.2-3B-Instruct,15,key,2048,2060,28,8,128,21.30304909,2.31756568,1.31973886,15.6953125,4.702457,10
-llama32,Llama-3.2-3B-Instruct,17,key,2048,2060,28,8,128,21.31003571,2.29178786,1.31938553,16.953125,4.67667518,11
-llama32,Llama-3.2-3B-Instruct,5,key,2048,2060,28,8,128,20.80928993,2.27514791,1.26965165,15.5390625,4.58526406,12
-llama32,Llama-3.2-3B-Instruct,27,key,2048,2060,28,8,128,21.95325279,2.14051008,1.33124721,17.828125,4.56941993,13
-llama32,Llama-3.2-3B-Instruct,3,key,2048,2060,28,8,128,20.99602699,2.29906034,1.21433997,18.5,4.56320167,14
-llama32,Llama-3.2-3B-Instruct,11,key,2048,2060,28,8,128,22.75170326,2.07024741,1.31200576,17.859375,4.51983833,15
-llama32,Llama-3.2-3B-Instruct,8,key,2048,2060,28,8,128,22.69172096,1.99132109,1.35887694,18.328125,4.48478408,16
-llama32,Llama-3.2-3B-Instruct,16,key,2048,2060,28,8,128,21.77913284,2.02916121,1.35272098,17.625,4.47083883,17
-llama32,Llama-3.2-3B-Instruct,22,key,2048,2060,28,8,128,20.69512939,2.2062788,1.1909585,16.859375,4.43199377,18
-llama32,Llama-3.2-3B-Instruct,23,key,2048,2060,28,8,128,21.67165565,2.00090289,1.32818103,16.890625,4.4126667,19
-llama32,Llama-3.2-3B-Instruct,4,key,2048,2060,28,8,128,20.92627335,2.07528329,1.24137008,15.1015625,4.36296704,20
-llama32,Llama-3.2-3B-Instruct,6,key,2048,2060,28,8,128,21.77516747,1.94450366,1.31674516,15.765625,4.3500072,21
-llama32,Llama-3.2-3B-Instruct,20,key,2048,2060,28,8,128,21.1760006,1.99979794,1.28416097,15.5078125,4.34275894,22
-llama32,Llama-3.2-3B-Instruct,26,key,2048,2060,28,8,128,20.89036179,1.9694823,1.3112675,15.4453125,4.32526789,23
-llama32,Llama-3.2-3B-Instruct,24,key,2048,2060,28,8,128,21.30534744,1.95420563,1.27664709,18.171875,4.2961201,24
-llama32,Llama-3.2-3B-Instruct,18,key,2048,2060,28,8,128,21.67084312,1.85675955,1.34466362,14.3984375,4.28496532,25
-llama32,Llama-3.2-3B-Instruct,1,key,2048,2060,28,8,128,21.04491425,1.82312846,1.38582349,12.4609375,4.26119766,26
-llama32,Llama-3.2-3B-Instruct,2,key,2048,2060,28,8,128,20.26666069,1.75081897,1.24422908,14.1875,4.00838108,27
-llama32,Llama-3.2-3B-Instruct,21,key,2048,2060,28,8,128,20.84332275,1.69968224,1.22667694,17.421875,3.96852531,28
+model_id,model,layer,kv_type,c_mse_upper95,c_ip_upper95,effective_dimension,risk_score,rank,score_protocol,notes
+llama32,Llama3.2-3B,25,key,13.65083599,97.2277298,14.72666073,3.0,1,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,7,key,10.81758118,92.22422028,22.66816902,1.61175456,2,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,11,key,10.77363396,95.26843262,24.07811546,1.60295663,3,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,27,key,10.0830822,92.73531342,21.9019413,1.53249009,4,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,3,key,9.47418213,85.41773987,17.92729568,1.52710695,5,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,8,key,10.94099045,93.85968781,26.3309021,1.49088983,6,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,14,key,10.63344479,85.90429688,21.53207207,1.47697289,7,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,4,key,9.46076965,81.76703644,19.6466713,1.27127032,8,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,19,key,10.35721779,84.41773224,23.45563126,1.26680966,9,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,13,key,10.72108555,83.38069153,24.39586258,1.25626744,10,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,0,key,10.15618324,64.08864594,15.92725945,1.18081422,11,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,22,key,9.79563618,81.27322388,21.96890259,1.15674725,12,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,23,key,9.96354294,83.07188416,23.59392738,1.14586981,13,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,17,key,9.67899323,81.35045624,23.30097008,1.05776847,14,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,12,key,10.50558376,81.98066711,27.04862785,1.05247722,15,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,9,key,10.61202049,80.51470947,26.81898689,1.03900055,16,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,1,key,9.25755501,78.62639618,21.31625557,1.01748578,17,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,16,key,9.64112377,81.77046967,24.91572762,0.97838269,18,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,18,key,9.4331274,79.14496613,22.96562195,0.96416993,19,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,6,key,9.4863348,80.10482788,25.28263855,0.88188634,20,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,24,key,9.58934975,78.19021606,25.00849342,0.85657862,21,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,20,key,9.19041729,77.34484863,23.30582428,0.84356023,22,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,15,key,9.65063095,74.58281708,26.04030991,0.70675552,23,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,5,key,8.9631691,72.70885468,23.0194149,0.66842197,24,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,26,key,9.43929958,75.97962189,27.36039162,0.65479562,25,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,10,key,9.42737865,74.95955658,28.56287766,0.57333952,26,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,2,key,8.38442898,75.30783844,24.70251846,0.55274831,27,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.
+llama32,Llama3.2-3B,21,key,8.49845123,72.69883728,24.53514671,0.49826141,28,paper_full: minmax(C_mse) + minmax(log1p(C_ip)) + minmax(1/d_eff),risk_score = Norm(C_mse) + Norm(log(1+C_ip)) + Norm(1/(d_eff+eps)); calibration/evaluation overlap=yes. flat_rows=32688; flat_dim=128.

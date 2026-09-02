@@ -9,7 +9,12 @@
       "filename": "tbgmp_case_classification.csv",
       "bytes": 5919,
       "sha256": "29ae97824f21f5301ae3a4745c6aa636f20a41f5ea3b5eeb9e0c22912ae9341b"
+    },
+    {
+      "filename": "tbgmp_key_risk_profile.csv",
+      "bytes": 6300,
+      "sha256": "2696b98a506ae66847cf043ae68b2b0e2e95b3c9656dbd61bf2123286690e66a"
     }
   ],
-  "notes": "Sanitized from case-level XEC experiment exports. Qwen2.5-14B ranking records policy order because a separate risk-score file was not available."
+  "notes": "Sanitized from case-level XEC experiment exports. The recovered 48-layer profile contains all three empirical components and the exact historical ranking used by the reported recovery sweep. That historical runner summed C_mse + log1p(C_ip) + 1/d_eff without per-model min-max normalization; this protocol is retained explicitly rather than relabeled as the current normalized score."
 }

@@ -1,13 +1,49 @@
-model,layer,rank,risk_score,ranking_source
-Qwen2.5-14B,0,1,,policy_order_only
-Qwen2.5-14B,46,2,,policy_order_only
-Qwen2.5-14B,2,3,,policy_order_only
-Qwen2.5-14B,47,4,,policy_order_only
-Qwen2.5-14B,30,5,,policy_order_only
-Qwen2.5-14B,13,6,,policy_order_only
-Qwen2.5-14B,43,7,,policy_order_only
-Qwen2.5-14B,11,8,,policy_order_only
-Qwen2.5-14B,4,9,,policy_order_only
-Qwen2.5-14B,45,10,,policy_order_only
-Qwen2.5-14B,15,11,,policy_order_only
-Qwen2.5-14B,21,12,,policy_order_only
+model_id,model,layer,kv_type,c_mse_upper95,c_ip_upper95,effective_dimension,risk_score,rank,score_protocol,source
+qwen25_14b,Qwen2.5-14B,0,key,10.464851379394531,774.780029296875,1.440542459487915,17.812903332185215,1,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,46,key,4.223930358886719,37.446231842041016,4.741745471954346,8.084083852858623,2,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,2,key,3.1267895698547363,106.0064926147461,3.7517714500427246,8.066219837482455,3,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,47,key,3.5196595191955566,59.250614166259766,5.465404033660889,7.801141374683921,4,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,30,key,3.776608467102051,49.55625915527344,11.799498558044434,7.784444590119951,5,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,13,key,2.911006450653076,95.25914764404295,7.186270713806152,7.617204694250051,6,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,43,key,2.7132534980773926,107.29118347167967,5.769898891448975,7.571390502680269,7,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,11,key,3.1800153255462646,68.67294311523438,10.808067321777344,7.516350857284658,8,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,4,key,2.415938138961792,119.09169006347656,5.251347541809082,7.394620986458806,9,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,45,key,2.225167751312256,91.21202850341795,3.9289023876190186,7.003782346750731,10,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,15,key,2.6381726264953613,61.058135986328125,4.731652736663818,6.977586893425006,11,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,21,key,2.729740619659424,56.6766357421875,7.293557167053223,6.921700094209378,12,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,17,key,2.5015668869018555,63.173622131347656,9.038615226745604,6.773795559570958,13,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,10,key,2.475320816040039,60.40370559692383,8.9608793258667,6.704387192026721,14,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,22,key,2.5417511463165283,50.93759536743164,7.020557880401611,6.6342328779431154,15,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,9,key,2.3131103515625,52.94328308105469,6.804684162139893,6.44800112502544,16,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,6,key,2.089564800262451,57.34063720703125,5.923227310180664,6.3246905692547,17,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,3,key,2.3345274925231934,43.44985961914063,6.114173889160156,6.292443689444534,18,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,31,key,2.293742179870605,44.29743194580078,7.453063011169434,6.241165544509759,19,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,38,key,2.184049606323242,49.08478927612305,12.668988227844238,6.176699862561471,20,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,14,key,2.229285717010498,44.82593536376953,14.838485717773438,6.121528243671547,21,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,41,key,2.1382758617401123,44.93214416503906,7.442856788635254,6.099798054463982,22,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,29,key,2.391412734985352,36.70769119262695,13.925301551818848,6.093088549390667,23,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,27,key,2.0848450660705566,47.05137252807617,8.480268478393555,6.075036560566407,24,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,23,key,2.1879992485046387,40.79289245605469,7.197892665863037,6.059655088166851,25,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,19,key,2.15299654006958,41.74190521240234,8.318737983703613,6.028386907552758,26,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,18,key,2.368140459060669,32.54410171508789,7.007399559020996,6.023707792124212,27,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,20,key,2.105658769607544,44.247535705566406,9.4546480178833,6.023575062117277,28,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,16,key,2.210270404815674,36.68609619140625,9.318142890930176,5.946879151452738,29,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,8,key,1.9877721071243288,43.01852798461914,8.519776344299316,5.889756716132476,30,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,12,key,2.389939308166504,29.541934967041016,15.023655891418455,5.875601659317368,31,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,39,key,1.9591753482818604,42.76599884033203,13.119991302490234,5.814252144739612,32,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,36,key,1.8522872924804688,44.37916946411133,6.833178520202637,5.81368524880067,33,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,44,key,2.0872445106506348,35.880958557128906,8.589423179626465,5.811362153416303,34,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,33,key,2.079062223434448,36.35042953491211,10.01471996307373,5.799259651940627,35,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,37,key,1.924025058746338,43.29960632324219,12.7291898727417,5.793560444064515,36,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,35,key,2.0002665519714355,34.44222640991211,7.78178596496582,5.696675702596027,37,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,7,key,1.982635736465454,35.505367279052734,8.607860565185547,5.6962679205031375,38,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,32,key,1.7779276371002195,41.7456169128418,12.700740814208984,5.61192986356296,39,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,28,key,1.9638935327529907,32.30967330932617,13.31932544708252,5.544820254552863,40,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,24,key,1.6814508438110352,41.00118255615234,15.522075653076172,5.483572991337543,41,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,25,key,1.695000410079956,40.0676383972168,16.110898971557617,5.472290617308823,42,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,26,key,1.894481897354126,32.03456497192383,15.038613319396973,5.458531826600934,43,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,5,key,1.7999234199523926,34.44727325439453,12.463440895080566,5.448204416503215,44,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,42,key,1.6345467567443848,37.00041961669922,8.588533401489258,5.388578273552002,45,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,34,key,1.760632038116455,32.785343170166016,12.578222274780272,5.360161603286104,46,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,40,key,1.6248500347137451,36.44166946411133,11.920701026916504,5.33152195964912,47,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0
+qwen25_14b,Qwen2.5-14B,1,key,1.286408543586731,44.42047119140625,18.32766914367676,5.156933766193727,48,historical_full_components: C_mse + log1p(C_ip) + 1/d_eff,calibration_prefill_literature_ctx4096_depth50_seed0

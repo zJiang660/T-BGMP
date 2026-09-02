@@ -198,6 +198,37 @@ def main() -> None:
             json.loads(provenance.read_text(encoding="utf-8"))
         print(f"PASS case-level bundle: {directory.relative_to(ROOT)}")
 
+    expected_ranking_layers = {
+        "qwen25_14b": 48,
+        "llama32_3b": 28,
+    }
+    for model_dir, expected_layers in expected_ranking_layers.items():
+        path = ROOT / "results" / "main_evidence" / model_dir / "risk_ranking.csv"
+        frame = pd.read_csv(path)
+        required_metrics = {
+            "layer", "rank", "risk_score", "c_mse_upper95", "c_ip_upper95",
+            "effective_dimension", "score_protocol",
+        }
+        missing_metrics = required_metrics - set(frame.columns)
+        if missing_metrics:
+            failures.append(
+                f"{path.relative_to(ROOT)}: missing Full metrics {sorted(missing_metrics)}"
+            )
+            continue
+        layers = set(pd.to_numeric(frame["layer"], errors="coerce").dropna().astype(int))
+        ranks = set(pd.to_numeric(frame["rank"], errors="coerce").dropna().astype(int))
+        if layers != set(range(expected_layers)):
+            failures.append(
+                f"{path.relative_to(ROOT)}: expected all {expected_layers} model layers"
+            )
+        if ranks != set(range(1, expected_layers + 1)):
+            failures.append(
+                f"{path.relative_to(ROOT)}: ranks must be contiguous 1..{expected_layers}"
+            )
+        if frame[["risk_score", "c_mse_upper95", "c_ip_upper95", "effective_dimension"]].isna().any().any():
+            failures.append(f"{path.relative_to(ROOT)}: incomplete Full risk metrics")
+        print(f"PASS complete Full ranking: {model_dir} ({expected_layers} layers)")
+
     qwen25_dir = ROOT / "results" / "main_evidence" / "qwen25_3b"
     for filename, required in QWEN25_RISK_ABLATION_REQUIRED.items():
         path = qwen25_dir / filename
