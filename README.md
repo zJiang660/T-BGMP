@@ -109,13 +109,34 @@ environment, and an external TurboQuant/KV-cache backend. Start from:
 
 ```bash
 export MODEL_ROOT=/path/to/models
+export TURBOQUANT_ROOT=/path/to/turboquant-pytorch
+python experiments/generate_retrieval_cases.py \
+  --config configs/default_experiment.yaml \
+  --model-path "${MODEL_ROOT}/Qwen3-4B-Instruct-2507" \
+  --output /path/to/outputs/qwen3_cases.csv
+python experiments/stage_c_profile_key_risk.py \
+  --config configs/default_experiment.yaml \
+  --model-key qwen3_4b \
+  --model-root "${MODEL_ROOT}" \
+  --turboquant-root "${TURBOQUANT_ROOT}" \
+  --output /path/to/outputs/qwen3_risk_ranking.csv
 python experiments/run_full_pipeline.py \
-  --cases data/demo/full_runner_cases.csv \
+  --cases /path/to/outputs/qwen3_cases.csv \
   --model-path "${MODEL_ROOT}/Qwen3-4B-Instruct-2507" \
   --model-id Qwen3-4B-Instruct-2507 \
+  --turboquant-root "${TURBOQUANT_ROOT}" \
+  --risk-ranking /path/to/outputs/qwen3_risk_ranking.csv \
   --output /path/to/outputs/qwen3_full.csv \
-  --backend module.path:factory
+  --backend turboquant
 ```
+
+The case generator uses the configured domain/context/depth/seed grid and the
+selected model tokenizer. Stage C performs a real key-cache profiling pass with
+TurboQuant's `MSECompressor`, then computes the paper's MSE, inner-product, and
+effective-dimension risk score. Replace the demo domain sources in
+`configs/default_experiment.yaml` with documented public corpora for a formal
+rerun. The Stage C profiling source must itself contain at least the configured
+number of tokens; the profiler does not repeat short text.
 
 Model repository IDs, Hugging Face and ModelScope download examples, gated
 license notes, recommended directories, and environment requirements are
@@ -181,7 +202,7 @@ The complete model-free Stage A--F demonstration is:
 ```bash
 python experiments/stage_a_discovery.py
 python experiments/stage_b_mine_sensitive_cases.py
-python experiments/stage_c_profile_key_risk.py
+python experiments/stage_c_profile_key_risk.py --demo-stats
 python experiments/stage_d_topk_recovery.py
 python experiments/stage_e_random_bottom_controls.py
 python experiments/stage_f_efficiency_analysis.py

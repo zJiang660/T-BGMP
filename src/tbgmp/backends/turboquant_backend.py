@@ -193,6 +193,9 @@ class TurboQuantBackend:
                 policy=policy,
                 max_new_tokens=int(legacy_kwargs.get("max_new_tokens", 32)),
                 seed=int(legacy_kwargs.get("seed", 0)),
+                add_special_tokens=bool(
+                    legacy_kwargs.get("add_special_tokens", True)
+                ),
             )
 
         self._raise_if_unavailable()
@@ -241,7 +244,11 @@ class TurboQuantBackend:
         model.to(device)
         model.eval()
 
-        encoded = tokenizer(request.prompt, return_tensors="pt")
+        encoded = tokenizer(
+            request.prompt,
+            return_tensors="pt",
+            add_special_tokens=request.add_special_tokens,
+        )
         encoded = {key: value.to(device) for key, value in encoded.items()}
         cache = self._build_cache(request, int(model.config.num_hidden_layers))
         if torch.cuda.is_available():
@@ -272,6 +279,7 @@ class TurboQuantBackend:
                 ),
                 "peak_gpu_gb": peak_gpu_gb,
                 "generated_tokens": int(len(new_tokens)),
+                "actual_context_tokens": int(encoded["input_ids"].shape[1]),
             },
         )
 

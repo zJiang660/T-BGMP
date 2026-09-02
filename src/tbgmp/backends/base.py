@@ -12,6 +12,7 @@ class GenerationRequest:
     policy: dict
     max_new_tokens: int = 32
     seed: int = 0
+    add_special_tokens: bool = True
 
 
 @dataclass

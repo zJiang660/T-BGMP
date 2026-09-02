@@ -8,11 +8,33 @@ experiment:
   maximum_topk: 12
   max_new_tokens: 32
   default_seed: 0
+  random_seeds: [0, 1, 2]
 
 inputs:
   model_registry: configs/model_registry.yaml
   policies: configs/policies.yaml
+  prompt_template: configs/prompt_template.yaml
   cases: /path/to/cases.csv
+
+case_generation:
+  domain_sources:
+    math: data/demo/contexts/math.txt
+    literature: data/demo/contexts/literature.txt
+    science: data/demo/contexts/science.txt
+    code: data/demo/contexts/code.txt
+  needle_template: "The hidden answer is {answer}."
+  question: "What is the hidden answer? Reply with the exact string."
+  reserve_tokens: 64
+
+profiling:
+  domain: literature
+  context_length: 4096
+  quant_bits: 2
+  max_rows: 20000
+  ip_pairs: 8192
+  seed: 42
+  device: cuda
+  load_in_4bit: false
 
 backend:
   config: configs/backend_turboquant.yaml

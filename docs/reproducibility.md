@@ -51,7 +51,7 @@ Run the explicit Stage A--F flow:
 ```bash
 python experiments/stage_a_discovery.py
 python experiments/stage_b_mine_sensitive_cases.py
-python experiments/stage_c_profile_key_risk.py
+python experiments/stage_c_profile_key_risk.py --demo-stats
 python experiments/stage_d_topk_recovery.py
 python experiments/stage_e_random_bottom_controls.py
 python experiments/stage_f_efficiency_analysis.py

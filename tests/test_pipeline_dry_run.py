@@ -44,6 +44,18 @@ def test_stage_a_help() -> None:
     assert "--dry-run" in result.stdout
 
 
+def test_stage_c_demo_must_be_explicit() -> None:
+    result = subprocess.run(
+        [sys.executable, "experiments/stage_c_profile_key_risk.py"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    assert result.returncode != 0
+    assert "explicit --demo-stats flag" in result.stderr
+
+
 def test_smoke_help() -> None:
     result = run_command("experiments/smoke_test_backend.py", "--help")
     assert "--model-key" in result.stdout

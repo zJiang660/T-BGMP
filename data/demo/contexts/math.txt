@@ -1,0 +1,1 @@
+Integers can be decomposed into prime factors. A proof should state its assumptions, proceed through justified steps, and verify the final equality. Modular arithmetic studies remainders under division and is useful for checking divisibility and periodicity.

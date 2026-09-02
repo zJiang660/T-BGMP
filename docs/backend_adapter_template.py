@@ -22,13 +22,16 @@ class Backend:
         quantization,
         max_new_tokens,
         seed=0,
+        add_special_tokens=True,
     ):
         # TODO:
         # 1. Load the user-supplied model from model_path.
         # 2. Apply quantization.key_bits/value_bits/residual_window.
         # 3. Apply protected_key_bits to quantization.protected_layers.
-        # 4. Generate deterministically and record memory/runtime metrics.
-        # 5. Return the decoded response. The pipeline recomputes answer match.
+        # 4. Tokenize with the supplied add_special_tokens setting. The full
+        #    runner passes False because prompt is already chat-template rendered.
+        # 5. Generate deterministically and record memory/runtime metrics.
+        # 6. Return the decoded response. The pipeline recomputes answer match.
         raise NotImplementedError("Connect this adapter to a compatible backend")
 
 

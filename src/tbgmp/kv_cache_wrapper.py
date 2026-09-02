@@ -33,6 +33,7 @@ class KVCacheBackend(Protocol):
         quantization: QuantizationConfig | None,
         max_new_tokens: int,
         seed: int = 0,
+        add_special_tokens: bool = True,
     ) -> GenerationResult:
         """Run one generation under a cache policy."""
 

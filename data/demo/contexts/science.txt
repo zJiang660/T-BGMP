@@ -1,0 +1,1 @@
+An experiment compares a controlled baseline with a treatment while holding other variables fixed. Repeated measurements estimate uncertainty, and the report distinguishes observations from interpretations of the underlying mechanism.

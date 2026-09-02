@@ -1,0 +1,1 @@
+A program accepts structured input, validates each field, and computes a deterministic result. Tests cover normal behavior, boundary conditions, malformed records, and repeated execution with the same random seed.

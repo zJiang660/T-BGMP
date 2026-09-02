@@ -1,10 +1,12 @@
 system: "Use only the supplied context to answer the question."
-template: |
-  Context:
+user_template: |
+  Read this document:
+
   {context}
 
   Question:
   {question}
 
   Answer exactly with the hidden answer string.
+use_chat_template: true
 answer_matching: exact_substring

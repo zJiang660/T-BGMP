@@ -17,6 +17,16 @@ the synthetic demo rows; full GPU discovery requires an external runner.
 `experiments/run_full_pipeline.py` executes FP16, K2/V2, K4/V2, K6/V2, and
 K6/V4 through the user-supplied backend.
 
+Generate the grid with `experiments/generate_retrieval_cases.py`. It uses the
+selected model tokenizer, deterministic hidden strings, configured domain text
+sources, and exact depth/seed combinations. During execution, the runner
+renders each request with `configs/prompt_template.yaml` and the tokenizer's
+chat template, with thinking disabled where the model exposes that option.
+Generated case files record `document_tokens`; real backend outputs separately
+record `actual_context_tokens` after the complete rendered prompt is tokenized.
+The runner marks rendered prompts so the backend does not add special tokens a
+second time.
+
 ## Stage B: Sensitive-Case Mining
 
 Sensitive cases are selected using `found` fields, not execution status:
@@ -33,6 +43,16 @@ retrieval miss and is not admitted to the conditional recovery set.
 For each key layer, estimate upper-tail reconstruction MSE, inner-product
 distortion, and effective dimension where available. Normalize these components
 within a model and sum them to obtain a model-specific empirical risk score.
+`experiments/stage_c_profile_key_risk.py` can either consume precomputed layer
+statistics or run the complete model profiling path. The real path extracts key
+tensors from `past_key_values`, reconstructs them with TurboQuant's
+`MSECompressor`, applies the bit-normalized `2^(2b)` factor, and reports the 95th
+percentile MSE and inner-product errors plus participation-ratio effective
+dimension. The default formal profiling context is literature at 4096 tokens.
+The profiling source must contain at least the requested number of tokens; it
+is truncated but never repeated, because repetition would change key statistics.
+The bundled four-layer statistics are available only through the explicit
+`--demo-stats` flag and are never selected silently by the formal path.
 
 ## Stage D: Top-k Recovery
 
@@ -41,6 +61,8 @@ precision, raise only the Top-k key layers to the protected precision and
 measure the first successful recovery budget.
 The full runner evaluates Top1 through Top12 (or the configured maximum)
 without stopping after the first success, preserving the diagnostic sweep.
+The runner preserves the selected case's aggressive K/V bits: K2/V2 failures
+remain K2/V2 outside protected key layers, while K4/V2 failures remain K4/V2.
 
 T-BGMP is a diagnostic recovery protocol, not an oracle-free deployment policy:
 the current procedure evaluates recoverability after a failure is known.

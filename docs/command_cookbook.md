@@ -85,6 +85,26 @@ python experiments/stage_f_efficiency_analysis.py --help
 
 Requires working TurboQuant backend binding and model weights.
 
+Create the configured retrieval grid:
+
+```bash
+python experiments/generate_retrieval_cases.py \
+  --config configs/default_experiment.yaml \
+  --model-path "$MODEL_ROOT/Qwen2.5-3B-Instruct" \
+  --output "$OUTPUT_ROOT/qwen25_3b/cases.csv"
+```
+
+Profile the model's key-layer risk ranking:
+
+```bash
+python experiments/stage_c_profile_key_risk.py \
+  --config configs/default_experiment.yaml \
+  --model-key qwen25_3b \
+  --model-root "$MODEL_ROOT" \
+  --turboquant-root "$TURBOQUANT_ROOT" \
+  --output "$OUTPUT_ROOT/qwen25_3b/risk_ranking.csv"
+```
+
 ```bash
 python experiments/smoke_test_backend.py \
   --backend turboquant \
@@ -111,13 +131,13 @@ risk-ranked key-layer protection:
 ```bash
 python experiments/run_full_pipeline.py \
   --config configs/default_experiment.yaml \
-  --cases /path/to/cases.csv \
+  --cases "$OUTPUT_ROOT/qwen25_3b/cases.csv" \
   --model-key qwen25_3b \
   --model-root "$MODEL_ROOT" \
   --output-dir "$OUTPUT_ROOT/qwen25_3b" \
   --backend turboquant \
   --turboquant-root "$TURBOQUANT_ROOT" \
-  --risk-ranking /path/to/risk_ranking.csv \
+  --risk-ranking "$OUTPUT_ROOT/qwen25_3b/risk_ranking.csv" \
   --max-new-tokens 32 \
   --seed 0
 ```

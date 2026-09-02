@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from tbgmp.kv_cache_wrapper import DryRunBackend, load_backend
 from tbgmp.controls import bottomk_layers, sample_random_layers
 from tbgmp.backends.turboquant_backend import TurboQuantBackend
+from tbgmp.prompting import render_retrieval_prompt
 from tbgmp.quantization import QuantizationConfig
 from tbgmp.retrieval_eval import found_answer
 
@@ -40,10 +41,28 @@ def policy_config(name: str, policies: dict) -> QuantizationConfig | None:
     )
 
 
+def protected_config(
+    aggressive: QuantizationConfig,
+    tbgmp_policy: dict,
+    layers: tuple[int, ...],
+) -> QuantizationConfig:
+    """Protect ranked keys while preserving the case's aggressive baseline."""
+    config = QuantizationConfig(
+        key_bits=aggressive.key_bits,
+        value_bits=aggressive.value_bits,
+        protected_key_bits=int(tbgmp_policy["protected_key_bits"]),
+        protected_layers=layers,
+        residual_window=aggressive.residual_window,
+    )
+    config.validate()
+    return config
+
+
 def execute(
     *,
     backend,
     case: pd.Series,
+    prompt: str,
     model_path: str,
     model_id: str,
     policy_name: str,
@@ -53,7 +72,6 @@ def execute(
     seed: int,
     stage: str,
 ) -> dict:
-    prompt = f"{case['context']}\n\n{case['question']}"
     try:
         result = backend.generate(
             model_path=model_path,
@@ -63,6 +81,7 @@ def execute(
             quantization=quantization,
             max_new_tokens=max_new_tokens,
             seed=seed,
+            add_special_tokens=False,
         )
     except (NotImplementedError, RuntimeError) as exc:
         raise SystemExit(str(exc)) from None
@@ -81,12 +100,17 @@ def execute(
             "tok_per_s": metadata.get("tok_per_s"),
             "peak_gpu_gb": metadata.get("peak_gpu_gb"),
             "kv_saving": metadata.get("kv_saving"),
+            "actual_context_tokens": metadata.get("actual_context_tokens", ""),
         }
+    result_fields.setdefault("actual_context_tokens", "")
     return {
         "model": model_id,
         "case_id": case["case_id"],
         "domain": case.get("domain", ""),
         "context_length": case.get("context_length", ""),
+        "document_tokens": case.get(
+            "document_tokens", case.get("actual_context_tokens", "")
+        ),
         "depth": case.get("depth", ""),
         "seed": case.get("seed", ""),
         "answer": case["answer"],
@@ -135,6 +159,7 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=ROOT / "configs" / "policies.yaml",
     )
+    parser.add_argument("--prompt-template", type=Path)
     parser.add_argument("--output", type=Path)
     parser.add_argument("--output-dir", type=Path)
     parser.add_argument(
@@ -143,20 +168,44 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--turboquant-root", type=Path)
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--max-new-tokens", type=int, default=32)
-    parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--max-new-tokens", type=int)
+    parser.add_argument("--seed", type=int)
     parser.add_argument(
         "--risk-ranking",
         type=Path,
         help="CSV with layer and rank columns; required for Top-k stages.",
     )
-    parser.add_argument("--maximum-topk", type=int, default=12)
-    parser.add_argument("--random-seeds", default="0,1,2")
+    parser.add_argument("--maximum-topk", type=int)
+    parser.add_argument("--random-seeds")
     return parser.parse_args()
 
 
 def resolve_paths(args: argparse.Namespace) -> None:
     config = yaml.safe_load(args.config.read_text(encoding="utf-8"))
+    experiment = config.get("experiment", {})
+    args.max_new_tokens = (
+        args.max_new_tokens
+        if args.max_new_tokens is not None
+        else int(experiment.get("max_new_tokens", 32))
+    )
+    args.seed = (
+        args.seed if args.seed is not None else int(experiment.get("default_seed", 0))
+    )
+    args.maximum_topk = (
+        args.maximum_topk
+        if args.maximum_topk is not None
+        else int(experiment.get("maximum_topk", 12))
+    )
+    if args.random_seeds is None:
+        values = experiment.get("random_seeds", [0, 1, 2])
+        args.random_seeds = ",".join(str(value) for value in values)
+    if args.prompt_template is None:
+        configured_prompt = config.get("inputs", {}).get(
+            "prompt_template", "configs/prompt_template.yaml"
+        )
+        args.prompt_template = Path(configured_prompt)
+        if not args.prompt_template.is_absolute():
+            args.prompt_template = ROOT / args.prompt_template
     if args.cases is None:
         configured_cases = config.get("inputs", {}).get("cases")
         if configured_cases and not str(configured_cases).startswith("/path/to/"):
@@ -223,6 +272,29 @@ def main() -> None:
         backend = load_backend(args.backend)
     cases = load_cases(args.cases)
     policies = yaml.safe_load(args.policies.read_text(encoding="utf-8"))
+    prompt_config = yaml.safe_load(args.prompt_template.read_text(encoding="utf-8"))
+    tokenizer = None
+    if not args.dry_run:
+        try:
+            from transformers import AutoTokenizer
+        except ImportError as exc:
+            raise SystemExit(
+                "Full execution requires transformers for prompt rendering."
+            ) from exc
+        tokenizer = AutoTokenizer.from_pretrained(
+            args.model_path,
+            trust_remote_code=True,
+            local_files_only=True,
+        )
+    prompts = {
+        str(case["case_id"]): render_retrieval_prompt(
+            str(case["context"]),
+            str(case["question"]),
+            prompt_config=prompt_config,
+            tokenizer=tokenizer,
+        )
+        for _, case in cases.iterrows()
+    }
     discovery_names = [
         "fp16",
         "uniform_k2_v2_rw128",
@@ -239,6 +311,7 @@ def main() -> None:
             row = execute(
                 backend=backend,
                 case=case,
+                prompt=prompts[str(case["case_id"])],
                 model_path=args.model_path,
                 model_id=args.model_id,
                 policy_name=name,
@@ -274,19 +347,17 @@ def main() -> None:
         maximum_topk = min(args.maximum_topk, len(ranked_layers))
 
         for case, aggressive_name in sensitive_cases:
+            aggressive_config = policy_config(aggressive_name, policies)
+            if aggressive_config is None:
+                raise RuntimeError("Sensitive-case aggressive policy cannot be FP16.")
             first_success_k = None
             for k in range(1, maximum_topk + 1):
                 layers = tuple(ranked_layers[:k])
-                config = QuantizationConfig(
-                    key_bits=int(tbgmp["default_key_bits"]),
-                    value_bits=int(tbgmp["default_value_bits"]),
-                    protected_key_bits=int(tbgmp["protected_key_bits"]),
-                    protected_layers=layers,
-                    residual_window=int(tbgmp.get("residual_window", 128)),
-                )
+                config = protected_config(aggressive_config, tbgmp, layers)
                 row = execute(
                     backend=backend,
                     case=case,
+                    prompt=prompts[str(case["case_id"])],
                     model_path=args.model_path,
                     model_id=args.model_id,
                     policy_name=f"tbgmp_top{k}",
@@ -307,16 +378,11 @@ def main() -> None:
             k = first_success_k
             for seed in random_seeds:
                 random_layers = tuple(sample_random_layers(ranked_layers, k, seed))
-                config = QuantizationConfig(
-                    key_bits=int(tbgmp["default_key_bits"]),
-                    value_bits=int(tbgmp["default_value_bits"]),
-                    protected_key_bits=int(tbgmp["protected_key_bits"]),
-                    protected_layers=random_layers,
-                    residual_window=int(tbgmp.get("residual_window", 128)),
-                )
+                config = protected_config(aggressive_config, tbgmp, random_layers)
                 row = execute(
                     backend=backend,
                     case=case,
+                    prompt=prompts[str(case["case_id"])],
                     model_path=args.model_path,
                     model_id=args.model_id,
                     policy_name=f"random{k}_seed{seed}",
@@ -331,16 +397,11 @@ def main() -> None:
                 rows.append(row)
 
             bottom_layers = tuple(bottomk_layers(ranked_layers, k))
-            config = QuantizationConfig(
-                key_bits=int(tbgmp["default_key_bits"]),
-                value_bits=int(tbgmp["default_value_bits"]),
-                protected_key_bits=int(tbgmp["protected_key_bits"]),
-                protected_layers=bottom_layers,
-                residual_window=int(tbgmp.get("residual_window", 128)),
-            )
+            config = protected_config(aggressive_config, tbgmp, bottom_layers)
             row = execute(
                 backend=backend,
                 case=case,
+                prompt=prompts[str(case["case_id"])],
                 model_path=args.model_path,
                 model_id=args.model_id,
                 policy_name=f"bottom{k}",
