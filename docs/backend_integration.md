@@ -56,13 +56,18 @@ its current dependencies.
 
 A complete backend must:
 
-1. Load a user-supplied Hugging Face model and tokenizer.
+1. Load a user-supplied Hugging Face model and tokenizer once per process and
+   expose the owned tokenizer through `get_tokenizer(model_path)` when possible.
 2. Run FP16 generation.
 3. Run uniform KV-cache policies K2/V2, K4/V2, K6/V2, and K6/V4.
 4. Run protected-key Top-k policies with default key bits, default value bits,
    protected key bits, arbitrary protected layer IDs, and a residual window.
 5. Return the response, execution status, retrieval result, and optionally
    runtime, throughput, peak GPU memory, and KV saving.
+
+The reference adapter caches the model/tokenizer by resolved model path. Every
+generation request constructs a new policy-specific KV cache, so cache state is
+not reused across cases or policies.
 
 The request/result protocol is in `src/tbgmp/backends/base.py`. The validation
 adapter is in `src/tbgmp/backends/turboquant_backend.py`.

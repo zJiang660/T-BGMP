@@ -4,6 +4,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pandas as pd
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -60,3 +62,53 @@ def test_smoke_help() -> None:
     result = run_command("experiments/smoke_test_backend.py", "--help")
     assert "--model-key" in result.stdout
     assert "--backend" in result.stdout
+
+
+def test_full_pipeline_resumes_and_materializes_stage_f(tmp_path) -> None:
+    output = tmp_path / "full.csv"
+    command = (
+        "experiments/run_full_pipeline.py",
+        "--backend",
+        "tests.fake_backend:create_backend",
+        "--model-path",
+        "fake-model",
+        "--model-id",
+        "fake-model",
+        "--cases",
+        "data/demo/full_runner_cases.csv",
+        "--risk-ranking",
+        "results/audit/demo_key_risk_ranking.csv",
+        "--output",
+        str(output),
+        "--maximum-topk",
+        "4",
+        "--checkpoint-every",
+        "2",
+    )
+    first = run_command(*command)
+    journal = output.with_suffix(".jsonl")
+    first_attempts = len(journal.read_text(encoding="utf-8").splitlines())
+    second = run_command(*command)
+    second_attempts = len(journal.read_text(encoding="utf-8").splitlines())
+
+    assert "new attempts=15" in first.stdout
+    assert "new attempts=0" in second.stdout
+    assert first_attempts == second_attempts == 15
+    rows = pd.read_csv(output)
+    assert len(rows) == 15
+    stage_f = pd.read_csv(tmp_path / "full_stage_f.csv")
+    assert len(stage_f) == 2
+    assert stage_f["comparison_valid"].all()
+    summary = pd.read_csv(tmp_path / "full_stage_f_summary.csv")
+    assert int(summary.iloc[0]["valid_pairs"]) == 2
+    assert output.with_suffix(".run.json").is_file()
+
+    changed = subprocess.run(
+        [sys.executable, *command, "--maximum-topk", "3"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    assert changed.returncode != 0
+    assert "different experiment signature" in changed.stderr

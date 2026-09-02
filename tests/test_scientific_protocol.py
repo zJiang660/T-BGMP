@@ -45,6 +45,11 @@ class CapturingBackend:
         )
 
 
+class OOMBackend:
+    def generate(self, **kwargs):
+        raise RuntimeError("CUDA out of memory while allocating cache")
+
+
 def test_protected_policy_inherits_k2_aggressive_bits() -> None:
     aggressive = QuantizationConfig(key_bits=2, value_bits=2, residual_window=128)
     config = protected_config(
@@ -102,6 +107,26 @@ def test_runner_marks_chat_prompt_as_already_rendered() -> None:
     assert backend.add_special_tokens is False
     assert row["document_tokens"] == 200
     assert row["actual_context_tokens"] == 240
+
+
+def test_runner_records_oom_without_treating_it_as_retrieval_failure() -> None:
+    row = execute(
+        backend=OOMBackend(),
+        case={"case_id": "case-oom", "answer": "answer"},
+        prompt="prompt",
+        model_path="/models/example",
+        model_id="example",
+        policy_name="uniform_k2_v2_rw128",
+        policy_type="uniform",
+        quantization=QuantizationConfig(key_bits=2, value_bits=2),
+        max_new_tokens=16,
+        seed=0,
+        stage="stage_a_discovery",
+    )
+    assert row["status"] == "oom"
+    assert row["oom"] is True
+    assert row["completed"] is False
+    assert row["found"] is False
 
 
 def test_case_grid_is_config_driven_and_deterministic(tmp_path: Path) -> None:

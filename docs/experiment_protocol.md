@@ -80,6 +80,20 @@ policy at the first-success Top-k budget.
 For successfully recovered cases, compare T-BGMP KV-cache saving with a
 uniform safe precision such as K6/V2. Runtime is diagnostic only; this
 repository makes no system speedup claim.
+The full runner pairs each first-success T-BGMP policy with the configured
+K6/V2 and K6/V4 rows for the same case. A comparison is valid only when both
+retrievals completed successfully. Backend-reported KV saving is preferred;
+otherwise the output is explicitly labeled as nominal bit-budget accounting.
+
+## Runtime and Resume Semantics
+
+The production backend owns one lazily initialized model/tokenizer runtime per
+model path. Policies rebuild or reset only the KV cache. Each attempted
+combination is fsynced to a JSONL journal immediately; the CSV is an atomic
+latest-attempt snapshot. On restart, only `completed=True` identities are
+skipped. OOM and other errors are preserved with `completed=False` and retried
+on the next invocation. Remaining incomplete rows make the runner exit nonzero
+after all durable outputs and metadata have been written.
 
 ## Evidence Groups
 

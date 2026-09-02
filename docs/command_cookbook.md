@@ -142,6 +142,12 @@ python experiments/run_full_pipeline.py \
   --seed 0
 ```
 
+The command is resumable. Re-run it with the same `--output` or
+`--output-dir`: completed model/case/stage/policy identities are skipped, while
+OOM/error attempts are retried. The adjacent `.jsonl` file is the durable
+attempt journal. Stage F detail and summary CSVs are emitted beside the main
+result CSV.
+
 The included adapter intentionally stops before generation until the exact
 arbitrary key-layer protection semantics are implemented. See
 `docs/turboquant_api_findings.md` and `docs/turboquant_patch_guide.md`.

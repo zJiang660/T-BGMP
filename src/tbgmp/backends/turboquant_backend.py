@@ -39,6 +39,8 @@ class TurboQuantBackend:
         self.runtime_module = None
         self.compressor_class = None
         self._import_error = ""
+        self._runtime_cache: dict[str, dict[str, Any]] = {}
+        self.model_load_count = 0
         self._compressors_module = None
         self._compressors_file = (
             self.root / "turboquant" / "compressors_v3.py" if self.root else None
@@ -167,6 +169,69 @@ class TurboQuantBackend:
             n_layers=n_layers,
         )
 
+    def _load_runtime(self, model_path: str) -> dict[str, Any]:
+        try:
+            import torch
+            from transformers import AutoModelForCausalLM, AutoTokenizer
+        except Exception as exc:
+            raise RuntimeError(
+                "Real TurboQuant generation requires torch and transformers "
+                "in the active environment."
+            ) from exc
+
+        path = Path(model_path)
+        if not model_path or not path.is_dir():
+            raise RuntimeError("Model path does not exist or was not provided.")
+        device = self.device
+        if device == "cuda" and not torch.cuda.is_available():
+            device = "cpu"
+        tokenizer = AutoTokenizer.from_pretrained(
+            path,
+            trust_remote_code=True,
+            local_files_only=True,
+        )
+        if tokenizer.pad_token_id is None and tokenizer.eos_token_id is not None:
+            tokenizer.pad_token = tokenizer.eos_token
+
+        dtype = torch.float16 if device == "cuda" else torch.float32
+        model_kwargs = {
+            "trust_remote_code": True,
+            "local_files_only": True,
+            "low_cpu_mem_usage": True,
+        }
+        try:
+            model = AutoModelForCausalLM.from_pretrained(
+                path,
+                dtype=dtype,
+                **model_kwargs,
+            )
+        except TypeError:
+            model = AutoModelForCausalLM.from_pretrained(
+                path,
+                torch_dtype=dtype,
+                **model_kwargs,
+            )
+        model.to(device)
+        model.eval()
+        self.model_load_count += 1
+        return {
+            "torch": torch,
+            "tokenizer": tokenizer,
+            "model": model,
+            "device": device,
+        }
+
+    def _get_runtime(self, model_path: str) -> dict[str, Any]:
+        key = str(Path(model_path).expanduser().resolve())
+        if key not in self._runtime_cache:
+            self._runtime_cache[key] = self._load_runtime(model_path)
+        return self._runtime_cache[key]
+
+    def get_tokenizer(self, model_path: str):
+        """Return the tokenizer owned by the backend's single model runtime."""
+        self._raise_if_unavailable()
+        return self._get_runtime(model_path)["tokenizer"]
+
     def generate(
         self,
         request: GenerationRequest | None = None,
@@ -199,50 +264,13 @@ class TurboQuantBackend:
             )
 
         self._raise_if_unavailable()
-        try:
-            import torch
-            from transformers import AutoModelForCausalLM, AutoTokenizer
-        except Exception as exc:
-            raise RuntimeError(
-                "Real TurboQuant smoke generation requires torch and "
-                "transformers in the active environment."
-            ) from exc
-
-        if not request.model_path or not Path(request.model_path).is_dir():
-            raise RuntimeError("Model path does not exist or was not provided.")
-
         start = time.time()
-        device = self.device
-        if device == "cuda" and not torch.cuda.is_available():
-            device = "cpu"
+        runtime = self._get_runtime(request.model_path)
+        torch = runtime["torch"]
+        tokenizer = runtime["tokenizer"]
+        model = runtime["model"]
+        device = runtime["device"]
         torch.manual_seed(request.seed)
-
-        tokenizer = AutoTokenizer.from_pretrained(
-            request.model_path,
-            trust_remote_code=True,
-        )
-        if tokenizer.pad_token_id is None and tokenizer.eos_token_id is not None:
-            tokenizer.pad_token = tokenizer.eos_token
-
-        dtype = torch.float16 if device == "cuda" else torch.float32
-        model_kwargs = {
-            "trust_remote_code": True,
-            "low_cpu_mem_usage": True,
-        }
-        try:
-            model = AutoModelForCausalLM.from_pretrained(
-                request.model_path,
-                dtype=dtype,
-                **model_kwargs,
-            )
-        except TypeError:
-            model = AutoModelForCausalLM.from_pretrained(
-                request.model_path,
-                torch_dtype=dtype,
-                **model_kwargs,
-            )
-        model.to(device)
-        model.eval()
 
         encoded = tokenizer(
             request.prompt,

@@ -138,6 +138,16 @@ effective-dimension risk score. Replace the demo domain sources in
 rerun. The Stage C profiling source must itself contain at least the configured
 number of tokens; the profiler does not repeat short text.
 
+The full runner loads each model/tokenizer once per backend process and creates
+a fresh KV cache for every policy/case combination. It writes every attempt to
+a durable JSONL journal, periodically atomically replaces the latest-row CSV,
+and resumes by skipping only rows marked `completed=True`. OOM and execution
+errors remain explicit incomplete attempts and cause a non-zero final exit so
+the same command can safely be resubmitted. `configs/default_experiment.yaml`
+drives the discovery/aggressive/safe policy sets, grid, Top-k limit, seeds,
+output paths, and checkpoint interval. Stage F is produced automatically as
+`*_stage_f.csv` and `*_stage_f_summary.csv`.
+
 Model repository IDs, Hugging Face and ModelScope download examples, gated
 license notes, recommended directories, and environment requirements are
 documented in [`docs/model_setup.md`](docs/model_setup.md). Copy

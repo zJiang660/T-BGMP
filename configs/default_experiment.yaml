@@ -9,12 +9,27 @@ experiment:
   max_new_tokens: 32
   default_seed: 0
   random_seeds: [0, 1, 2]
+  discovery_policies:
+    - fp16
+    - uniform_k2_v2_rw128
+    - uniform_k4_v2_rw128
+    - uniform_k6_v2_rw128
+    - uniform_k6_v4_rw128
+  aggressive_policies: [uniform_k4_v2_rw128, uniform_k2_v2_rw128]
+  safe_policies: [uniform_k6_v2_rw128, uniform_k6_v4_rw128]
+  tbgmp_policy: tbgmp_topk
 
 inputs:
   model_registry: configs/model_registry.yaml
   policies: configs/policies.yaml
   prompt_template: configs/prompt_template.yaml
   cases: /path/to/cases.csv
+  risk_ranking: /path/to/risk_ranking.csv
+
+outputs:
+  results: /path/to/outputs/full_pipeline_results.csv
+  generated_cases: /path/to/outputs/generated_cases.csv
+  checkpoint_every: 25
 
 case_generation:
   domain_sources:

@@ -9,8 +9,13 @@ from tbgmp.kv_cache_wrapper import GenerationResult
 
 class Backend:
     def __init__(self):
-        # Load tokenizer/model lazily or cache instances by model_path.
-        pass
+        # Cache tokenizer/model runtimes by model_path. Do not reload them for
+        # every policy/case combination.
+        self.runtimes = {}
+
+    def get_tokenizer(self, model_path):
+        # Return the tokenizer from the same cached runtime used by generate().
+        raise NotImplementedError
 
     def generate(
         self,
