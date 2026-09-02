@@ -95,6 +95,15 @@ skipped. OOM and other errors are preserved with `completed=False` and retried
 on the next invocation. Remaining incomplete rows make the runner exit nonzero
 after all durable outputs and metadata have been written.
 
+Each run also creates an atomic `*.run.json` provenance manifest. The manifest
+records SHA-256 fingerprints for the experiment, case, policy, prompt, backend,
+model-registry, and ranking inputs; the repository commit and dirty state; model
+configuration identity; Python, package, CUDA, and GPU versions; sanitized
+command arguments; SLURM job identifiers; invocation timestamps; and requested
+versus actually observed context-token ranges. Resuming the same output appends
+a new invocation record. Protocol-changing inputs retain signature protection,
+while machine-specific absolute paths and credentials are not stored.
+
 ## Evidence Groups
 
 Main evidence models:

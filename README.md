@@ -167,6 +167,12 @@ drives the discovery/aggressive/safe policy sets, grid, Top-k limit, seeds,
 output paths, and checkpoint interval. Stage F is produced automatically as
 `*_stage_f.csv` and `*_stage_f_summary.csv`.
 
+Every invocation atomically updates `*.run.json` with content hashes for all
+protocol inputs, Git and model identity, runtime/CUDA/GPU versions, sanitized
+arguments, SLURM identifiers, timestamps, and requested/actual context-token
+ranges. Resume attempts are appended to this manifest without exposing local
+absolute paths or credentials.
+
 Model repository IDs, Hugging Face and ModelScope download examples, gated
 license notes, recommended directories, and environment requirements are
 documented in [`docs/model_setup.md`](docs/model_setup.md). Copy

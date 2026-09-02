@@ -23,6 +23,15 @@ from tbgmp.backends.turboquant_backend import TurboQuantBackend
 from tbgmp.experiment_config import configured_path, validate_experiment_config
 from tbgmp.metrics import kv_saving_advantage
 from tbgmp.prompting import render_retrieval_prompt
+from tbgmp.provenance import (
+    fingerprint_inputs,
+    model_identity,
+    new_invocation,
+    repository_state,
+    runtime_environment,
+    summarize_numeric,
+    utc_now,
+)
 from tbgmp.quantization import QuantizationConfig, estimate_nominal_kv_saving
 from tbgmp.retrieval_eval import found_answer
 from tbgmp.result_store import IncrementalResultStore
@@ -356,14 +365,16 @@ def prepare_run_manifest(
     prompt_config: dict,
     risk_ranking: Path | None,
     runtime: dict,
-) -> tuple[Path, str]:
+    provenance: dict,
+    invocation: dict,
+) -> tuple[Path, str, str]:
     case_hashes = pd.util.hash_pandas_object(
         cases.astype(str), index=True
     ).values.tobytes()
     ranking_hash = ""
     if risk_ranking and risk_ranking.is_file():
         ranking_hash = hashlib.sha256(risk_ranking.read_bytes()).hexdigest()
-    signature_payload = {
+    legacy_payload = {
         "model_id": model_id,
         "cases_sha256": hashlib.sha256(case_hashes).hexdigest(),
         "experiment": experiment,
@@ -372,16 +383,33 @@ def prepare_run_manifest(
         "prompt": prompt_config,
         "runtime": runtime,
     }
+    public_runtime = {
+        **runtime,
+        "model_directory": Path(str(runtime["model_path"])).name,
+    }
+    public_runtime.pop("model_path", None)
+    signature_payload = {
+        **legacy_payload,
+        "runtime": public_runtime,
+        "input_artifacts": provenance["input_artifacts"],
+        "model_identity": provenance["model_identity"],
+    }
     canonical = json.dumps(
         signature_payload,
         sort_keys=True,
         separators=(",", ":"),
     ).encode("utf-8")
     signature = hashlib.sha256(canonical).hexdigest()
+    legacy_canonical = json.dumps(
+        legacy_payload,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    legacy_signature = hashlib.sha256(legacy_canonical).hexdigest()
     path = output.with_suffix(".run.json")
     if path.is_file():
         existing = json.loads(path.read_text(encoding="utf-8"))
-        if existing.get("signature") != signature:
+        if existing.get("signature") not in {signature, legacy_signature}:
             raise SystemExit(
                 "Existing output was created with a different experiment "
                 "signature; use a new output path instead of mixing runs"
@@ -411,6 +439,19 @@ def prepare_run_manifest(
                 },
                 path,
             )
+            existing = json.loads(path.read_text(encoding="utf-8"))
+        manifest = {
+            **existing,
+            "schema_version": "2.0",
+            "signature": signature,
+            **signature_payload,
+            "repository": provenance["repository"],
+            "environment": provenance["environment"],
+            "input_artifacts": provenance["input_artifacts"],
+            "model_identity": provenance["model_identity"],
+            "invocations": [*existing.get("invocations", []), invocation],
+        }
+        write_json_atomic(manifest, path)
     else:
         journal = output.with_suffix(".jsonl")
         if output.exists() or journal.exists():
@@ -420,13 +461,46 @@ def prepare_run_manifest(
             )
         write_json_atomic(
             {
+                "schema_version": "2.0",
                 "signature": signature,
                 "risk_ranking_sha256": ranking_hash,
                 **signature_payload,
+                "repository": provenance["repository"],
+                "environment": provenance["environment"],
+                "invocations": [invocation],
             },
             path,
         )
-    return path, signature
+    return path, signature, invocation["invocation_id"]
+
+
+def finalize_run_manifest(
+    path: Path,
+    invocation_id: str,
+    *,
+    status: str,
+    rows: list[dict],
+    requested_context: dict,
+    error: str = "",
+) -> None:
+    manifest = json.loads(path.read_text(encoding="utf-8"))
+    invocations = manifest.get("invocations", [])
+    for invocation in reversed(invocations):
+        if invocation.get("invocation_id") == invocation_id:
+            invocation["finished_at_utc"] = utc_now()
+            invocation["status"] = status
+            invocation["row_count"] = len(rows)
+            invocation["requested_context_tokens"] = requested_context
+            invocation["actual_context_tokens"] = summarize_numeric(
+                row.get("actual_context_tokens") for row in rows
+            )
+            if error:
+                invocation["error_type"] = error
+            break
+    manifest["invocations"] = invocations
+    manifest["latest_status"] = status
+    manifest["latest_finished_at_utc"] = utc_now()
+    write_json_atomic(manifest, path)
 
 
 def run_combination(
@@ -635,7 +709,27 @@ def main() -> None:
         args.cases = generated_path
 
     discovery_names = protocol["discovery_policies"]
-    run_manifest, run_signature = prepare_run_manifest(
+    backend_config_path = configured_path(
+        ROOT, config.get("backend", {}).get("config")
+    )
+    provenance = {
+        "repository": repository_state(ROOT),
+        "environment": runtime_environment(),
+        "model_identity": model_identity(args.model_id, Path(args.model_path)),
+        "input_artifacts": fingerprint_inputs(
+            {
+                "backend_config": backend_config_path,
+                "case_file": args.cases,
+                "experiment_config": args.config,
+                "model_registry": args.model_registry,
+                "policy_config": args.policies,
+                "prompt_template": args.prompt_template,
+                "risk_ranking": args.risk_ranking,
+            }
+        ),
+    }
+    invocation = new_invocation()
+    run_manifest, run_signature, invocation_id = prepare_run_manifest(
         output=args.output,
         model_id=args.model_id,
         cases=cases,
@@ -652,6 +746,8 @@ def main() -> None:
             "seed": args.seed,
             "random_seeds": args.random_seeds,
         },
+        provenance=provenance,
+        invocation=invocation,
     )
     if tokenizer is None and not args.dry_run:
         tokenizer = load_tokenizer(backend, args.model_path)
@@ -673,6 +769,8 @@ def main() -> None:
     sensitive_cases: list[tuple[pd.Series, str]] = []
     recovered: list[tuple[pd.Series, dict]] = []
     ranked_layers: list[int] = []
+    requested_context = summarize_numeric(cases.get("context_length", []))
+    run_failure = ""
     try:
         for _, case in cases.iterrows():
             case_results: dict[str, dict] = {}
@@ -831,14 +929,34 @@ def main() -> None:
                 policies=policies,
                 num_layers=len(ranked_layers),
             )
+    except BaseException as exc:
+        run_failure = type(exc).__name__
+        raise
     finally:
         store.close()
+        if run_failure:
+            finalize_run_manifest(
+                run_manifest,
+                invocation_id,
+                status="failed",
+                rows=store.rows(),
+                requested_context=requested_context,
+                error=run_failure,
+            )
 
     write_stage_f_outputs(store, args.output)
     incomplete_rows = [
         row for row in store.rows() if not row_bool(row, "completed")
     ]
     oom_rows = [row for row in incomplete_rows if row_bool(row, "oom")]
+    final_status = "incomplete" if incomplete_rows else "complete"
+    finalize_run_manifest(
+        run_manifest,
+        invocation_id,
+        status=final_status,
+        rows=store.rows(),
+        requested_context=requested_context,
+    )
     metadata = {
         "model_id": args.model_id,
         "backend": "dry_run" if args.dry_run else args.backend,
@@ -856,6 +974,11 @@ def main() -> None:
         "journal": str(store.journal_path),
         "run_manifest": str(run_manifest),
         "run_signature": run_signature,
+        "run_status": final_status,
+        "requested_context_tokens": requested_context,
+        "actual_context_tokens": summarize_numeric(
+            row.get("actual_context_tokens") for row in store.rows()
+        ),
         "stage_f_detail": str(
             args.output.with_name(f"{args.output.stem}_stage_f.csv")
         ),

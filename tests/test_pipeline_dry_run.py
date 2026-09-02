@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -101,7 +102,22 @@ def test_full_pipeline_resumes_and_materializes_stage_f(tmp_path) -> None:
     assert stage_f["comparison_valid"].all()
     summary = pd.read_csv(tmp_path / "full_stage_f_summary.csv")
     assert int(summary.iloc[0]["valid_pairs"]) == 2
-    assert output.with_suffix(".run.json").is_file()
+    manifest_path = output.with_suffix(".run.json")
+    assert manifest_path.is_file()
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    assert manifest["schema_version"] == "2.0"
+    assert manifest["latest_status"] == "complete"
+    assert len(manifest["invocations"]) == 2
+    assert all(
+        invocation["status"] == "complete"
+        for invocation in manifest["invocations"]
+    )
+    assert manifest["repository"]["commit"]
+    assert manifest["input_artifacts"]
+    assert manifest["model_identity"]["model_id"] == "fake-model"
+    serialized = json.dumps(manifest)
+    assert str(tmp_path) not in serialized
+    assert "<OUTPUT_PATH>" in serialized
 
     changed = subprocess.run(
         [sys.executable, *command, "--maximum-topk", "3"],
