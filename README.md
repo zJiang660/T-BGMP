@@ -267,7 +267,7 @@ results/main_evidence/  Sanitized per-case evidence for four main models
 results/supporting/     Supporting summaries and Gemma2 case-level evidence
 results/audit/          Small demo outputs and regenerated integrity reports
 docs/                    Protocol, interpretation, limitations, and provenance
-slurm/xec/               Sanitized templates only
+slurm/                   Validated XEC/SIP launch templates and usage notes
 ```
 
 ## Paper Results Map

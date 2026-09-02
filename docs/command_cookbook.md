@@ -158,11 +158,14 @@ The included adapter intentionally stops before generation until the exact
 arbitrary key-layer protection semantics are implemented. See
 `docs/turboquant_api_findings.md` and `docs/turboquant_patch_guide.md`.
 
-For an A800-style batch template, see:
+For canonical resumable A800-style batch templates, see:
 
 ```bash
-slurm/xec/submit_smoke_test_a800_template.sbatch
+slurm/xec/submit_full_pipeline_a800_template.sbatch
+slurm/sip/submit_full_pipeline_a800_template.sbatch
 ```
 
-The repository includes a sanitized example from a completed small XEC smoke
-test in `examples/smoke_test/`.
+Required environment variables and submission notes are documented in
+`slurm/README.md`. The optional backend-only smoke template remains separate;
+the repository includes a sanitized example from a completed small smoke test
+in `examples/smoke_test/`.
