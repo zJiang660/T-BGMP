@@ -11,11 +11,13 @@ def build_messages(
     context: str,
     question: str,
     prompt_config: dict[str, Any] | None = None,
+    *,
+    domain: str = "",
 ) -> list[dict[str, str]]:
     config = prompt_config or {}
     system = str(config.get("system", DEFAULT_SYSTEM_PROMPT))
     template = str(config.get("user_template", DEFAULT_USER_TEMPLATE))
-    user = template.format(context=context, question=question)
+    user = template.format(context=context, question=question, domain=domain)
     messages: list[dict[str, str]] = []
     if system:
         messages.append({"role": "system", "content": system})
@@ -52,8 +54,9 @@ def render_retrieval_prompt(
     *,
     prompt_config: dict[str, Any] | None = None,
     tokenizer=None,
+    domain: str = "",
 ) -> str:
-    messages = build_messages(context, question, prompt_config)
+    messages = build_messages(context, question, prompt_config, domain=domain)
     use_chat_template = bool((prompt_config or {}).get("use_chat_template", True))
     if tokenizer is not None and use_chat_template:
         return apply_chat_template(tokenizer, messages)

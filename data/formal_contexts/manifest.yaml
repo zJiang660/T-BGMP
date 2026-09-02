@@ -1,0 +1,29 @@
+protocol: formal_hpc_v1
+normalization: LF line endings; the runner strips blank lines and surrounding whitespace
+files:
+  code.txt:
+    source: Nan-Do/code-search-net-python, train streaming split, first 200 accepted records
+    bytes: 80059
+    sha256: 60fdef96626d92393b1db5294e8d79217d687d3804de2dde8257801de9e51c8d
+  literature.txt:
+    source: PG-19 public-domain literature snapshot (KJV excerpt)
+    bytes: 80001
+    sha256: 1e8b311ae268723fc8278505448e08f7ecbb20dc4235aef8db07f2cff78202d8
+  math.txt:
+    source: openai/gsm8k, main configuration, first 400 train records
+    bytes: 80062
+    sha256: 4289c6b55aed517fb2699ae54db46662eb70fa32f7507d3890c01f6837d2b65e
+  science.txt:
+    source: arXiv API query for cs.LG, cs.AI, and stat.ML; first 80 returned records
+    bytes: 80003
+    sha256: 5a4eacd9f8a66c6eeacd6ae5bd7d0ecb4a3045b1d564f20762cea038f0d0ffb7
+case_grid:
+  domains: [math, literature, science, code]
+  context_lengths: [4096, 6144, 8192]
+  needle_depths: [10, 50, 90]
+  seeds: [0, 1]
+  answers_by_seed:
+    0: AURORA-7749
+    1: NEBULA-3186
+  reserve_tokens: 96
+  expected_cases_per_model: 72

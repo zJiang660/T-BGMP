@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import importlib.util
 import re
 import sys
@@ -26,6 +27,7 @@ REQUIRED_FILES = [
     "docs/model_setup.md",
     "docs/backend_integration.md",
     "docs/smoke_test.md",
+    "data/formal_contexts/manifest.yaml",
     "results/paper_tables/table_main_evidence.csv",
     "results/paper_tables/table_control_statistics.csv",
     "results/paper_tables/table_first_success_k.csv",
@@ -116,6 +118,22 @@ def check_manifest() -> None:
         fail("manifest aggregate is not 183/183")
 
 
+def check_formal_contexts() -> None:
+    manifest_path = ROOT / "data" / "formal_contexts" / "manifest.yaml"
+    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    if manifest.get("protocol") != "formal_hpc_v1":
+        fail("formal context manifest has an unexpected protocol")
+    for filename, expected in manifest.get("files", {}).items():
+        path = manifest_path.parent / filename
+        if not path.is_file():
+            fail(f"missing formal context: {path.relative_to(ROOT)}")
+        content = path.read_bytes()
+        if len(content) != int(expected["bytes"]):
+            fail(f"formal context size mismatch: {path.relative_to(ROOT)}")
+        if hashlib.sha256(content).hexdigest() != expected["sha256"]:
+            fail(f"formal context hash mismatch: {path.relative_to(ROOT)}")
+
+
 def check_main_table() -> None:
     path = ROOT / "results" / "paper_tables" / "table_main_evidence.csv"
     with path.open(newline="", encoding="utf-8") as handle:
@@ -175,6 +193,7 @@ def main() -> None:
     check_required_files()
     check_audit_import()
     check_manifest()
+    check_formal_contexts()
     check_main_table()
     check_smoke_examples()
     check_mimo_absent(files)

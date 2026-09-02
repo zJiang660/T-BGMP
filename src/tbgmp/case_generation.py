@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import random
 from pathlib import Path
 from typing import Any
 
@@ -11,6 +12,13 @@ def stable_answer(domain: str, context_length: int, depth: int, seed: int) -> st
     payload = f"{domain}|{context_length}|{depth}|{seed}".encode("utf-8")
     suffix = hashlib.sha256(payload).hexdigest()[:8].upper()
     return f"TBGMP-{suffix}"
+
+
+def formal_answer(seed: int, answers_by_seed: dict[Any, Any]) -> str:
+    for key in (seed, str(seed)):
+        if key in answers_by_seed:
+            return str(answers_by_seed[key])
+    raise ValueError(f"formal protocol has no hidden answer for seed {seed}")
 
 
 def repeat_to_length(tokens: list[int], length: int) -> list[int]:
@@ -70,6 +78,54 @@ def build_needle_context(
     return context, actual_tokens
 
 
+def build_formal_needle_context(
+    tokenizer,
+    source_text: str,
+    *,
+    context_length: int,
+    depth: int,
+    seed: int,
+    answer: str,
+    reserve_tokens: int = 96,
+) -> tuple[str, int]:
+    """Reproduce the context construction used by the original HPC runner."""
+    if not 0 <= depth <= 100:
+        raise ValueError("needle depth must be between 0 and 100")
+    cleaned = "\n".join(
+        line.strip()
+        for line in source_text.replace("\r", "\n").splitlines()
+        if line.strip()
+    )
+    source_tokens = tokenizer.encode(cleaned, add_special_tokens=False)
+    if not source_tokens:
+        raise ValueError("domain source must produce at least one token")
+    if len(source_tokens) < context_length:
+        source_tokens *= context_length // len(source_tokens) + 2
+
+    needle = f"The secret project code name is {answer}."
+    needle_tokens = tokenizer.encode(needle, add_special_tokens=False)
+    rng = random.Random(
+        1000003 + int(seed) * 1009 + int(context_length) * 37 + int(depth) * 17
+    )
+    offset = rng.randint(0, min(97, max(0, len(source_tokens) - 1)))
+    source_tokens = source_tokens[offset:] + source_tokens[:offset]
+    budget = max(1, int(context_length) - len(needle_tokens) - int(reserve_tokens))
+    position = max(0.0, min(1.0, float(depth) / 100.0))
+    before_length = max(0, min(budget, int(budget * position) + rng.randint(-8, 8)))
+    after_length = budget - before_length
+    before = tokenizer.decode(source_tokens[:before_length], skip_special_tokens=True)
+    after = tokenizer.decode(
+        source_tokens[before_length : before_length + after_length],
+        skip_special_tokens=True,
+    )
+    context = (
+        f"{before}\n\n--- Internal Memo ---\n{needle}\n"
+        f"--- End Memo ---\n\n{after}"
+    )
+    actual_tokens = len(tokenizer.encode(context, add_special_tokens=False))
+    return context, actual_tokens
+
+
 def generate_case_grid(
     tokenizer,
     experiment: dict[str, Any],
@@ -92,6 +148,8 @@ def generate_case_grid(
         generation.get("needle_template", "The hidden answer is {answer}.")
     )
     reserve_tokens = int(generation.get("reserve_tokens", 64))
+    protocol = str(generation.get("protocol", "deterministic_demo_v1"))
+    answers_by_seed = generation.get("answers_by_seed", {})
     rows: list[dict[str, Any]] = []
     for domain in domains:
         source_path = Path(str(sources[domain]))
@@ -101,16 +159,30 @@ def generate_case_grid(
         for context_length in experiment.get("context_lengths", []):
             for depth in experiment.get("needle_depths", []):
                 for seed in experiment.get("seeds", []):
-                    answer = stable_answer(domain, context_length, depth, seed)
-                    context, document_tokens = build_needle_context(
-                        tokenizer,
-                        source_text,
-                        context_length=int(context_length),
-                        depth=int(depth),
-                        answer=answer,
-                        needle_template=needle_template,
-                        reserve_tokens=reserve_tokens,
-                    )
+                    if protocol == "formal_hpc_v1":
+                        answer = formal_answer(int(seed), answers_by_seed)
+                        context, document_tokens = build_formal_needle_context(
+                            tokenizer,
+                            source_text,
+                            context_length=int(context_length),
+                            depth=int(depth),
+                            seed=int(seed),
+                            answer=answer,
+                            reserve_tokens=reserve_tokens,
+                        )
+                    elif protocol == "deterministic_demo_v1":
+                        answer = stable_answer(domain, context_length, depth, seed)
+                        context, document_tokens = build_needle_context(
+                            tokenizer,
+                            source_text,
+                            context_length=int(context_length),
+                            depth=int(depth),
+                            answer=answer,
+                            needle_template=needle_template,
+                            reserve_tokens=reserve_tokens,
+                        )
+                    else:
+                        raise ValueError(f"unsupported case-generation protocol: {protocol}")
                     rows.append(
                         {
                             "case_id": (
@@ -124,6 +196,7 @@ def generate_case_grid(
                             "context": context,
                             "question": question,
                             "answer": answer,
+                            "generation_protocol": protocol,
                         }
                     )
     return pd.DataFrame(rows)

@@ -32,14 +32,17 @@ outputs:
   checkpoint_every: 25
 
 case_generation:
+  protocol: formal_hpc_v1
   domain_sources:
-    math: data/demo/contexts/math.txt
-    literature: data/demo/contexts/literature.txt
-    science: data/demo/contexts/science.txt
-    code: data/demo/contexts/code.txt
-  needle_template: "The hidden answer is {answer}."
-  question: "What is the hidden answer? Reply with the exact string."
-  reserve_tokens: 64
+    math: data/formal_contexts/math.txt
+    literature: data/formal_contexts/literature.txt
+    science: data/formal_contexts/science.txt
+    code: data/formal_contexts/code.txt
+  answers_by_seed:
+    0: AURORA-7749
+    1: NEBULA-3186
+  question: "What is the secret project code name? Answer with just the code name."
+  reserve_tokens: 96
 
 profiling:
   domain: literature

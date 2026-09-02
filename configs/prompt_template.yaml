@@ -1,12 +1,11 @@
-system: "Use only the supplied context to answer the question."
+system: "You are a careful assistant. Answer concisely."
 user_template: |
-  Read this document:
+  The following document is from the {domain} domain.
+
+  Read this document carefully:
 
   {context}
 
-  Question:
   {question}
-
-  Answer exactly with the hidden answer string.
 use_chat_template: true
 answer_matching: exact_substring

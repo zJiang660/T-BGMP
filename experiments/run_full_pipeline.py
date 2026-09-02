@@ -661,6 +661,7 @@ def main() -> None:
             str(case["question"]),
             prompt_config=prompt_config,
             tokenizer=tokenizer,
+            domain=str(case.get("domain", "")),
         )
         for _, case in cases.iterrows()
     }

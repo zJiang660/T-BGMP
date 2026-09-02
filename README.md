@@ -145,12 +145,16 @@ Use `requirements-gpu-sip.txt` with `--profile sip_gpu` for the recorded SIP
 environment. See [`VERSION_LOCK.md`](VERSION_LOCK.md) for provenance and the
 model fingerprint policy.
 
-The case generator uses the configured domain/context/depth/seed grid and the
-selected model tokenizer. Stage C performs a real key-cache profiling pass with
+The case generator defaults to the recorded `formal_hpc_v1` protocol. The exact
+bounded domain snapshots and their SHA-256 manifest are committed under
+[`data/formal_contexts/`](data/formal_contexts/); generation reproduces the
+original seed-specific answers, source rotation, insertion jitter, context
+budgets, and prompt wording with the selected model tokenizer. Stage C performs
+a real key-cache profiling pass with
 TurboQuant's `MSECompressor`, then computes the paper's MSE, inner-product, and
-effective-dimension risk score. Replace the demo domain sources in
-`configs/default_experiment.yaml` with documented public corpora for a formal
-rerun. The Stage C profiling source must itself contain at least the configured
+effective-dimension risk score. Demo contexts remain under `data/demo/` but are
+not referenced by the formal default configuration. The Stage C profiling
+source must itself contain at least the configured
 number of tokens; the profiler does not repeat short text.
 
 The full runner loads each model/tokenizer once per backend process and creates

@@ -160,3 +160,34 @@ def test_case_grid_is_config_driven_and_deterministic(tmp_path: Path) -> None:
     assert first["context"].str.contains("--- Internal Memo ---").all()
     assert (first["document_tokens"] <= 224).all()
     assert "actual_context_tokens" not in first.columns
+
+
+def test_formal_case_grid_matches_recorded_hpc_protocol(tmp_path: Path) -> None:
+    source = tmp_path / "literature.txt"
+    source.write_text("0123456789" * 100, encoding="utf-8")
+    experiment = {
+        "domains": ["literature"],
+        "context_lengths": [256],
+        "needle_depths": [50],
+        "seeds": [0, 1],
+    }
+    generation = {
+        "protocol": "formal_hpc_v1",
+        "domain_sources": {"literature": str(source)},
+        "answers_by_seed": {0: "AURORA-7749", 1: "NEBULA-3186"},
+        "reserve_tokens": 96,
+        "question": "What is the secret project code name?",
+    }
+    first = generate_case_grid(
+        CharacterTokenizer(), experiment, generation, base_dir=tmp_path
+    )
+    second = generate_case_grid(
+        CharacterTokenizer(), experiment, generation, base_dir=tmp_path
+    )
+    assert first.equals(second)
+    assert first["answer"].tolist() == ["AURORA-7749", "NEBULA-3186"]
+    assert (first["generation_protocol"] == "formal_hpc_v1").all()
+    assert first["context"].str.contains(
+        "The secret project code name is ", regex=False
+    ).all()
+    assert first.iloc[0]["context"] != first.iloc[1]["context"]
