@@ -200,6 +200,17 @@ See:
 - [`docs/smoke_test.md`](docs/smoke_test.md)
 - [`docs/command_cookbook.md`](docs/command_cookbook.md)
 
+Patch deployment is pinned and executable:
+
+```bash
+python scripts/manage_turboquant_patch.py \
+  --turboquant-root "${TURBOQUANT_ROOT}" --apply
+```
+
+This verifies the upstream commit and patch hash, performs an idempotent
+`git apply --check`/apply flow, and tests the patched API and key-only precision
+behavior before the backend is marked ready.
+
 ## Reproducibility Levels
 
 This repository supports reproducibility at three levels:

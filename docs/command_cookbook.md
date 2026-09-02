@@ -21,6 +21,10 @@ Clone the external runtime and configure paths outside version control:
 ```bash
 git clone https://github.com/tonbistudio/turboquant-pytorch.git \
   /path/to/turboquant-pytorch
+git -C /path/to/turboquant-pytorch checkout \
+  999713889a18c0ffa20c62a65e7cbbe5746794e3
+python scripts/manage_turboquant_patch.py \
+  --turboquant-root /path/to/turboquant-pytorch --apply
 
 export TURBOQUANT_ROOT=/path/to/turboquant-pytorch
 export MODEL_ROOT=/path/to/models
@@ -35,9 +39,11 @@ $env:MODEL_ROOT="/path/to/models"
 $env:OUTPUT_ROOT="/path/to/outputs"
 ```
 
-Check the current public API boundary:
+Check the validated backend boundary:
 
 ```bash
+python scripts/manage_turboquant_patch.py \
+  --turboquant-root "$TURBOQUANT_ROOT"
 python experiments/smoke_test_backend.py --help
 ```
 

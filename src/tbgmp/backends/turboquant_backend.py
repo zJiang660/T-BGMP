@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from .base import GenerationRequest, GenerationResult
+from ..turboquant_patch_validation import validate_runtime_contract
 
 
 INTEGRATION_MESSAGE = (
@@ -38,7 +39,13 @@ class TurboQuantBackend:
         self.device = device
         self.runtime_module = None
         self.compressor_class = None
+        self.cache_class = None
         self._import_error = ""
+        self._contract_status: dict[str, Any] = {
+            "signature_ok": False,
+            "behavior_ok": False,
+            "passed": False,
+        }
         self._runtime_cache: dict[str, dict[str, Any]] = {}
         self.model_load_count = 0
         self._compressors_module = None
@@ -60,6 +67,15 @@ class TurboQuantBackend:
                 )
                 if hasattr(self._compressors_module, "TurboQuantV3"):
                     self.compressor_class = self._compressors_module.TurboQuantV3
+                generation_module = importlib.import_module(
+                    "turboquant.generation_test"
+                )
+                self.cache_class = getattr(generation_module, "V3Cache", None)
+                if self.compressor_class is not None and self.cache_class is not None:
+                    self._contract_status = validate_runtime_contract(
+                        self.compressor_class,
+                        self.cache_class,
+                    )
             except Exception as exc:  # pragma: no cover - message asserted indirectly
                 self._import_error = repr(exc)
 
@@ -73,19 +89,7 @@ class TurboQuantBackend:
         generation_file_ok = (
             self._generation_file is not None and self._generation_file.is_file()
         )
-        source_text = ""
-        if compressors_file_ok:
-            source_text += self._compressors_file.read_text(
-                encoding="utf-8", errors="replace"
-            )
-        if generation_file_ok:
-            source_text += self._generation_file.read_text(
-                encoding="utf-8", errors="replace"
-            )
-        arbitrary_patch_detected = (
-            "protected_layer_ids" in source_text
-            and "protected_key_bits" in source_text
-        )
+        arbitrary_patch_detected = bool(self._contract_status.get("passed"))
         ready = bool(
             root_ok
             and import_ok
@@ -101,17 +105,24 @@ class TurboQuantBackend:
             "generation_test_file": generation_file_ok,
             "import_ok": import_ok,
             "compressor_v3_found": compressor_ok,
-            "protected_layers_semantics": "prefix_suffix_count",
+            "protected_layers_semantics": (
+                "explicit_key_layer_ids"
+                if arbitrary_patch_detected
+                else "prefix_suffix_count"
+            ),
             "arbitrary_patch_detected": arbitrary_patch_detected,
             "arbitrary_protected_key_layer_ids": arbitrary_patch_detected,
             "key_only_protection": arbitrary_patch_detected,
+            "patch_signature_ok": bool(self._contract_status.get("signature_ok")),
+            "patch_behavior_ok": bool(self._contract_status.get("behavior_ok")),
+            "patch_contract": self._contract_status,
             "residual_window": "supported by upstream V3 cache",
             "ready_for_tbgmp_generation": ready,
             "error": self._import_error,
             "message": (
                 "The external TurboQuant runtime can be inspected. Real "
-                "generation is enabled only when the arbitrary key-layer patch "
-                "is detected and required Python packages are available."
+                "generation is enabled only after API-signature and key-only "
+                "behavior checks pass and required Python packages are available."
             ),
         }
 

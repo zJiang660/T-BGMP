@@ -25,6 +25,10 @@ Clone the external dependency next to this repository:
 ```bash
 git clone https://github.com/tonbistudio/turboquant-pytorch.git \
   /path/to/workspace/turboquant-pytorch
+git -C /path/to/workspace/turboquant-pytorch checkout \
+  999713889a18c0ffa20c62a65e7cbbe5746794e3
+python scripts/manage_turboquant_patch.py \
+  --turboquant-root /path/to/workspace/turboquant-pytorch --apply
 ```
 
 No Git submodule is used. This keeps upstream history, releases, and licensing
@@ -86,10 +90,12 @@ Relevant upstream reference files:
 - [`turboquant/generation_test.py`](https://github.com/tonbistudio/turboquant-pytorch/blob/master/turboquant/generation_test.py)
 
 The included adapter validates `TURBOQUANT_ROOT`, imports the external runtime,
-detects whether the arbitrary key-layer patch is present, and can run a minimal
-smoke generation path when the patch and required Python packages are
-available. It does not approximate Top-k with first/last layers and does not
-fabricate output.
+checks the patched constructor signatures, and executes a small CPU behavior
+probe before enabling generation. Merely finding parameter names in source
+text is not accepted as evidence that arbitrary key-layer protection works.
+The adapter can run a minimal smoke generation path when the patch and required
+Python packages are available. It does not approximate Top-k with first/last
+layers and does not fabricate output.
 
 The minimal repository provides adapters and pipeline scripts, but full GPU
 execution depends on the external backend and user-supplied model weights.

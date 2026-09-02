@@ -1,9 +1,9 @@
 # TurboQuant Patch Guide
 
-Status: proposed patch guide with smoke validation. `git apply --check` passes
-against a clean clone of the inspected public TurboQuant repository, and a
-minimal XEC A800-class backend smoke test has run successfully with patched
-TurboQuant.
+Status: pinned, machine-checkable patch with smoke validation. The patch is
+bound to upstream commit `999713889a18c0ffa20c62a65e7cbbe5746794e3` and its
+SHA-256 is recorded in `configs/runtime_lock.yaml`. A minimal XEC A800-class
+backend smoke test has run successfully with patched TurboQuant.
 
 T-BGMP needs arbitrary risk-ranked key-layer protection. The inspected public
 TurboQuant runtime exposes prefix/suffix protected layer counts, so exact
@@ -32,17 +32,45 @@ For each cache update:
 4. Preserve residual-window behavior.
 5. Report the effective policy in raw JSONL output.
 
-## Implementation Checklist
+## Reproducible Deployment
 
-1. Locate the KV-cache quantization function.
-2. Replace prefix/suffix `protected_layers` logic with explicit
-   `protected_layer_ids` membership.
-3. Apply `protected_key_bits` only to selected key layers.
-4. Keep values at default value precision unless explicitly configured.
-5. Preserve `residual_window` behavior.
-6. Validate with `experiments/smoke_test_backend.py`.
-7. Convert raw JSONL with `scripts/convert_raw_outputs_to_case_csv.py`.
-8. Audit case-level CSV with `scripts/audit_results.py`.
+Start from the pinned upstream state, without local tracked modifications:
+
+```bash
+git clone https://github.com/tonbistudio/turboquant-pytorch.git \
+  /path/to/turboquant-pytorch
+git -C /path/to/turboquant-pytorch checkout \
+  999713889a18c0ffa20c62a65e7cbbe5746794e3
+```
+
+Check compatibility without modifying the checkout:
+
+```bash
+python scripts/manage_turboquant_patch.py \
+  --turboquant-root /path/to/turboquant-pytorch
+```
+
+The unmodified checkout reports `ready_to_apply` and exits non-zero because it
+is not yet usable for T-BGMP. Apply and validate in one operation:
+
+```bash
+python scripts/manage_turboquant_patch.py \
+  --turboquant-root /path/to/turboquant-pytorch --apply
+```
+
+The command refuses a different upstream commit, a modified patch hash, an
+incompatible diff, or unrelated tracked changes. Re-running it is safe: an
+already applied patch is detected with `git apply --reverse --check` and is not
+applied twice. By default, success additionally requires:
+
+1. `TurboQuantV3` and `V3Cache` to expose `protected_layer_ids` and
+   `protected_key_bits` in their constructor signatures;
+2. a selected layer to use K8/V2 under a K4/V2 base policy;
+3. an unselected layer to remain K4/V2.
+
+Use `--skip-runtime-validation` only while preparing a source checkout before
+installing its Python dependencies. It must not be used as evidence that a GPU
+environment is ready.
 
 ## Minimal Validation
 
@@ -61,7 +89,11 @@ machine.
 ## Patch Check Status
 
 - Patch file: `patches/turboquant_arbitrary_protected_layers.patch`
-- Apply check: PASS against the inspected public TurboQuant repository.
+- Locked upstream commit: `999713889a18c0ffa20c62a65e7cbbe5746794e3`.
+- Patch integrity and apply check: enforced by
+  `scripts/manage_turboquant_patch.py`.
+- API signature and key-only behavior check: enforced by the patch manager and
+  `TurboQuantBackend.check_available()`.
 - Runtime smoke test: PASS for a minimal XEC A800-class Qwen2.5-3B-Instruct
   smoke test using FP16 and `tbgmp_topk` with protected layer IDs `[25, 2]`.
 - Full paper-scale validation: NOT TESTED by this smoke test.

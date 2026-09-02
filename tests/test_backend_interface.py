@@ -22,4 +22,6 @@ def test_turboquant_check_available_is_informative_without_root() -> None:
     assert status["backend"] == "turboquant"
     assert status["ready_for_tbgmp_generation"] is False
     assert status["arbitrary_protected_key_layer_ids"] is False
+    assert status["patch_signature_ok"] is False
+    assert status["patch_behavior_ok"] is False
     assert "message" in status

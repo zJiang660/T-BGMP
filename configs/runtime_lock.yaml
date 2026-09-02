@@ -33,6 +33,8 @@ external_runtime:
   turboquant:
     repository: https://github.com/tonbistudio/turboquant-pytorch.git
     upstream_commit: 999713889a18c0ffa20c62a65e7cbbe5746794e3
+    patch: patches/turboquant_arbitrary_protected_layers.patch
+    patch_sha256: 96f0a750ef6ee34b76c608b8f2e085c51c2332a92d6792454777e0858461b80c
 
 # Historical ModelScope downloads do not expose one immutable repository SHA.
 # Their config and weight-index hashes therefore form the authoritative content
