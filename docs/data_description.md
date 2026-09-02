@@ -15,15 +15,18 @@
 - `table_frozen_top3.csv`: camera-ready Table 6.
 - `table_ruler_transfer.csv`: camera-ready Table 7.
 - `table_qwen25_scale.csv`: supplementary within-family scale summary.
-- `table_supporting_models.csv`: supporting and boundary-supporting outcomes.
-- `table_gemma2_boundary.csv`: value-bottleneck policy contrast.
+- `table_supporting_models.csv`: supporting-model outcomes plus a clearly
+  marked legacy Gemma2 row.
+- `table_gemma2_boundary.csv`: superseded exploratory Gemma2 summary; not a
+  final-paper source.
 - `table_boundary_models.csv`: invalid or interface-limited executions.
 
 Paper-facing summaries exist only in `results/paper_tables/`. Other result
 directories contain case-level bundles or supporting material and do not
 duplicate the canonical summary CSVs.
 
-Case-level sources for camera-ready Tables 4--7 are retained under
+Case-level sources for camera-ready Tables 4--7, the Fixed-Layer Check,
+cross-seed validation, and the current Gemma2 boundary result are retained under
 `results/extensions/`. They are reduced from completed formal outputs and keep
 the per-case success decisions required to reconstruct every reported value.
 See `results/extensions/README.md` and run
@@ -49,9 +52,10 @@ The current Table 2 and Table 3 source files are
 `risk_ablation_summary.csv`. The superseded derived `first_success_cases.csv`
 was removed from that model directory.
 
-The Gemma2 bundle follows the same structure under
-`results/supporting/gemma2_9b/`. Responses are truncated to short excerpts;
-host, device, partition, timestamps, paths, and raw logs are excluded.
+The current Gemma2 evidence is under `results/extensions/gemma2_boundary/`.
+The earlier bundle under `results/supporting/gemma2_9b/` is retained only as a
+superseded exploratory record. Neither bundle includes full responses, host,
+device, partition, private paths, or raw logs.
 
 Models without released case-level bundles are listed once in
 `docs/missing_case_level_data.md`.

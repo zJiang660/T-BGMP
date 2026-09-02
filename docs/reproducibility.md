@@ -35,8 +35,12 @@ or:
 
 ```bash
 conda env create -f environment.yml
-conda activate tbgmp-repro
+conda activate tbgmp-artifact-cpu
 ```
+
+`environment.yml` and `requirements.txt` are CPU-only. For full inference use
+`environment-gpu-xec.yml` or `environment-gpu-sip.yml`, then validate the
+selected profile with `scripts/check_runtime_lock.py`.
 
 ## Model-Free Pipeline
 
@@ -82,7 +86,7 @@ The audit verifies:
 
 - the four-model main set and 183/183 aggregate;
 - supporting/main separation;
-- Gemma2 value-bottleneck numbers;
+- the current Gemma2 incomplete key-only recovery boundary result;
 - excluded-model classification;
 - per-model restoration directly from sanitized case-level Top-k rows;
 - consistency of the current camera-ready Table 1, Table 2, and Table 3--7

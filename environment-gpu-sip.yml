@@ -1,0 +1,10 @@
+name: tbgmp-gpu-sip
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.12
+  - pip
+  - pip:
+      - -r requirements.txt
+      - -r requirements-gpu-sip.txt
+

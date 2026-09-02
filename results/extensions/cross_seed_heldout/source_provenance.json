@@ -1,0 +1,56 @@
+{
+  "provenance_version": "1.0",
+  "sanitization": "Responses, answers, timestamps, scheduler identifiers, private paths, and runtime telemetry removed.",
+  "sources": [
+    {
+      "label": "Qwen3-4B_cross_seed_0_to_1",
+      "filename": "cross_seed_0_to_1.csv",
+      "bytes": 133911,
+      "sha256": "2273d2c13f5a59f7a3f2099547d3528d65cbd22fcdf13a4f8e64439a7cacc714"
+    },
+    {
+      "label": "Qwen3-4B_cross_seed_1_to_0",
+      "filename": "cross_seed_1_to_0.csv",
+      "bytes": 133938,
+      "sha256": "a93102bcd34dc6b802a6996bc13580b043835d18f8ed737fba82bb9cfd9b65e6"
+    },
+    {
+      "label": "Qwen3-4B_risk_cal_seed0",
+      "filename": "risk_cal_seed0.csv",
+      "bytes": 4668,
+      "sha256": "92b3d66df0058227b69a2bd5bb482911c89864afa64209717e93023d7915d1a0"
+    },
+    {
+      "label": "Qwen3-4B_risk_cal_seed1",
+      "filename": "risk_cal_seed1.csv",
+      "bytes": 4678,
+      "sha256": "9398633fdb9e8fedf9c9c5a5b63068f0531fff8c8f351819acae562520dfd1ec"
+    },
+    {
+      "label": "Qwen2.5-3B_cross_seed_0_to_1",
+      "filename": "cross_seed_0_to_1.csv",
+      "bytes": 124731,
+      "sha256": "5ce3762c695faac8b9e2dc10581de849f5d7a59b9a6794df0bac4aeb7dd6f179"
+    },
+    {
+      "label": "Qwen2.5-3B_cross_seed_1_to_0",
+      "filename": "cross_seed_1_to_0.csv",
+      "bytes": 124717,
+      "sha256": "a3180db7e4841470e0000841148d69f23b870022b9e81f69f40b943ad150e440"
+    },
+    {
+      "label": "Qwen2.5-3B_risk_cal_seed0",
+      "filename": "risk_cal_seed0.csv",
+      "bytes": 4636,
+      "sha256": "6197e28441037723b07424c6d499bf73de508950a39d124f3baf7d47d158b45a"
+    },
+    {
+      "label": "Qwen2.5-3B_risk_cal_seed1",
+      "filename": "risk_cal_seed1.csv",
+      "bytes": 4641,
+      "sha256": "af3254ba4f4c8ef6a48bcd6e6a106e52b0a0a0e62dc171fc7473158bc3af59c6"
+    }
+  ],
+  "source_code_commit": "not retained in the original cross-seed run record",
+  "verification": "python scripts/audit_extension_results.py"
+}

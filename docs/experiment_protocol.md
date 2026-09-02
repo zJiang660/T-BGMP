@@ -122,8 +122,8 @@ Supporting models:
 
 Boundary and excluded models:
 
-- Gemma2-9B is boundary-supporting value-bottleneck evidence, not main
-  evidence.
+- Gemma2-9B is boundary-supporting incomplete key-only recovery evidence, not
+  main evidence.
 - Gemma-3-4B-it has an invalid FP16 baseline for the evaluated task.
 - Qwen3.5, InternLM, and GLM are excluded because of cache or generation
   interface limitations.

@@ -7,6 +7,9 @@ profiles:
   xec_gpu:
     python: "3.10.20"
     cuda_runtime: "12.1"
+    platform: Linux HPC with Slurm
+    tested_hardware:
+      - NVIDIA A800 80GB
     requirements: requirements-gpu-xec.txt
     packages:
       torch: "2.5.1+cu121"
@@ -19,6 +22,11 @@ profiles:
   sip_gpu:
     python: "3.12.12"
     cuda_runtime: site-provided
+    platform: Linux HPC with Slurm
+    tested_hardware:
+      - NVIDIA A800 80GB PCIe
+      - NVIDIA GeForce RTX 4090
+      - NVIDIA GeForce RTX 3090 (smoke only)
     requirements: requirements-gpu-sip.txt
     packages:
       torch: "2.5.1"
@@ -97,6 +105,7 @@ models:
     source_revision: master
     config_sha256: 994f50b16abb4ae00880baefe03c10260b5bd608d2bf586f7056ca05a534feea
     weight_file: model.safetensors
+    weight_sha256: not_retained_in_original_record
   gemma2_9b:
     repo_id: google/gemma-2-9b-it
     local_dir: gemma-2-9b-it

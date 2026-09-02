@@ -1,4 +1,6 @@
-name: tbgmp-repro
+# CPU-only artifact analysis environment. For model inference use one of the
+# recorded GPU profiles in environment-gpu-xec.yml or environment-gpu-sip.yml.
+name: tbgmp-artifact-cpu
 channels:
   - conda-forge
 dependencies:
@@ -8,4 +10,5 @@ dependencies:
   - matplotlib
   - scipy
   - pyyaml
+  - pytest
   - pip

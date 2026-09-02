@@ -44,8 +44,9 @@ Relevant file: `results/paper_tables/table_control_statistics.csv`.
 
 ### Claim 3: Ranking Validation
 
-The camera-ready risk ablation, weight sensitivity, and domain-held-out
-summaries are available as canonical cleaned CSVs.
+The camera-ready risk ablation, weight sensitivity, cross-seed, and
+domain-held-out results are available as canonical cleaned CSVs or reduced
+case-level evidence.
 
 How to verify:
 
@@ -55,7 +56,8 @@ python scripts/build_paper_tables.py
 
 Relevant files: `results/paper_tables/table_risk_ablation.csv`,
 `results/paper_tables/table_weight_sensitivity.csv`, and
-`results/paper_tables/table_domain_heldout.csv`.
+`results/paper_tables/table_domain_heldout.csv`. Cross-seed evidence is under
+`results/extensions/cross_seed_heldout/`.
 
 ### Claim 4: Frozen and RULER-Style Transfer
 
@@ -72,23 +74,24 @@ python scripts/validate_csv_schema.py
 Relevant files: `results/paper_tables/table_frozen_top3.csv` and
 `results/paper_tables/table_ruler_transfer.csv`.
 
-### Claim 5: Gemma2 Boundary Case
+### Claim 5: Fixed-Layer and Gemma2 Boundary Checks
 
-Gemma2-9B is treated as a value-bottleneck boundary-supporting case, not as a
-fifth main evidence model.
+The fixed-layer comparison combines validated fixed-policy outcomes with the
+canonical main-ranking exact-at-budget T-BGMP outcomes. Gemma2-9B is treated
+as an incomplete key-only recovery boundary, not as a fifth main model.
 
 How to verify:
 
 ```bash
-python scripts/audit_results.py
+python scripts/audit_extension_results.py
 ```
 
 Expected output includes:
 
 ```text
-Gemma2 key-only Top-k: 7/72
-Gemma2 Uniform K6/V2: 7/72
-Gemma2 Uniform K6/V4: 72/72
+OBSERVED fixed-layer Qwen3-4B: fixed_l0=54/72, fixed_l0_l7_l25=68/72, tbgmp_top1=54/72, tbgmp_top3=68/72
+OBSERVED fixed-layer Llama3.2-3B: fixed_l0=12/25, fixed_l0_l7_l25=15/25, tbgmp_top1=0/25, tbgmp_top3=13/25
+OBSERVED Gemma2 cumulative Top12=18/25; unrecovered=7/25
 ```
 
 ### Claim 6: Backend Smoke Path
@@ -163,5 +166,6 @@ python scripts/build_paper_tables.py
 python scripts/build_figures.py
 python scripts/validate_csv_schema.py
 python scripts/check_artifact_integrity.py
+python scripts/check_paper_artifacts.py
 python -m pytest tests
 ```

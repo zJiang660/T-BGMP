@@ -42,7 +42,8 @@ Total main: 183/183
 python scripts/build_paper_tables.py
 ```
 
-Verify the case-level sources behind camera-ready Tables 4--7:
+Verify the case-level sources behind camera-ready Tables 4--7 and the
+Fixed-Layer, cross-seed, and Gemma2 text results:
 
 ```bash
 python scripts/audit_extension_results.py
@@ -70,6 +71,7 @@ python -m pytest tests
 
 ```bash
 python scripts/check_artifact_integrity.py
+python scripts/check_paper_artifacts.py
 ```
 
 ## 8. Backend Smoke Test

@@ -1,4 +1,4 @@
-artifact_version: "1.0"
+artifact_version: "1.1"
 paper_title: "T-BGMP: An Empirical Characterization of Key-Layer Protection for KV-Cache Quantization Failure Recovery"
 
 paper_items:
@@ -11,14 +11,45 @@ paper_items:
   table_6: results/paper_tables/table_frozen_top3.csv
   table_7: results/paper_tables/table_ruler_transfer.csv
 
+paper_text_items:
+  fixed_layer_check:
+    cases: results/extensions/fixed_layer/case_level.csv
+    provenance: results/extensions/fixed_layer/source_provenance.json
+    audit_command: python scripts/audit_extension_results.py
+  cross_seed_heldout:
+    cases: results/extensions/cross_seed_heldout/case_level.csv
+    rankings: results/extensions/cross_seed_heldout/rankings.csv
+    provenance: results/extensions/cross_seed_heldout/source_provenance.json
+    audit_command: python scripts/audit_extension_results.py
+  additional_models:
+    summary: results/paper_tables/table_supporting_models.csv
+    included_rows:
+      - Mistral-7B-Instruct-v0.3
+      - Yi-1.5-9B-Chat-16K
+      - Zephyr-7B-Beta
+      - SmolLM2-1.7B-Instruct
+    audit_command: python scripts/audit_results.py
+  gemma2_incomplete_key_only_recovery:
+    cases: results/extensions/gemma2_boundary/case_level.csv
+    summary: results/extensions/gemma2_boundary/summary.csv
+    provenance: results/extensions/gemma2_boundary/source_provenance.json
+    audit_command: python scripts/audit_extension_results.py
+
 extension_case_level:
   weight_sensitivity:
     rankings: results/extensions/weight_sensitivity/rankings.csv
     cases: results/extensions/weight_sensitivity/case_level.csv
+  fixed_layer: results/extensions/fixed_layer/case_level.csv
+  cross_seed_heldout:
+    rankings: results/extensions/cross_seed_heldout/rankings.csv
+    cases: results/extensions/cross_seed_heldout/case_level.csv
   domain_heldout: results/extensions/domain_heldout/case_level.csv
   frozen_top3: results/extensions/frozen_top3/case_level.csv
   ruler_screening: results/extensions/ruler/screening_case_level.csv
   ruler_recovery: results/extensions/ruler/recovery_case_level.csv
+  gemma2_boundary:
+    cases: results/extensions/gemma2_boundary/case_level.csv
+    summary: results/extensions/gemma2_boundary/summary.csv
   provenance: results/extensions/source_provenance.json
   audit_command: python scripts/audit_extension_results.py
 
@@ -57,7 +88,7 @@ supporting:
     role: supporting
   gemma2_9b:
     role: boundary_supporting
-    note: "value-bottleneck boundary case"
+    note: "incomplete key-only recovery boundary; final artifact is under results/extensions/gemma2_boundary"
 
 excluded:
   gemma3_4b:

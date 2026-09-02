@@ -1,0 +1,18 @@
+record_type,policy,k,exact_found,cumulative_unique_found,denominator
+baseline,FP16 baseline,,63,,72
+baseline,Uniform K2/V2 rw128,,39,,72
+baseline,Uniform K4/V2 rw128,,52,,72
+baseline,Uniform K6/V2 rw128,,55,,72
+baseline,Uniform K6/V4 rw128,,53,,72
+key_only_topk,T-BGMP Top1,1,9,9,25
+key_only_topk,T-BGMP Top2,2,9,12,25
+key_only_topk,T-BGMP Top3,3,7,13,25
+key_only_topk,T-BGMP Top4,4,9,15,25
+key_only_topk,T-BGMP Top5,5,11,17,25
+key_only_topk,T-BGMP Top6,6,9,17,25
+key_only_topk,T-BGMP Top7,7,9,17,25
+key_only_topk,T-BGMP Top8,8,8,17,25
+key_only_topk,T-BGMP Top9,9,11,18,25
+key_only_topk,T-BGMP Top10,10,10,18,25
+key_only_topk,T-BGMP Top11,11,8,18,25
+key_only_topk,T-BGMP Top12,12,5,18,25

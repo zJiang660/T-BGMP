@@ -1,0 +1,32 @@
+{
+  "provenance_version": "1.0",
+  "sanitization": "Responses, timestamps, scheduler identifiers, private paths, and runtime telemetry removed.",
+  "sources": [
+    {
+      "label": "Qwen3-4B_fixed_layer",
+      "filename": "qwen3_4b_fixed_layer_details.csv",
+      "bytes": 155114,
+      "sha256": "39618631cb34af36652509714b86b245eb6b1a33b81acd25128a2c6c9acbd62c"
+    },
+    {
+      "label": "Qwen3-4B_canonical_topk",
+      "filename": "topk_recovery.csv",
+      "bytes": 152833,
+      "sha256": "434ff74f27995e5901293552e3b83b45f38bf1dd4472cb8a510a74cb74b8add4"
+    },
+    {
+      "label": "Llama3.2-3B_fixed_layer",
+      "filename": "llama32_fixed_layer_details.csv",
+      "bytes": 53294,
+      "sha256": "447d34d555948420081938f7aeaa7bc6ae805565b2f5a7f1969ab1bdb85fc548"
+    },
+    {
+      "label": "Llama3.2-3B_canonical_topk",
+      "filename": "topk_recovery.csv",
+      "bytes": 54554,
+      "sha256": "ea06a0158fb6476b6069ba20747f4d45efc6c416f73fe876b6423e58cbf5a2c1"
+    }
+  ],
+  "protocol_note": "Fixed rows use validated fixed-layer outputs. T-BGMP Top1/Top3 rows use the canonical main Full ranking at the exact requested budget; stale T-BGMP columns from the fixed-layer harness are not used.",
+  "verification": "python scripts/audit_extension_results.py"
+}

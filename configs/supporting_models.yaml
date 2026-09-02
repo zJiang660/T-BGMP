@@ -6,7 +6,7 @@ supporting:
 
 boundary_supporting:
   - model: Gemma2-9B
-    interpretation: value_bottleneck
+    interpretation: incomplete_key_only_recovery
 
 excluded:
   - model: Gemma-3-4B-it

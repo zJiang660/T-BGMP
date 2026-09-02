@@ -8,6 +8,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "results" / "paper_tables"
 TABLE_DIR = ROOT / "tables" / "paper"
+SUPERSEDED_INPUTS = {"table_gemma2_boundary.csv"}
 
 
 def markdown_table(df: pd.DataFrame) -> str:
@@ -37,6 +38,9 @@ def main() -> None:
     print("Available paper-ready tables:")
     TABLE_DIR.mkdir(parents=True, exist_ok=True)
     for path in sorted(DATA_DIR.glob("*.csv")):
+        if path.name in SUPERSEDED_INPUTS:
+            print(f"  - {path.name}: skipped (superseded exploratory result)")
+            continue
         df = pd.read_csv(path)
         output = TABLE_DIR / f"{path.stem}.md"
         output.write_text(markdown_table(df), encoding="utf-8")

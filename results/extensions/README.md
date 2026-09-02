@@ -1,7 +1,8 @@
 # Camera-ready extension evidence
 
 This directory contains the smallest case-level representation needed to
-recompute Tables 4--7. It was recovered from the completed formal GPU runs;
+recompute Tables 4--7 and the final paper's text-only validation results. It
+was recovered from the completed formal GPU runs;
 raw model responses, scheduler logs, checkpoints, timestamps, and private
 machine paths are intentionally excluded.
 
@@ -18,6 +19,12 @@ machine paths are intentionally excluded.
   weight settings. Qwen2.5-3B perturbations reuse the direct equal-weight
   outputs only because every case succeeds within the unchanged Top3 prefix;
   the `evidence` column records this distinction.
+- `fixed_layer/case_level.csv`: validated fixed-policy outcomes plus the
+  canonical main-ranking exact-at-budget T-BGMP outcomes used by the paper.
+- `cross_seed_heldout/`: bidirectional cross-seed Top1--Top12 outcomes and the
+  frozen calibration rankings.
+- `gemma2_boundary/`: completed Gemma2 reproduction supporting incomplete
+  key-only recovery; the Top1--Top12 union restores 18/25 conditional cases.
 
 Run `python scripts/audit_extension_results.py` to reconstruct and verify the
 paper-facing tables.

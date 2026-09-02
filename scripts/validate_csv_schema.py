@@ -155,6 +155,26 @@ EXTENSION_REQUIRED = {
         "model", "case_id", "weights", "first_success_k",
         "recovered_within_top12", "evidence",
     },
+    "fixed_layer/case_level.csv": {
+        "model", "case_id", "variant", "protected_layers", "k", "found",
+        "completed", "status", "evidence_source", "metric_semantics",
+    },
+    "cross_seed_heldout/case_level.csv": {
+        "model", "case_id", "calibration_seed", "evaluation_seed", "k",
+        "protected_layers", "found", "completed", "status",
+    },
+    "cross_seed_heldout/rankings.csv": {
+        "model", "calibration_seed", "layer", "mse", "ip",
+        "effective_dimension", "risk_score", "rank", "source",
+    },
+    "gemma2_boundary/case_level.csv": {
+        "model", "case_id", "stage", "case_type", "policy", "policy_type",
+        "protected_layers", "found", "completed", "status",
+    },
+    "gemma2_boundary/summary.csv": {
+        "record_type", "policy", "k", "exact_found",
+        "cumulative_unique_found", "denominator",
+    },
 }
 
 

@@ -57,7 +57,7 @@ folder name with each rerun.
 | Supporting | Yi-1.5-9B-Chat-16K | `01-ai/Yi-1.5-9B-Chat-16K` | Hugging Face or a verified ModelScope mirror | Supporting long-context model. Use the 16K chat checkpoint, not the base or shorter-context variant. |
 | Supporting | Zephyr-7B-beta | `HuggingFaceH4/zephyr-7b-beta` | Hugging Face or a verified ModelScope mirror | Tolerant-model/boundary analysis. Keep the beta instruction checkpoint used by the study. |
 | Supporting | SmolLM2-1.7B-Instruct | `HuggingFaceTB/SmolLM2-1.7B-Instruct` | Hugging Face or a verified ModelScope mirror | Small-model supporting evidence and low-memory compatibility checks. |
-| Boundary | Gemma2-9B | `google/gemma-2-9b-it` | Hugging Face; use a verified ModelScope mirror only if terms and files match | Value-bottleneck boundary evidence, not a main recovery model. Access requires acceptance of Google's Gemma terms. |
+| Boundary | Gemma2-9B | `google/gemma-2-9b-it` | Hugging Face; use a verified ModelScope mirror only if terms and files match | Incomplete key-only recovery boundary evidence, not a main recovery model. Access requires acceptance of Google's Gemma terms. |
 | Boundary | GLM-4-9B-Chat-HF | `zai-org/glm-4-9b-chat-hf` | Hugging Face or a verified ModelScope mirror | Boundary/compatibility analysis. The former `THUDM/glm-4-9b-chat-hf` identifier resolves to the current repository. Requires `transformers>=4.46.0` according to its model card. |
 
 Other excluded or boundary models mentioned in the paper should be downloaded

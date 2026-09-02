@@ -1,0 +1,38 @@
+{
+  "provenance_version": "1.0",
+  "sanitization": "Responses, answers, timestamps, scheduler identifiers, private paths, and runtime telemetry removed.",
+  "sources": [
+    {
+      "label": "tbgmp_full_single_model_results",
+      "filename": "tbgmp_full_single_model_results.csv",
+      "bytes": 287272,
+      "sha256": "554bde4c9fd12d0a6b168906ac103bccb5d5742324b961d39f86e5e980531e91"
+    },
+    {
+      "label": "tbgmp_case_classification",
+      "filename": "tbgmp_case_classification.csv",
+      "bytes": 4658,
+      "sha256": "f2fdeef6c36b3fa1acacf4ead7e49564d1d530ea0264c8c41a0f64eb0da40a3c"
+    },
+    {
+      "label": "tbgmp_key_risk_profile",
+      "filename": "tbgmp_key_risk_profile.csv",
+      "bytes": 5535,
+      "sha256": "9b6c4b1d3c531beaef8ca20091fbfbb33bbf6dbb25748d6218efa6487b849788"
+    },
+    {
+      "label": "tbgmp_ranked_layers",
+      "filename": "tbgmp_ranked_layers.json",
+      "bytes": 244,
+      "sha256": "1ae689de760dcb5457aef2634f99cf6a9d7e746c6ea2f5ff24b298f4fc36feab"
+    },
+    {
+      "label": "tbgmp_single_model_summary",
+      "filename": "tbgmp_single_model_summary.json",
+      "bytes": 462,
+      "sha256": "85511eee4d15bf5b99cc346701f3ca10b64a6fe71b889df26c66041618014017"
+    }
+  ],
+  "source_code_commit": "not retained in the original Gemma2 run record",
+  "verification": "python scripts/audit_extension_results.py"
+}

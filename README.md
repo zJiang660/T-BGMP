@@ -84,7 +84,7 @@ Excluded / boundary:
 
 The main conditional aggregate is 183/183 restored cases. This is not an
 unconditional success rate over all models or prompts. Gemma2-9B is
-value-bottleneck boundary evidence, not a fifth main model.
+incomplete key-only recovery boundary evidence, not a fifth main model.
 
 ## Quick Start
 
@@ -95,6 +95,7 @@ python scripts/build_paper_tables.py
 python scripts/build_figures.py
 python scripts/audit_results.py
 python scripts/validate_csv_schema.py
+python scripts/check_paper_artifacts.py
 ```
 
 ## Model Setup and Full Reproduction
@@ -135,15 +136,17 @@ environment. Before full GPU execution, install one recorded profile and
 verify the runtime rather than resolving the latest packages:
 
 ```bash
-python -m pip install -r requirements-gpu-xec.txt
+conda env create -f environment-gpu-xec.yml
+conda activate tbgmp-gpu-xec
 python scripts/check_runtime_lock.py --profile xec_gpu \
   --turboquant-root "${TURBOQUANT_ROOT}" \
   --model-root "${MODEL_ROOT}" --model-key qwen3_4b
 ```
 
-Use `requirements-gpu-sip.txt` with `--profile sip_gpu` for the recorded SIP
-environment. See [`VERSION_LOCK.md`](VERSION_LOCK.md) for provenance and the
-model fingerprint policy.
+Use `environment-gpu-sip.yml` with `--profile sip_gpu` for the recorded SIP
+environment. Direct pip equivalents remain in `requirements-gpu-xec.txt` and
+`requirements-gpu-sip.txt`. See [`VERSION_LOCK.md`](VERSION_LOCK.md) for
+provenance and the model fingerprint policy.
 
 The case generator defaults to the recorded `formal_hpc_v1` protocol. The exact
 bounded domain snapshots and their SHA-256 manifest are committed under
@@ -284,12 +287,20 @@ The current camera-ready paper is mapped to the repository as follows:
 | Table 5: domain-held-out | `results/paper_tables/table_domain_heldout.csv` |
 | Table 6: frozen Top3 | `results/paper_tables/table_frozen_top3.csv` |
 | Table 7: RULER-style transfer | `results/paper_tables/table_ruler_transfer.csv` |
+| Fixed-Layer Check | `results/extensions/fixed_layer/case_level.csv` |
+| Cross-seed held-out | `results/extensions/cross_seed_heldout/` |
+| Additional model families | `results/paper_tables/table_supporting_models.csv` |
+| Gemma2 incomplete key-only recovery | `results/extensions/gemma2_boundary/` |
 
-Tables 4--7 also have reduced case-level evidence under
+Tables 4--7 and the two text-only validation checks have reduced case-level evidence under
 `results/extensions/`. Run `python scripts/audit_extension_results.py` to
 reconstruct their reported values. The recovered path-independent experiment
 runners and exact protocols are documented in
 `docs/extension_experiments.md`.
+
+Run `python scripts/check_paper_artifacts.py` to verify that every Table 1--7,
+Figure 2, and text-only result mapping points to an existing artifact and
+analysis command.
 
 `tables/paper/` and `figures/paper/` are generated locally by the build
 scripts and are intentionally not versioned.

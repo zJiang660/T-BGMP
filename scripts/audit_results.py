@@ -50,11 +50,10 @@ def case_level_available() -> bool:
 
 
 def gemma_case_level_available() -> bool:
-    directory = ROOT / "results" / "supporting" / "gemma2_9b"
+    directory = ROOT / "results" / "extensions" / "gemma2_boundary"
     required = (
-        "sensitive_cases.csv",
-        "topk_recovery.csv",
-        "stage_a_discovery.csv",
+        "case_level.csv",
+        "summary.csv",
         "source_provenance.json",
     )
     return all((directory / filename).exists() for filename in required)
@@ -130,55 +129,48 @@ def main() -> None:
     gemma_support = supporting[supporting["model"] == "Gemma2-9B"]
     checks["gemma_boundary_supporting"] = (
         len(gemma_support) == 1
-        and "Boundary-supporting" in str(gemma_support.iloc[0]["usage"])
-        and "value bottleneck" in str(gemma_support.iloc[0]["usage"]).lower()
+        and "Legacy" in str(gemma_support.iloc[0]["usage"])
+        and "not a final-paper artifact" in str(gemma_support.iloc[0]["usage"])
     )
-
-    gemma = pd.read_csv(PAPER_DIR / "table_gemma2_boundary.csv").set_index("policy")
-    checks["gemma_key_only_7_of_72"] = gemma.loc["Key-only Top1--Top12", "found"] == "7/72 unique"
-    checks["gemma_k6_v2_7_of_72"] = gemma.loc["Uniform K6/V2", "found"] == "7/72"
-    checks["gemma_k6_v4_72_of_72"] = gemma.loc["Uniform K6/V4", "found"] == "72/72"
 
     using_gemma_case_level = gemma_case_level_available()
     if using_gemma_case_level:
-        gemma_dir = ROOT / "results" / "supporting" / "gemma2_9b"
-        gemma_sensitive = pd.read_csv(gemma_dir / "sensitive_cases.csv")
-        gemma_topk = pd.read_csv(gemma_dir / "topk_recovery.csv")
-        gemma_stage_a = pd.read_csv(gemma_dir / "stage_a_discovery.csv")
-        checks["gemma_case_level_key_only_7_of_72"] = (
-            gemma_topk.loc[bool_series(gemma_topk["found"]), "case_id"].nunique() == 7
-            and len(gemma_sensitive) == 72
+        gemma_dir = ROOT / "results" / "extensions" / "gemma2_boundary"
+        gemma_cases = pd.read_csv(gemma_dir / "case_level.csv")
+        gemma_summary = pd.read_csv(gemma_dir / "summary.csv")
+        checks["gemma_current_rows_complete"] = (
+            len(gemma_cases) == 732
+            and bool_series(gemma_cases["completed"]).all()
+            and set(gemma_cases["status"]) == {"ok"}
         )
-        gemma_stage_a["found"] = bool_series(gemma_stage_a["found"])
-        gemma_policy_counts = gemma_stage_a.groupby("policy")["found"].agg(
-            ["sum", "count"]
+        baseline = gemma_summary[gemma_summary["record_type"] == "baseline"].set_index("policy")
+        checks["gemma_current_discovery_counts"] = (
+            int(baseline.loc["FP16 baseline", "exact_found"]) == 63
+            and int(baseline.loc["Uniform K2/V2 rw128", "exact_found"]) == 39
+            and int(baseline.loc["Uniform K4/V2 rw128", "exact_found"]) == 52
+            and int(baseline.loc["Uniform K6/V2 rw128", "exact_found"]) == 55
+            and int(baseline.loc["Uniform K6/V4 rw128", "exact_found"]) == 53
         )
-        checks["gemma_case_level_k6_v2_7_of_72"] = (
-            tuple(gemma_policy_counts.loc["uniform_k6_v2_rw128"]) == (7, 72)
-        )
-        checks["gemma_case_level_k6_v4_72_of_72"] = (
-            tuple(gemma_policy_counts.loc["uniform_k6_v4_rw128"]) == (72, 72)
+        top12 = gemma_summary[
+            (gemma_summary["record_type"] == "key_only_topk")
+            & (gemma_summary["k"] == 12)
+        ].iloc[0]
+        checks["gemma_incomplete_key_only_18_of_25"] = (
+            int(top12["cumulative_unique_found"]) == 18
+            and int(top12["denominator"]) == 25
         )
         gemma_provenance = json.loads(
             (gemma_dir / "source_provenance.json").read_text(encoding="utf-8")
         )
         checks["gemma_provenance_hashes_present"] = bool(
-            gemma_provenance.get("source_files")
+            gemma_provenance.get("sources")
         ) and all(
             len(item.get("sha256", "")) == 64
-            and set(item) == {"filename", "bytes", "sha256"}
-            for item in gemma_provenance["source_files"]
+            and {"filename", "bytes", "sha256"} <= set(item)
+            for item in gemma_provenance["sources"]
         )
     else:
-        print(
-            "WARNING: using paper-ready Gemma2 summary CSV because case-level "
-            "outputs are unavailable."
-        )
-        checks["gemma_summary_fallback_matches_claims"] = (
-            checks["gemma_key_only_7_of_72"]
-            and checks["gemma_k6_v2_7_of_72"]
-            and checks["gemma_k6_v4_72_of_72"]
-        )
+        checks["gemma_current_boundary_artifact_present"] = False
 
     boundary = pd.read_csv(PAPER_DIR / "table_boundary_models.csv")
     checks["excluded_classified_not_retrieval_failure"] = all(
@@ -310,9 +302,9 @@ def main() -> None:
         print(f"- {model}: {model_restored}/{model_sensitive}")
     print(f"- Total main: {case_level_restored}/{case_level_sensitive}")
     print("\nGemma2 boundary audit")
-    print("- key-only Top-k: 7/72")
-    print("- Uniform K6/V2: 7/72")
-    print("- Uniform K6/V4: 72/72")
+    print("- FP16-valid discovery: 63/72")
+    print("- key-only cumulative Top12: 18/25")
+    print("- unrecovered through Top12: 7/25")
     print("\nSupporting / boundary checks")
     print("- supporting models are not counted into main total")
     print("- excluded models are not counted as T-BGMP failures")

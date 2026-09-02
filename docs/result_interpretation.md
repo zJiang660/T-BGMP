@@ -23,14 +23,14 @@ the 183-case aggregate.
 
 ## Boundary-Supporting Model
 
-Gemma2-9B is a value-bottleneck boundary case:
+Gemma2-9B is an incomplete key-only recovery boundary case:
 
-- key-only Top1--Top12: 7/72 unique cases
-- Uniform K6/V2: 7/72
-- Uniform K6/V4: 72/72
+- FP16-valid discovery cases: 63/72
+- conditional aggressive failures: 25
+- key-only Top1--Top12: 18/25 recovered, leaving 7/25 unrecovered
 
-This result limits the key-only claim and indicates that some failures require
-higher value precision.
+This result limits the key-only claim without assigning a specific key/value
+failure taxonomy that the completed reproduction does not support.
 
 ## Excluded Models
 

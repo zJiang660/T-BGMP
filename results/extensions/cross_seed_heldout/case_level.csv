@@ -1,0 +1,1729 @@
+model,case_id,calibration_seed,evaluation_seed,domain,context_length,depth,seed,k,protected_layers,found,completed,status
+Qwen2.5-3B,code_ctx4096_d10_s1,0,1,code,4096,10,1,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s1,0,1,code,4096,10,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s1,0,1,code,4096,10,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s1,0,1,code,4096,10,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s1,0,1,code,4096,10,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s1,0,1,code,4096,10,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s1,0,1,code,4096,10,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s1,0,1,code,4096,10,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s1,0,1,code,4096,10,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s1,0,1,code,4096,10,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s1,0,1,code,4096,10,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s1,0,1,code,4096,10,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s1,0,1,code,4096,50,1,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s1,0,1,code,4096,50,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s1,0,1,code,4096,50,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s1,0,1,code,4096,50,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s1,0,1,code,4096,50,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s1,0,1,code,4096,50,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s1,0,1,code,4096,50,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s1,0,1,code,4096,50,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s1,0,1,code,4096,50,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s1,0,1,code,4096,50,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s1,0,1,code,4096,50,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s1,0,1,code,4096,50,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s1,0,1,code,4096,90,1,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s1,0,1,code,4096,90,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s1,0,1,code,4096,90,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s1,0,1,code,4096,90,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s1,0,1,code,4096,90,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s1,0,1,code,4096,90,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s1,0,1,code,4096,90,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s1,0,1,code,4096,90,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s1,0,1,code,4096,90,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s1,0,1,code,4096,90,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s1,0,1,code,4096,90,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s1,0,1,code,4096,90,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s1,0,1,code,6144,10,1,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s1,0,1,code,6144,10,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s1,0,1,code,6144,10,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s1,0,1,code,6144,10,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s1,0,1,code,6144,10,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s1,0,1,code,6144,10,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s1,0,1,code,6144,10,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s1,0,1,code,6144,10,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s1,0,1,code,6144,10,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s1,0,1,code,6144,10,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s1,0,1,code,6144,10,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s1,0,1,code,6144,10,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s1,0,1,code,6144,50,1,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s1,0,1,code,6144,50,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s1,0,1,code,6144,50,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s1,0,1,code,6144,50,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s1,0,1,code,6144,50,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s1,0,1,code,6144,50,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s1,0,1,code,6144,50,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s1,0,1,code,6144,50,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s1,0,1,code,6144,50,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s1,0,1,code,6144,50,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s1,0,1,code,6144,50,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s1,0,1,code,6144,50,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s1,0,1,code,6144,90,1,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s1,0,1,code,6144,90,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s1,0,1,code,6144,90,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s1,0,1,code,6144,90,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s1,0,1,code,6144,90,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s1,0,1,code,6144,90,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s1,0,1,code,6144,90,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s1,0,1,code,6144,90,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s1,0,1,code,6144,90,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s1,0,1,code,6144,90,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s1,0,1,code,6144,90,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s1,0,1,code,6144,90,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s1,0,1,code,8192,10,1,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s1,0,1,code,8192,10,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s1,0,1,code,8192,10,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s1,0,1,code,8192,10,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s1,0,1,code,8192,10,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s1,0,1,code,8192,10,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s1,0,1,code,8192,10,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s1,0,1,code,8192,10,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s1,0,1,code,8192,10,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s1,0,1,code,8192,10,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s1,0,1,code,8192,10,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s1,0,1,code,8192,10,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s1,0,1,code,8192,50,1,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s1,0,1,code,8192,50,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s1,0,1,code,8192,50,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s1,0,1,code,8192,50,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s1,0,1,code,8192,50,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s1,0,1,code,8192,50,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s1,0,1,code,8192,50,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s1,0,1,code,8192,50,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s1,0,1,code,8192,50,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s1,0,1,code,8192,50,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s1,0,1,code,8192,50,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s1,0,1,code,8192,50,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s1,0,1,code,8192,90,1,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s1,0,1,code,8192,90,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s1,0,1,code,8192,90,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s1,0,1,code,8192,90,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s1,0,1,code,8192,90,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s1,0,1,code,8192,90,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s1,0,1,code,8192,90,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s1,0,1,code,8192,90,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s1,0,1,code,8192,90,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s1,0,1,code,8192,90,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s1,0,1,code,8192,90,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s1,0,1,code,8192,90,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,1,[0],False,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,2,"[0, 27]",False,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,3,"[0, 27, 1]",False,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",False,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,1,[0],True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,1,[0],True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,1,[0],True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,3,"[0, 27, 1]",False,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,1,[0],True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,2,"[0, 27]",False,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,5,"[0, 27, 1, 18, 2]",False,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",False,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",False,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,1,[0],True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,3,"[0, 27, 1]",False,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,1,[0],True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,2,"[0, 27]",False,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,4,"[0, 27, 1, 18]",False,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,7,"[0, 27, 1, 18, 2, 20, 29]",False,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",False,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,1,[0],False,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,2,"[0, 27]",False,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,3,"[0, 27, 1]",False,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,4,"[0, 27, 1, 18]",False,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,6,"[0, 27, 1, 18, 2, 20]",False,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,7,"[0, 27, 1, 18, 2, 20, 29]",False,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,1,[0],True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s1,0,1,math,4096,10,1,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s1,0,1,math,4096,10,1,2,"[0, 27]",False,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s1,0,1,math,4096,10,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s1,0,1,math,4096,10,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s1,0,1,math,4096,10,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s1,0,1,math,4096,10,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s1,0,1,math,4096,10,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s1,0,1,math,4096,10,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s1,0,1,math,4096,10,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s1,0,1,math,4096,10,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s1,0,1,math,4096,10,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s1,0,1,math,4096,10,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s1,0,1,math,4096,50,1,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s1,0,1,math,4096,50,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s1,0,1,math,4096,50,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s1,0,1,math,4096,50,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s1,0,1,math,4096,50,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s1,0,1,math,4096,50,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s1,0,1,math,4096,50,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s1,0,1,math,4096,50,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s1,0,1,math,4096,50,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s1,0,1,math,4096,50,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s1,0,1,math,4096,50,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s1,0,1,math,4096,50,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s1,0,1,math,4096,90,1,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s1,0,1,math,4096,90,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s1,0,1,math,4096,90,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s1,0,1,math,4096,90,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s1,0,1,math,4096,90,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s1,0,1,math,4096,90,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s1,0,1,math,4096,90,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s1,0,1,math,4096,90,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s1,0,1,math,4096,90,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s1,0,1,math,4096,90,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s1,0,1,math,4096,90,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s1,0,1,math,4096,90,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s1,0,1,math,6144,10,1,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s1,0,1,math,6144,10,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s1,0,1,math,6144,10,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s1,0,1,math,6144,10,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s1,0,1,math,6144,10,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s1,0,1,math,6144,10,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s1,0,1,math,6144,10,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s1,0,1,math,6144,10,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s1,0,1,math,6144,10,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s1,0,1,math,6144,10,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s1,0,1,math,6144,10,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s1,0,1,math,6144,10,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s1,0,1,math,6144,50,1,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s1,0,1,math,6144,50,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s1,0,1,math,6144,50,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s1,0,1,math,6144,50,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s1,0,1,math,6144,50,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s1,0,1,math,6144,50,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s1,0,1,math,6144,50,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s1,0,1,math,6144,50,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s1,0,1,math,6144,50,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s1,0,1,math,6144,50,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s1,0,1,math,6144,50,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s1,0,1,math,6144,50,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s1,0,1,math,6144,90,1,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s1,0,1,math,6144,90,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s1,0,1,math,6144,90,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s1,0,1,math,6144,90,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s1,0,1,math,6144,90,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s1,0,1,math,6144,90,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s1,0,1,math,6144,90,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s1,0,1,math,6144,90,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s1,0,1,math,6144,90,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s1,0,1,math,6144,90,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s1,0,1,math,6144,90,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s1,0,1,math,6144,90,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s1,0,1,math,8192,10,1,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s1,0,1,math,8192,10,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s1,0,1,math,8192,10,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s1,0,1,math,8192,10,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s1,0,1,math,8192,10,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s1,0,1,math,8192,10,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s1,0,1,math,8192,10,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s1,0,1,math,8192,10,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s1,0,1,math,8192,10,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s1,0,1,math,8192,10,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s1,0,1,math,8192,10,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s1,0,1,math,8192,10,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s1,0,1,math,8192,50,1,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s1,0,1,math,8192,50,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s1,0,1,math,8192,50,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s1,0,1,math,8192,50,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s1,0,1,math,8192,50,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s1,0,1,math,8192,50,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s1,0,1,math,8192,50,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s1,0,1,math,8192,50,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s1,0,1,math,8192,50,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s1,0,1,math,8192,50,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s1,0,1,math,8192,50,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s1,0,1,math,8192,50,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s1,0,1,math,8192,90,1,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s1,0,1,math,8192,90,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s1,0,1,math,8192,90,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s1,0,1,math,8192,90,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s1,0,1,math,8192,90,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s1,0,1,math,8192,90,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s1,0,1,math,8192,90,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s1,0,1,math,8192,90,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s1,0,1,math,8192,90,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s1,0,1,math,8192,90,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s1,0,1,math,8192,90,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s1,0,1,math,8192,90,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",False,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s1,0,1,science,4096,10,1,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s1,0,1,science,4096,10,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s1,0,1,science,4096,10,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s1,0,1,science,4096,10,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s1,0,1,science,4096,10,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s1,0,1,science,4096,10,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s1,0,1,science,4096,10,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s1,0,1,science,4096,10,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s1,0,1,science,4096,10,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s1,0,1,science,4096,10,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s1,0,1,science,4096,10,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s1,0,1,science,4096,10,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s1,0,1,science,4096,50,1,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s1,0,1,science,4096,50,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s1,0,1,science,4096,50,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s1,0,1,science,4096,50,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s1,0,1,science,4096,50,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s1,0,1,science,4096,50,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s1,0,1,science,4096,50,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s1,0,1,science,4096,50,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s1,0,1,science,4096,50,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s1,0,1,science,4096,50,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s1,0,1,science,4096,50,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s1,0,1,science,4096,50,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s1,0,1,science,4096,90,1,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s1,0,1,science,4096,90,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s1,0,1,science,4096,90,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s1,0,1,science,4096,90,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s1,0,1,science,4096,90,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s1,0,1,science,4096,90,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s1,0,1,science,4096,90,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s1,0,1,science,4096,90,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s1,0,1,science,4096,90,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s1,0,1,science,4096,90,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s1,0,1,science,4096,90,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s1,0,1,science,4096,90,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s1,0,1,science,6144,10,1,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s1,0,1,science,6144,10,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s1,0,1,science,6144,10,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s1,0,1,science,6144,10,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s1,0,1,science,6144,10,1,5,"[0, 27, 1, 18, 2]",False,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s1,0,1,science,6144,10,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s1,0,1,science,6144,10,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s1,0,1,science,6144,10,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s1,0,1,science,6144,10,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s1,0,1,science,6144,10,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",False,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s1,0,1,science,6144,10,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",False,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s1,0,1,science,6144,10,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s1,0,1,science,6144,50,1,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s1,0,1,science,6144,50,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s1,0,1,science,6144,50,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s1,0,1,science,6144,50,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s1,0,1,science,6144,50,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s1,0,1,science,6144,50,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s1,0,1,science,6144,50,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s1,0,1,science,6144,50,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s1,0,1,science,6144,50,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s1,0,1,science,6144,50,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s1,0,1,science,6144,50,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s1,0,1,science,6144,50,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s1,0,1,science,6144,90,1,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s1,0,1,science,6144,90,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s1,0,1,science,6144,90,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s1,0,1,science,6144,90,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s1,0,1,science,6144,90,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s1,0,1,science,6144,90,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s1,0,1,science,6144,90,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s1,0,1,science,6144,90,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s1,0,1,science,6144,90,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s1,0,1,science,6144,90,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s1,0,1,science,6144,90,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s1,0,1,science,6144,90,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s1,0,1,science,8192,10,1,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s1,0,1,science,8192,10,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s1,0,1,science,8192,10,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s1,0,1,science,8192,10,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s1,0,1,science,8192,10,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s1,0,1,science,8192,10,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s1,0,1,science,8192,10,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s1,0,1,science,8192,10,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s1,0,1,science,8192,10,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s1,0,1,science,8192,10,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s1,0,1,science,8192,10,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s1,0,1,science,8192,10,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s1,0,1,science,8192,50,1,1,[0],False,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s1,0,1,science,8192,50,1,2,"[0, 27]",False,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s1,0,1,science,8192,50,1,3,"[0, 27, 1]",False,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s1,0,1,science,8192,50,1,4,"[0, 27, 1, 18]",False,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s1,0,1,science,8192,50,1,5,"[0, 27, 1, 18, 2]",False,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s1,0,1,science,8192,50,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s1,0,1,science,8192,50,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s1,0,1,science,8192,50,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s1,0,1,science,8192,50,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s1,0,1,science,8192,50,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",False,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s1,0,1,science,8192,50,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",False,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s1,0,1,science,8192,50,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s1,0,1,science,8192,90,1,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s1,0,1,science,8192,90,1,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s1,0,1,science,8192,90,1,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s1,0,1,science,8192,90,1,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s1,0,1,science,8192,90,1,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s1,0,1,science,8192,90,1,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s1,0,1,science,8192,90,1,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s1,0,1,science,8192,90,1,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s1,0,1,science,8192,90,1,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s1,0,1,science,8192,90,1,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s1,0,1,science,8192,90,1,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s1,0,1,science,8192,90,1,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s0,1,0,code,4096,10,0,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s0,1,0,code,4096,10,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s0,1,0,code,4096,10,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s0,1,0,code,4096,10,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s0,1,0,code,4096,10,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s0,1,0,code,4096,10,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s0,1,0,code,4096,10,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s0,1,0,code,4096,10,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s0,1,0,code,4096,10,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s0,1,0,code,4096,10,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s0,1,0,code,4096,10,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d10_s0,1,0,code,4096,10,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s0,1,0,code,4096,50,0,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s0,1,0,code,4096,50,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s0,1,0,code,4096,50,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s0,1,0,code,4096,50,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s0,1,0,code,4096,50,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s0,1,0,code,4096,50,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s0,1,0,code,4096,50,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s0,1,0,code,4096,50,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s0,1,0,code,4096,50,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s0,1,0,code,4096,50,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s0,1,0,code,4096,50,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d50_s0,1,0,code,4096,50,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s0,1,0,code,4096,90,0,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s0,1,0,code,4096,90,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s0,1,0,code,4096,90,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s0,1,0,code,4096,90,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s0,1,0,code,4096,90,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s0,1,0,code,4096,90,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s0,1,0,code,4096,90,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s0,1,0,code,4096,90,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s0,1,0,code,4096,90,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s0,1,0,code,4096,90,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s0,1,0,code,4096,90,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx4096_d90_s0,1,0,code,4096,90,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s0,1,0,code,6144,10,0,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s0,1,0,code,6144,10,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s0,1,0,code,6144,10,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s0,1,0,code,6144,10,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s0,1,0,code,6144,10,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s0,1,0,code,6144,10,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s0,1,0,code,6144,10,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s0,1,0,code,6144,10,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s0,1,0,code,6144,10,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s0,1,0,code,6144,10,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s0,1,0,code,6144,10,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d10_s0,1,0,code,6144,10,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s0,1,0,code,6144,50,0,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s0,1,0,code,6144,50,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s0,1,0,code,6144,50,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s0,1,0,code,6144,50,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s0,1,0,code,6144,50,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s0,1,0,code,6144,50,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s0,1,0,code,6144,50,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s0,1,0,code,6144,50,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s0,1,0,code,6144,50,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s0,1,0,code,6144,50,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s0,1,0,code,6144,50,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d50_s0,1,0,code,6144,50,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s0,1,0,code,6144,90,0,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s0,1,0,code,6144,90,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s0,1,0,code,6144,90,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s0,1,0,code,6144,90,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s0,1,0,code,6144,90,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s0,1,0,code,6144,90,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s0,1,0,code,6144,90,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s0,1,0,code,6144,90,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s0,1,0,code,6144,90,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s0,1,0,code,6144,90,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s0,1,0,code,6144,90,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx6144_d90_s0,1,0,code,6144,90,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s0,1,0,code,8192,10,0,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s0,1,0,code,8192,10,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s0,1,0,code,8192,10,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s0,1,0,code,8192,10,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s0,1,0,code,8192,10,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s0,1,0,code,8192,10,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s0,1,0,code,8192,10,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s0,1,0,code,8192,10,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s0,1,0,code,8192,10,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s0,1,0,code,8192,10,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s0,1,0,code,8192,10,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d10_s0,1,0,code,8192,10,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s0,1,0,code,8192,50,0,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s0,1,0,code,8192,50,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s0,1,0,code,8192,50,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s0,1,0,code,8192,50,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s0,1,0,code,8192,50,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s0,1,0,code,8192,50,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s0,1,0,code,8192,50,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s0,1,0,code,8192,50,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s0,1,0,code,8192,50,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s0,1,0,code,8192,50,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s0,1,0,code,8192,50,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d50_s0,1,0,code,8192,50,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s0,1,0,code,8192,90,0,1,[0],True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s0,1,0,code,8192,90,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s0,1,0,code,8192,90,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s0,1,0,code,8192,90,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s0,1,0,code,8192,90,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s0,1,0,code,8192,90,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s0,1,0,code,8192,90,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s0,1,0,code,8192,90,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s0,1,0,code,8192,90,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s0,1,0,code,8192,90,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s0,1,0,code,8192,90,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,code_ctx8192_d90_s0,1,0,code,8192,90,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,1,[0],True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,1,[0],True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,1,[0],True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,1,[0],True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,1,[0],False,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,2,"[0, 27]",False,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,1,[0],True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,1,[0],False,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,2,"[0, 27]",False,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,1,[0],False,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,2,"[0, 27]",False,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,4,"[0, 27, 1, 18]",False,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,1,[0],True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s0,1,0,math,4096,10,0,1,[0],False,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s0,1,0,math,4096,10,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s0,1,0,math,4096,10,0,3,"[0, 27, 1]",False,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s0,1,0,math,4096,10,0,4,"[0, 27, 1, 18]",False,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s0,1,0,math,4096,10,0,5,"[0, 27, 1, 18, 2]",False,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s0,1,0,math,4096,10,0,6,"[0, 27, 1, 18, 2, 20]",False,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s0,1,0,math,4096,10,0,7,"[0, 27, 1, 18, 2, 20, 29]",False,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s0,1,0,math,4096,10,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",False,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s0,1,0,math,4096,10,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s0,1,0,math,4096,10,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s0,1,0,math,4096,10,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d10_s0,1,0,math,4096,10,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s0,1,0,math,4096,50,0,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s0,1,0,math,4096,50,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s0,1,0,math,4096,50,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s0,1,0,math,4096,50,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s0,1,0,math,4096,50,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s0,1,0,math,4096,50,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s0,1,0,math,4096,50,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s0,1,0,math,4096,50,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s0,1,0,math,4096,50,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s0,1,0,math,4096,50,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s0,1,0,math,4096,50,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d50_s0,1,0,math,4096,50,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s0,1,0,math,4096,90,0,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s0,1,0,math,4096,90,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s0,1,0,math,4096,90,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s0,1,0,math,4096,90,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s0,1,0,math,4096,90,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s0,1,0,math,4096,90,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s0,1,0,math,4096,90,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s0,1,0,math,4096,90,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s0,1,0,math,4096,90,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s0,1,0,math,4096,90,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s0,1,0,math,4096,90,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx4096_d90_s0,1,0,math,4096,90,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s0,1,0,math,6144,10,0,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s0,1,0,math,6144,10,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s0,1,0,math,6144,10,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s0,1,0,math,6144,10,0,4,"[0, 27, 1, 18]",False,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s0,1,0,math,6144,10,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s0,1,0,math,6144,10,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s0,1,0,math,6144,10,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s0,1,0,math,6144,10,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s0,1,0,math,6144,10,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s0,1,0,math,6144,10,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s0,1,0,math,6144,10,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d10_s0,1,0,math,6144,10,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s0,1,0,math,6144,50,0,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s0,1,0,math,6144,50,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s0,1,0,math,6144,50,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s0,1,0,math,6144,50,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s0,1,0,math,6144,50,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s0,1,0,math,6144,50,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s0,1,0,math,6144,50,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s0,1,0,math,6144,50,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s0,1,0,math,6144,50,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s0,1,0,math,6144,50,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s0,1,0,math,6144,50,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d50_s0,1,0,math,6144,50,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s0,1,0,math,6144,90,0,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s0,1,0,math,6144,90,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s0,1,0,math,6144,90,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s0,1,0,math,6144,90,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s0,1,0,math,6144,90,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s0,1,0,math,6144,90,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s0,1,0,math,6144,90,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s0,1,0,math,6144,90,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s0,1,0,math,6144,90,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s0,1,0,math,6144,90,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s0,1,0,math,6144,90,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx6144_d90_s0,1,0,math,6144,90,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s0,1,0,math,8192,10,0,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s0,1,0,math,8192,10,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s0,1,0,math,8192,10,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s0,1,0,math,8192,10,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s0,1,0,math,8192,10,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s0,1,0,math,8192,10,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s0,1,0,math,8192,10,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s0,1,0,math,8192,10,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s0,1,0,math,8192,10,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s0,1,0,math,8192,10,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s0,1,0,math,8192,10,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d10_s0,1,0,math,8192,10,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s0,1,0,math,8192,50,0,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s0,1,0,math,8192,50,0,2,"[0, 27]",False,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s0,1,0,math,8192,50,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s0,1,0,math,8192,50,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s0,1,0,math,8192,50,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s0,1,0,math,8192,50,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s0,1,0,math,8192,50,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s0,1,0,math,8192,50,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s0,1,0,math,8192,50,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s0,1,0,math,8192,50,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s0,1,0,math,8192,50,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d50_s0,1,0,math,8192,50,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s0,1,0,math,8192,90,0,1,[0],True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s0,1,0,math,8192,90,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s0,1,0,math,8192,90,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s0,1,0,math,8192,90,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s0,1,0,math,8192,90,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s0,1,0,math,8192,90,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s0,1,0,math,8192,90,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s0,1,0,math,8192,90,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s0,1,0,math,8192,90,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s0,1,0,math,8192,90,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s0,1,0,math,8192,90,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,math_ctx8192_d90_s0,1,0,math,8192,90,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s0,1,0,science,4096,10,0,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s0,1,0,science,4096,10,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s0,1,0,science,4096,10,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s0,1,0,science,4096,10,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s0,1,0,science,4096,10,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s0,1,0,science,4096,10,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s0,1,0,science,4096,10,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s0,1,0,science,4096,10,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s0,1,0,science,4096,10,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s0,1,0,science,4096,10,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s0,1,0,science,4096,10,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d10_s0,1,0,science,4096,10,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s0,1,0,science,4096,50,0,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s0,1,0,science,4096,50,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s0,1,0,science,4096,50,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s0,1,0,science,4096,50,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s0,1,0,science,4096,50,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s0,1,0,science,4096,50,0,6,"[0, 27, 1, 18, 2, 20]",False,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s0,1,0,science,4096,50,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s0,1,0,science,4096,50,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",False,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s0,1,0,science,4096,50,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s0,1,0,science,4096,50,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s0,1,0,science,4096,50,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d50_s0,1,0,science,4096,50,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s0,1,0,science,4096,90,0,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s0,1,0,science,4096,90,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s0,1,0,science,4096,90,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s0,1,0,science,4096,90,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s0,1,0,science,4096,90,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s0,1,0,science,4096,90,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s0,1,0,science,4096,90,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s0,1,0,science,4096,90,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s0,1,0,science,4096,90,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s0,1,0,science,4096,90,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s0,1,0,science,4096,90,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx4096_d90_s0,1,0,science,4096,90,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s0,1,0,science,6144,10,0,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s0,1,0,science,6144,10,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s0,1,0,science,6144,10,0,3,"[0, 27, 1]",False,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s0,1,0,science,6144,10,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s0,1,0,science,6144,10,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s0,1,0,science,6144,10,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s0,1,0,science,6144,10,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s0,1,0,science,6144,10,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",False,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s0,1,0,science,6144,10,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",False,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s0,1,0,science,6144,10,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s0,1,0,science,6144,10,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d10_s0,1,0,science,6144,10,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",False,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s0,1,0,science,6144,50,0,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s0,1,0,science,6144,50,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s0,1,0,science,6144,50,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s0,1,0,science,6144,50,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s0,1,0,science,6144,50,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s0,1,0,science,6144,50,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s0,1,0,science,6144,50,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s0,1,0,science,6144,50,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s0,1,0,science,6144,50,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s0,1,0,science,6144,50,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s0,1,0,science,6144,50,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d50_s0,1,0,science,6144,50,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s0,1,0,science,6144,90,0,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s0,1,0,science,6144,90,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s0,1,0,science,6144,90,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s0,1,0,science,6144,90,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s0,1,0,science,6144,90,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s0,1,0,science,6144,90,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s0,1,0,science,6144,90,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s0,1,0,science,6144,90,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s0,1,0,science,6144,90,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s0,1,0,science,6144,90,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s0,1,0,science,6144,90,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx6144_d90_s0,1,0,science,6144,90,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s0,1,0,science,8192,10,0,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s0,1,0,science,8192,10,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s0,1,0,science,8192,10,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s0,1,0,science,8192,10,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s0,1,0,science,8192,10,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s0,1,0,science,8192,10,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s0,1,0,science,8192,10,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s0,1,0,science,8192,10,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s0,1,0,science,8192,10,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s0,1,0,science,8192,10,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s0,1,0,science,8192,10,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d10_s0,1,0,science,8192,10,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s0,1,0,science,8192,50,0,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s0,1,0,science,8192,50,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s0,1,0,science,8192,50,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s0,1,0,science,8192,50,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s0,1,0,science,8192,50,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s0,1,0,science,8192,50,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s0,1,0,science,8192,50,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s0,1,0,science,8192,50,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s0,1,0,science,8192,50,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s0,1,0,science,8192,50,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s0,1,0,science,8192,50,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d50_s0,1,0,science,8192,50,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s0,1,0,science,8192,90,0,1,[0],True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s0,1,0,science,8192,90,0,2,"[0, 27]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s0,1,0,science,8192,90,0,3,"[0, 27, 1]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s0,1,0,science,8192,90,0,4,"[0, 27, 1, 18]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s0,1,0,science,8192,90,0,5,"[0, 27, 1, 18, 2]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s0,1,0,science,8192,90,0,6,"[0, 27, 1, 18, 2, 20]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s0,1,0,science,8192,90,0,7,"[0, 27, 1, 18, 2, 20, 29]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s0,1,0,science,8192,90,0,8,"[0, 27, 1, 18, 2, 20, 29, 24]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s0,1,0,science,8192,90,0,9,"[0, 27, 1, 18, 2, 20, 29, 24, 19]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s0,1,0,science,8192,90,0,10,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s0,1,0,science,8192,90,0,11,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35]",True,True,ok
+Qwen2.5-3B,science_ctx8192_d90_s0,1,0,science,8192,90,0,12,"[0, 27, 1, 18, 2, 20, 29, 24, 19, 14, 35, 16]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s1,0,1,code,4096,10,1,1,[0],True,True,ok
+Qwen3-4B,code_ctx4096_d10_s1,0,1,code,4096,10,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s1,0,1,code,4096,10,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s1,0,1,code,4096,10,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s1,0,1,code,4096,10,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s1,0,1,code,4096,10,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s1,0,1,code,4096,10,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s1,0,1,code,4096,10,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s1,0,1,code,4096,10,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s1,0,1,code,4096,10,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s1,0,1,code,4096,10,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s1,0,1,code,4096,10,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s1,0,1,code,4096,50,1,1,[0],True,True,ok
+Qwen3-4B,code_ctx4096_d50_s1,0,1,code,4096,50,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s1,0,1,code,4096,50,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s1,0,1,code,4096,50,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s1,0,1,code,4096,50,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s1,0,1,code,4096,50,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s1,0,1,code,4096,50,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s1,0,1,code,4096,50,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s1,0,1,code,4096,50,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s1,0,1,code,4096,50,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s1,0,1,code,4096,50,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s1,0,1,code,4096,50,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s1,0,1,code,4096,90,1,1,[0],True,True,ok
+Qwen3-4B,code_ctx4096_d90_s1,0,1,code,4096,90,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s1,0,1,code,4096,90,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s1,0,1,code,4096,90,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s1,0,1,code,4096,90,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s1,0,1,code,4096,90,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s1,0,1,code,4096,90,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s1,0,1,code,4096,90,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s1,0,1,code,4096,90,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s1,0,1,code,4096,90,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s1,0,1,code,4096,90,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s1,0,1,code,4096,90,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s1,0,1,code,6144,10,1,1,[0],True,True,ok
+Qwen3-4B,code_ctx6144_d10_s1,0,1,code,6144,10,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s1,0,1,code,6144,10,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s1,0,1,code,6144,10,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s1,0,1,code,6144,10,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s1,0,1,code,6144,10,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s1,0,1,code,6144,10,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s1,0,1,code,6144,10,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s1,0,1,code,6144,10,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s1,0,1,code,6144,10,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s1,0,1,code,6144,10,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s1,0,1,code,6144,10,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s1,0,1,code,6144,50,1,1,[0],True,True,ok
+Qwen3-4B,code_ctx6144_d50_s1,0,1,code,6144,50,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s1,0,1,code,6144,50,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s1,0,1,code,6144,50,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s1,0,1,code,6144,50,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s1,0,1,code,6144,50,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s1,0,1,code,6144,50,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s1,0,1,code,6144,50,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s1,0,1,code,6144,50,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s1,0,1,code,6144,50,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s1,0,1,code,6144,50,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s1,0,1,code,6144,50,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s1,0,1,code,6144,90,1,1,[0],True,True,ok
+Qwen3-4B,code_ctx6144_d90_s1,0,1,code,6144,90,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s1,0,1,code,6144,90,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s1,0,1,code,6144,90,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s1,0,1,code,6144,90,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s1,0,1,code,6144,90,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s1,0,1,code,6144,90,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s1,0,1,code,6144,90,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s1,0,1,code,6144,90,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s1,0,1,code,6144,90,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s1,0,1,code,6144,90,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s1,0,1,code,6144,90,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s1,0,1,code,8192,10,1,1,[0],True,True,ok
+Qwen3-4B,code_ctx8192_d10_s1,0,1,code,8192,10,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s1,0,1,code,8192,10,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s1,0,1,code,8192,10,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s1,0,1,code,8192,10,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s1,0,1,code,8192,10,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s1,0,1,code,8192,10,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s1,0,1,code,8192,10,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s1,0,1,code,8192,10,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s1,0,1,code,8192,10,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s1,0,1,code,8192,10,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s1,0,1,code,8192,10,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s1,0,1,code,8192,50,1,1,[0],True,True,ok
+Qwen3-4B,code_ctx8192_d50_s1,0,1,code,8192,50,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s1,0,1,code,8192,50,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s1,0,1,code,8192,50,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s1,0,1,code,8192,50,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s1,0,1,code,8192,50,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s1,0,1,code,8192,50,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s1,0,1,code,8192,50,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s1,0,1,code,8192,50,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s1,0,1,code,8192,50,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s1,0,1,code,8192,50,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s1,0,1,code,8192,50,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s1,0,1,code,8192,90,1,1,[0],True,True,ok
+Qwen3-4B,code_ctx8192_d90_s1,0,1,code,8192,90,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s1,0,1,code,8192,90,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s1,0,1,code,8192,90,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s1,0,1,code,8192,90,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s1,0,1,code,8192,90,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s1,0,1,code,8192,90,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s1,0,1,code,8192,90,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s1,0,1,code,8192,90,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s1,0,1,code,8192,90,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s1,0,1,code,8192,90,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s1,0,1,code,8192,90,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,1,[0],True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s1,0,1,literature,4096,10,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,1,[0],True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s1,0,1,literature,4096,50,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,1,[0],True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s1,0,1,literature,4096,90,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,1,[0],True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s1,0,1,literature,6144,10,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,1,[0],True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,3,"[0, 8, 1]",False,True,ok
+Qwen3-4B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s1,0,1,literature,6144,50,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,1,[0],True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",False,True,ok
+Qwen3-4B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s1,0,1,literature,6144,90,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,1,[0],True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,7,"[0, 8, 1, 5, 4, 6, 10]",False,True,ok
+Qwen3-4B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",False,True,ok
+Qwen3-4B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s1,0,1,literature,8192,10,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,1,[0],True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s1,0,1,literature,8192,50,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,1,[0],True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s1,0,1,literature,8192,90,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s1,0,1,math,4096,10,1,1,[0],True,True,ok
+Qwen3-4B,math_ctx4096_d10_s1,0,1,math,4096,10,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s1,0,1,math,4096,10,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s1,0,1,math,4096,10,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s1,0,1,math,4096,10,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s1,0,1,math,4096,10,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s1,0,1,math,4096,10,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s1,0,1,math,4096,10,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s1,0,1,math,4096,10,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s1,0,1,math,4096,10,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s1,0,1,math,4096,10,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s1,0,1,math,4096,10,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s1,0,1,math,4096,50,1,1,[0],True,True,ok
+Qwen3-4B,math_ctx4096_d50_s1,0,1,math,4096,50,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s1,0,1,math,4096,50,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s1,0,1,math,4096,50,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s1,0,1,math,4096,50,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s1,0,1,math,4096,50,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s1,0,1,math,4096,50,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s1,0,1,math,4096,50,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s1,0,1,math,4096,50,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s1,0,1,math,4096,50,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s1,0,1,math,4096,50,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s1,0,1,math,4096,50,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s1,0,1,math,4096,90,1,1,[0],True,True,ok
+Qwen3-4B,math_ctx4096_d90_s1,0,1,math,4096,90,1,2,"[0, 8]",False,True,ok
+Qwen3-4B,math_ctx4096_d90_s1,0,1,math,4096,90,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s1,0,1,math,4096,90,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s1,0,1,math,4096,90,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s1,0,1,math,4096,90,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s1,0,1,math,4096,90,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s1,0,1,math,4096,90,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s1,0,1,math,4096,90,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s1,0,1,math,4096,90,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s1,0,1,math,4096,90,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s1,0,1,math,4096,90,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s1,0,1,math,6144,10,1,1,[0],True,True,ok
+Qwen3-4B,math_ctx6144_d10_s1,0,1,math,6144,10,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s1,0,1,math,6144,10,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s1,0,1,math,6144,10,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s1,0,1,math,6144,10,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s1,0,1,math,6144,10,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s1,0,1,math,6144,10,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s1,0,1,math,6144,10,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s1,0,1,math,6144,10,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s1,0,1,math,6144,10,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s1,0,1,math,6144,10,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s1,0,1,math,6144,10,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s1,0,1,math,6144,50,1,1,[0],True,True,ok
+Qwen3-4B,math_ctx6144_d50_s1,0,1,math,6144,50,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s1,0,1,math,6144,50,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s1,0,1,math,6144,50,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s1,0,1,math,6144,50,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s1,0,1,math,6144,50,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s1,0,1,math,6144,50,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s1,0,1,math,6144,50,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s1,0,1,math,6144,50,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s1,0,1,math,6144,50,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s1,0,1,math,6144,50,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s1,0,1,math,6144,50,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s1,0,1,math,6144,90,1,1,[0],True,True,ok
+Qwen3-4B,math_ctx6144_d90_s1,0,1,math,6144,90,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s1,0,1,math,6144,90,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s1,0,1,math,6144,90,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s1,0,1,math,6144,90,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s1,0,1,math,6144,90,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s1,0,1,math,6144,90,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s1,0,1,math,6144,90,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s1,0,1,math,6144,90,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s1,0,1,math,6144,90,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s1,0,1,math,6144,90,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s1,0,1,math,6144,90,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s1,0,1,math,8192,10,1,1,[0],False,True,ok
+Qwen3-4B,math_ctx8192_d10_s1,0,1,math,8192,10,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s1,0,1,math,8192,10,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s1,0,1,math,8192,10,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s1,0,1,math,8192,10,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s1,0,1,math,8192,10,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s1,0,1,math,8192,10,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s1,0,1,math,8192,10,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s1,0,1,math,8192,10,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s1,0,1,math,8192,10,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s1,0,1,math,8192,10,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s1,0,1,math,8192,10,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s1,0,1,math,8192,50,1,1,[0],False,True,ok
+Qwen3-4B,math_ctx8192_d50_s1,0,1,math,8192,50,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s1,0,1,math,8192,50,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s1,0,1,math,8192,50,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s1,0,1,math,8192,50,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s1,0,1,math,8192,50,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s1,0,1,math,8192,50,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s1,0,1,math,8192,50,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s1,0,1,math,8192,50,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s1,0,1,math,8192,50,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s1,0,1,math,8192,50,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s1,0,1,math,8192,50,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s1,0,1,math,8192,90,1,1,[0],True,True,ok
+Qwen3-4B,math_ctx8192_d90_s1,0,1,math,8192,90,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s1,0,1,math,8192,90,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s1,0,1,math,8192,90,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s1,0,1,math,8192,90,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s1,0,1,math,8192,90,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s1,0,1,math,8192,90,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s1,0,1,math,8192,90,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s1,0,1,math,8192,90,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s1,0,1,math,8192,90,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s1,0,1,math,8192,90,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s1,0,1,math,8192,90,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s1,0,1,science,4096,10,1,1,[0],True,True,ok
+Qwen3-4B,science_ctx4096_d10_s1,0,1,science,4096,10,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s1,0,1,science,4096,10,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s1,0,1,science,4096,10,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s1,0,1,science,4096,10,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s1,0,1,science,4096,10,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s1,0,1,science,4096,10,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s1,0,1,science,4096,10,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s1,0,1,science,4096,10,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s1,0,1,science,4096,10,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s1,0,1,science,4096,10,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",False,True,ok
+Qwen3-4B,science_ctx4096_d10_s1,0,1,science,4096,10,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s1,0,1,science,4096,50,1,1,[0],True,True,ok
+Qwen3-4B,science_ctx4096_d50_s1,0,1,science,4096,50,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s1,0,1,science,4096,50,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s1,0,1,science,4096,50,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s1,0,1,science,4096,50,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s1,0,1,science,4096,50,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s1,0,1,science,4096,50,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s1,0,1,science,4096,50,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s1,0,1,science,4096,50,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s1,0,1,science,4096,50,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s1,0,1,science,4096,50,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s1,0,1,science,4096,50,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s1,0,1,science,4096,90,1,1,[0],True,True,ok
+Qwen3-4B,science_ctx4096_d90_s1,0,1,science,4096,90,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s1,0,1,science,4096,90,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s1,0,1,science,4096,90,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s1,0,1,science,4096,90,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s1,0,1,science,4096,90,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s1,0,1,science,4096,90,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s1,0,1,science,4096,90,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s1,0,1,science,4096,90,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s1,0,1,science,4096,90,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s1,0,1,science,4096,90,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s1,0,1,science,4096,90,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s1,0,1,science,6144,10,1,1,[0],True,True,ok
+Qwen3-4B,science_ctx6144_d10_s1,0,1,science,6144,10,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s1,0,1,science,6144,10,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s1,0,1,science,6144,10,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s1,0,1,science,6144,10,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s1,0,1,science,6144,10,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s1,0,1,science,6144,10,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s1,0,1,science,6144,10,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s1,0,1,science,6144,10,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s1,0,1,science,6144,10,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s1,0,1,science,6144,10,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s1,0,1,science,6144,10,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s1,0,1,science,6144,50,1,1,[0],True,True,ok
+Qwen3-4B,science_ctx6144_d50_s1,0,1,science,6144,50,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s1,0,1,science,6144,50,1,3,"[0, 8, 1]",False,True,ok
+Qwen3-4B,science_ctx6144_d50_s1,0,1,science,6144,50,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s1,0,1,science,6144,50,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s1,0,1,science,6144,50,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s1,0,1,science,6144,50,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s1,0,1,science,6144,50,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s1,0,1,science,6144,50,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",False,True,ok
+Qwen3-4B,science_ctx6144_d50_s1,0,1,science,6144,50,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s1,0,1,science,6144,50,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s1,0,1,science,6144,50,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s1,0,1,science,6144,90,1,1,[0],False,True,ok
+Qwen3-4B,science_ctx6144_d90_s1,0,1,science,6144,90,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s1,0,1,science,6144,90,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s1,0,1,science,6144,90,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s1,0,1,science,6144,90,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s1,0,1,science,6144,90,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s1,0,1,science,6144,90,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s1,0,1,science,6144,90,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s1,0,1,science,6144,90,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",False,True,ok
+Qwen3-4B,science_ctx6144_d90_s1,0,1,science,6144,90,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s1,0,1,science,6144,90,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s1,0,1,science,6144,90,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s1,0,1,science,8192,10,1,1,[0],False,True,ok
+Qwen3-4B,science_ctx8192_d10_s1,0,1,science,8192,10,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s1,0,1,science,8192,10,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s1,0,1,science,8192,10,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s1,0,1,science,8192,10,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s1,0,1,science,8192,10,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s1,0,1,science,8192,10,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s1,0,1,science,8192,10,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s1,0,1,science,8192,10,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s1,0,1,science,8192,10,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s1,0,1,science,8192,10,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s1,0,1,science,8192,10,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s1,0,1,science,8192,50,1,1,[0],False,True,ok
+Qwen3-4B,science_ctx8192_d50_s1,0,1,science,8192,50,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s1,0,1,science,8192,50,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s1,0,1,science,8192,50,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s1,0,1,science,8192,50,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s1,0,1,science,8192,50,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s1,0,1,science,8192,50,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s1,0,1,science,8192,50,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s1,0,1,science,8192,50,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s1,0,1,science,8192,50,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s1,0,1,science,8192,50,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s1,0,1,science,8192,50,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s1,0,1,science,8192,90,1,1,[0],False,True,ok
+Qwen3-4B,science_ctx8192_d90_s1,0,1,science,8192,90,1,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s1,0,1,science,8192,90,1,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s1,0,1,science,8192,90,1,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s1,0,1,science,8192,90,1,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s1,0,1,science,8192,90,1,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s1,0,1,science,8192,90,1,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s1,0,1,science,8192,90,1,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s1,0,1,science,8192,90,1,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s1,0,1,science,8192,90,1,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s1,0,1,science,8192,90,1,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s1,0,1,science,8192,90,1,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s0,1,0,code,4096,10,0,1,[0],True,True,ok
+Qwen3-4B,code_ctx4096_d10_s0,1,0,code,4096,10,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s0,1,0,code,4096,10,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s0,1,0,code,4096,10,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s0,1,0,code,4096,10,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s0,1,0,code,4096,10,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s0,1,0,code,4096,10,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s0,1,0,code,4096,10,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s0,1,0,code,4096,10,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s0,1,0,code,4096,10,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s0,1,0,code,4096,10,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx4096_d10_s0,1,0,code,4096,10,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s0,1,0,code,4096,50,0,1,[0],True,True,ok
+Qwen3-4B,code_ctx4096_d50_s0,1,0,code,4096,50,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s0,1,0,code,4096,50,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s0,1,0,code,4096,50,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s0,1,0,code,4096,50,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s0,1,0,code,4096,50,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s0,1,0,code,4096,50,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s0,1,0,code,4096,50,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s0,1,0,code,4096,50,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s0,1,0,code,4096,50,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s0,1,0,code,4096,50,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx4096_d50_s0,1,0,code,4096,50,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",False,True,ok
+Qwen3-4B,code_ctx4096_d90_s0,1,0,code,4096,90,0,1,[0],True,True,ok
+Qwen3-4B,code_ctx4096_d90_s0,1,0,code,4096,90,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s0,1,0,code,4096,90,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s0,1,0,code,4096,90,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s0,1,0,code,4096,90,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s0,1,0,code,4096,90,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s0,1,0,code,4096,90,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s0,1,0,code,4096,90,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s0,1,0,code,4096,90,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s0,1,0,code,4096,90,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s0,1,0,code,4096,90,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx4096_d90_s0,1,0,code,4096,90,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s0,1,0,code,6144,10,0,1,[0],True,True,ok
+Qwen3-4B,code_ctx6144_d10_s0,1,0,code,6144,10,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s0,1,0,code,6144,10,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s0,1,0,code,6144,10,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s0,1,0,code,6144,10,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s0,1,0,code,6144,10,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s0,1,0,code,6144,10,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s0,1,0,code,6144,10,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s0,1,0,code,6144,10,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s0,1,0,code,6144,10,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s0,1,0,code,6144,10,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx6144_d10_s0,1,0,code,6144,10,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s0,1,0,code,6144,50,0,1,[0],True,True,ok
+Qwen3-4B,code_ctx6144_d50_s0,1,0,code,6144,50,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s0,1,0,code,6144,50,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s0,1,0,code,6144,50,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s0,1,0,code,6144,50,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s0,1,0,code,6144,50,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s0,1,0,code,6144,50,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s0,1,0,code,6144,50,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s0,1,0,code,6144,50,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s0,1,0,code,6144,50,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s0,1,0,code,6144,50,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx6144_d50_s0,1,0,code,6144,50,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s0,1,0,code,6144,90,0,1,[0],False,True,ok
+Qwen3-4B,code_ctx6144_d90_s0,1,0,code,6144,90,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s0,1,0,code,6144,90,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s0,1,0,code,6144,90,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s0,1,0,code,6144,90,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s0,1,0,code,6144,90,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s0,1,0,code,6144,90,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s0,1,0,code,6144,90,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s0,1,0,code,6144,90,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s0,1,0,code,6144,90,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s0,1,0,code,6144,90,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx6144_d90_s0,1,0,code,6144,90,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s0,1,0,code,8192,10,0,1,[0],False,True,ok
+Qwen3-4B,code_ctx8192_d10_s0,1,0,code,8192,10,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s0,1,0,code,8192,10,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s0,1,0,code,8192,10,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s0,1,0,code,8192,10,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s0,1,0,code,8192,10,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s0,1,0,code,8192,10,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s0,1,0,code,8192,10,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s0,1,0,code,8192,10,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s0,1,0,code,8192,10,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s0,1,0,code,8192,10,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx8192_d10_s0,1,0,code,8192,10,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",False,True,ok
+Qwen3-4B,code_ctx8192_d50_s0,1,0,code,8192,50,0,1,[0],True,True,ok
+Qwen3-4B,code_ctx8192_d50_s0,1,0,code,8192,50,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s0,1,0,code,8192,50,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s0,1,0,code,8192,50,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s0,1,0,code,8192,50,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s0,1,0,code,8192,50,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s0,1,0,code,8192,50,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s0,1,0,code,8192,50,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s0,1,0,code,8192,50,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s0,1,0,code,8192,50,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s0,1,0,code,8192,50,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx8192_d50_s0,1,0,code,8192,50,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s0,1,0,code,8192,90,0,1,[0],True,True,ok
+Qwen3-4B,code_ctx8192_d90_s0,1,0,code,8192,90,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s0,1,0,code,8192,90,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s0,1,0,code,8192,90,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s0,1,0,code,8192,90,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s0,1,0,code,8192,90,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s0,1,0,code,8192,90,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s0,1,0,code,8192,90,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s0,1,0,code,8192,90,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s0,1,0,code,8192,90,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s0,1,0,code,8192,90,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,code_ctx8192_d90_s0,1,0,code,8192,90,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,1,[0],True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx4096_d10_s0,1,0,literature,4096,10,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,1,[0],True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx4096_d50_s0,1,0,literature,4096,50,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,1,[0],True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx4096_d90_s0,1,0,literature,4096,90,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,1,[0],True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx6144_d10_s0,1,0,literature,6144,10,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,1,[0],True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx6144_d50_s0,1,0,literature,6144,50,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,1,[0],True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx6144_d90_s0,1,0,literature,6144,90,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,1,[0],False,True,ok
+Qwen3-4B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,3,"[0, 8, 1]",False,True,ok
+Qwen3-4B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,4,"[0, 8, 1, 5]",False,True,ok
+Qwen3-4B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx8192_d10_s0,1,0,literature,8192,10,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,1,[0],True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx8192_d50_s0,1,0,literature,8192,50,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,1,[0],True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,literature_ctx8192_d90_s0,1,0,literature,8192,90,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s0,1,0,math,4096,10,0,1,[0],True,True,ok
+Qwen3-4B,math_ctx4096_d10_s0,1,0,math,4096,10,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s0,1,0,math,4096,10,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s0,1,0,math,4096,10,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s0,1,0,math,4096,10,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s0,1,0,math,4096,10,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s0,1,0,math,4096,10,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s0,1,0,math,4096,10,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s0,1,0,math,4096,10,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s0,1,0,math,4096,10,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s0,1,0,math,4096,10,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx4096_d10_s0,1,0,math,4096,10,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s0,1,0,math,4096,50,0,1,[0],False,True,ok
+Qwen3-4B,math_ctx4096_d50_s0,1,0,math,4096,50,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s0,1,0,math,4096,50,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s0,1,0,math,4096,50,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s0,1,0,math,4096,50,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s0,1,0,math,4096,50,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s0,1,0,math,4096,50,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s0,1,0,math,4096,50,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s0,1,0,math,4096,50,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s0,1,0,math,4096,50,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s0,1,0,math,4096,50,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx4096_d50_s0,1,0,math,4096,50,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s0,1,0,math,4096,90,0,1,[0],True,True,ok
+Qwen3-4B,math_ctx4096_d90_s0,1,0,math,4096,90,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s0,1,0,math,4096,90,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s0,1,0,math,4096,90,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s0,1,0,math,4096,90,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s0,1,0,math,4096,90,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s0,1,0,math,4096,90,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s0,1,0,math,4096,90,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s0,1,0,math,4096,90,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s0,1,0,math,4096,90,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s0,1,0,math,4096,90,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx4096_d90_s0,1,0,math,4096,90,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s0,1,0,math,6144,10,0,1,[0],False,True,ok
+Qwen3-4B,math_ctx6144_d10_s0,1,0,math,6144,10,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s0,1,0,math,6144,10,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s0,1,0,math,6144,10,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s0,1,0,math,6144,10,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s0,1,0,math,6144,10,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s0,1,0,math,6144,10,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s0,1,0,math,6144,10,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s0,1,0,math,6144,10,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s0,1,0,math,6144,10,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",False,True,ok
+Qwen3-4B,math_ctx6144_d10_s0,1,0,math,6144,10,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx6144_d10_s0,1,0,math,6144,10,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s0,1,0,math,6144,50,0,1,[0],False,True,ok
+Qwen3-4B,math_ctx6144_d50_s0,1,0,math,6144,50,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s0,1,0,math,6144,50,0,3,"[0, 8, 1]",False,True,ok
+Qwen3-4B,math_ctx6144_d50_s0,1,0,math,6144,50,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s0,1,0,math,6144,50,0,5,"[0, 8, 1, 5, 4]",False,True,ok
+Qwen3-4B,math_ctx6144_d50_s0,1,0,math,6144,50,0,6,"[0, 8, 1, 5, 4, 6]",False,True,ok
+Qwen3-4B,math_ctx6144_d50_s0,1,0,math,6144,50,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s0,1,0,math,6144,50,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s0,1,0,math,6144,50,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s0,1,0,math,6144,50,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s0,1,0,math,6144,50,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx6144_d50_s0,1,0,math,6144,50,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s0,1,0,math,6144,90,0,1,[0],False,True,ok
+Qwen3-4B,math_ctx6144_d90_s0,1,0,math,6144,90,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s0,1,0,math,6144,90,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s0,1,0,math,6144,90,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s0,1,0,math,6144,90,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s0,1,0,math,6144,90,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s0,1,0,math,6144,90,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s0,1,0,math,6144,90,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s0,1,0,math,6144,90,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s0,1,0,math,6144,90,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s0,1,0,math,6144,90,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx6144_d90_s0,1,0,math,6144,90,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s0,1,0,math,8192,10,0,1,[0],False,True,ok
+Qwen3-4B,math_ctx8192_d10_s0,1,0,math,8192,10,0,2,"[0, 8]",False,True,ok
+Qwen3-4B,math_ctx8192_d10_s0,1,0,math,8192,10,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s0,1,0,math,8192,10,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s0,1,0,math,8192,10,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s0,1,0,math,8192,10,0,6,"[0, 8, 1, 5, 4, 6]",False,True,ok
+Qwen3-4B,math_ctx8192_d10_s0,1,0,math,8192,10,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s0,1,0,math,8192,10,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s0,1,0,math,8192,10,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",False,True,ok
+Qwen3-4B,math_ctx8192_d10_s0,1,0,math,8192,10,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s0,1,0,math,8192,10,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx8192_d10_s0,1,0,math,8192,10,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s0,1,0,math,8192,50,0,1,[0],False,True,ok
+Qwen3-4B,math_ctx8192_d50_s0,1,0,math,8192,50,0,2,"[0, 8]",False,True,ok
+Qwen3-4B,math_ctx8192_d50_s0,1,0,math,8192,50,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s0,1,0,math,8192,50,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s0,1,0,math,8192,50,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s0,1,0,math,8192,50,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s0,1,0,math,8192,50,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s0,1,0,math,8192,50,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s0,1,0,math,8192,50,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s0,1,0,math,8192,50,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s0,1,0,math,8192,50,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx8192_d50_s0,1,0,math,8192,50,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s0,1,0,math,8192,90,0,1,[0],False,True,ok
+Qwen3-4B,math_ctx8192_d90_s0,1,0,math,8192,90,0,2,"[0, 8]",False,True,ok
+Qwen3-4B,math_ctx8192_d90_s0,1,0,math,8192,90,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s0,1,0,math,8192,90,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s0,1,0,math,8192,90,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s0,1,0,math,8192,90,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s0,1,0,math,8192,90,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s0,1,0,math,8192,90,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s0,1,0,math,8192,90,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s0,1,0,math,8192,90,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s0,1,0,math,8192,90,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,math_ctx8192_d90_s0,1,0,math,8192,90,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s0,1,0,science,4096,10,0,1,[0],True,True,ok
+Qwen3-4B,science_ctx4096_d10_s0,1,0,science,4096,10,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s0,1,0,science,4096,10,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s0,1,0,science,4096,10,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s0,1,0,science,4096,10,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s0,1,0,science,4096,10,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s0,1,0,science,4096,10,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s0,1,0,science,4096,10,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s0,1,0,science,4096,10,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s0,1,0,science,4096,10,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s0,1,0,science,4096,10,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx4096_d10_s0,1,0,science,4096,10,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s0,1,0,science,4096,50,0,1,[0],True,True,ok
+Qwen3-4B,science_ctx4096_d50_s0,1,0,science,4096,50,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s0,1,0,science,4096,50,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s0,1,0,science,4096,50,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s0,1,0,science,4096,50,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s0,1,0,science,4096,50,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s0,1,0,science,4096,50,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s0,1,0,science,4096,50,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s0,1,0,science,4096,50,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s0,1,0,science,4096,50,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s0,1,0,science,4096,50,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx4096_d50_s0,1,0,science,4096,50,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s0,1,0,science,4096,90,0,1,[0],True,True,ok
+Qwen3-4B,science_ctx4096_d90_s0,1,0,science,4096,90,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s0,1,0,science,4096,90,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s0,1,0,science,4096,90,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s0,1,0,science,4096,90,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s0,1,0,science,4096,90,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s0,1,0,science,4096,90,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s0,1,0,science,4096,90,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s0,1,0,science,4096,90,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s0,1,0,science,4096,90,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s0,1,0,science,4096,90,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx4096_d90_s0,1,0,science,4096,90,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s0,1,0,science,6144,10,0,1,[0],True,True,ok
+Qwen3-4B,science_ctx6144_d10_s0,1,0,science,6144,10,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s0,1,0,science,6144,10,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s0,1,0,science,6144,10,0,4,"[0, 8, 1, 5]",False,True,ok
+Qwen3-4B,science_ctx6144_d10_s0,1,0,science,6144,10,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s0,1,0,science,6144,10,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s0,1,0,science,6144,10,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s0,1,0,science,6144,10,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s0,1,0,science,6144,10,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s0,1,0,science,6144,10,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s0,1,0,science,6144,10,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx6144_d10_s0,1,0,science,6144,10,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s0,1,0,science,6144,50,0,1,[0],True,True,ok
+Qwen3-4B,science_ctx6144_d50_s0,1,0,science,6144,50,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s0,1,0,science,6144,50,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s0,1,0,science,6144,50,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s0,1,0,science,6144,50,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s0,1,0,science,6144,50,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s0,1,0,science,6144,50,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s0,1,0,science,6144,50,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s0,1,0,science,6144,50,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s0,1,0,science,6144,50,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s0,1,0,science,6144,50,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx6144_d50_s0,1,0,science,6144,50,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s0,1,0,science,6144,90,0,1,[0],True,True,ok
+Qwen3-4B,science_ctx6144_d90_s0,1,0,science,6144,90,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s0,1,0,science,6144,90,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s0,1,0,science,6144,90,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s0,1,0,science,6144,90,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s0,1,0,science,6144,90,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s0,1,0,science,6144,90,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s0,1,0,science,6144,90,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s0,1,0,science,6144,90,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s0,1,0,science,6144,90,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s0,1,0,science,6144,90,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx6144_d90_s0,1,0,science,6144,90,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s0,1,0,science,8192,10,0,1,[0],True,True,ok
+Qwen3-4B,science_ctx8192_d10_s0,1,0,science,8192,10,0,2,"[0, 8]",False,True,ok
+Qwen3-4B,science_ctx8192_d10_s0,1,0,science,8192,10,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s0,1,0,science,8192,10,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s0,1,0,science,8192,10,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s0,1,0,science,8192,10,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s0,1,0,science,8192,10,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s0,1,0,science,8192,10,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s0,1,0,science,8192,10,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s0,1,0,science,8192,10,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s0,1,0,science,8192,10,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx8192_d10_s0,1,0,science,8192,10,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",False,True,ok
+Qwen3-4B,science_ctx8192_d50_s0,1,0,science,8192,50,0,1,[0],False,True,ok
+Qwen3-4B,science_ctx8192_d50_s0,1,0,science,8192,50,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s0,1,0,science,8192,50,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s0,1,0,science,8192,50,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s0,1,0,science,8192,50,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s0,1,0,science,8192,50,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s0,1,0,science,8192,50,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s0,1,0,science,8192,50,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s0,1,0,science,8192,50,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s0,1,0,science,8192,50,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx8192_d50_s0,1,0,science,8192,50,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",False,True,ok
+Qwen3-4B,science_ctx8192_d50_s0,1,0,science,8192,50,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s0,1,0,science,8192,90,0,1,[0],False,True,ok
+Qwen3-4B,science_ctx8192_d90_s0,1,0,science,8192,90,0,2,"[0, 8]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s0,1,0,science,8192,90,0,3,"[0, 8, 1]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s0,1,0,science,8192,90,0,4,"[0, 8, 1, 5]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s0,1,0,science,8192,90,0,5,"[0, 8, 1, 5, 4]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s0,1,0,science,8192,90,0,6,"[0, 8, 1, 5, 4, 6]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s0,1,0,science,8192,90,0,7,"[0, 8, 1, 5, 4, 6, 10]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s0,1,0,science,8192,90,0,8,"[0, 8, 1, 5, 4, 6, 10, 35]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s0,1,0,science,8192,90,0,9,"[0, 8, 1, 5, 4, 6, 10, 35, 11]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s0,1,0,science,8192,90,0,10,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s0,1,0,science,8192,90,0,11,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2]",True,True,ok
+Qwen3-4B,science_ctx8192_d90_s0,1,0,science,8192,90,0,12,"[0, 8, 1, 5, 4, 6, 10, 35, 11, 12, 2, 14]",False,True,ok

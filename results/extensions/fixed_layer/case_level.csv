@@ -1,0 +1,389 @@
+model,case_id,domain,context_length,depth,seed,variant,protected_layers,k,found,completed,status,evidence_source,metric_semantics
+Llama3.2-3B,code_ctx4096_d50_s0,code,4096,50,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,code_ctx4096_d50_s0,code,4096,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,code_ctx4096_d50_s0,code,4096,50,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,code_ctx4096_d50_s0,code,4096,50,0,tbgmp_top3,"[25, 7, 11]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,code_ctx6144_d50_s0,code,6144,50,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,code_ctx6144_d50_s0,code,6144,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,code_ctx6144_d50_s0,code,6144,50,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,code_ctx6144_d50_s0,code,6144,50,0,tbgmp_top3,"[25, 7, 11]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,code_ctx8192_d10_s0,code,8192,10,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,code_ctx8192_d10_s0,code,8192,10,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,code_ctx8192_d10_s0,code,8192,10,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,code_ctx8192_d10_s0,code,8192,10,0,tbgmp_top3,"[25, 7, 11]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,code_ctx8192_d50_s0,code,8192,50,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,code_ctx8192_d50_s0,code,8192,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,code_ctx8192_d50_s0,code,8192,50,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,code_ctx8192_d50_s0,code,8192,50,0,tbgmp_top3,"[25, 7, 11]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,code_ctx8192_d90_s0,code,8192,90,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,code_ctx8192_d90_s0,code,8192,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,code_ctx8192_d90_s0,code,8192,90,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,code_ctx8192_d90_s0,code,8192,90,0,tbgmp_top3,"[25, 7, 11]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,code_ctx8192_d90_s1,code,8192,90,1,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,code_ctx8192_d90_s1,code,8192,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,code_ctx8192_d90_s1,code,8192,90,1,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,code_ctx8192_d90_s1,code,8192,90,1,tbgmp_top3,"[25, 7, 11]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,literature_ctx4096_d10_s1,literature,4096,10,1,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,literature_ctx4096_d10_s1,literature,4096,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,literature_ctx4096_d10_s1,literature,4096,10,1,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,literature_ctx4096_d10_s1,literature,4096,10,1,tbgmp_top3,"[25, 7, 11]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,literature_ctx4096_d90_s1,literature,4096,90,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,literature_ctx4096_d90_s1,literature,4096,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,literature_ctx4096_d90_s1,literature,4096,90,1,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,literature_ctx4096_d90_s1,literature,4096,90,1,tbgmp_top3,"[25, 7, 11]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,literature_ctx6144_d90_s0,literature,6144,90,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,literature_ctx6144_d90_s0,literature,6144,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,literature_ctx6144_d90_s0,literature,6144,90,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,literature_ctx6144_d90_s0,literature,6144,90,0,tbgmp_top3,"[25, 7, 11]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,literature_ctx6144_d90_s1,literature,6144,90,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,literature_ctx6144_d90_s1,literature,6144,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,literature_ctx6144_d90_s1,literature,6144,90,1,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,literature_ctx6144_d90_s1,literature,6144,90,1,tbgmp_top3,"[25, 7, 11]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,literature_ctx8192_d50_s0,literature,8192,50,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,literature_ctx8192_d50_s0,literature,8192,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,literature_ctx8192_d50_s0,literature,8192,50,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,literature_ctx8192_d50_s0,literature,8192,50,0,tbgmp_top3,"[25, 7, 11]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,literature_ctx8192_d90_s0,literature,8192,90,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,literature_ctx8192_d90_s0,literature,8192,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,literature_ctx8192_d90_s0,literature,8192,90,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,literature_ctx8192_d90_s0,literature,8192,90,0,tbgmp_top3,"[25, 7, 11]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,math_ctx6144_d10_s1,math,6144,10,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,math_ctx6144_d10_s1,math,6144,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,math_ctx6144_d10_s1,math,6144,10,1,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,math_ctx6144_d10_s1,math,6144,10,1,tbgmp_top3,"[25, 7, 11]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,math_ctx6144_d50_s0,math,6144,50,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,math_ctx6144_d50_s0,math,6144,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,math_ctx6144_d50_s0,math,6144,50,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,math_ctx6144_d50_s0,math,6144,50,0,tbgmp_top3,"[25, 7, 11]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,math_ctx6144_d90_s0,math,6144,90,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,math_ctx6144_d90_s0,math,6144,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,math_ctx6144_d90_s0,math,6144,90,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,math_ctx6144_d90_s0,math,6144,90,0,tbgmp_top3,"[25, 7, 11]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,math_ctx8192_d10_s1,math,8192,10,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,math_ctx8192_d10_s1,math,8192,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,math_ctx8192_d10_s1,math,8192,10,1,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,math_ctx8192_d10_s1,math,8192,10,1,tbgmp_top3,"[25, 7, 11]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,math_ctx8192_d50_s0,math,8192,50,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,math_ctx8192_d50_s0,math,8192,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,math_ctx8192_d50_s0,math,8192,50,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,math_ctx8192_d50_s0,math,8192,50,0,tbgmp_top3,"[25, 7, 11]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,math_ctx8192_d50_s1,math,8192,50,1,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,math_ctx8192_d50_s1,math,8192,50,1,fixed_l0_l7_l25,"[0, 7, 25]",3,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,math_ctx8192_d50_s1,math,8192,50,1,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,math_ctx8192_d50_s1,math,8192,50,1,tbgmp_top3,"[25, 7, 11]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,math_ctx8192_d90_s0,math,8192,90,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,math_ctx8192_d90_s0,math,8192,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,math_ctx8192_d90_s0,math,8192,90,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,math_ctx8192_d90_s0,math,8192,90,0,tbgmp_top3,"[25, 7, 11]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,science_ctx4096_d90_s0,science,4096,90,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,science_ctx4096_d90_s0,science,4096,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,science_ctx4096_d90_s0,science,4096,90,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,science_ctx4096_d90_s0,science,4096,90,0,tbgmp_top3,"[25, 7, 11]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,science_ctx4096_d90_s1,science,4096,90,1,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,science_ctx4096_d90_s1,science,4096,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,science_ctx4096_d90_s1,science,4096,90,1,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,science_ctx4096_d90_s1,science,4096,90,1,tbgmp_top3,"[25, 7, 11]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,science_ctx6144_d50_s0,science,6144,50,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,science_ctx6144_d50_s0,science,6144,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,science_ctx6144_d50_s0,science,6144,50,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,science_ctx6144_d50_s0,science,6144,50,0,tbgmp_top3,"[25, 7, 11]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,science_ctx6144_d50_s1,science,6144,50,1,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,science_ctx6144_d50_s1,science,6144,50,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,science_ctx6144_d50_s1,science,6144,50,1,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,science_ctx6144_d50_s1,science,6144,50,1,tbgmp_top3,"[25, 7, 11]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,science_ctx6144_d90_s0,science,6144,90,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,science_ctx6144_d90_s0,science,6144,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,science_ctx6144_d90_s0,science,6144,90,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,science_ctx6144_d90_s0,science,6144,90,0,tbgmp_top3,"[25, 7, 11]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,science_ctx8192_d50_s0,science,8192,50,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,science_ctx8192_d50_s0,science,8192,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Llama3.2-3B,science_ctx8192_d50_s0,science,8192,50,0,tbgmp_top1,[25],1,False,True,completed,canonical_main_topk,exact_at_budget
+Llama3.2-3B,science_ctx8192_d50_s0,science,8192,50,0,tbgmp_top3,"[25, 7, 11]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx4096_d10_s0,code,4096,10,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx4096_d10_s0,code,4096,10,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx4096_d10_s0,code,4096,10,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx4096_d10_s0,code,4096,10,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx4096_d10_s1,code,4096,10,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx4096_d10_s1,code,4096,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx4096_d10_s1,code,4096,10,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx4096_d10_s1,code,4096,10,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx4096_d50_s0,code,4096,50,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx4096_d50_s0,code,4096,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx4096_d50_s0,code,4096,50,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx4096_d50_s0,code,4096,50,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx4096_d50_s1,code,4096,50,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx4096_d50_s1,code,4096,50,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx4096_d50_s1,code,4096,50,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx4096_d50_s1,code,4096,50,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx4096_d90_s0,code,4096,90,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx4096_d90_s0,code,4096,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx4096_d90_s0,code,4096,90,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx4096_d90_s0,code,4096,90,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx4096_d90_s1,code,4096,90,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx4096_d90_s1,code,4096,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx4096_d90_s1,code,4096,90,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx4096_d90_s1,code,4096,90,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx6144_d10_s0,code,6144,10,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx6144_d10_s0,code,6144,10,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx6144_d10_s0,code,6144,10,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx6144_d10_s0,code,6144,10,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx6144_d10_s1,code,6144,10,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx6144_d10_s1,code,6144,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx6144_d10_s1,code,6144,10,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx6144_d10_s1,code,6144,10,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx6144_d50_s0,code,6144,50,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx6144_d50_s0,code,6144,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx6144_d50_s0,code,6144,50,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx6144_d50_s0,code,6144,50,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx6144_d50_s1,code,6144,50,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx6144_d50_s1,code,6144,50,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx6144_d50_s1,code,6144,50,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx6144_d50_s1,code,6144,50,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx6144_d90_s0,code,6144,90,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx6144_d90_s0,code,6144,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx6144_d90_s0,code,6144,90,0,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx6144_d90_s0,code,6144,90,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx6144_d90_s1,code,6144,90,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx6144_d90_s1,code,6144,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx6144_d90_s1,code,6144,90,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx6144_d90_s1,code,6144,90,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx8192_d10_s0,code,8192,10,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx8192_d10_s0,code,8192,10,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx8192_d10_s0,code,8192,10,0,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx8192_d10_s0,code,8192,10,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx8192_d10_s1,code,8192,10,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx8192_d10_s1,code,8192,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx8192_d10_s1,code,8192,10,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx8192_d10_s1,code,8192,10,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx8192_d50_s0,code,8192,50,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx8192_d50_s0,code,8192,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx8192_d50_s0,code,8192,50,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx8192_d50_s0,code,8192,50,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx8192_d50_s1,code,8192,50,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx8192_d50_s1,code,8192,50,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx8192_d50_s1,code,8192,50,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx8192_d50_s1,code,8192,50,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx8192_d90_s0,code,8192,90,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx8192_d90_s0,code,8192,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx8192_d90_s0,code,8192,90,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx8192_d90_s0,code,8192,90,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx8192_d90_s1,code,8192,90,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx8192_d90_s1,code,8192,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,code_ctx8192_d90_s1,code,8192,90,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,code_ctx8192_d90_s1,code,8192,90,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx4096_d10_s0,literature,4096,10,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx4096_d10_s0,literature,4096,10,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx4096_d10_s0,literature,4096,10,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx4096_d10_s0,literature,4096,10,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx4096_d10_s1,literature,4096,10,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx4096_d10_s1,literature,4096,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx4096_d10_s1,literature,4096,10,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx4096_d10_s1,literature,4096,10,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx4096_d50_s0,literature,4096,50,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx4096_d50_s0,literature,4096,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx4096_d50_s0,literature,4096,50,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx4096_d50_s0,literature,4096,50,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx4096_d50_s1,literature,4096,50,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx4096_d50_s1,literature,4096,50,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx4096_d50_s1,literature,4096,50,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx4096_d50_s1,literature,4096,50,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx4096_d90_s0,literature,4096,90,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx4096_d90_s0,literature,4096,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx4096_d90_s0,literature,4096,90,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx4096_d90_s0,literature,4096,90,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx4096_d90_s1,literature,4096,90,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx4096_d90_s1,literature,4096,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx4096_d90_s1,literature,4096,90,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx4096_d90_s1,literature,4096,90,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx6144_d10_s0,literature,6144,10,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx6144_d10_s0,literature,6144,10,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx6144_d10_s0,literature,6144,10,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx6144_d10_s0,literature,6144,10,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx6144_d10_s1,literature,6144,10,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx6144_d10_s1,literature,6144,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx6144_d10_s1,literature,6144,10,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx6144_d10_s1,literature,6144,10,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx6144_d50_s0,literature,6144,50,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx6144_d50_s0,literature,6144,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx6144_d50_s0,literature,6144,50,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx6144_d50_s0,literature,6144,50,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx6144_d50_s1,literature,6144,50,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx6144_d50_s1,literature,6144,50,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx6144_d50_s1,literature,6144,50,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx6144_d50_s1,literature,6144,50,1,tbgmp_top3,"[0, 8, 1]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx6144_d90_s0,literature,6144,90,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx6144_d90_s0,literature,6144,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx6144_d90_s0,literature,6144,90,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx6144_d90_s0,literature,6144,90,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx6144_d90_s1,literature,6144,90,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx6144_d90_s1,literature,6144,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx6144_d90_s1,literature,6144,90,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx6144_d90_s1,literature,6144,90,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx8192_d10_s0,literature,8192,10,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx8192_d10_s0,literature,8192,10,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx8192_d10_s0,literature,8192,10,0,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx8192_d10_s0,literature,8192,10,0,tbgmp_top3,"[0, 8, 1]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx8192_d10_s1,literature,8192,10,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx8192_d10_s1,literature,8192,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx8192_d10_s1,literature,8192,10,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx8192_d10_s1,literature,8192,10,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx8192_d50_s0,literature,8192,50,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx8192_d50_s0,literature,8192,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx8192_d50_s0,literature,8192,50,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx8192_d50_s0,literature,8192,50,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx8192_d50_s1,literature,8192,50,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx8192_d50_s1,literature,8192,50,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx8192_d50_s1,literature,8192,50,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx8192_d50_s1,literature,8192,50,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx8192_d90_s0,literature,8192,90,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx8192_d90_s0,literature,8192,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx8192_d90_s0,literature,8192,90,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx8192_d90_s0,literature,8192,90,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx8192_d90_s1,literature,8192,90,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx8192_d90_s1,literature,8192,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,literature_ctx8192_d90_s1,literature,8192,90,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,literature_ctx8192_d90_s1,literature,8192,90,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx4096_d10_s0,math,4096,10,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx4096_d10_s0,math,4096,10,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx4096_d10_s0,math,4096,10,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx4096_d10_s0,math,4096,10,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx4096_d10_s1,math,4096,10,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx4096_d10_s1,math,4096,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx4096_d10_s1,math,4096,10,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx4096_d10_s1,math,4096,10,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx4096_d50_s0,math,4096,50,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx4096_d50_s0,math,4096,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx4096_d50_s0,math,4096,50,0,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx4096_d50_s0,math,4096,50,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx4096_d50_s1,math,4096,50,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx4096_d50_s1,math,4096,50,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx4096_d50_s1,math,4096,50,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx4096_d50_s1,math,4096,50,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx4096_d90_s0,math,4096,90,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx4096_d90_s0,math,4096,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx4096_d90_s0,math,4096,90,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx4096_d90_s0,math,4096,90,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx4096_d90_s1,math,4096,90,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx4096_d90_s1,math,4096,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx4096_d90_s1,math,4096,90,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx4096_d90_s1,math,4096,90,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx6144_d10_s0,math,6144,10,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx6144_d10_s0,math,6144,10,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx6144_d10_s0,math,6144,10,0,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx6144_d10_s0,math,6144,10,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx6144_d10_s1,math,6144,10,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx6144_d10_s1,math,6144,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx6144_d10_s1,math,6144,10,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx6144_d10_s1,math,6144,10,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx6144_d50_s0,math,6144,50,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx6144_d50_s0,math,6144,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx6144_d50_s0,math,6144,50,0,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx6144_d50_s0,math,6144,50,0,tbgmp_top3,"[0, 8, 1]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx6144_d50_s1,math,6144,50,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx6144_d50_s1,math,6144,50,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx6144_d50_s1,math,6144,50,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx6144_d50_s1,math,6144,50,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx6144_d90_s0,math,6144,90,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx6144_d90_s0,math,6144,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx6144_d90_s0,math,6144,90,0,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx6144_d90_s0,math,6144,90,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx6144_d90_s1,math,6144,90,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx6144_d90_s1,math,6144,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx6144_d90_s1,math,6144,90,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx6144_d90_s1,math,6144,90,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx8192_d10_s0,math,8192,10,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx8192_d10_s0,math,8192,10,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx8192_d10_s0,math,8192,10,0,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx8192_d10_s0,math,8192,10,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx8192_d10_s1,math,8192,10,1,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx8192_d10_s1,math,8192,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx8192_d10_s1,math,8192,10,1,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx8192_d10_s1,math,8192,10,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx8192_d50_s0,math,8192,50,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx8192_d50_s0,math,8192,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx8192_d50_s0,math,8192,50,0,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx8192_d50_s0,math,8192,50,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx8192_d50_s1,math,8192,50,1,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx8192_d50_s1,math,8192,50,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx8192_d50_s1,math,8192,50,1,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx8192_d50_s1,math,8192,50,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx8192_d90_s0,math,8192,90,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx8192_d90_s0,math,8192,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx8192_d90_s0,math,8192,90,0,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx8192_d90_s0,math,8192,90,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx8192_d90_s1,math,8192,90,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx8192_d90_s1,math,8192,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,math_ctx8192_d90_s1,math,8192,90,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,math_ctx8192_d90_s1,math,8192,90,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx4096_d10_s0,science,4096,10,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx4096_d10_s0,science,4096,10,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx4096_d10_s0,science,4096,10,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx4096_d10_s0,science,4096,10,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx4096_d10_s1,science,4096,10,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx4096_d10_s1,science,4096,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx4096_d10_s1,science,4096,10,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx4096_d10_s1,science,4096,10,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx4096_d50_s0,science,4096,50,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx4096_d50_s0,science,4096,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx4096_d50_s0,science,4096,50,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx4096_d50_s0,science,4096,50,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx4096_d50_s1,science,4096,50,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx4096_d50_s1,science,4096,50,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx4096_d50_s1,science,4096,50,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx4096_d50_s1,science,4096,50,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx4096_d90_s0,science,4096,90,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx4096_d90_s0,science,4096,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx4096_d90_s0,science,4096,90,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx4096_d90_s0,science,4096,90,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx4096_d90_s1,science,4096,90,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx4096_d90_s1,science,4096,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx4096_d90_s1,science,4096,90,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx4096_d90_s1,science,4096,90,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx6144_d10_s0,science,6144,10,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx6144_d10_s0,science,6144,10,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx6144_d10_s0,science,6144,10,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx6144_d10_s0,science,6144,10,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx6144_d10_s1,science,6144,10,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx6144_d10_s1,science,6144,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx6144_d10_s1,science,6144,10,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx6144_d10_s1,science,6144,10,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx6144_d50_s0,science,6144,50,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx6144_d50_s0,science,6144,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx6144_d50_s0,science,6144,50,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx6144_d50_s0,science,6144,50,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx6144_d50_s1,science,6144,50,1,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx6144_d50_s1,science,6144,50,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx6144_d50_s1,science,6144,50,1,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx6144_d50_s1,science,6144,50,1,tbgmp_top3,"[0, 8, 1]",3,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx6144_d90_s0,science,6144,90,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx6144_d90_s0,science,6144,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx6144_d90_s0,science,6144,90,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx6144_d90_s0,science,6144,90,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx6144_d90_s1,science,6144,90,1,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx6144_d90_s1,science,6144,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx6144_d90_s1,science,6144,90,1,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx6144_d90_s1,science,6144,90,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx8192_d10_s0,science,8192,10,0,fixed_l0,[0],1,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx8192_d10_s0,science,8192,10,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx8192_d10_s0,science,8192,10,0,tbgmp_top1,[0],1,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx8192_d10_s0,science,8192,10,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx8192_d10_s1,science,8192,10,1,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx8192_d10_s1,science,8192,10,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx8192_d10_s1,science,8192,10,1,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx8192_d10_s1,science,8192,10,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx8192_d50_s0,science,8192,50,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx8192_d50_s0,science,8192,50,0,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx8192_d50_s0,science,8192,50,0,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx8192_d50_s0,science,8192,50,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx8192_d50_s1,science,8192,50,1,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx8192_d50_s1,science,8192,50,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx8192_d50_s1,science,8192,50,1,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx8192_d50_s1,science,8192,50,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx8192_d90_s0,science,8192,90,0,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx8192_d90_s0,science,8192,90,0,fixed_l0_l7_l25,"[0, 7, 25]",3,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx8192_d90_s0,science,8192,90,0,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx8192_d90_s0,science,8192,90,0,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx8192_d90_s1,science,8192,90,1,fixed_l0,[0],1,False,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx8192_d90_s1,science,8192,90,1,fixed_l0_l7_l25,"[0, 7, 25]",3,True,True,ok,validated_fixed_layer_run,fixed_policy_outcome
+Qwen3-4B,science_ctx8192_d90_s1,science,8192,90,1,tbgmp_top1,[0],1,False,True,completed,canonical_main_topk,exact_at_budget
+Qwen3-4B,science_ctx8192_d90_s1,science,8192,90,1,tbgmp_top3,"[0, 8, 1]",3,True,True,completed,canonical_main_topk,exact_at_budget

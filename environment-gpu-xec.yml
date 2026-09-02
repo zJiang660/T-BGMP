@@ -1,0 +1,10 @@
+name: tbgmp-gpu-xec
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.20
+  - pip
+  - pip:
+      - -r requirements.txt
+      - -r requirements-gpu-xec.txt
+
