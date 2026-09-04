@@ -9,14 +9,41 @@ import argparse
 import csv
 import gc
 import json
-import math
 import os
 import sys
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 
-import torch
+import pandas as pd
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+SRC_ROOT = PROJECT_ROOT / "src"
+if str(SRC_ROOT) not in sys.path:
+    sys.path.insert(0, str(SRC_ROOT))
+
+from tbgmp.profiling import (  # noqa: E402
+    flatten_key_tensor,
+    get_cache_layer,
+    layer_distortion_metrics,
+    load_compressor,
+    sample_rows,
+)
+from tbgmp.risk_score import compute_risk_scores  # noqa: E402
+
+
+PROFILE_SCORE_PROTOCOL = "paper_full_normalized_v1"
+
+
+def require_torch():
+    try:
+        import torch
+    except ImportError as exc:
+        raise RuntimeError(
+            "The domain-held-out GPU runner requires PyTorch."
+        ) from exc
+    return torch
 
 
 def import_hpc_runner(turboquant_root: Path):
@@ -89,47 +116,43 @@ def completed_keys(rows: list[dict]) -> set[tuple]:
     return {done_key(row) for row in rows if bool_field(row.get("completed"))}
 
 
-def uniform_quantize_dequantize(x, bits=2):
-    x = x.float()
-    qmax = float((1 << int(bits)) - 1)
-    mn = x.min(dim=-1, keepdim=True).values
-    mx = x.max(dim=-1, keepdim=True).values
-    scale = (mx - mn).clamp_min(1e-6) / qmax
-    q = torch.clamp(torch.round((x - mn) / scale), 0, qmax)
-    return q * scale + mn
-
-
-def effective_dimension(x):
-    x = x.float()
-    x = x - x.mean(dim=0, keepdim=True)
-    try:
-        s = torch.linalg.svdvals(x)
-        eig = s.square()
-        return float((eig.sum().square() / eig.square().sum().clamp_min(1e-8)).item())
-    except Exception:
-        return 1.0
-
-
-def cache_to_legacy(past):
-    if hasattr(past, "to_legacy_cache"):
-        return past.to_legacy_cache()
-    return past
+def finalize_profile_rows(rows: list[dict]) -> list[dict]:
+    """Apply the paper's normalized Full score and return rank-ordered rows."""
+    ranked = compute_risk_scores(pd.DataFrame(rows))
+    ranked["score_protocol"] = PROFILE_SCORE_PROTOCOL
+    return ranked.to_dict(orient="records")
 
 
 def profile_domains(hpc, model, tokenizer, dims, args, model_name: str) -> list[int]:
+    torch = require_torch()
     out = Path(args.output_dir)
     risk_csv = out / f"{args.output_prefix}_heldout_risk_ranking.csv"
     used_csv = out / f"{args.output_prefix}_heldout_profile_used_cases.csv"
     if risk_csv.exists() and risk_csv.stat().st_size > 0:
         rows = read_csv(risk_csv)
+        protocols = {row.get("score_protocol", "") for row in rows}
+        if protocols != {PROFILE_SCORE_PROTOCOL}:
+            raise RuntimeError(
+                f"Existing held-out ranking {risk_csv} does not use "
+                f"{PROFILE_SCORE_PROTOCOL}. Use a clean output directory so "
+                "legacy and canonical rankings cannot be mixed."
+            )
         ranked = [int(r["layer"]) for r in sorted(rows, key=lambda r: int(r["rank"]))]
         if ranked:
             return ranked
 
     profile_domains_list = [x.strip() for x in args.profile_domains.split(",") if x.strip()]
-    accum: dict[int, list[dict]] = defaultdict(list)
+    if not profile_domains_list:
+        raise ValueError("--profile-domains must contain at least one domain")
+    sampled_keys: dict[int, list] = defaultdict(list)
+    source_by_layer: dict[int, list[str]] = defaultdict(list)
     used_cases = []
-    for domain in profile_domains_list:
+    rows_per_domain = max(
+        1,
+        (int(args.profile_samples_per_layer) + len(profile_domains_list) - 1)
+        // len(profile_domains_list),
+    )
+    for domain_index, domain in enumerate(profile_domains_list):
         prompt = hpc.build_prompt(
             tokenizer,
             args.model_id,
@@ -157,79 +180,63 @@ def profile_domains(hpc, model, tokenizer, dims, args, model_name: str) -> list[
         )
         with torch.inference_mode():
             outputs = model(input_ids=input_ids, attention_mask=attention_mask, use_cache=True)
-        past = cache_to_legacy(outputs.past_key_values)
-        for layer_idx, layer_past in enumerate(past):
-            keys = layer_past[0].detach()
-            flat = keys.float().reshape(-1, keys.shape[-1])
-            if flat.shape[0] > int(args.profile_samples_per_layer):
-                idx = torch.linspace(
-                    0,
-                    flat.shape[0] - 1,
-                    steps=int(args.profile_samples_per_layer),
-                    device=flat.device,
-                ).long()
-                flat = flat.index_select(0, idx)
-            deq = uniform_quantize_dequantize(flat, bits=args.profile_bits)
-            mse = float(torch.mean((flat - deq).square()).item())
-            sample = flat[: min(128, flat.shape[0])]
-            sample_deq = deq[: sample.shape[0]]
-            ip_before = sample @ sample.T
-            ip_after = sample_deq @ sample_deq.T
-            ip_dist = float(torch.mean((ip_before - ip_after).abs()).item())
-            deff = effective_dimension(sample)
-            accum[int(layer_idx)].append(
-                {
-                    "mse_proxy": mse,
-                    "ip_distortion_proxy": ip_dist,
-                    "effective_dimension": deff,
-                    "source_domain": domain,
-                    "source": (
-                        f"heldout_profile_{domain}_ctx{args.profile_context_length}"
-                        f"_depth{args.profile_depth}_seed{args.profile_seed}"
-                    ),
-                }
+        layer_count = int(model.config.num_hidden_layers)
+        for layer_idx in range(layer_count):
+            keys, _ = get_cache_layer(outputs.past_key_values, layer_idx)
+            flat = flatten_key_tensor(keys, torch)
+            sampled = sample_rows(
+                flat,
+                rows_per_domain,
+                int(args.profile_seed) + domain_index * 100003 + layer_idx,
+                torch,
+            )
+            sampled_keys[layer_idx].append(sampled)
+            source_by_layer[layer_idx].append(
+                f"heldout_profile_{domain}_ctx{args.profile_context_length}"
+                f"_depth{args.profile_depth}_seed{args.profile_seed}"
             )
         del outputs
         gc.collect()
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
 
+    compressor_class = load_compressor(Path(args.turboquant_root))
     rows = []
-    for layer, vals in sorted(accum.items()):
-        mse = sum(v["mse_proxy"] for v in vals) / len(vals)
-        ip = sum(v["ip_distortion_proxy"] for v in vals) / len(vals)
-        deff = sum(v["effective_dimension"] for v in vals) / len(vals)
-        risk = mse + math.log1p(ip) + (1.0 / max(deff, 1e-6))
+    for layer, samples in sorted(sampled_keys.items()):
+        combined = torch.cat(samples, dim=0)
+        mse_p95, ip_p95, effective_dim = layer_distortion_metrics(
+            combined,
+            layer=layer,
+            bits=int(args.profile_bits),
+            max_rows=int(args.profile_samples_per_layer),
+            ip_pairs=int(args.profile_ip_pairs),
+            seed=int(args.profile_seed),
+            compressor_class=compressor_class,
+            torch_module=torch,
+        )
         rows.append(
             {
                 "model_id": args.model_id,
                 "model_name": model_name,
                 "layer": layer,
                 "kv_type": "key",
-                "risk_score": risk,
-                "mse_proxy": mse,
-                "ip_distortion_proxy": ip,
-                "effective_dimension": deff,
+                "mse_p95": mse_p95,
+                "ip_p95": ip_p95,
+                "effective_dim": effective_dim,
+                "c_mse_upper95": mse_p95,
+                "c_ip_upper95": ip_p95,
+                "effective_dimension": effective_dim,
+                "quant_bits": int(args.profile_bits),
+                "profile_samples_per_layer": int(args.profile_samples_per_layer),
+                "profile_ip_pairs": int(args.profile_ip_pairs),
                 "profile_domains": args.profile_domains,
-                "source": ";".join(v["source"] for v in vals),
+                "source": ";".join(source_by_layer[layer]),
+                "completed": True,
+                "error": "",
             }
         )
-    rows = sorted(rows, key=lambda r: float(r["risk_score"]), reverse=True)
-    for idx, row in enumerate(rows, start=1):
-        row["rank"] = idx
-    fields = [
-        "model_id",
-        "model_name",
-        "layer",
-        "kv_type",
-        "risk_score",
-        "mse_proxy",
-        "ip_distortion_proxy",
-        "effective_dimension",
-        "rank",
-        "profile_domains",
-        "source",
-    ]
+    rows = finalize_profile_rows(rows)
+    fields = list(rows[0].keys())
     write_csv(risk_csv, rows, fields)
     write_csv(
         used_csv,
@@ -571,6 +578,7 @@ def parse_args():
     parser.add_argument("--profile-seed", type=int, default=0)
     parser.add_argument("--profile-bits", type=int, default=2)
     parser.add_argument("--profile-samples-per-layer", type=int, default=512)
+    parser.add_argument("--profile-ip-pairs", type=int, default=8192)
     parser.add_argument("--topk-list", default="1,2,4,8,12")
     parser.add_argument("--random-seeds", default="0,1,2")
     return parser.parse_args()
@@ -578,6 +586,7 @@ def parse_args():
 
 def main() -> None:
     args = parse_args()
+    torch = require_torch()
     out = Path(args.output_dir)
     out.mkdir(parents=True, exist_ok=True)
     hpc = import_hpc_runner(Path(args.turboquant_root))

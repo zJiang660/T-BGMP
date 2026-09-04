@@ -144,7 +144,7 @@ def layer_distortion_metrics(
     return mse_p95, ip_p95, effective_dimension(x, torch_module)
 
 
-def _load_compressor(turboquant_root: Path):
+def load_compressor(turboquant_root: Path):
     root = turboquant_root.expanduser().resolve()
     if not root.is_dir():
         raise RuntimeError(f"TurboQuant root does not exist: {root}")
@@ -152,6 +152,11 @@ def _load_compressor(turboquant_root: Path):
         sys.path.insert(0, str(root))
     module = importlib.import_module("turboquant.compressors_v3")
     return getattr(module, "MSECompressor")
+
+
+# Backward-compatible private alias for callers written before the loader was
+# shared with the extension runners.
+_load_compressor = load_compressor
 
 
 def _load_model(model_path: Path, device: str, load_in_4bit: bool):
@@ -220,7 +225,7 @@ def profile_model_key_risk(
 
     torch_module, model, tokenizer = _load_model(model_path, device, load_in_4bit)
     set_deterministic(seed, torch_module)
-    compressor_class = _load_compressor(turboquant_root)
+    compressor_class = load_compressor(turboquant_root)
 
     source = context_file.read_text(encoding="utf-8", errors="ignore")
     source_tokens = tokenizer.encode(source, add_special_tokens=False)

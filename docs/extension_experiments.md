@@ -31,6 +31,13 @@ The runtime root must expose the formal helper module
 completed run. The experiment settings are recorded in
 `configs/extensions/domain_heldout.yaml`.
 
+The held-out runner profiles the frozen domains with the same Full-score
+implementation as the main method: TurboQuant `MSECompressor`, bit-normalized
+95th-percentile MSE and inner-product distortion, effective dimension, and
+per-model min-max normalization. Its ranking CSV is tagged
+`paper_full_normalized_v1`; the runner refuses to resume from an older output
+directory containing a different scoring protocol.
+
 ## Frozen Top3 policy
 
 This experiment selects one model-level Top3 policy from calibration results
