@@ -8,9 +8,9 @@ import csv
 import fcntl
 import gc
 import hashlib
-import importlib.util
 import json
 import os
+import sys
 import traceback
 from pathlib import Path
 
@@ -18,6 +18,13 @@ import torch
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+SRC_ROOT = REPO_ROOT / "src"
+if str(SRC_ROOT) not in sys.path:
+    sys.path.insert(0, str(SRC_ROOT))
+
+from tbgmp.extension_runtime import create_extension_runtime  # noqa: E402
+
+
 ROOT = Path(os.environ.get("TBGMP_FROZEN_ROOT", Path.cwd())).expanduser().resolve()
 CONFIG_PATH = Path(
     os.environ.get(
@@ -73,13 +80,6 @@ def write_csv_atomic(path: Path, rows: list[dict], fields: list[str]) -> None:
         handle.flush()
         os.fsync(handle.fileno())
     os.replace(temp, path)
-
-
-def import_backend(path: Path):
-    spec = importlib.util.spec_from_file_location("frozen_topk_backend", str(path))
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
 
 
 def make_policy(model_id: str, model_cfg: dict, policy_name: str, random_seed: str = "") -> dict:
@@ -202,7 +202,7 @@ def main() -> None:
         task_lock.write(f"job={os.environ.get('SLURM_JOB_ID', '')} gpu={gpu_name}\n")
         task_lock.flush()
     model_cfg = config["models"][model_id]
-    hpc = import_backend(Path(config["backend_path"]))
+    hpc = create_extension_runtime(config["turboquant_runtime"])
     backend_id = model_cfg["backend_model_id"]
     hpc.MODEL_REGISTRY.setdefault(backend_id, {})
     hpc.MODEL_REGISTRY[backend_id].update({

@@ -31,6 +31,7 @@ from tbgmp.profiling import (  # noqa: E402
     sample_rows,
 )
 from tbgmp.risk_score import compute_risk_scores  # noqa: E402
+from tbgmp.extension_runtime import create_extension_runtime  # noqa: E402
 
 
 PROFILE_SCORE_PROTOCOL = "paper_full_normalized_v1"
@@ -47,10 +48,7 @@ def require_torch():
 
 
 def import_hpc_runner(turboquant_root: Path):
-    sys.path.insert(0, str(turboquant_root))
-    import run_tbgmp_single_model_hpc as hpc  # noqa: PLC0415
-
-    return hpc
+    return create_extension_runtime(turboquant_root)
 
 
 def register_qwen3_4b(hpc, model_path: str) -> None:

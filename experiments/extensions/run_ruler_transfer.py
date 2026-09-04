@@ -7,11 +7,11 @@ import argparse
 import csv
 import gc
 import hashlib
-import importlib.util
 import json
 import os
 import random
 import re
+import sys
 import time
 import traceback
 from datetime import datetime, timezone
@@ -21,6 +21,13 @@ import torch
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+SRC_ROOT = REPO_ROOT / "src"
+if str(SRC_ROOT) not in sys.path:
+    sys.path.insert(0, str(SRC_ROOT))
+
+from tbgmp.extension_runtime import create_extension_runtime  # noqa: E402
+
+
 ROOT = Path(os.environ.get("TBGMP_RULER_ROOT", Path.cwd())).expanduser().resolve()
 MODEL_ROOT = Path(os.environ.get("MODEL_ROOT", ROOT / "models")).expanduser().resolve()
 CONFIG_PATH = Path(os.environ.get("TBGMP_RULER_CONFIG", REPO_ROOT / "configs" / "extensions" / "ruler.json"))
@@ -36,19 +43,11 @@ MODEL_SPECS = {
         "backend_model_id": "qwen3_4b",
         "model_name": "Qwen3-4B-Instruct-2507",
         "model_path": MODEL_ROOT / "Qwen3-4B-Instruct-2507",
-        "backend": Path(os.environ.get(
-            "TBGMP_QWEN3_BACKEND",
-            ROOT / "runtime" / "backends" / "run_tbgmp_single_model.py",
-        )),
     },
     "qwen25_3b": {
         "backend_model_id": "qwen25_3b_instruct",
         "model_name": "Qwen2.5-3B-Instruct",
         "model_path": MODEL_ROOT / "Qwen2.5-3B-Instruct",
-        "backend": Path(os.environ.get(
-            "TBGMP_QWEN25_BACKEND",
-            ROOT / "runtime" / "backends" / "run_tbgmp_single_model.py",
-        )),
     },
 }
 FIELDS = [
@@ -88,13 +87,6 @@ def write_csv_atomic(path: Path, rows: list[dict]) -> None:
         handle.flush()
         os.fsync(handle.fileno())
     os.replace(temp, path)
-
-
-def import_backend(path: Path, model_id: str):
-    spec = importlib.util.spec_from_file_location(f"ruler_backend_{model_id}", str(path))
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
 
 
 def safe_chat_prompt(tokenizer, question: str) -> str:
@@ -343,7 +335,7 @@ def main() -> None:
     manifest = load_json(MANIFEST_PATH)
     samples = samples_for_args(args, manifest)
     spec = MODEL_SPECS[args.model]
-    hpc = import_backend(spec["backend"], args.model)
+    hpc = create_extension_runtime(os.environ["TURBOQUANT_ROOT"])
     backend_id = spec["backend_model_id"]
     if backend_id not in hpc.MODEL_REGISTRY:
         hpc.MODEL_REGISTRY[backend_id] = {

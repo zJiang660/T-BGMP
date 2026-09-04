@@ -1,8 +1,9 @@
 {
   "experiment": "T-BGMP Frozen Top-k Proactive Protection Policy",
   "root": "$TBGMP_FROZEN_ROOT",
-  "backend_path": "$TBGMP_BACKEND_SCRIPT",
-  "backend_sha256": "cf9c39d102d991d38e8839bb8f4d755520ea349058ce62c344423a9e6cb8f2ec",
+  "backend_path": "$PROJECT_ROOT/src/tbgmp/extension_runtime.py",
+  "backend_source": "repository_owned_hpc_compatibility_runtime",
+  "original_hpc_backend_sha256": "cf9c39d102d991d38e8839bb8f4d755520ea349058ce62c344423a9e6cb8f2ec",
   "turboquant_runtime": "$TURBOQUANT_ROOT",
   "turboquant_commit": "UNAVAILABLE_PRESERVED_RUNTIME_SNAPSHOT",
   "domain_context_root": "$PROJECT_ROOT/data/formal_contexts",

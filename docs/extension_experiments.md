@@ -26,10 +26,11 @@ python experiments/extensions/run_domain_heldout.py \
   --output-prefix qwen3_4b
 ```
 
-The runtime root must expose the formal helper module
-`run_tbgmp_single_model_hpc.py`; this is the same helper API used by the
-completed run. The experiment settings are recorded in
-`configs/extensions/domain_heldout.yaml`.
+The runner uses the repository-owned compatibility runtime in
+`src/tbgmp/extension_runtime.py`, recovered from the formal XEC/SIP helper.
+Only the upstream TurboQuant checkout is external and is selected through
+`TURBOQUANT_ROOT`; no helper script from an HPC work directory is required.
+The experiment settings are recorded in `configs/extensions/domain_heldout.yaml`.
 
 The held-out runner profiles the frozen domains with the same Full-score
 implementation as the main method: TurboQuant `MSECompressor`, bit-normalized
@@ -48,7 +49,7 @@ Top-k sweep. Set the runtime paths referenced by
 ```bash
 export PROJECT_ROOT="$PWD"
 export TBGMP_FROZEN_ROOT="$OUTPUT_ROOT/frozen_top3"
-export TBGMP_BACKEND_SCRIPT="$TURBOQUANT_BACKEND_SCRIPT"
+export TURBOQUANT_ROOT="/path/to/turboquant-pytorch"
 python experiments/extensions/run_frozen_top3.py --task-id 0
 ```
 
@@ -66,6 +67,7 @@ conditional set, and run the frozen ranking controls:
 
 ```bash
 export TBGMP_RULER_ROOT="$OUTPUT_ROOT/ruler"
+export TURBOQUANT_ROOT="/path/to/turboquant-pytorch"
 python experiments/extensions/run_ruler_transfer.py \
   --stage screening --model qwen3_4b --task niah_multikey_1 --length 4096
 python experiments/extensions/build_ruler_conditional_sets.py
