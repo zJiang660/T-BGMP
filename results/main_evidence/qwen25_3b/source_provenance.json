@@ -11,9 +11,9 @@
       "sha256": "3655d01c66a36d341bcb7100923d7ba68d89a42d155010ca07d7749724190a35"
     },
     {
-      "filename": "qwen25_full_layer_key_risk.csv",
-      "bytes": 7024,
-      "sha256": "fcadd08127b18a92d78ab16a7a53fa2b1642dbf270d1bcc195126478605c011d"
+      "filename": "tbgmp_key_risk_profile.csv",
+      "bytes": 4762,
+      "sha256": "35fad7216cf02188e7af097eac9c1646143ff318dc563964956eab83f053091b"
     },
     {
       "filename": "qwen25_3b_risk_ablation_details_job2141266.csv",
@@ -21,5 +21,5 @@
       "sha256": "c771c171c4a6bff2d49f6d015e7e0c1a3bed8273c21683deeb6fced3d4a6ad44"
     }
   ],
-  "notes": "Sanitized from case-level experiment exports. The risk-ablation source supplies the current camera-ready Qwen2.5-3B Full-ranking first-success statistics."
+  "notes": "Sanitized from case-level XEC experiment exports. The historical raw-component profile is the exact ranking used by the main recovery, Frozen Top3, and RULER policies. The normalized camera-ready risk-ablation run is retained separately and supplies Table 3/4 validation statistics; it does not replace the diagnostic ranking used by those completed runs."
 }

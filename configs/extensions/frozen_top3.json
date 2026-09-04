@@ -40,7 +40,8 @@
       "evaluation_seed": 1,
       "ranking_path": "$PROJECT_ROOT/results/main_evidence/qwen3_4b/risk_ranking.csv",
       "ranking_source_path": "$PROJECT_ROOT/results/main_evidence/qwen3_4b/risk_ranking.csv",
-      "ranking_source_sha256": "348facb3ba262d216be5d568f3b3c1a4197ffca19ef5a9dfbfd096573f57137f",
+      "ranking_source_sha256": "f056f75cabc74c7d1bf68408e941f89b3ed69db96a5ead7bc5c0c538467905f4",
+      "original_profile_sha256": "348facb3ba262d216be5d568f3b3c1a4197ffca19ef5a9dfbfd096573f57137f",
       "ranking": [
         0,
         8,
@@ -148,7 +149,9 @@
       "evaluation_seed": 1,
       "ranking_path": "$PROJECT_ROOT/results/main_evidence/qwen25_3b/risk_ranking.csv",
       "ranking_source_path": "$PROJECT_ROOT/results/main_evidence/qwen25_3b/risk_ranking.csv",
-      "ranking_source_sha256": "7a39d28e735d3438870b505bb015045417cbc7346bb77e6b834cd92392b91064",
+      "ranking_source_sha256": "90483a08abfa1a9ecbff82829c8bb83fb3cb938dc0f5ff43926403eb0d2f68b3",
+      "original_profile_sha256": "35fad7216cf02188e7af097eac9c1646143ff318dc563964956eab83f053091b",
+      "original_ranking_record_sha256": "7a39d28e735d3438870b505bb015045417cbc7346bb77e6b834cd92392b91064",
       "ranking": [
         0,
         27,

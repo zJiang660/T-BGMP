@@ -62,3 +62,20 @@ summed the raw MSE, log-IP, and inverse-effective-dimension values before
 ranking. Its `score_protocol` field and provenance note preserve that distinction
 explicitly; reproducing the reported Qwen2.5-14B rows requires that recorded
 historical rank, while a new experiment should use the current normalized score.
+
+## Diagnostic and Ablation Rankings
+
+The main recovery sweeps and the Frozen Top3/RULER extensions must use the
+exact ranking that was active when their model outputs were generated. For
+Qwen3-4B this is the normalized Full score from the formal SIP profile. For
+Qwen2.5-3B the completed diagnostic run used the historical raw-component
+score `MSE + log1p(IP) + 1/d_eff`; its exact policy order is preserved in
+`results/main_evidence/qwen25_3b/risk_ranking.csv`.
+
+The later camera-ready risk-ablation run recomputed normalized MSE-only,
+MSE+IP, and Full rankings. Those outputs support Tables 3 and 4 and are kept
+under the dedicated risk-ablation and weight-sensitivity artifacts. They do
+not retroactively change the layer order used by the already completed main,
+Frozen Top3, or RULER executions. Tests enforce that every diagnostic policy
+prefix and extension config matches its corresponding authoritative ranking
+file and SHA-256 hash.
